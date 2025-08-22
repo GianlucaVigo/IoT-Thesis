@@ -65,11 +65,11 @@ def perform_analysis(analysis, dataset):
 
         # IP BASED
         case 0:
-            ip.country(dataset)
+            ip.analysis(dataset, "country")
         case 1:
-            ip.continent(dataset)
+            ip.analysis(dataset, "continent")
         case 2:
-            ip.as_name(dataset)
+            ip.analysis(dataset, "as_name")
         case 3:
             ip.stability(dataset)
 

@@ -6,26 +6,28 @@ import datetime
 import plotly.express as px
 from collections import Counter
 
-''''''
-def country(data):
 
-    print("[IP] Country Distribution")
+''''''
+def analysis(data, mode):
+
+    print(f"[IP] {mode.capitalize()} Distribution")
 
     sns.set_theme()
 
     data_df = pd.read_csv(data)
 
-    country_df = data_df.loc[:, 'country'].dropna(how='any', axis=0)
+    data_df = data_df.loc[:, mode].dropna(how='any', axis=0)
 
-    plot = sns.displot(data=country_df)
+    plot = sns.displot(data=data_df)
     plot.set_xticklabels(rotation=45)
 
     plt.show()
 
-    # geographical representation of the country distribution
-    country_map(country_df)
+    if mode == 'country':
+        # geographical representation of the country distribution
+        country_map(data_df)
 
-    country_timeline(data)
+    timeline(data, mode)
 
     print("-" * 100)
     return
@@ -46,7 +48,6 @@ def country_map(data):
         locations="country",
         color="count",
         hover_name="country",
-        #color_continuous_scale="Viridis",
         projection="natural earth",
         locationmode="country names" 
     )
@@ -58,50 +59,8 @@ def country_map(data):
 
 
 ''''''
-def continent(data):
-
-    print("[IP] Continent Distribution")
-
-    sns.set_theme()
-
-    data_df = pd.read_csv(data)
-
-    continent_df = data_df.loc[:, 'continent'].dropna(how='any', axis=0)
-
-    plot = sns.displot(data=continent_df)
-    plot.set_xticklabels(rotation=45)
-
-    plt.show()
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def as_name(data):
-
-    print("[IP] AS Name Distribution")
-
-    sns.set_theme()
-
-    data_df = pd.read_csv(data)
-
-    as_name_df = data_df.loc[:, 'as_name'].dropna(how='any', axis=0)
-
-    plot = sns.displot(data=as_name_df)
-    plot.set_xticklabels(rotation=90)
-
-    plt.show()
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def country_timeline(data):
-    print("[IP] Country over time")
+def timeline(data, mode):
+    print(f"[IP] {mode.capitalize()} over time")
 
     # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
     data = data[:-41]
@@ -110,48 +69,52 @@ def country_timeline(data):
     dir_list = os.listdir(data)
     dir_list.sort()
 
-    country_data = {'Date': [],
+    timeline_data = {'Date': [],
                     'Value': []}
 
-    selected_country = None
+    selected_item = None
 
     for i, date in enumerate(dir_list):
         
         # Append to the "Date" row the dataset date
-        country_data["Date"].append(date)
+        timeline_data["Date"].append(date)
         
-        path = f"{data}{date}/"
-        dataset = os.listdir(path)
-        path += dataset[0] # assuming only 1 dataset per directory
+        path = f"{data}{date}/" # assuming only 1 dataset per directory
+        dataset = os.listdir(path)[0]
+        path += dataset
 
         '''DATA CONVERSION'''
         # CSV -> pandas dataframe
         data_df = pd.read_csv(path)
 
         '''DATA FILTERING'''
-        # consider only 'isCoAP' column + delete rows with NaN
-        data_df = data_df.loc[:, 'country'].dropna(how='any', axis=0)
+        # consider only user requested column + delete rows with NaN
+        data_df = data_df.loc[:, mode].dropna(how='any', axis=0)
 
         if i == 0: # first iteration
             print("Here's the list of available countries collected in the first experiment date: \n")
-            for i, country in enumerate(data_df.drop_duplicates()):
-                print(f"{i:2d}. {country}")
+            for i, option in enumerate(data_df.drop_duplicates()):
+                print(f"{i:2d}. {option}")
 
             print("\nWrite the country you're interested in:")
-            selected_country = input().capitalize()
+            selected_item_id = int(input())
+            selected_item = data_df.drop_duplicates().iloc[selected_item_id]
 
         # Append to the "Value" row the number of occurrences of the selected country
-        value = data_df.value_counts()[selected_country]
-        country_data["Value"].append(int(value))
+        try:
+            value = int(data_df.value_counts()[selected_item])
+        except:
+            value = 0
+        timeline_data["Value"].append(value)
     
 
     # dict to dataframe
-    country_data_df = pd.DataFrame(country_data)
-    country_data_df["Date"] = pd.to_datetime(country_data_df["Date"])
+    timeline_data_df = pd.DataFrame(timeline_data)
+    timeline_data_df["Date"] = timeline_data_df["Date"].astype(str)
 
     # Plot horizontal bar chart
     plt.figure(figsize=(8, 5))
-    ax = sns.barplot(data=country_data_df, y="Date", x="Value", color="lightgreen")
+    ax = sns.barplot(data=timeline_data_df, y="Date", x="Value", color="lightgreen")
 
     # Add labels on each bar
     for p in ax.patches:
@@ -162,7 +125,7 @@ def country_timeline(data):
 
     plt.xlabel("Active CoAP servers")
     plt.ylabel("Dates")
-    plt.title(f"{selected_country} active servers over time")
+    plt.title(f"<{selected_item}> active servers over time")
     plt.tight_layout()
     plt.show()
 
@@ -272,7 +235,6 @@ def stability_geo_map(data):
         hover_name="country",
         animation_frame="date",
         animation_group="date",
-        color_continuous_scale="Viridis",
         projection="natural earth",
         locationmode="country names" 
     )
