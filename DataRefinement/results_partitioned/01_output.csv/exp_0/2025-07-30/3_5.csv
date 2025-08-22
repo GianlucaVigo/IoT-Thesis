@@ -1,0 +1,8 @@
+176.101.247.159,True,2.05 Content,ACK,"b'</register>,</ndm/dis>,</ndm/ci>,</mirror>,</uhp>,</ndm/logout>,</ndm/login>,</info>'",84
+112.123.109.17,False,,,,,,,,,,,
+81.94.243.107,False,,,,,,,,,,,
+117.141.29.159,True,2.05 Content,ACK,"b'</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>'",270
+194.28.56.72,True,2.05 Content,ACK,"b'</register>,</ndm/dis>,</ndm/ci>,</mirror>,</uhp>,</ndm/logout>,</ndm/login>,</info>'",84
+118.100.129.155,True,2.05 Content,ACK,"b'</>;title=""General Info"";ct=0,</qlink/searchfh>;title=qlink/searchfh,</qlink/searchgw>;title=qlink/searchgw,</qlink/request>;title=qlink/request,</qlink/success>;title=qlink/success,</device/inform/bootstrap>;title=device/inform/bootstrap,</device/inform/boot>;title=device/inform/boot,</device/inform/syncreq>;title=device/inform/syncreq,</device/inform/offline>;title=device/inform/offline,</device/inform/heartbeat>;title=device/inform/heartbeat,</device/inform/data>;title=device/inform/data,</device/inform/change>;title=device/inform/change,</async>;ct=0'",560
+5.139.164.104,False,,,,,,,,,,,
+134.17.129.240,True,2.05 Content,ACK,"b'</register>,</ndm/dis>,</ndm/ci>,</mirror>,</uhp>,</ndm/logout>,</ndm/login>,</info>'",84
