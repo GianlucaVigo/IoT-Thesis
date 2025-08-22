@@ -1,6 +1,7 @@
 from aiocoap import *
 import csv
 import logging
+import datetime
 
 from utils.file_handling import files_handling
 
@@ -78,8 +79,24 @@ async def findCoapServers(partition_path):
                 
                 print("-" * 100)
 
-
                 files_handling.store_data(data_to_store, coap_test_file)
+                
+        
+        # 3. logging operations
+        path_fields = partition_path.split('/')
+        
+        exp_name = path_fields[3]
+        date = datetime.date.today()
+        n_part = path_fields[4].split('.')[0].split('_')[1]
+        part_id = path_fields[4].split('.')[0].split('_')[0]
+        dataset_name = path_fields[2]
+
+        log_info = [exp_name, date, n_part, part_id, dataset_name]
+
+        files_handling.store_data(log_info, "DataRefinement/logs/results_partitioned.csv")
+        
+
+
                 
 
     except Exception as e:

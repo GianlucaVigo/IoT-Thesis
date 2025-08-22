@@ -1,6 +1,7 @@
 import datetime
 import os
 import csv
+import pandas as pd
 
 
 def file_selection(levels, path):
@@ -12,13 +13,13 @@ def file_selection(levels, path):
         options.sort()                # Sort the list alphabetically
 
         if menu_level == 'partition':
-            path_to_check = path.replace("IpScan", "DataRefinement")
-            path_to_check += f"/{datetime.date.today()}"
+            path_fields = path.split('/')
+            
+            date = datetime.date.today()
+            zmap = path_fields[2]
+            exp = path_fields[3]
 
-            try:
-                done_csv = os.listdir(path_to_check)
-            except:
-                done_csv = []
+            done_csv = get_part_info(zmap, exp, date)
 
         while(True):
             #   Print all the datasets together with a zero based index
@@ -140,3 +141,61 @@ def new_ip_test(coap_filepath):
     new_file.close()
 
     return file_name
+
+
+def get_dataset_info(dataset_name):
+
+    csv_metadata = "IpScan/logs/results.csv"
+
+    results_df = pd.read_csv(csv_metadata)
+
+    dataset_rows = results_df.loc[results_df['dataset_name'] == dataset_name]
+
+    date = dataset_rows.iloc[0]['date']
+    n_ips = dataset_rows.iloc[0]['n_ips']
+
+    return [date, n_ips]
+
+
+
+def get_exp_info(dataset_name):
+
+    csv_metadata = "IpScan/logs/results_partitioned.csv"
+
+    results_df = pd.read_csv(csv_metadata)
+
+    dataset_rows = results_df.loc[((results_df['dataset_name'] == dataset_name) &
+                                  (results_df['partition_id'] == 1))]
+
+    res = []
+
+    for i in range(dataset_rows.shape[0]):
+        exp_name = dataset_rows.iloc[i]['exp_name']
+        date = dataset_rows.iloc[i]['date']
+        n_partitions = int(dataset_rows.iloc[i]['n_partitions'])
+
+        res.append([exp_name, date, n_partitions])
+
+    return res
+
+def get_part_info(zmap, exp, date):
+
+    csv_metadata = "DataRefinement/logs/results_partitioned.csv"
+
+    results_df = pd.read_csv(csv_metadata)
+
+    dataset_rows = results_df.loc[((results_df['exp_name'] == exp) &
+                                  (results_df['date'] == str(date))&
+                                  (results_df['dataset_name'] == zmap))]
+    
+    res = []
+
+    for i in range(dataset_rows.shape[0]):
+        part_id = dataset_rows.iloc[i]['partition_id']
+        nr_part = dataset_rows.iloc[i]['n_partitions']
+        
+        part_name = f"{part_id}_{nr_part}.csv"
+
+        res.append(part_name)
+
+    return res

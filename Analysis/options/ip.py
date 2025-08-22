@@ -2,9 +2,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-import datetime
 import plotly.express as px
-from collections import Counter
 
 
 ''''''
@@ -105,6 +103,7 @@ def timeline(data, mode):
             value = int(data_df.value_counts()[selected_item])
         except:
             value = 0
+        
         timeline_data["Value"].append(value)
     
 

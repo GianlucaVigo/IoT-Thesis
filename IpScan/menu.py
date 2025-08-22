@@ -1,4 +1,6 @@
 import os
+from utils.file_handling import files_handling
+import datetime
 
 def zmap_menu():
 
@@ -13,7 +15,12 @@ def zmap_menu():
         #   Print all the datasets together with a zero based index
         print("Here's the list of available zmap output datasets to work with:\n")
         for dataset_id in range(len(datasets)):
-            print(f"\t{dataset_id}. {datasets[dataset_id]}") 
+
+            dataset_name = datasets[dataset_id]
+
+            if dataset_name.find("results") == -1:
+                dataset_info = files_handling.get_dataset_info(dataset_name)
+                print(f"\t{dataset_id}. {dataset_name} | date: {dataset_info[0]} | nr_ips: {dataset_info[1]}") 
 
         #   User selection
         print("\nSelect the raw dataset index: ['e' to main menu] ")
@@ -41,8 +48,32 @@ def zmap_menu():
 
 
     # 2) user defines the number of partitions to be created
+
+    exps = files_handling.get_exp_info(datasets[dataset_id])
+
     while(True):
-        print("How many csv partitions do you want to create? MAX: 20 ['e' to main menu]")
+
+        while(True):
+            print("Here's the list of experiments performed on the selected dataset: \n")
+
+            for exp in exps:
+                print(f"\texp_name: {exp[0]} | date: {exp[1]} | nr_partitions: {exp[2]}")
+            
+            print("\nDo you want to create a NEW experiment? [Y/n]")
+
+            answer = input()
+            match answer:
+                case "Y":
+                    break
+                case "n":
+                    print("\t[Redirection to main menu ...]")    # To main menu
+                    print("-" * 100)
+                    return
+                case _:
+                    print("\tINPUT ERROR: Invalid input")    # Invalid user choice
+                    print("-" * 100)
+
+        print("\nHow many csv partitions do you want to create? MAX: 20 ['e' to main menu]")
 
         #   upperbound limit over the number of partitions to be created
         n_partitions_upperbound = 20
@@ -109,14 +140,17 @@ def zmap_menu():
 
         if i == n_partitions-1: # last iteration
             # END label
-            end = len(source_zmap_csv)  
+            end = len(source_zmap_csv)
+
         else: # other iterations
             # END label
             end = (i+1)*partitions_size
+        
+        files_handling.store_data(["exp_"+str(n_exp), datetime.date.today(), n_partitions, i+1, end-start, datasets[dataset_id]],
+                                  "IpScan/logs/results_partitioned.csv")
 
         with open(partition_path, 'w+') as out_file:
             # writing one partition considering START and END labels
             out_file.writelines(source_zmap_csv[start:end])
-
 
     return None
