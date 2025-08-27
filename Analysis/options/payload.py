@@ -6,34 +6,40 @@ from collections import Counter
 from utils import payload_handling
 from utils import files_handling
 
+def analysis(data_df, mode):
 
-''''''
-def size_stats(data):
+    # Plot horizontal bar chart
+    plt.figure(figsize=(8, 5))
 
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload Size (bytes)' column + do not consider rows with NaN values
-    payload_size_df = data_df.loc[:, 'Payload Size (bytes)'].dropna(how='any', axis=0)
+    match mode:
+        case 'Payload Size (bytes)':
+            sns.histplot(data=data_df, x=mode, bins=40, kde=True, color="lightgreen")
+            plt.ylabel("# CoAP Resources")
+            plt.title("[PAYLOAD] Size Distribution")
+    #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
+    #sns.boxplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
 
     '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    plot = sns.displot(data=payload_size_df)
-    plot.set_xticklabels(rotation=45)
-    # show the plot
+    plt.xlabel(mode)
+    plt.tight_layout()
     plt.show()
 
     '''STATS'''
-    # Average Payload Size
-    print(f"\tPayload size average value: {payload_size_df.mean()}")
-    # Payload Size Median Value
-    print(f"\tPayload size median value: {payload_size_df.median()}")
+    match mode:
+        case 'Payload Size (bytes)':
+            # Average Payload Size
+            print(f"\tPayload size average value: {data_df[mode].mean()}")
+            # Payload Size Median Value
+            print(f"\tPayload size median value: {data_df[mode].median()}")
     
     print("-" * 100)
     return
+
+
+''''''
+def size_stats(data):
+    return
+    
 
 
 

@@ -1,3 +1,5 @@
+import pandas as pd
+
 from Analysis.options import ip
 from Analysis.options import payload
 
@@ -75,7 +77,7 @@ def perform_analysis(analysis, dataset):
 
         # PAYLOAD BASED
         case 4:
-            payload.size_stats(dataset)
+            payload.analysis(dataset, "Payload Size (bytes)")
         case 5:
             payload.most_common(dataset)
         case 6:
@@ -105,6 +107,9 @@ def analysis_menu():
                     return
                 else: 
                     path.update({level: choice})
+        
+        # preloaded dataframe
+        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
         # enable multiple analysis on the already selected dataset
         while(True):
@@ -116,4 +121,4 @@ def analysis_menu():
                 return
 
             # 3) perform selected analysis on selected test dataset
-            perform_analysis(analysis_id, path)
+            perform_analysis(analysis_id, data_df)
