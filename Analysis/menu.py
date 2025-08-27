@@ -77,11 +77,11 @@ def perform_analysis(analysis, dataset):
 
         # PAYLOAD BASED
         case 4:
-            payload.analysis(dataset, "Payload Size (bytes)")
+            payload.analysis(dataset, "Payload Size")
         case 5:
-            payload.analysis(dataset, "Payload")
+            payload.analysis(dataset, "Most Common")
         case 6:
-            payload.n_resources(dataset)
+            payload.analysis(dataset, "Resources Number")
         case 7:
             payload.resources_depth(dataset)
         case 8:

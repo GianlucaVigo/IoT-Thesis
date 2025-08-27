@@ -15,11 +15,10 @@ def analysis(data_df, mode):
 
     match mode:
 
-        # Payload Size
-        case 'Payload Size (bytes)':
+        case 'Payload Size':
             
             # Type of plot
-            sns.histplot(data=data_df, x=mode, bins=40, kde=True, color="lightgreen")
+            sns.histplot(data=data_df, x='Payload Size (bytes)', bins=40, kde=True, color="lightgreen")
             
             # Plot Labels
             plt.xlabel('Payload Size (Bytes)')
@@ -32,13 +31,13 @@ def analysis(data_df, mode):
             stat_rows.append(f"\tPayload size average value: {data_df[mode].mean()}")
             stat_rows.append(f"\tPayload size median value: {data_df[mode].median()}")
 
-        # Most Common
-        case 'Payload':
 
-            # DATA PROCESSING
+        case 'Most Common':
+
+            '''DATA PROCESSING'''
             resource_list = []
             
-            for raw_payload in data_df[mode]:
+            for raw_payload in data_df['Payload']:
                 resource_list.extend(payload_handling.resource_list_of(str(raw_payload)))
             
             resources_dict = Counter(resource_list).most_common()
@@ -53,6 +52,31 @@ def analysis(data_df, mode):
 
             # Plot Title
             plt.title("[PAYLOAD] TOP 30 Most Common Resources' URI")
+
+        
+        case 'Resources Number':
+
+            '''DATA PROCESSING'''
+            # list containing the number of resources for each ip address
+            n_resources_per_list = []
+            # iterate over the raw payloads
+            for raw_payload in data_df['Payload']:
+                # append to the n_resources_per_list the size of resource_list_payload
+                n_resources_per_list.append(len(payload_handling.resource_list_of(str(raw_payload))))
+            
+            n_resources_dict = Counter(n_resources_per_list)
+            n_resources_df = pd.DataFrame.from_dict(n_resources_dict, orient='index').reset_index()
+            n_resources_df.columns = ['n_resources', 'count']
+
+            # Type of plot
+            sns.barplot(data=n_resources_df, x='n_resources', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Number of Resources')
+            plt.ylabel("# CoAP Machines")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Number of Resources per CoAP Machine")
 
 
 
@@ -94,7 +118,7 @@ def n_resources(data):
     # list containing the number of resources for each ip address
     n_resources_per_list = []
     # iterate over the raw payloads
-    for raw_payload in payload_df:
+    for raw_payload in data_df['Payload']:
         # append to the n_resources_per_list the size of resource_list_payload
         n_resources_per_list.append(len(payload_handling.resource_list_of(raw_payload)))
     # list -> pandas dataframe
