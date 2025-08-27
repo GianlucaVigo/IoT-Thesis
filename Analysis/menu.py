@@ -79,7 +79,7 @@ def perform_analysis(analysis, dataset):
         case 4:
             payload.analysis(dataset, "Payload Size (bytes)")
         case 5:
-            payload.most_common(dataset)
+            payload.analysis(dataset, "Payload")
         case 6:
             payload.n_resources(dataset)
         case 7:

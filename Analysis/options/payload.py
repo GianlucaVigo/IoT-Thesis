@@ -8,71 +8,69 @@ from utils import files_handling
 
 def analysis(data_df, mode):
 
-    # Plot horizontal bar chart
+    # Plot Figure Size
     plt.figure(figsize=(8, 5))
 
+    stat_rows = []
+
     match mode:
+
+        # Payload Size
         case 'Payload Size (bytes)':
+            
+            # Type of plot
             sns.histplot(data=data_df, x=mode, bins=40, kde=True, color="lightgreen")
+            
+            # Plot Labels
+            plt.xlabel('Payload Size (Bytes)')
             plt.ylabel("# CoAP Resources")
+
+            # Plot Title
             plt.title("[PAYLOAD] Size Distribution")
+
+            # Additional stats
+            stat_rows.append(f"\tPayload size average value: {data_df[mode].mean()}")
+            stat_rows.append(f"\tPayload size median value: {data_df[mode].median()}")
+
+        # Most Common
+        case 'Payload':
+
+            # DATA PROCESSING
+            resource_list = []
+            
+            for raw_payload in data_df[mode]:
+                resource_list.extend(payload_handling.resource_list_of(str(raw_payload)))
+            
+            resources_dict = Counter(resource_list).most_common()
+            resources_dict_df = pd.DataFrame(resources_dict, columns=['uri', 'count'])
+
+            # Type of plot
+            sns.barplot(data=resources_dict_df.head(30), y="uri", x="count", color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Count')
+            plt.ylabel("URI")
+
+            # Plot Title
+            plt.title("[PAYLOAD] TOP 30 Most Common Resources' URI")
+
+
+
+
     #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
     #sns.boxplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
 
     '''PLOTTING'''
-    plt.xlabel(mode)
     plt.tight_layout()
     plt.show()
 
     '''STATS'''
-    match mode:
-        case 'Payload Size (bytes)':
-            # Average Payload Size
-            print(f"\tPayload size average value: {data_df[mode].mean()}")
-            # Payload Size Median Value
-            print(f"\tPayload size median value: {data_df[mode].median()}")
-    
-    print("-" * 100)
-    return
+    try:
+        for stat in stat_rows:
+            print(stat)
+    except:
+        print("No stats available")
 
-
-''''''
-def size_stats(data):
-    return
-    
-
-
-
-''''''
-def most_common(data):
-
-    print("[PAYLOAD] Most common Resource URIs")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    resource_list = []
-    # resource lists
-    for raw_payload in payload_df:
-        resource_list.extend(payload_handling.resource_list_of(raw_payload))
-    # dictionary -> pd DataFrame
-    resources_dict = Counter(resource_list).most_common()
-    resources_dict_df = pd.DataFrame(resources_dict, columns=['uri', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=resources_dict_df, x="uri", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
 
     print("-" * 100)
     return
