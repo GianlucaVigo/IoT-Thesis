@@ -1,101 +1,136 @@
 import os
+from utils import files_handling
+import datetime
 
 def zmap_menu():
 
-    # 1) base zmap dataset selection
-    source_zmap_path = "IpScan/results"
+    '''1) zmap dataset selection'''
 
-    #   List of all the available zmap output csv files alphabetically sorted
-    datasets = os.listdir(source_zmap_path) # returns a <list> object
-    datasets.sort()                         # sort the list alphabetically
+    # info available at the moment
+    path_source = {'phase': 'IpScan', 'folder': 'results'}
+    # level chosen by the user
+    level = 'ZMAP dataset'                                   
+
+    # returns the dataset selected by the user (ex. 01_output.csv)
+    dataset = files_handling.file_selection(level, path_source)
     
-    while(True):    
-        #   Print all the datasets together with a zero based index
-        print("Here's the list of available zmap output datasets to work with:\n")
-        for dataset_id in range(len(datasets)):
-            print(f"\t{dataset_id}. {datasets[dataset_id]}") 
+    # IF
+    # T: return to 'main menu'                                                           
+    if dataset == None:                                             
+        return
+    # F: update path by adding dataset
+    else:                                                           
+        path_source.update({'ZMAP dataset': dataset})
+    
 
-        #   User selection
-        print("\nSelect the raw dataset index: ['e' to main menu] ")
-        try:
-            choice = input()
-            print("-" * 100)
-            if (choice == 'e'):
-                return None # -> to MAIN MENU
-            
-            dataset_id = int(choice)
+    '''2) user defines the number of partitions to be created'''
+    # getting all experiments performed on the selected dataset
+    experiments = files_handling.get_exps_info(dataset)             
+    
+    print("Here's the list of experiments created over the selected ZMAP dataset:\n")
 
-        except Exception as e:
-            print("\tINPUT ERROR: Invalid input")    # Invalid user input
-            print(f"\t\t {e}")
-            print("-" * 100)
-            continue
-        
-        if (dataset_id not in range(len(datasets))):
-            print("\tINPUT ERROR: Invalid option -> Out of range!")    # Invalid user choice
-            print("-" * 100)
-            continue
+    # iterating over the experiment dictionaries
+    for i, exp in enumerate(experiments):
+        # print index                         
+        exp_info_row = f"\t{i:2d}. "                                
 
-        source_zmap_path += f"/{datasets[dataset_id]}"
-        break
+        # print metadata info (exp_name, date, n_partitions)
+        for key, value in exp.items():                              
+            exp_info_row += f" {key}: {value} |"
 
+        print(exp_info_row[:-1])
 
-    # 2) user defines the number of partitions to be created
+    
+
     while(True):
-        print("How many csv partitions do you want to create? MAX: 20 ['e' to main menu]")
+        # new experiment?                                                   
+        print("\nDo you want to create a NEW experiment? [Y/n]")
 
-        #   upperbound limit over the number of partitions to be created
-        n_partitions_upperbound = 20
+        # user input
+        answer = input()                                            
+
+        match answer:
+            # Create/Define a new experiment over the selected ZMAP dataset
+            case "Y":                                               
+                break
+
+            # To main menu
+            case "n":
+                print("\t[Redirection to main menu ...]")           
+                print("-" * 100)
+                return
+                
+            # Invalid user choice
+            case _:
+                print("\tINPUT ERROR: Invalid input")               
+                print("-" * 100)
+
+
+    while(True):
+        print("\nHow many csv partitions do you want to create? MAX: 20 ['e' to main menu]")
+
+        # upperbound limit over the number of partitions to be created
+        n_partitions_upperbound = 20                                
 
         try:
-            choice = input()
+            # user input: number of partitions to be created
+            choice = input()                                        
             print("-" * 100)
-            if (choice == 'e'):
-                return # -> to MAIN MENU
-            
-            n_partitions = int(choice)
 
+            # -> to MAIN MENU
+            if (choice == 'e'):
+                return                                              
+
+            # convert the user input: str -> int   
+            n_partitions = int(choice)                              
+
+        # Invalid user input
         except Exception as e:
-            print("\tINPUT ERROR: Invalid input")    # Invalid user input
+            print("\tINPUT ERROR: Invalid input")                   
             print(f"\t\t {e}")
             print("-" * 100)
             continue
 
+        # Invalid user choice
         if (n_partitions > n_partitions_upperbound):
-            print("\tINPUT ERROR: Invalid option -> Too many partitions!")    # Invalid user choice
+            print("\tINPUT ERROR: Invalid option -> Too many partitions!")    
             print("-" * 100)
             continue
-        
+            
+        # Invalid user choice
         if (n_partitions <= 0):
-            print("\tINPUT ERROR: Invalid option -> Number of partitions can't be zero or negative!")    # Invalid user choice
+            print("\tINPUT ERROR: Invalid option -> Number of partitions can't be zero or negative!")    
             print("-" * 100)
             continue
-    
+            
         break
 
 
-    # 3) directory structure preparation
-    #   a. Source Dataset selection
-    zmap_partitions_path = "IpScan/results_partitioned"
-    zmap_partitions_path += f"/{datasets[dataset_id]}"
+    '''3) directory structure preparation'''
 
-    #       if not already present the directory path, create it
-    if not os.path.exists(zmap_partitions_path):
-        os.makedirs(zmap_partitions_path) # -> create the ZMAP output directory
+    # Source Dataset selection
+    path_partitions = {'phase': 'IpScan', 'folder': 'results_partitioned', 'ZMAP dataset': dataset}
+    path_partitions_str = files_handling.path_dict_to_str(path_partitions)
 
-    #   b. Partitioning Experiment ID
-    n_exp = len(os.listdir(zmap_partitions_path))
-    zmap_partitions_path += f"/exp_{n_exp}"
+    # if not already present the directory path...
+    if not os.path.exists(path_partitions_str):
+        # create the ZMAP output directory
+        os.makedirs(path_partitions_str) 
 
-    #       if not already present the directory path, create it
-    if not os.path.exists(zmap_partitions_path):
-        os.makedirs(zmap_partitions_path) # -> create the exp directory
+    # Partitioning Experiment ID
+    n_exp = len(os.listdir(path_partitions_str))
+    path_partitions.update({'experiment': f"exp_{n_exp}"})
+    path_partitions_str = files_handling.path_dict_to_str(path_partitions)
+
+    # if not already present the directory path...
+    if not os.path.exists(path_partitions_str):
+        # create the exp directory
+        os.makedirs(path_partitions_str)
 
 
 
     # 4) split Source Dataset into N csv files (to increase concurrency among multiple Google VMs)
-
-    source_zmap_csv = open(source_zmap_path, 'r').readlines()
+    source_zmap_csv = open(files_handling.path_dict_to_str(path_source), 'r').readlines()
 
     #   partition size (last one will get the remaining entries)
     partitions_size = len(source_zmap_csv) // n_partitions
@@ -103,20 +138,27 @@ def zmap_menu():
     #   partitions writing
     for i in range(n_partitions):
 
-        partition_path = f"{zmap_partitions_path}/{i+1}_{n_partitions}.csv"
+        path_partitions.update({'partition': f"{i+1}_{n_partitions}.csv"})
+
         # START label
         start = i * partitions_size
 
         if i == n_partitions-1: # last iteration
             # END label
-            end = len(source_zmap_csv)  
+            end = len(source_zmap_csv)
+
         else: # other iterations
             # END label
             end = (i+1)*partitions_size
+        
+        files_handling.store_data(["exp_"+str(n_exp), i+1, end-start, dataset],
+                                  "utils/logs/partitions.csv")
 
-        with open(partition_path, 'w+') as out_file:
+        with open(files_handling.path_dict_to_str(path_partitions), 'w+') as out_file:
             # writing one partition considering START and END labels
             out_file.writelines(source_zmap_csv[start:end])
 
+    files_handling.store_data(["exp_"+str(n_exp), datetime.date.today(), n_partitions, dataset],
+                              "utils/logs/experiments.csv")
 
     return None

@@ -1,7 +1,7 @@
 from Analysis.options import ip
 from Analysis.options import payload
 
-from utils.file_handling import files_handling
+from utils import files_handling
 
 
 # return the analysis to perform requested by user 
@@ -95,9 +95,16 @@ def analysis_menu():
     while(True):
 
         # 1) analysis selection
-        levels = ["zmap output", "experiment", "date", "dataset"]
-        path = "DataRefinement/results"      
-        test_id = files_handling.file_selection(levels, path)
+        levels = ["ZMAP dataset", "experiment", "date"]
+        path = {'phase': 'DataRefinement', 'folder': 'results'}
+
+        for level in levels:
+                choice = files_handling.file_selection(level, path)
+
+                if choice == None:
+                    return
+                else: 
+                    path.update({level: choice})
 
         # enable multiple analysis on the already selected dataset
         while(True):
@@ -109,4 +116,4 @@ def analysis_menu():
                 return
 
             # 3) perform selected analysis on selected test dataset
-            perform_analysis(analysis_id, test_id)
+            perform_analysis(analysis_id, path)

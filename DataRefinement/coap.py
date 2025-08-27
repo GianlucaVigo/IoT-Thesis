@@ -1,8 +1,9 @@
 from aiocoap import *
 import csv
 import logging
+import datetime
 
-from utils.file_handling import files_handling
+from utils import files_handling
 
 # log info settings
 logging.basicConfig(level=logging.INFO)
@@ -36,16 +37,17 @@ async def findCoapServers(partition_path):
     
     try:
         # OUTPUT FILE: CoAP servers 
-        coap_test_file = files_handling.new_coap_test(partition_path)
+        coap_test_path = files_handling.new_coap_test(partition_path)
         
         # INPUT FILE: 
         # 1. zmap partition size
-        with open(partition_path, newline='') as zmap_file:
+        with open(files_handling.path_dict_to_str(partition_path), newline='') as zmap_file:
             zmap_partition_size = sum(1 for _ in csv.reader(zmap_file))
 
         # 2. zmap partition csv
-        with open(partition_path, newline='') as zmap_file:
+        with open(files_handling.path_dict_to_str(partition_path), newline='') as zmap_file:
             zmap_partition_csv = csv.reader(zmap_file)
+
 
             for row in zmap_partition_csv:
 
@@ -78,9 +80,20 @@ async def findCoapServers(partition_path):
                 
                 print("-" * 100)
 
-
-                files_handling.store_data(data_to_store, coap_test_file)
+                files_handling.store_data(data_to_store, files_handling.path_dict_to_str(coap_test_path))
                 
+        
+        # 3. logging operations
+        exp_name = partition_path['experiment']
+        date = datetime.date.today()
+        part_id = partition_path['partition'].split('.')[0].split('_')[0]
+        dataset_name = partition_path['ZMAP dataset']
+
+        log_info = [exp_name, date, part_id, dataset_name]
+
+        files_handling.store_data(log_info, "utils/logs/coap_checks.csv")
+        
+
 
     except Exception as e:
         print(f"coap.py: {e}")

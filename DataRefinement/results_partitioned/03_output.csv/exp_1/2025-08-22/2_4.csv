@@ -1,0 +1,6 @@
+77.40.93.180,True,2.05 Content,ACK,"b'</register>,</ndm/dis>,</ndm/ci>,</mirror>,</uhp>,</ndm/logout>,</ndm/login>,</info>'",84
+98.25.1.14,False,,,,,,,,,,,
+58.209.194.16,False,,,,,,,,,,,
+49.147.228.48,True,2.05 Content,ACK,"b'</>;title=""General Info"";ct=0,</qlink/searchfh>;title=qlink/searchfh,</qlink/searchgw>;title=qlink/searchgw,</qlink/request>;title=qlink/request,</qlink/success>;title=qlink/success,</device/inform/bootstrap>;title=device/inform/bootstrap,</device/inform/boot>;title=device/inform/boot,</device/inform/syncreq>;title=device/inform/syncreq,</device/inform/offline>;title=device/inform/offline,</device/inform/heartbeat>;title=device/inform/heartbeat,</device/inform/data>;title=device/inform/data,</async>;ct=0'",509
+36.1.224.84,False,,,,,,,,,,,
+81.215.210.244,True,2.05 Content,ACK,"b'</ndm/dis>,</ndm/ci>,</uhp>,</ndm/logout>,</ndm/login>,</info>'",62

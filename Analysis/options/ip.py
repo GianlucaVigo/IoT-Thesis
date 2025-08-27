@@ -2,9 +2,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-import datetime
 import plotly.express as px
-from collections import Counter
+
+from utils import files_handling
 
 
 ''''''
@@ -14,18 +14,36 @@ def analysis(data, mode):
 
     sns.set_theme()
 
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
+    data_df = data_df.dropna(how='any', axis=0)
 
-    data_df = data_df.loc[:, mode].dropna(how='any', axis=0)
+    count_dict = data_df[mode].value_counts().to_dict()
 
-    plot = sns.displot(data=data_df)
-    plot.set_xticklabels(rotation=45)
+    count_df = pd.DataFrame({
+        mode: count_dict.keys(),
+        'count': count_dict.values()
+    })
 
+    # Plot horizontal bar chart
+    plt.figure(figsize=(8, 5))
+    ax = sns.barplot(data=count_df, y=mode, x="count", color="lightgreen")
+
+    # Add labels on each bar
+    for p in ax.patches:
+        ax.text(p.get_width(),                # x-position (end of bar)
+                p.get_y() + p.get_height()/2, # y-position (center of bar)
+                int(p.get_width()),           # label text
+                ha="left", va="center")
+
+    plt.xlabel("Count")
+    plt.ylabel(f"{mode.capitalize()}")
+    plt.title(f"[IP] {mode.capitalize()} Distribution")
+    plt.tight_layout()
     plt.show()
 
     if mode == 'country':
         # geographical representation of the country distribution
-        country_map(data_df)
+        country_map(count_df)
 
     timeline(data, mode)
 
@@ -39,12 +57,12 @@ def country_map(data):
 
     print("[IP] Geographical Country Distribution")
 
-    geo_country_df = (data.value_counts()
+    '''geo_country_df = (data.value_counts()
                            .rename_axis('country')
-                           .reset_index(name='count'))
+                           .reset_index(name='count'))'''
 
     fig = px.choropleth(
-        geo_country_df,
+        data,
         locations="country",
         color="count",
         hover_name="country",
@@ -63,10 +81,15 @@ def timeline(data, mode):
     print(f"[IP] {mode.capitalize()} over time")
 
     # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
-    data = data[:-41]
-    # After: DataRefinement/results/02_output.csv/exp_0/
+    path = {
+        'phase': data['phase'],
+        'folder': data['folder'],
+        'ZMAP dataset': data['ZMAP dataset'],
+        'experiment': data['experiment']
+    }
+    #  After: DataRefinement/results/02_output.csv/exp_0/
 
-    dir_list = os.listdir(data)
+    dir_list = os.listdir(files_handling.path_dict_to_str(path))
     dir_list.sort()
 
     timeline_data = {'Date': [],
@@ -77,15 +100,13 @@ def timeline(data, mode):
     for i, date in enumerate(dir_list):
         
         # Append to the "Date" row the dataset date
-        timeline_data["Date"].append(date)
+        timeline_data["Date"].append(date.split('.')[0])
         
-        path = f"{data}{date}/" # assuming only 1 dataset per directory
-        dataset = os.listdir(path)[0]
-        path += dataset
+        path.update({'date': date})
 
         '''DATA CONVERSION'''
         # CSV -> pandas dataframe
-        data_df = pd.read_csv(path)
+        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
         '''DATA FILTERING'''
         # consider only user requested column + delete rows with NaN
@@ -105,6 +126,7 @@ def timeline(data, mode):
             value = int(data_df.value_counts()[selected_item])
         except:
             value = 0
+        
         timeline_data["Value"].append(value)
     
 
@@ -136,8 +158,17 @@ def stability(data):
 
     print("[IP] IP addresses stability over time")
 
-    data = data[:-41]
-    dir_list = os.listdir(data)
+    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
+    path = {
+        'phase': data['phase'],
+        'folder': data['folder'],
+        'ZMAP dataset': data['ZMAP dataset'],
+        'experiment': data['experiment']
+    }
+    #  After: DataRefinement/results/02_output.csv/exp_0/
+
+    dir_list = os.listdir(files_handling.path_dict_to_str(path))
+    dir_list.sort()
 
     if (len(dir_list) <= 1):
             print("There must be at least 2 datasets to examine the stability property: please acquire more data!")
@@ -147,16 +178,12 @@ def stability(data):
     stability_df = pd.DataFrame()
 
     for dir in dir_list:
-        path = f"{data}{dir}/"
 
-        # assuming only 1 dataset per directory
-        dataset = os.listdir(path)
-
-        path += dataset[0]
+        path.update({'date': dir})
 
         '''DATA CONVERSION'''
         # CSV -> pandas dataframe
-        data_df = pd.read_csv(path)
+        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
         '''DATA FILTERING'''
         # consider only 'isCoAP' column
@@ -198,7 +225,16 @@ def stability(data):
 ''''''
 def stability_geo_map(data):
 
-    dir_list = os.listdir(data)
+    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
+    path = {
+        'phase': data['phase'],
+        'folder': data['folder'],
+        'ZMAP dataset': data['ZMAP dataset'],
+        'experiment': data['experiment']
+    }
+    #  After: DataRefinement/results/02_output.csv/exp_0/
+
+    dir_list = os.listdir(files_handling.path_dict_to_str(path))
     dir_list.sort()
 
     if (len(dir_list) <= 1):
@@ -209,16 +245,12 @@ def stability_geo_map(data):
     stability_df = pd.DataFrame(columns=['date', 'country', 'count'])
 
     for dir in dir_list:
-        path = f"{data}{dir}/"
 
-        # assuming only 1 dataset per directory
-        dataset = os.listdir(path)
-
-        path += dataset[0]
+        path.update({'date': dir})
 
         '''DATA CONVERSION'''
         # CSV -> pandas dataframe
-        data_df = pd.read_csv(path)
+        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
         '''DATA FILTERING'''
         # consider only 'isCoAP' column
