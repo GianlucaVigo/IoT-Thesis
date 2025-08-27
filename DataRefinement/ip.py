@@ -4,7 +4,7 @@ import time
 import os
 import csv
 
-from utils.file_handling import files_handling
+from utils import files_handling
 
 
 def get_info(ip_address):
@@ -69,13 +69,15 @@ def findIpInfo(coap_dataset_path):
         ip_info_file = files_handling.new_ip_test(coap_dataset_path)
 
         # INPUT FILEs: coap partitions
-        partitions = os.listdir(coap_dataset_path)
+        partitions = os.listdir(files_handling.path_dict_to_str(coap_dataset_path))
         partitions.sort()
 
         # need to examine ALL partitions of an experiment
         for part in partitions:
 
-            coap_dataset = open(f"{coap_dataset_path}/{part}", 'r', newline='')
+            coap_dataset_path.update({'partition': part})
+
+            coap_dataset = open(files_handling.path_dict_to_str(coap_dataset_path), 'r', newline='')
             ip_list = csv.reader(coap_dataset)
 
             for row in ip_list:
@@ -87,7 +89,7 @@ def findIpInfo(coap_dataset_path):
                     # Store ip info data
                     row.extend(ip_info)
                     
-                files_handling.store_data(row, ip_info_file)
+                files_handling.store_data(row, files_handling.path_dict_to_str(ip_info_file))
 
 
     except Exception as e:

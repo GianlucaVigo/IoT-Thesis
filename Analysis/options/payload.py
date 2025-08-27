@@ -3,14 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from collections import Counter
 
-from utils.payload_handling import payload_handling
+from utils import payload_handling
+from utils import files_handling
+
 
 ''''''
 def size_stats(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload Size (bytes)' column + do not consider rows with NaN values
@@ -42,7 +44,7 @@ def most_common(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload' column + do not consider rows with NaN values
@@ -78,7 +80,7 @@ def n_resources(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload' column + do not consider rows with NaN values
@@ -118,7 +120,7 @@ def resources_depth(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload' column + do not consider rows with NaN values
@@ -157,7 +159,7 @@ def n_coap_servers(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload' column + do not consider rows with NaN values
@@ -188,7 +190,7 @@ def response_code_distribution(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Code' column + do not consider rows with NaN values
@@ -213,7 +215,7 @@ def payload_attributes_distribution(data):
 
     '''DATA CONVERSION'''
     # CSV -> pandas dataframe
-    data_df = pd.read_csv(data)
+    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
 
     '''DATA FILTERING'''
     # consider only 'Payload' column + do not consider rows with NaN values
