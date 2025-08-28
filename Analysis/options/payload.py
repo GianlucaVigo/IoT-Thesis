@@ -19,7 +19,8 @@ def analysis(data_df, mode):
         case 'Payload Size':
             
             # Type of plot
-            sns.histplot(data=data_df, x='Payload Size (bytes)', bins=40, kde=True, color="lightgreen")
+            sns.countplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
+            #sns.histplot(data=data_df, x='Payload Size (bytes)', bins=40, kde=True, color="lightgreen")
             
             # Plot Labels
             plt.xlabel('Payload Size (Bytes)')
@@ -49,7 +50,6 @@ def analysis(data_df, mode):
             
             # dictionary -> pd DataFrame
             resources_df = pd.DataFrame(resources_dict.items(), columns=['uri', 'count'])
-            print(resources_df.head(30))
 
             # Type of plot
             sns.barplot(data=resources_df.head(30), y="uri", x="count", color="lightgreen")
@@ -75,7 +75,6 @@ def analysis(data_df, mode):
             
             # dictionary -> pd DataFrame
             n_resources_df = pd.DataFrame(n_resources_dict.items(), columns=['n_resources', 'count'])
-            print(n_resources_df)
 
             # Type of plot
             sns.barplot(data=n_resources_df, x='n_resources', y='count', color="lightgreen")
@@ -105,9 +104,6 @@ def analysis(data_df, mode):
 
             # dictionary -> pd DataFrame
             levels_df = pd.DataFrame(levels_dict.items(), columns=['n_levels', 'count'])
-            
-            # printing the exact numbers
-            print(levels_df)
 
             # Type of plot
             sns.barplot(data=levels_df, x='n_levels', y='count', color="lightgreen")
@@ -118,6 +114,41 @@ def analysis(data_df, mode):
 
             # Plot Title
             plt.title("[PAYLOAD] Number of Levels per CoAP Resource")
+
+
+        # 8
+        case 'Active CoAP Machines':
+
+             # Type of plot
+            sns.countplot(data=data_df, x='isCoAP', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Active/Inactive CoAP Machine')
+            plt.xticks([0, 1], ['False', 'True'])
+
+            plt.ylabel("# CoAP Machines")
+
+            # Plot Title
+            plt.title('[PAYLOAD] Number of active/inactive CoAP machines')
+
+            stat_rows.append(f"Active/Inactive CoAP machines: {data_df['isCoAP'].value_counts()}")
+
+        
+        # 9
+        case 'Response Code':
+
+             # Type of plot
+            sns.countplot(data=data_df, x='Code', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Response Code')
+            plt.ylabel("# Responses")
+
+            # Plot Title
+            plt.title('[PAYLOAD] Valid CoAP Responses')
+
+            stat_rows.append(f"Response Codes: {data_df['Code'].value_counts()}")
+
 
 
 
@@ -140,63 +171,6 @@ def analysis(data_df, mode):
 
     print("-" * 100)
     return
-
-
-
-''''''
-def n_coap_servers(data):
-
-    print("[PAYLOAD] Number of CoAP servers")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    isCoAP_df = data_df.loc[:, 'isCoAP'].dropna(how='any', axis=0)
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    sns.countplot(x=isCoAP_df)
-    plt.xticks([0, 1], ['False', 'True'])
-    plt.title('Count of isCoAP values')
-    # show the plot
-    plt.show()
-
-    '''STATS'''
-    # Average Payload Size
-    print(f"Payload size average value: {isCoAP_df.value_counts()}")
-    
-    print("-" * 100)
-    return
-
-
-
-''''''
-def response_code_distribution(data):
-
-    print("[PAYLOAD] Response Code Distribution")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Code' column + do not consider rows with NaN values
-    payload_size_df = data_df.loc[:, 'Code'].dropna(how='any', axis=0)
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    sns.displot(data=payload_size_df)
-    # show the plot
-    plt.show()
-
-    print("-" * 100)
-    return
-
 
 
 ''''''

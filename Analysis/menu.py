@@ -85,11 +85,11 @@ def perform_analysis(analysis, dataset):
         case 7:
             payload.analysis(dataset, "Resource URI Depth")
         case 8:
-            payload.n_coap_servers(dataset)
+            payload.analysis(dataset, "Active CoAP Machines")
         case 9:
-            payload.response_code_distribution(dataset)
+            payload.analysis(dataset, "Response Code")
         case 10:
-            payload.payload_attributes_distribution(dataset)      
+            payload.analysis(dataset, "Resource Metadata")      
             
 
 def analysis_menu():
