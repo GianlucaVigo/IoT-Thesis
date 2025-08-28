@@ -83,7 +83,7 @@ def perform_analysis(analysis, dataset):
         case 6:
             payload.analysis(dataset, "Resources Number")
         case 7:
-            payload.resources_depth(dataset)
+            payload.analysis(dataset, "Resource URI Depth")
         case 8:
             payload.n_coap_servers(dataset)
         case 9:

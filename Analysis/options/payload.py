@@ -15,6 +15,7 @@ def analysis(data_df, mode):
 
     match mode:
 
+        # 4
         case 'Payload Size':
             
             # Type of plot
@@ -28,23 +29,30 @@ def analysis(data_df, mode):
             plt.title("[PAYLOAD] Size Distribution")
 
             # Additional stats
-            stat_rows.append(f"\tPayload size average value: {data_df[mode].mean()}")
-            stat_rows.append(f"\tPayload size median value: {data_df[mode].median()}")
+            stat_rows.append(f"\tPayload size average value: {data_df['Payload Size (bytes)'].mean()}")
+            stat_rows.append(f"\tPayload size median value: {data_df['Payload Size (bytes)'].median()}")
 
 
+        # 5
         case 'Most Common':
 
             '''DATA PROCESSING'''
-            resource_list = []
             
+            resources_dict = Counter()
+
             for raw_payload in data_df['Payload']:
-                resource_list.extend(payload_handling.resource_list_of(str(raw_payload)))
+                resources_list = payload_handling.resource_list_of(str(raw_payload))
+                resources_dict.update(resources_list)
+
+            # sorting the dictionary by value
+            resources_dict = dict(resources_dict.most_common())
             
-            resources_dict = Counter(resource_list).most_common()
-            resources_dict_df = pd.DataFrame(resources_dict, columns=['uri', 'count'])
+            # dictionary -> pd DataFrame
+            resources_df = pd.DataFrame(resources_dict.items(), columns=['uri', 'count'])
+            print(resources_df.head(30))
 
             # Type of plot
-            sns.barplot(data=resources_dict_df.head(30), y="uri", x="count", color="lightgreen")
+            sns.barplot(data=resources_df.head(30), y="uri", x="count", color="lightgreen")
 
             # Plot Labels
             plt.xlabel('Count')
@@ -54,19 +62,20 @@ def analysis(data_df, mode):
             plt.title("[PAYLOAD] TOP 30 Most Common Resources' URI")
 
         
+        # 6
         case 'Resources Number':
 
             '''DATA PROCESSING'''
-            # list containing the number of resources for each ip address
-            n_resources_per_list = []
+            n_resources_dict = Counter()
+            
             # iterate over the raw payloads
             for raw_payload in data_df['Payload']:
-                # append to the n_resources_per_list the size of resource_list_payload
-                n_resources_per_list.append(len(payload_handling.resource_list_of(str(raw_payload))))
+                n_resources_per_list = [len(payload_handling.resource_list_of(str(raw_payload)))]
+                n_resources_dict.update(n_resources_per_list)
             
-            n_resources_dict = Counter(n_resources_per_list)
-            n_resources_df = pd.DataFrame.from_dict(n_resources_dict, orient='index').reset_index()
-            n_resources_df.columns = ['n_resources', 'count']
+            # dictionary -> pd DataFrame
+            n_resources_df = pd.DataFrame(n_resources_dict.items(), columns=['n_resources', 'count'])
+            print(n_resources_df)
 
             # Type of plot
             sns.barplot(data=n_resources_df, x='n_resources', y='count', color="lightgreen")
@@ -79,6 +88,38 @@ def analysis(data_df, mode):
             plt.title("[PAYLOAD] Number of Resources per CoAP Machine")
 
 
+        # 7
+        case 'Resource URI Depth':
+
+            '''DATA PROCESSING'''
+            levels_dict = Counter()
+
+            for raw_payload in data_df['Payload']:
+                resources_list = payload_handling.resource_list_of(str(raw_payload))
+
+                n_levels_list = []
+                for single_resource_payload in resources_list:
+                    n_levels_list.append(payload_handling.n_levels_of(single_resource_payload))
+
+                levels_dict.update(n_levels_list)
+
+            # dictionary -> pd DataFrame
+            levels_df = pd.DataFrame(levels_dict.items(), columns=['n_levels', 'count'])
+            
+            # printing the exact numbers
+            print(levels_df)
+
+            # Type of plot
+            sns.barplot(data=levels_df, x='n_levels', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Number of Levels')
+            plt.ylabel("# CoAP Resources")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Number of Levels per CoAP Resource")
+
+
 
 
     #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
@@ -89,91 +130,13 @@ def analysis(data_df, mode):
     plt.show()
 
     '''STATS'''
-    try:
+    print("Additional statistics:\n")
+    if len(stat_rows) > 0:
         for stat in stat_rows:
             print(stat)
-    except:
-        print("No stats available")
+    else:
+        print("\tNo stats available")
 
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def n_resources(data):
-
-    print("[PAYLOAD] Number of Resources for each IP address")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    # list containing the number of resources for each ip address
-    n_resources_per_list = []
-    # iterate over the raw payloads
-    for raw_payload in data_df['Payload']:
-        # append to the n_resources_per_list the size of resource_list_payload
-        n_resources_per_list.append(len(payload_handling.resource_list_of(raw_payload)))
-    # list -> pandas dataframe
-    n_resources_per_list_df = pd.DataFrame(n_resources_per_list, columns=['n_resources'])
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    plot = sns.displot(data=n_resources_per_list_df)
-    plot.set_xticklabels(rotation=45)
-    # show the plot
-    plt.show()
-
-    '''STATS'''
-    # Print average payload size
-    print(f"\tAverage number of resources per machine: {n_resources_per_list_df.mean()}")
-    
-    print("-" * 100)
-    return
-
-
-
-''''''
-def resources_depth(data):
-
-    print("[PAYLOAD] Resource URI depth levels")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    n_levels_list = []
-    for raw_payload in payload_df:
-        resources_list = payload_handling.resource_list_of(raw_payload)
-
-        for single_resource_payload in resources_list:
-            n_levels_list.append(payload_handling.n_levels_of(single_resource_payload))
-
-    # dictionary -> pd DataFrame
-    levels_dict = Counter(n_levels_list)
-    levels_dict_df = pd.DataFrame(levels_dict.items(), columns=['n_levels', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=levels_dict_df, x="n_levels", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
 
     print("-" * 100)
     return
