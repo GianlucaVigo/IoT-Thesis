@@ -1,14 +1,23 @@
 import itertools
 
 ''''''
+def URI_list_of(payload):
+
+    URI_list = []
+
+    for resource in str(payload).split(','):
+        URI_list.append(resource[resource.find("<"):resource.find(">")+1])
+
+    return URI_list
+
+
+''''''
 def resource_list_of(payload):
 
     resource_list = []
 
-    payload = payload.split(',')
-
-    for resource in payload:
-        resource_list.append(resource[resource.find("<"):resource.find(">")+1])
+    for resource in str(payload)[2:-1].split(','):
+        resource_list.append(resource)
 
     return resource_list
 
@@ -30,8 +39,11 @@ def resource_attributes(payload):
         return None
     
     for attr in itertools.islice(res_attributes, 1, None): # skip resource name
-        # attribute name
+
+        # getting metadata name
         attr_name = attr.split('=')[0]
-        attributes_list.append(attr_name)
+
+        if attr_name != None:
+            attributes_list.append(attr_name)
 
     return attributes_list

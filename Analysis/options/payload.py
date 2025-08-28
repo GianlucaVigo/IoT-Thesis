@@ -42,7 +42,7 @@ def analysis(data_df, mode):
             resources_dict = Counter()
 
             for raw_payload in data_df['Payload']:
-                resources_list = payload_handling.resource_list_of(str(raw_payload))
+                resources_list = payload_handling.URI_list_of(str(raw_payload))
                 resources_dict.update(resources_list)
 
             # sorting the dictionary by value
@@ -70,7 +70,7 @@ def analysis(data_df, mode):
             
             # iterate over the raw payloads
             for raw_payload in data_df['Payload']:
-                n_resources_per_list = [len(payload_handling.resource_list_of(str(raw_payload)))]
+                n_resources_per_list = [len(payload_handling.URI_list_of(str(raw_payload)))]
                 n_resources_dict.update(n_resources_per_list)
             
             # dictionary -> pd DataFrame
@@ -94,7 +94,7 @@ def analysis(data_df, mode):
             levels_dict = Counter()
 
             for raw_payload in data_df['Payload']:
-                resources_list = payload_handling.resource_list_of(str(raw_payload))
+                resources_list = payload_handling.URI_list_of(str(raw_payload))
 
                 n_levels_list = []
                 for single_resource_payload in resources_list:
@@ -131,7 +131,7 @@ def analysis(data_df, mode):
             # Plot Title
             plt.title('[PAYLOAD] Number of active/inactive CoAP machines')
 
-            stat_rows.append(f"Active/Inactive CoAP machines: {data_df['isCoAP'].value_counts()}")
+            stat_rows.append(f"Active/Inactive CoAP machines:\n {data_df['isCoAP'].value_counts()}")
 
         
         # 9
@@ -147,10 +147,33 @@ def analysis(data_df, mode):
             # Plot Title
             plt.title('[PAYLOAD] Valid CoAP Responses')
 
-            stat_rows.append(f"Response Codes: {data_df['Code'].value_counts()}")
+            stat_rows.append(f"Response Codes:\n {data_df['Code'].value_counts()}")
 
+        
+        # 10
+        case 'Resource Metadata':
 
+            '''DATA PROCESSING'''
+            metadata_dict = Counter()
 
+            for raw_payload in data_df['Payload']:
+                resources_list = payload_handling.resource_list_of(raw_payload)
+
+                for single_resource_payload in resources_list:
+                    metadata_dict.update(payload_handling.resource_attributes(str(single_resource_payload)))
+
+            # dictionary -> pd DataFrame
+            metadata_df = pd.DataFrame(metadata_dict.items(), columns=['metadata', 'count'])
+
+            # Type of plot
+            sns.barplot(data=metadata_df, x='metadata', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Resource Metadata')
+            plt.ylabel("# Metadata Occurrences")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Metadata Distribution over CoAP Resources")
 
 
     #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
