@@ -86,6 +86,31 @@ def time_analysis(data_df, mode):
     plt.title(f"Counts Heatmap: {mode.capitalize()}")
     plt.show()
 
+    # OPTION 4 - NB: only for 'country' option
+    if mode == 'country':
+
+        fig = px.choropleth(
+            df_plot,
+            locations="country",        # column with country names
+            locationmode="country names",
+            color="count",              # value to color by
+            animation_frame="Date",     # adds a time slider
+            title="Counts per Country over Time"
+        )
+        fig.show()
+
+        fig = px.scatter_geo(
+            df_plot,
+            locations="country",
+            locationmode="country names",
+            size="count",               # bubble size = count
+            color="country",
+            animation_frame="Date",
+            projection="natural earth",
+            title="Counts per Country over Time"
+        )
+        fig.show()
+
 
 ''''''
 def stability(data):
@@ -150,61 +175,4 @@ def stability(data):
     print(f"\tNumber of stable ip addresses: {stability_df.shape[0] - clean_stability_df.shape[0]}")
     print("-" * 100)
 
-    stability_geo_map(data)
-
-    return
-
-
-
-''''''
-def stability_geo_map(data):
-
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
-    path = {
-        'phase': data['phase'],
-        'folder': data['folder'],
-        'ZMAP dataset': data['ZMAP dataset'],
-        'experiment': data['experiment']
-    }
-    #  After: DataRefinement/results/02_output.csv/exp_0/
-
-    dir_list = os.listdir(files_handling.path_dict_to_str(path))
-    dir_list.sort()
-
-    if (len(dir_list) <= 1):
-            print("There must be at least 2 datasets to examine the stability property: please acquire more data!")
-            print("-" * 100)
-            return 
-
-    stability_df = pd.DataFrame(columns=['date', 'country', 'count'])
-
-    for dir in dir_list:
-
-        path.update({'date': dir})
-
-        '''DATA CONVERSION'''
-        # CSV -> pandas dataframe
-        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
-
-        '''DATA FILTERING'''
-        # consider only 'isCoAP' column
-        for index, value in data_df.loc[:, 'country'].value_counts().items():
-            new_row = pd.DataFrame({"date": [dir], "country": [index], "count": [value]})
-            stability_df = pd.concat([stability_df, new_row], ignore_index=True)
-
-    stability_df["count"] = stability_df["count"].astype(float)
-
-    fig = px.choropleth(
-        stability_df,
-        locations="country",
-        color="count",
-        hover_name="country",
-        animation_frame="date",
-        animation_group="date",
-        projection="natural earth",
-        locationmode="country names" 
-    )
-
-    fig.show()
-    
     return
