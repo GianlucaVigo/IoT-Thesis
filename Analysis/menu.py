@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from Analysis.options import ip
 from Analysis.options import payload
@@ -6,43 +7,77 @@ from Analysis.options import payload
 from utils import files_handling
 
 
-# return the analysis to perform requested by user 
-def analysis_selection():
+def analysis_sel():
 
-    analysis_list = ["country", # IP analysis
-                    "continent",
-                    "as_name",
-                    "stability", # same zmap source, different experiments over time
+    # Level 3
+    ip_tree = {'Country': [0],
+                'Continent': [1],
+                'AS Name': [2]
+                }
+    
+    payload_tree = {'Size Statistics': [0],
+                    'Top 30 Most Common URI': [1],
+                    'Number of Resources / CoAP Server': [2],
+                    'URI Depth Levels': [3],
+                    'Active/Inactive CoAP Machines': [4],
+                    'Response Codes': [5],
+                    'Resources\' Metadata': [6]
+                    }
+    ###########
+    #----------
 
-                    "size_stats", # Response Msg analysis
-                    "most_common",
-                    "#_resources",
-                    "resources_depth",
-                    "#_coap_servers",
-                    "response_code_distribution",
-                    "payload_attributes_distribution"
-                    ]
+    # Level 2
+    instant_tree = {'IP-based': [ip_tree, 0],
+                    'Payload-based': [payload_tree, 1]
+                    }
     
-    selected_analysis = None
-        
-    print(f"On which kind of analysis are you interested?\n")
+    time_tree = {'IP-based': [ip_tree, 0],
+                'Payload-based': [payload_tree, 1]
+                }
+    ###########
+    #----------
+
+    # Level 1
+    discovery_tree = {'Instant-based': [instant_tree, 0],
+                      'Time-based': [time_tree, 1]
+                     }
+    ###########
+    observe_tree = {'Prova': [0]}
+    #----------
+
+    # Level 0
+    analysis_tree = {'Discovery-based': [discovery_tree, 0],
+                      'Observe-based': [observe_tree, 1]
+                      }
     
-    for option_id in range(len(analysis_list)):
-        print(f"\t{option_id:2d}. {analysis_list[option_id]}")
+    ''''''
+
+    user_tree = analysis_tree
+    user_selection = []
 
     while(True):
 
+        print(f"On which kind of analysis are you interested in?\n")
+
+        options = list(user_tree.keys())
+            
+        for option_id, option in enumerate(options):
+            print(f"\t{option_id:2d}. {option}")
+
+
         #   User selection
-        print(f"\nSelect the analysis index: ['e' to main menu] ")
+        print(f"\nSelect the  index: ['e' to main menu] ")
         try:
             choice = input()
 
             print("-" * 100)
 
             if (choice == 'e'):
-                return 'e' # -> to MAIN MENU
-                    
-            selected_analysis = int(choice)
+                return # -> to MAIN MENU
+                            
+            choice = int(choice)
+
+            chosen_tree_list = user_tree[options[choice]]
 
         except Exception as e:
             print("\tINPUT ERROR: Invalid input")    # Invalid user input
@@ -52,73 +87,163 @@ def analysis_selection():
 
         else:
 
-            if (selected_analysis not in range(len(analysis_list))):
+            if (choice not in range(len(options))):
                 print("\tINPUT ERROR: Invalid option -> Out of range!")    # Invalid user choice
                 print("-" * 100)
                 continue
+                    
+            elif (len(chosen_tree_list) == 2): # Go to next level
+
+                user_tree = chosen_tree_list[0]             # take next tree menù
+                user_selection.append(chosen_tree_list[1])  # append number identifying user choice
+
+            else: # Menù end reached
+
+                user_selection.append(chosen_tree_list[0])
+                break
+
+
+    return user_selection
+
+
+def dataset_sel(analysis):
+
+    # discovery based
+    if analysis[0] == 0:
+
+        # instant based -> ONLY 1 dataset to consider
+        if analysis[1] == 0:
+
+            levels = ["ZMAP dataset", "experiment", "date"]
+            path = {'phase': 'DataRefinement', 'folder': 'results'}
+
+            for level in levels:
+                    choice = files_handling.file_selection(level, path)
+
+                    if choice == None:
+                        return
+                    else: 
+                        path.update({level: choice})
             
-            else:
-                return selected_analysis
+            # preloaded dataframe
+            data_df = pd.read_csv(files_handling.path_dict_to_str(path))
+
+            return data_df
+
+        # time-series based -> MULTIPLE datasets must be considered
+        elif analysis[1] == 1:
+            
+            levels = ["ZMAP dataset", "experiment"]
+            path = {'phase': 'DataRefinement', 'folder': 'results'}
+
+            for level in levels:
+                    choice = files_handling.file_selection(level, path)
+
+                    if choice == None:
+                        return
+                    else: 
+                        path.update({level: choice})
+
+            csvs = os.listdir(files_handling.path_dict_to_str(path))
+            csvs.sort()
+
+            frames = []
+
+            for i, csv in enumerate(csvs):
+                path.update({'date': csv})
+            
+                if i == 0:
+                    date_df = pd.read_csv(files_handling.path_dict_to_str(path), skiprows=0)
+                else:
+                    date_df = pd.read_csv(files_handling.path_dict_to_str(path))
+
+                date_df['Date'] = csv.split('.')[0]
+
+                frames.append(date_df)
+
+            data_df = pd.concat(frames)
+
+            return data_df
+
 
 
 def perform_analysis(analysis, dataset):
 
-    match analysis:
+    match analysis[0]:
 
-        # IP BASED
+        # discovery-based
         case 0:
-            ip.analysis(dataset, "country")
-        case 1:
-            ip.analysis(dataset, "continent")
-        case 2:
-            ip.analysis(dataset, "as_name")
-        case 3:
-            ip.stability(dataset)
-
-        # PAYLOAD BASED
-        case 4:
-            payload.analysis(dataset, "Payload Size")
-        case 5:
-            payload.analysis(dataset, "Most Common")
-        case 6:
-            payload.analysis(dataset, "Resources Number")
-        case 7:
-            payload.analysis(dataset, "Resource URI Depth")
-        case 8:
-            payload.analysis(dataset, "Active CoAP Machines")
-        case 9:
-            payload.analysis(dataset, "Response Code")
-        case 10:
-            payload.analysis(dataset, "Resource Metadata")      
             
+            match analysis[1]:
+
+                # instant-based
+                case 0:
+                    
+                    match analysis[2]:
+
+                        # IP-based
+                        case 0:
+
+                            match analysis[3]:
+
+                                # Country
+                                case 0:
+                                    ip.instant_analysis(dataset, "country")
+                                # Continent
+                                case 1:
+                                    ip.instant_analysis(dataset, "continent")
+                                # AS Name
+                                case 2:
+                                    ip.instant_analysis(dataset, "as_name")
+
+                        # Payload-based
+                        case 1:
+                            
+                            match analysis[3]:
+
+                                # Size Statistics
+                                case 0:
+                                    payload.instant_analysis(dataset, "Payload Size")
+                                # Top 30 Most Common URI
+                                case 1:
+                                    payload.instant_analysis(dataset, "Most Common")
+                                # Number of Resources / CoAP Server
+                                case 2:
+                                    payload.instant_analysis(dataset, "Resources Number")
+                                # URI Depth Levels
+                                case 3:
+                                    payload.instant_analysis(dataset, "Resource URI Depth")
+                                # Active/Inactive CoAP Machines
+                                case 4:
+                                    payload.instant_analysis(dataset, "Active CoAP Machines")
+                                # Response Codes
+                                case 5:
+                                    payload.instant_analysis(dataset, "Response Code")
+                                # Resources' Metadata
+                                case 6:
+                                    payload.instant_analysis(dataset, "Resource Metadata") 
+
+                # time-based
+                case 1:
+                    print("Time based analysis")
+
+        # observe-based
+        case 1:
+            print('Observe')
+      
 
 def analysis_menu():
 
     while(True):
 
         # 1) analysis selection
-        levels = ["ZMAP dataset", "experiment", "date"]
-        path = {'phase': 'DataRefinement', 'folder': 'results'}
+        chosen_analysis = analysis_sel()
 
-        for level in levels:
-                choice = files_handling.file_selection(level, path)
+        if chosen_analysis == None:
+            break
 
-                if choice == None:
-                    return
-                else: 
-                    path.update({level: choice})
+        # 2) dataset/s selection
+        data_df = dataset_sel(chosen_analysis)
         
-        # preloaded dataframe
-        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
-
-        # enable multiple analysis on the already selected dataset
-        while(True):
-
-            # 2) analysis selection      
-            analysis_id = analysis_selection()
-
-            if analysis_id == 'e':
-                return
-
-            # 3) perform selected analysis on selected test dataset
-            perform_analysis(analysis_id, data_df)
+        # 3) perform analysis
+        perform_analysis(chosen_analysis, data_df)

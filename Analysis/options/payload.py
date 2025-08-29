@@ -6,7 +6,7 @@ from collections import Counter
 from utils import payload_handling
 from utils import files_handling
 
-def analysis(data_df, mode):
+def instant_analysis(data_df, mode):
 
     # Plot Figure Size
     plt.figure(figsize=(8, 5))
@@ -191,49 +191,6 @@ def analysis(data_df, mode):
     else:
         print("\tNo stats available")
 
-
-    print("-" * 100)
-    return
-
-
-''''''
-def payload_attributes_distribution(data):
-
-    print("[PAYLOAD] Resource Metadata Distribution")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    attributes_dict = Counter({})
-
-    for raw_payload in payload_df:
-
-        raw_payload = raw_payload[2:-1]
-
-        resources_list = raw_payload.split(',')
-
-        for single_resource_payload in resources_list:
-            res = payload_handling.resource_attributes(single_resource_payload)
-
-            if res != None:
-                attributes_dict.update(res)
-
-    attributes_df = pd.DataFrame(attributes_dict.items(), columns=['attributes', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=attributes_df, x="attributes", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
 
     print("-" * 100)
     return

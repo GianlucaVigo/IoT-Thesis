@@ -8,25 +8,15 @@ from utils import files_handling
 
 
 ''''''
-def analysis(data, mode):
+def instant_analysis(data, mode):
 
-    print(f"[IP] {mode.capitalize()} Distribution")
-
-    sns.set_theme()
-
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-    data_df = data_df.dropna(how='any', axis=0)
-
-    count_dict = data_df[mode].value_counts().to_dict()
-
-    count_df = pd.DataFrame({
-        mode: count_dict.keys(),
-        'count': count_dict.values()
-    })
+    count_s = data.groupby([mode]).size()
+    count_df = pd.DataFrame(count_s).reset_index()
+    count_df = count_df.rename(columns={0: 'count'})
 
     # Plot horizontal bar chart
     plt.figure(figsize=(8, 5))
-    ax = sns.barplot(data=count_df, y=mode, x="count", color="lightgreen")
+    ax = sns.barplot(data=count_df.sort_values('count'), y=mode, x="count", color="lightgreen")
 
     # Add labels on each bar
     for p in ax.patches:
@@ -35,7 +25,7 @@ def analysis(data, mode):
                 int(p.get_width()),           # label text
                 ha="left", va="center")
 
-    plt.xlabel("Count")
+    plt.xlabel("Number of associated IPs")
     plt.ylabel(f"{mode.capitalize()}")
     plt.title(f"[IP] {mode.capitalize()} Distribution")
     plt.tight_layout()
@@ -43,26 +33,17 @@ def analysis(data, mode):
 
     if mode == 'country':
         # geographical representation of the country distribution
-        country_map(count_df)
+        geo_map(count_df)
 
-    timeline(data, mode)
-
-    print("-" * 100)
     return
 
 
 
 ''''''
-def country_map(data):
-
-    print("[IP] Geographical Country Distribution")
-
-    '''geo_country_df = (data.value_counts()
-                           .rename_axis('country')
-                           .reset_index(name='count'))'''
+def geo_map(country_df):
 
     fig = px.choropleth(
-        data,
+        country_df,
         locations="country",
         color="count",
         hover_name="country",
@@ -78,9 +59,8 @@ def country_map(data):
 
 ''''''
 def timeline(data, mode):
-    print(f"[IP] {mode.capitalize()} over time")
 
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
+    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
     path = {
         'phase': data['phase'],
         'folder': data['folder'],
@@ -99,7 +79,7 @@ def timeline(data, mode):
 
     for i, date in enumerate(dir_list):
         
-        # Append to the "Date" row the dataset date
+        # Append to the "Date" row the dataset date: [2025-07-31].[csv] -> 2025-07-31
         timeline_data["Date"].append(date.split('.')[0])
         
         path.update({'date': date})
@@ -158,7 +138,7 @@ def stability(data):
 
     print("[IP] IP addresses stability over time")
 
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
+    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
     path = {
         'phase': data['phase'],
         'folder': data['folder'],
@@ -225,7 +205,7 @@ def stability(data):
 ''''''
 def stability_geo_map(data):
 
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31/2025-07-31 13:47:30.325439.csv
+    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
     path = {
         'phase': data['phase'],
         'folder': data['folder'],
