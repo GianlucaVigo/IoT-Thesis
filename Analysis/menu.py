@@ -251,25 +251,25 @@ def perform_analysis(analysis, dataset):
 
                                 # Size Statistics
                                 case 0:
-                                    payload.instant_analysis(dataset, "Payload Size")
+                                    payload.time_analysis(dataset, "Payload Size")
                                 # Top 30 Most Common URI
                                 case 1:
-                                    payload.instant_analysis(dataset, "Most Common")
+                                    payload.time_analysis(dataset, "Most Common")
                                 # Number of Resources / CoAP Server
                                 case 2:
-                                    payload.instant_analysis(dataset, "Resources Number")
+                                    payload.time_analysis(dataset, "Resources Number")
                                 # URI Depth Levels
                                 case 3:
-                                    payload.instant_analysis(dataset, "Resource URI Depth")
+                                    payload.time_analysis(dataset, "Resource URI Depth")
                                 # Active/Inactive CoAP Machines
                                 case 4:
-                                    payload.instant_analysis(dataset, "Active CoAP Machines")
+                                    payload.time_analysis(dataset, "Active CoAP Machines")
                                 # Response Codes
                                 case 5:
-                                    payload.instant_analysis(dataset, "Response Code")
+                                    payload.time_analysis(dataset, "Response Code")
                                 # Resources' Metadata
                                 case 6:
-                                    payload.instant_analysis(dataset, "Resource Metadata") 
+                                    payload.time_analysis(dataset, "Resource Metadata") 
 
         # observe-based
         case 1:

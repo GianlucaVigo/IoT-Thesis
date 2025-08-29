@@ -33,17 +33,8 @@ def instant_analysis(data, mode):
 
     if mode == 'country':
         # geographical representation of the country distribution
-        geo_map(count_df)
-
-    return
-
-
-
-''''''
-def geo_map(country_df):
-
-    fig = px.choropleth(
-        country_df,
+        fig = px.choropleth(
+        count_df,
         locations="country",
         color="count",
         hover_name="country",
@@ -54,7 +45,6 @@ def geo_map(country_df):
     fig.show()
 
     return
-
 
 
 ''''''
