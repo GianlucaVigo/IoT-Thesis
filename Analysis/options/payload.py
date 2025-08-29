@@ -6,246 +6,191 @@ from collections import Counter
 from utils import payload_handling
 from utils import files_handling
 
+def instant_analysis(data_df, mode):
 
-''''''
-def size_stats(data):
+    # Plot Figure Size
+    plt.figure(figsize=(8, 5))
 
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
+    stat_rows = []
 
-    '''DATA FILTERING'''
-    # consider only 'Payload Size (bytes)' column + do not consider rows with NaN values
-    payload_size_df = data_df.loc[:, 'Payload Size (bytes)'].dropna(how='any', axis=0)
+    match mode:
+
+        # 4
+        case 'Payload Size':
+            
+            # Type of plot
+            sns.countplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
+            #sns.histplot(data=data_df, x='Payload Size (bytes)', bins=40, kde=True, color="lightgreen")
+            
+            # Plot Labels
+            plt.xlabel('Payload Size (Bytes)')
+            plt.ylabel("# CoAP Resources")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Size Distribution")
+
+            # Additional stats
+            stat_rows.append(f"\tPayload size average value: {data_df['Payload Size (bytes)'].mean()}")
+            stat_rows.append(f"\tPayload size median value: {data_df['Payload Size (bytes)'].median()}")
+
+
+        # 5
+        case 'Most Common':
+
+            '''DATA PROCESSING'''
+            
+            resources_dict = Counter()
+
+            for raw_payload in data_df['Payload']:
+                resources_list = payload_handling.URI_list_of(str(raw_payload))
+                resources_dict.update(resources_list)
+
+            # sorting the dictionary by value
+            resources_dict = dict(resources_dict.most_common())
+            
+            # dictionary -> pd DataFrame
+            resources_df = pd.DataFrame(resources_dict.items(), columns=['uri', 'count'])
+
+            # Type of plot
+            sns.barplot(data=resources_df.head(30), y="uri", x="count", color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Count')
+            plt.ylabel("URI")
+
+            # Plot Title
+            plt.title("[PAYLOAD] TOP 30 Most Common Resources' URI")
+
+        
+        # 6
+        case 'Resources Number':
+
+            '''DATA PROCESSING'''
+            n_resources_dict = Counter()
+            
+            # iterate over the raw payloads
+            for raw_payload in data_df['Payload']:
+                n_resources_per_list = [len(payload_handling.URI_list_of(str(raw_payload)))]
+                n_resources_dict.update(n_resources_per_list)
+            
+            # dictionary -> pd DataFrame
+            n_resources_df = pd.DataFrame(n_resources_dict.items(), columns=['n_resources', 'count'])
+
+            # Type of plot
+            sns.barplot(data=n_resources_df, x='n_resources', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Number of Resources')
+            plt.ylabel("# CoAP Machines")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Number of Resources per CoAP Machine")
+
+
+        # 7
+        case 'Resource URI Depth':
+
+            '''DATA PROCESSING'''
+            levels_dict = Counter()
+
+            for raw_payload in data_df['Payload']:
+                resources_list = payload_handling.URI_list_of(str(raw_payload))
+
+                n_levels_list = []
+                for single_resource_payload in resources_list:
+                    n_levels_list.append(payload_handling.n_levels_of(single_resource_payload))
+
+                levels_dict.update(n_levels_list)
+
+            # dictionary -> pd DataFrame
+            levels_df = pd.DataFrame(levels_dict.items(), columns=['n_levels', 'count'])
+
+            # Type of plot
+            sns.barplot(data=levels_df, x='n_levels', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Number of Levels')
+            plt.ylabel("# CoAP Resources")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Number of Levels per CoAP Resource")
+
+
+        # 8
+        case 'Active CoAP Machines':
+
+             # Type of plot
+            sns.countplot(data=data_df, x='isCoAP', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Active/Inactive CoAP Machine')
+            plt.xticks([0, 1], ['False', 'True'])
+
+            plt.ylabel("# CoAP Machines")
+
+            # Plot Title
+            plt.title('[PAYLOAD] Number of active/inactive CoAP machines')
+
+            stat_rows.append(f"Active/Inactive CoAP machines:\n {data_df['isCoAP'].value_counts()}")
+
+        
+        # 9
+        case 'Response Code':
+
+             # Type of plot
+            sns.countplot(data=data_df, x='Code', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Response Code')
+            plt.ylabel("# Responses")
+
+            # Plot Title
+            plt.title('[PAYLOAD] Valid CoAP Responses')
+
+            stat_rows.append(f"Response Codes:\n {data_df['Code'].value_counts()}")
+
+        
+        # 10
+        case 'Resource Metadata':
+
+            '''DATA PROCESSING'''
+            metadata_dict = Counter()
+
+            for raw_payload in data_df['Payload']:
+                resources_list = payload_handling.resource_list_of(raw_payload)
+
+                for single_resource_payload in resources_list:
+                    metadata_dict.update(payload_handling.resource_attributes(str(single_resource_payload)))
+
+            # dictionary -> pd DataFrame
+            metadata_df = pd.DataFrame(metadata_dict.items(), columns=['metadata', 'count'])
+
+            # Type of plot
+            sns.barplot(data=metadata_df, x='metadata', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Resource Metadata')
+            plt.ylabel("# Metadata Occurrences")
+
+            # Plot Title
+            plt.title("[PAYLOAD] Metadata Distribution over CoAP Resources")
+
+
+    #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
+    #sns.boxplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
 
     '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    plot = sns.displot(data=payload_size_df)
-    plot.set_xticklabels(rotation=45)
-    # show the plot
+    plt.tight_layout()
     plt.show()
 
     '''STATS'''
-    # Average Payload Size
-    print(f"\tPayload size average value: {payload_size_df.mean()}")
-    # Payload Size Median Value
-    print(f"\tPayload size median value: {payload_size_df.median()}")
-    
-    print("-" * 100)
-    return
+    print("Additional statistics:\n")
+    if len(stat_rows) > 0:
+        for stat in stat_rows:
+            print(stat)
+    else:
+        print("\tNo stats available")
 
-
-
-''''''
-def most_common(data):
-
-    print("[PAYLOAD] Most common Resource URIs")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    resource_list = []
-    # resource lists
-    for raw_payload in payload_df:
-        resource_list.extend(payload_handling.resource_list_of(raw_payload))
-    # dictionary -> pd DataFrame
-    resources_dict = Counter(resource_list).most_common()
-    resources_dict_df = pd.DataFrame(resources_dict, columns=['uri', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=resources_dict_df, x="uri", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def n_resources(data):
-
-    print("[PAYLOAD] Number of Resources for each IP address")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    # list containing the number of resources for each ip address
-    n_resources_per_list = []
-    # iterate over the raw payloads
-    for raw_payload in payload_df:
-        # append to the n_resources_per_list the size of resource_list_payload
-        n_resources_per_list.append(len(payload_handling.resource_list_of(raw_payload)))
-    # list -> pandas dataframe
-    n_resources_per_list_df = pd.DataFrame(n_resources_per_list, columns=['n_resources'])
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    plot = sns.displot(data=n_resources_per_list_df)
-    plot.set_xticklabels(rotation=45)
-    # show the plot
-    plt.show()
-
-    '''STATS'''
-    # Print average payload size
-    print(f"\tAverage number of resources per machine: {n_resources_per_list_df.mean()}")
-    
-    print("-" * 100)
-    return
-
-
-
-''''''
-def resources_depth(data):
-
-    print("[PAYLOAD] Resource URI depth levels")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    n_levels_list = []
-    for raw_payload in payload_df:
-        resources_list = payload_handling.resource_list_of(raw_payload)
-
-        for single_resource_payload in resources_list:
-            n_levels_list.append(payload_handling.n_levels_of(single_resource_payload))
-
-    # dictionary -> pd DataFrame
-    levels_dict = Counter(n_levels_list)
-    levels_dict_df = pd.DataFrame(levels_dict.items(), columns=['n_levels', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=levels_dict_df, x="n_levels", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def n_coap_servers(data):
-
-    print("[PAYLOAD] Number of CoAP servers")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    isCoAP_df = data_df.loc[:, 'isCoAP'].dropna(how='any', axis=0)
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    sns.countplot(x=isCoAP_df)
-    plt.xticks([0, 1], ['False', 'True'])
-    plt.title('Count of isCoAP values')
-    # show the plot
-    plt.show()
-
-    '''STATS'''
-    # Average Payload Size
-    print(f"Payload size average value: {isCoAP_df.value_counts()}")
-    
-    print("-" * 100)
-    return
-
-
-
-''''''
-def response_code_distribution(data):
-
-    print("[PAYLOAD] Response Code Distribution")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Code' column + do not consider rows with NaN values
-    payload_size_df = data_df.loc[:, 'Code'].dropna(how='any', axis=0)
-
-    '''PLOTTING'''
-    sns.set_theme()
-    # Plot all responses' payload size
-    sns.displot(data=payload_size_df)
-    # show the plot
-    plt.show()
-
-    print("-" * 100)
-    return
-
-
-
-''''''
-def payload_attributes_distribution(data):
-
-    print("[PAYLOAD] Resource Metadata Distribution")
-
-    '''DATA CONVERSION'''
-    # CSV -> pandas dataframe
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data))
-
-    '''DATA FILTERING'''
-    # consider only 'Payload' column + do not consider rows with NaN values
-    payload_df = data_df.loc[:, 'Payload'].dropna(how='any', axis=0)
-
-    '''DATA PROCESSING'''
-    attributes_dict = Counter({})
-
-    for raw_payload in payload_df:
-
-        raw_payload = raw_payload[2:-1]
-
-        resources_list = raw_payload.split(',')
-
-        for single_resource_payload in resources_list:
-            res = payload_handling.resource_attributes(single_resource_payload)
-
-            if res != None:
-                attributes_dict.update(res)
-
-    attributes_df = pd.DataFrame(attributes_dict.items(), columns=['attributes', 'count'])
-
-    '''PLOTTING'''
-    # plot resource_list
-    sns.set_theme()
-    # setting up the plot
-    plot = sns.barplot(data=attributes_df, x="attributes", y="count")
-    plot.tick_params(axis='x', labelrotation=90)
-    # show the plot
-    plt.show()
 
     print("-" * 100)
     return
