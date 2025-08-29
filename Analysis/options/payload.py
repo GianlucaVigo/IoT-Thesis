@@ -200,7 +200,7 @@ def time_analysis(data_df, mode):
 
     match mode:
 
-        # 4
+        # 0
         case 'Payload Size':
             
             column_criteria = 'Payload Size (bytes)'
@@ -229,7 +229,7 @@ def time_analysis(data_df, mode):
 
 
 
-        # 5
+        # 1
         case 'Most Common':
             
             # empty list to collect results
@@ -271,32 +271,47 @@ def time_analysis(data_df, mode):
             fig.show()
 
         
-        # 6
+        # 2
         case 'Resources Number':
 
-            '''DATA PROCESSING'''
-            n_resources_dict = Counter()
+            # empty list to collect results
+            all_resources = []
             
-            # iterate over the raw payloads
-            for raw_payload in data_df['Payload']:
-                n_resources_per_list = [len(payload_handling.URI_list_of(str(raw_payload)))]
-                n_resources_dict.update(n_resources_per_list)
+            for date in sorted(data_df['Date'].unique()):
+                date_df = data_df[data_df['Date'] == date]
+                n_resources_dict = Counter()
+
+                for i, raw_payload in enumerate(date_df['Payload']):
+
+                    if date_df.iloc[i, 2] == False:
+                        continue
+
+                    n_resources_per_list = [len(payload_handling.URI_list_of(raw_payload))]
+                    n_resources_dict.update(n_resources_per_list)
+
+                # dictionary -> pd DataFrame
+                resources_df = pd.DataFrame(n_resources_dict.items(), columns=['res_num', 'count'])
+                resources_df['Date'] = date # add the date
+                all_resources.append(resources_df)
+
+            # concatenate all dates
+            resources_day_df = pd.concat(all_resources, ignore_index=True)
+
+            fig = px.bar(
+                resources_day_df,
+                x="res_num",
+                y="count",
+                color="count",
+                animation_frame="Date",
+                #orientation='h',       # horizontal bars
+                title="Resource Number per CoAP Machine",
+                text="count"           # show count on bars
+            )
+
+            fig.show()
             
-            # dictionary -> pd DataFrame
-            n_resources_df = pd.DataFrame(n_resources_dict.items(), columns=['n_resources', 'count'])
 
-            # Type of plot
-            sns.barplot(data=n_resources_df, x='n_resources', y='count', color="lightgreen")
-
-            # Plot Labels
-            plt.xlabel('Number of Resources')
-            plt.ylabel("# CoAP Machines")
-
-            # Plot Title
-            plt.title("[PAYLOAD] Number of Resources per CoAP Machine")
-
-
-        # 7
+        # 3
         case 'Resource URI Depth':
 
             '''DATA PROCESSING'''
@@ -325,7 +340,7 @@ def time_analysis(data_df, mode):
             plt.title("[PAYLOAD] Number of Levels per CoAP Resource")
 
 
-        # 8
+        # 4
         case 'Active CoAP Machines':
 
              # Type of plot
@@ -341,7 +356,7 @@ def time_analysis(data_df, mode):
             plt.title('[PAYLOAD] Number of active/inactive CoAP machines')
 
         
-        # 9
+        # 5
         case 'Response Code':
 
              # Type of plot
@@ -355,7 +370,7 @@ def time_analysis(data_df, mode):
             plt.title('[PAYLOAD] Valid CoAP Responses')
 
         
-        # 10
+        # 6
         case 'Resource Metadata':
 
             '''DATA PROCESSING'''

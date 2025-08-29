@@ -1,12 +1,16 @@
 import itertools
+import math
 
 ''''''
 def URI_list_of(payload):
 
     URI_list = []
 
-    for resource in str(payload).split(','):
-        URI_list.append(resource[resource.find("<"):resource.find(">")+1])
+    uri_and_metadata = str(payload).split(',')
+
+    for resource in uri_and_metadata:
+        uri = resource[resource.find("<"):resource.find(">")+1]
+        URI_list.append(uri)
 
     return URI_list
 
