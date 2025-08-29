@@ -58,79 +58,33 @@ def geo_map(country_df):
 
 
 ''''''
-def timeline(data, mode):
+def time_analysis(data_df, mode):
 
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
-    path = {
-        'phase': data['phase'],
-        'folder': data['folder'],
-        'ZMAP dataset': data['ZMAP dataset'],
-        'experiment': data['experiment']
-    }
-    #  After: DataRefinement/results/02_output.csv/exp_0/
+    # easier to read
+    print(data_df.groupby(['Date', mode]).size().to_frame('count'))
 
-    dir_list = os.listdir(files_handling.path_dict_to_str(path))
-    dir_list.sort()
+    df_plot = data_df.value_counts(subset=['Date', mode]).reset_index(name='count')
 
-    timeline_data = {'Date': [],
-                    'Value': []}
-
-    selected_item = None
-
-    for i, date in enumerate(dir_list):
-        
-        # Append to the "Date" row the dataset date: [2025-07-31].[csv] -> 2025-07-31
-        timeline_data["Date"].append(date.split('.')[0])
-        
-        path.update({'date': date})
-
-        '''DATA CONVERSION'''
-        # CSV -> pandas dataframe
-        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
-
-        '''DATA FILTERING'''
-        # consider only user requested column + delete rows with NaN
-        data_df = data_df.loc[:, mode].dropna(how='any', axis=0)
-
-        if i == 0: # first iteration
-            print("Here's the list of available countries collected in the first experiment date: \n")
-            for i, option in enumerate(data_df.drop_duplicates()):
-                print(f"{i:2d}. {option}")
-
-            print("\nWrite the country you're interested in:")
-            selected_item_id = int(input())
-            selected_item = data_df.drop_duplicates().iloc[selected_item_id]
-
-        # Append to the "Value" row the number of occurrences of the selected country
-        try:
-            value = int(data_df.value_counts()[selected_item])
-        except:
-            value = 0
-        
-        timeline_data["Value"].append(value)
-    
-
-    # dict to dataframe
-    timeline_data_df = pd.DataFrame(timeline_data)
-    timeline_data_df["Date"] = timeline_data_df["Date"].astype(str)
-
-    # Plot horizontal bar chart
-    plt.figure(figsize=(8, 5))
-    ax = sns.barplot(data=timeline_data_df, y="Date", x="Value", color="lightgreen")
-
-    # Add labels on each bar
-    for p in ax.patches:
-        ax.text(p.get_width(),                # x-position (end of bar)
-                p.get_y() + p.get_height()/2, # y-position (center of bar)
-                int(p.get_width()),           # label text
-                ha="left", va="center")
-
-    plt.xlabel("Active CoAP servers")
-    plt.ylabel("Dates")
-    plt.title(f"<{selected_item}> active servers over time")
-    plt.tight_layout()
+    # OPTION 1
+    plt.figure(figsize=(10,6))
+    sns.lineplot(data=df_plot, x="Date", y="count", hue=mode, marker="o")
+    plt.xticks(rotation=45)
+    plt.title(f"Counts per {mode.capitalize()} over Time")
     plt.show()
 
+    # OPTION 2
+    plt.figure(figsize=(10,6))
+    sns.barplot(data=df_plot, x="Date", y="count", hue=mode)
+    plt.xticks(rotation=45)
+    plt.title(f"Counts per {mode.capitalize()} per Date")
+    plt.show()
+
+    # OPTION 3
+    heatmap_data = df_plot.pivot(index=mode, columns="Date", values="count").fillna(0)
+    plt.figure(figsize=(8,6))
+    sns.heatmap(heatmap_data, annot=True, fmt=".0f", cmap="Blues")
+    plt.title(f"Counts Heatmap: {mode.capitalize()}")
+    plt.show()
 
 
 ''''''

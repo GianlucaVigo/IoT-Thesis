@@ -161,7 +161,7 @@ def dataset_sel(analysis):
 
                 frames.append(date_df)
 
-            data_df = pd.concat(frames)
+            data_df = pd.concat(frames).reset_index()
 
             return data_df
 
@@ -227,6 +227,50 @@ def perform_analysis(analysis, dataset):
                 case 1:
                     print("Time based analysis")
 
+                    match analysis[2]:
+
+                        # IP-based
+                        case 0:
+
+                            match analysis[3]:
+
+                                # Country
+                                case 0:
+                                    ip.time_analysis(dataset, "country")
+                                # Continent
+                                case 1:
+                                    ip.time_analysis(dataset, "continent")
+                                # AS Name
+                                case 2:
+                                    ip.time_analysis(dataset, "as_name")
+
+                        # Payload-based
+                        case 1:
+                            
+                            match analysis[3]:
+
+                                # Size Statistics
+                                case 0:
+                                    payload.instant_analysis(dataset, "Payload Size")
+                                # Top 30 Most Common URI
+                                case 1:
+                                    payload.instant_analysis(dataset, "Most Common")
+                                # Number of Resources / CoAP Server
+                                case 2:
+                                    payload.instant_analysis(dataset, "Resources Number")
+                                # URI Depth Levels
+                                case 3:
+                                    payload.instant_analysis(dataset, "Resource URI Depth")
+                                # Active/Inactive CoAP Machines
+                                case 4:
+                                    payload.instant_analysis(dataset, "Active CoAP Machines")
+                                # Response Codes
+                                case 5:
+                                    payload.instant_analysis(dataset, "Response Code")
+                                # Resources' Metadata
+                                case 6:
+                                    payload.instant_analysis(dataset, "Resource Metadata") 
+
         # observe-based
         case 1:
             print('Observe')
@@ -247,3 +291,5 @@ def analysis_menu():
         
         # 3) perform analysis
         perform_analysis(chosen_analysis, data_df)
+
+        print('-'*100)
