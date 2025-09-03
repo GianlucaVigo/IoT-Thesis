@@ -1,10 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
-import os
 import plotly.express as px
-
-from utils import files_handling
 
 
 ''''''
@@ -34,15 +31,15 @@ def instant_analysis(data, mode):
     if mode == 'country':
         # geographical representation of the country distribution
         fig = px.choropleth(
-        count_df,
-        locations="country",
-        color="count",
-        hover_name="country",
-        projection="natural earth",
-        locationmode="country names" 
-    )
+            count_df,
+            locations="country",
+            color="count",
+            hover_name="country",
+            projection="natural earth",
+            locationmode="country names" 
+        )
 
-    fig.show()
+        fig.show()
 
     return
 
@@ -100,69 +97,3 @@ def time_analysis(data_df, mode):
             title="Counts per Country over Time"
         )
         fig.show()
-
-
-''''''
-def stability(data):
-
-    print("[IP] IP addresses stability over time")
-
-    # Before: DataRefinement/results/02_output.csv/exp_0/2025-07-31.csv
-    path = {
-        'phase': data['phase'],
-        'folder': data['folder'],
-        'ZMAP dataset': data['ZMAP dataset'],
-        'experiment': data['experiment']
-    }
-    #  After: DataRefinement/results/02_output.csv/exp_0/
-
-    dir_list = os.listdir(files_handling.path_dict_to_str(path))
-    dir_list.sort()
-
-    if (len(dir_list) <= 1):
-            print("There must be at least 2 datasets to examine the stability property: please acquire more data!")
-            print("-" * 100)
-            return 
-
-    stability_df = pd.DataFrame()
-
-    for dir in dir_list:
-
-        path.update({'date': dir})
-
-        '''DATA CONVERSION'''
-        # CSV -> pandas dataframe
-        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
-
-        '''DATA FILTERING'''
-        # consider only 'isCoAP' column
-        data_series = data_df.loc[:, 'isCoAP']
-
-        stability_df[dir] = data_series
-
-    stability_df = stability_df.reindex(sorted(stability_df.columns), axis=1)
-    
-    sns.heatmap(stability_df, fmt="d", cmap="YlGnBu")
-    plt.show()
-
-    clean_stability_df = pd.DataFrame()
-
-    for i, row in stability_df.iterrows():
-        if i == 0:
-            continue
-        for i in range(1, len(row)):
-             if(row.iloc[i] == row.iloc[i-1]): # HERE!
-                continue
-             else:
-                clean_stability_df = pd.concat([clean_stability_df, pd.DataFrame([row])], ignore_index=True)
-                break
-
-    sns.heatmap(clean_stability_df, fmt="d", cmap="YlGnBu")
-    plt.show()
-
-    '''STATS'''
-    print(f"\tNumber of instable ip addresses: {clean_stability_df.shape[0]}")
-    print(f"\tNumber of stable ip addresses: {stability_df.shape[0] - clean_stability_df.shape[0]}")
-    print("-" * 100)
-
-    return

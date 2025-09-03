@@ -66,13 +66,12 @@ def analysis_sel():
 
 
         #   User selection
-        print(f"\nSelect the  index: ['e' to main menu] ")
+        print(f"\nSelect the index: ['e' to main menu] ")
         try:
             choice = input()
 
-            print("-" * 100)
-
             if (choice == 'e'):
+                print("-" * 100)
                 return # -> to MAIN MENU
                             
             choice = int(choice)
@@ -96,10 +95,12 @@ def analysis_sel():
 
                 user_tree = chosen_tree_list[0]             # take next tree menù
                 user_selection.append(chosen_tree_list[1])  # append number identifying user choice
+                print("-" * 100)
 
             else: # Menù end reached
 
                 user_selection.append(chosen_tree_list[0])
+                print("-" * 100)
                 break
 
 
@@ -114,14 +115,14 @@ def dataset_sel(analysis):
         # instant based -> ONLY 1 dataset to consider
         if analysis[1] == 0:
 
-            levels = ["ZMAP dataset", "experiment", "date"]
-            path = {'phase': 'DataRefinement', 'folder': 'results'}
+            levels = ["dataset", "experiment", "date"]
+            path = {'phase': 'Merging', 'folder': 'csv'}
 
             for level in levels:
-                    choice = files_handling.file_selection(level, path)
+                    choice = files_handling.level_selection(level, path)
 
                     if choice == None:
-                        return
+                        return None
                     else: 
                         path.update({level: choice})
             
@@ -133,14 +134,14 @@ def dataset_sel(analysis):
         # time-series based -> MULTIPLE datasets must be considered
         elif analysis[1] == 1:
             
-            levels = ["ZMAP dataset", "experiment"]
-            path = {'phase': 'DataRefinement', 'folder': 'results'}
+            levels = ["dataset", "experiment"]
+            path = {'phase': 'Merging', 'folder': 'csv'}
 
             for level in levels:
-                    choice = files_handling.file_selection(level, path)
+                    choice = files_handling.level_selection(level, path)
 
                     if choice == None:
-                        return
+                        return None
                     else: 
                         path.update({level: choice})
 
@@ -164,6 +165,10 @@ def dataset_sel(analysis):
             data_df = pd.concat(frames).reset_index()
 
             return data_df
+    
+    # Observe Based
+    else:
+        print("0bserve-based analysis")
 
 
 
@@ -274,6 +279,8 @@ def perform_analysis(analysis, dataset):
         # observe-based
         case 1:
             print('Observe')
+
+    print('-'*100)
       
 
 def analysis_menu():
@@ -284,12 +291,13 @@ def analysis_menu():
         chosen_analysis = analysis_sel()
 
         if chosen_analysis == None:
-            break
+            return
 
         # 2) dataset/s selection
         data_df = dataset_sel(chosen_analysis)
+
+        if data_df is None or data_df.empty:
+            return
         
         # 3) perform analysis
         perform_analysis(chosen_analysis, data_df)
-
-        print('-'*100)

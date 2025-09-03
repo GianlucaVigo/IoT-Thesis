@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 
 
-def file_selection(level, path):
+def level_selection(level, path):
 
     string_path = path_dict_to_str(path)
 
@@ -13,20 +13,19 @@ def file_selection(level, path):
     options.sort()                          # Sort the list alphabetically
 
     match level:
-        case "ZMAP dataset":
+        case "dataset":
             metadata_info = get_datasets_info()
         case "experiment":
-            zmap_dataset = path['ZMAP dataset']
-            metadata_info = get_exps_info(zmap_dataset)
+            dataset = path['dataset']
+            metadata_info = get_exps_info(dataset)
         case "partition":
-            zmap_dataset = path['ZMAP dataset']
+            dataset = path['dataset']
             experiment = path['experiment']
-            metadata_info = get_parts_info(zmap_dataset, experiment)
+            metadata_info = get_parts_info(dataset, experiment)
         case "date":
-            zmap_dataset = path['ZMAP dataset']
+            dataset = path['dataset']
             experiment = path['experiment']
-            metadata_info = get_dates_info(zmap_dataset, experiment)
-
+            metadata_info = get_dates_info(dataset, experiment)
 
     while(True):
         #   Print all together with a zero based index
@@ -40,7 +39,7 @@ def file_selection(level, path):
 
         # printing list of options
         for option_id in range(len(options)):
-            print(f"\t{str(option_id)}".ljust(10), end="")
+            print(f"\t{option_id}".ljust(10), end="")
             for value in metadata_info[option_id].values():
                 print(str(value).ljust(20), end="")
             print()
@@ -102,7 +101,7 @@ def all_partitions_done(coap_path):
     experiment_row = pd.read_csv(csv_metadata)
     # find the rows associated to the specified dataset and experiment -> partitions
     experiment_row = experiment_row.loc[((experiment_row['exp_name'] == coap_path['experiment']) &
-                                        (experiment_row['dataset_name'] == coap_path['ZMAP dataset']))]
+                                        (experiment_row['dataset_name'] == coap_path['dataset']))]
     
     n_partitions = experiment_row['n_partitions'].iloc[0]
 
@@ -112,7 +111,7 @@ def all_partitions_done(coap_path):
     coap_tests_log_rows = pd.read_csv(coap_tests_log)
     # find the rows associated to the specified dataset and experiment -> partitions
     coap_tests_log_rows = coap_tests_log_rows.loc[((coap_tests_log_rows['exp_name'] == coap_path['experiment']) &
-                                                (coap_tests_log_rows['dataset_name'] == coap_path['ZMAP dataset'])&
+                                                (coap_tests_log_rows['dataset_name'] == coap_path['dataset'])&
                                                 (coap_tests_log_rows['date'] == coap_path['date']))]
 
     n_partitions_done = coap_tests_log_rows.shape[0]
@@ -126,15 +125,15 @@ def all_partitions_done(coap_path):
 
 def new_coap_test(partition_path):
 
-    # Before: IpScan/results_partitioned/02_output.csv/exp_0/4_4.csv
+    # Before: Partitioning/csv/02_output.csv/exp_0/4_4.csv
     coap_test_path = {
-        'phase' : 'DataRefinement',
-        'folder': 'results_partitioned',
-        'ZMAP dataset': partition_path['ZMAP dataset'],
+        'phase' : 'CoapInfo',
+        'folder': 'csv',
+        'dataset': partition_path['dataset'],
         'experiment': partition_path['experiment'],
         'date': datetime.date.today()
     }
-    # After: DataRefinement/results_partitioned/02_output.csv/exp_0/2025-08-23
+    # After: CoapInfo/csv/02_output.csv/exp_0/2025-08-23
 
     coap_test_path_str = path_dict_to_str(coap_test_path)
     
@@ -142,53 +141,51 @@ def new_coap_test(partition_path):
     if not os.path.exists(coap_test_path_str):
         os.makedirs(coap_test_path_str)
 
-    # Before: DataRefinement/results_partitioned/02_output.csv/exp_0/2025-08-23
+    # Before: CoapInfo/csv/02_output.csv/exp_0/2025-08-23
     coap_test_path.update({'partition': partition_path['partition']})
-    #  After: DataRefinement/results_partitioned/02_output.csv/exp_0/2025-08-23/4_4.csv
+    #  After: CoapInfo/csv/02_output.csv/exp_0/2025-08-23/4_4.csv
     
     coap_test_path_str = path_dict_to_str(coap_test_path)
 
     # create empty file
-    with open(coap_test_path_str, 'w'):
-        pass # do nothing
+    with open(coap_test_path_str, 'w') as coap_partition_test:
+        # HEADER
+        writer = csv.writer(coap_partition_test)
+        writer.writerow(["IP address", "asn", "as_name", "as_domain", "country_code", "country", "continent_code", "continent",     # from the IpInfo API
+                        "isCoAP", "Code", "Message Type", "Payload", "Payload Size (bytes)"])                                       # from Resource Discovery
+        coap_partition_test.close()
     
     # return coap test path
     return coap_test_path
 
 
 
-def new_ip_test(coap_filepath):
+def new_ip_test(zmap_filepath):
 
-    # Before: DataRefinement/results_partitioned/02_output.csv/exp_0/2025-08-18
-    ip_test_path = {
-        'phase' : 'DataRefinement',
-        'folder': 'results',
-        'ZMAP dataset': coap_filepath['ZMAP dataset'],
-        'experiment': coap_filepath['experiment']
+    '''DIRECTORIES ORGANIZATION'''
+    ipinfo_path = {
+        'phase' : 'IpInfo',
+        'folder': 'csv'
     }
-    # After: DataRefinement/results/02_output.csv/exp_0
 
-    ip_test_path_str = path_dict_to_str(ip_test_path)
+    ipinfo_path_str = path_dict_to_str(ipinfo_path)
 
-    if not os.path.exists(ip_test_path_str):
-        os.makedirs(ip_test_path_str)
+    if not os.path.exists(ipinfo_path_str):
+        os.makedirs(ipinfo_path_str)
+
+    '''NEW FILE DEFINITION'''
+    # Before: IpInfo/csv/
+    ipinfo_path.update({'dataset': zmap_filepath['dataset']})
+    #  After: IpInfo/csv/01_output.csv
     
-    # Before: DataRefinement/results/02_output.csv/exp_0
-    ip_test_path.update({'date': f"{coap_filepath['date']}.csv"})
-    ip_test_path_str = path_dict_to_str(ip_test_path)
-    #  After: DataRefinement/results/02_output.csv/exp_0/2025-08-23.csv
+    ipinfo_path_str = path_dict_to_str(ipinfo_path)
 
-    new_file = open(ip_test_path_str, "w", newline='')
+    '''CREATE EMPTY FILE'''
+    # create empty file
+    with open(ipinfo_path_str, 'w'):
+        pass # do nothing
 
-    # header definition
-    writer = csv.writer(new_file)
-
-    writer.writerow(["IP address", "isCoAP", "Code", "Message Type", "Payload", "Payload Size (bytes)",         # from the Resource Discovery
-                     "asn", "as_name", "as_domain", "country_code", "country", "continent_code", "continent"])  # from the IpInfo API
-
-    new_file.close()
-
-    return ip_test_path
+    return ipinfo_path
 
 
 
@@ -223,7 +220,7 @@ def get_datasets_info():
 # returns a list of dictionaries, one for each experiment performed over a zmap dataset together with additional info
 def get_exps_info(dataset_name):
 
-    # csv containing info about experiments performed on ZMAP datasets
+    # csv containing info about experiments performed on datasets
     csv_metadata = "utils/logs/experiments.csv"
 
     # csv -> pandas dataframe
