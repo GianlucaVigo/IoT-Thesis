@@ -35,8 +35,6 @@ def instant_analysis(data_df, mode):
 
         # 1
         case 'Most Common':
-
-            '''DATA PROCESSING'''
             
             uris_dict = Counter()
 
@@ -212,6 +210,43 @@ def instant_analysis(data_df, mode):
             stat_rows.append(f"Metadata Distribution over CoAP Resources:\n {metadata_df}")
 
 
+        # 7
+        case 'Content Type Metadata':
+            
+            metadata_ct_dict = Counter()
+
+            for i, raw_payload in enumerate(data_df['Payload']):
+
+                if data_df.iloc[i, 8] == False: # check wheter the machine is not exposing CoAP
+                    continue
+
+                if data_df.iloc[i, 9] != '2.05 Content': # analyse only 2.05 code responses
+                        continue
+
+                resources_list = payload_handling.resource_list_of(raw_payload)
+
+                for resource in resources_list:
+
+                    ct_value = payload_handling.get_metadata_value_of(resource, 'ct')
+
+                    if ct_value is not None:
+                        metadata_ct_dict.update(ct_value)
+
+            # dictionary -> pd DataFrame
+            metadata_ct_df = pd.DataFrame(metadata_ct_dict.items(), columns=['content_type', 'count'])
+
+            # Type of plot
+            sns.barplot(data=metadata_ct_df, x='content_type', y='count', color="lightgreen")
+
+            # Plot Labels
+            plt.xlabel('Content Type')
+            plt.ylabel("# CT Occurencies")
+
+            # Plot Title
+            plt.title("[PAYLOAD] CT Metadata Distribution over CoAP Resources")
+
+            stat_rows.append(f"CT Metadata Distribution over CoAP Resources:\n {metadata_ct_df}")
+
     '''PLOTTING'''
     plt.tight_layout()
     plt.show()
@@ -281,7 +316,7 @@ def time_analysis(data_df, mode):
                     uris_dict.update(uris_list)
 
                 # sorting the dictionary by value
-                top_uris = resources_dict.most_common(30)
+                top_uris = uris_dict.most_common(30)
 
                 # dictionary -> pd DataFrame
                 top_uris_df = pd.DataFrame(top_uris, columns=['uri', 'count'])
@@ -292,7 +327,7 @@ def time_analysis(data_df, mode):
             all_dates_df = pd.concat(all_resources, ignore_index=True)
 
             # sort by date and count
-            all_dates_df = (all_dates_df.sort_values(['Date', 'count'], ascending=[True, False]).groupby('Date', group_keys=False))
+            all_dates_df = all_dates_df.sort_values(['Date', 'count'], ascending=[True, False])
 
             fig = px.bar(
                 all_dates_df,
@@ -334,6 +369,14 @@ def time_analysis(data_df, mode):
                 # dictionary -> pd DataFrame
                 n_resources_df = pd.DataFrame(n_resources_dict.items(), columns=['res_num', 'count'])
                 n_resources_df['Date'] = date # add the date
+
+                '''Stats'''
+                print('@'*50)
+                print(f"\nDate {date}")
+                print(f"Number of Resources per CoAP Machine:\n {n_resources_df}\n")
+                print(f"Total Number of resources:\n {(n_resources_df['res_num'] * n_resources_df['count']).sum()}\n")
+                
+
                 all_resources.append(n_resources_df)
 
             # concatenate all dates
@@ -403,14 +446,26 @@ def time_analysis(data_df, mode):
         # 4
         case 'Active CoAP Machines':
 
-            df_grouped = (
+            all_dates_df = (
                 data_df
                 .groupby(["Date", "isCoAP", "country"])
                 .size()
                 .reset_index(name="count")
             )
 
-            print(df_grouped)
+            print(all_dates_df)
+
+            fig = px.bar(
+                all_dates_df,
+                x="isCoAP",
+                y="count",
+                color="country",
+                animation_frame="Date",
+                title="Active/Inactive CoAP machines over time",
+                text="count"           # show count on bars
+            )
+
+            fig.show()
 
         
         # 5
@@ -422,18 +477,18 @@ def time_analysis(data_df, mode):
             for date in sorted(data_df['Date'].unique()):
                 date_df = data_df[data_df['Date'] == date]
 
-                resources_dict = Counter(date_df['Code'])
+                response_codes_dict = Counter(date_df['Code'])
 
                 # dictionary -> pd DataFrame
-                resources_df = pd.DataFrame(resources_dict.items(), columns=['response_code', 'count'])
-                resources_df['Date'] = date # add the date
-                all_resources.append(resources_df)
+                response_codes_df = pd.DataFrame(response_codes_dict.items(), columns=['response_code', 'count'])
+                response_codes_df['Date'] = date # add the date
+                all_resources.append(response_codes_df)
 
             # concatenate all dates
-            resource_code_df = pd.concat(all_resources, ignore_index=True)
+            all_dates_df = pd.concat(all_resources, ignore_index=True)
 
             fig = px.bar(
-                resource_code_df,
+                all_dates_df,
                 x="response_code",
                 y="count",
                 color="response_code",
@@ -448,31 +503,85 @@ def time_analysis(data_df, mode):
         # 6
         case 'Resource Metadata':
 
-            '''DATA PROCESSING'''
-            metadata_dict = Counter()
+            # empty list to collect results
+            all_resources = []
+            
+            for date in sorted(data_df['Date'].unique()):
+                date_df = data_df[data_df['Date'] == date]
+                metadata_dict = Counter()
 
-            for raw_payload in data_df['Payload']:
-                resources_list = payload_handling.resource_list_of(raw_payload)
+                for raw_payload in date_df['Payload']:
+                    resources_list = payload_handling.resource_list_of(raw_payload)
 
-                for single_resource_payload in resources_list:
-                    metadata_dict.update(payload_handling.resource_metadata_names_of(single_resource_payload))
+                    for payload in resources_list:
+                        metadata_dict.update(payload_handling.resource_metadata_names_of(payload))
 
-            # dictionary -> pd DataFrame
-            metadata_df = pd.DataFrame(metadata_dict.items(), columns=['metadata', 'count'])
+                # dictionary -> pd DataFrame
+                metadata_df = pd.DataFrame(metadata_dict.items(), columns=['metadata', 'count'])
+                metadata_df['Date'] = date # add the date
+                all_resources.append(metadata_df)
 
-            # Type of plot
-            sns.barplot(data=metadata_df, x='metadata', y='count', color="lightgreen")
+            # concatenate all dates
+            all_dates_df = pd.concat(all_resources, ignore_index=True)
 
-            # Plot Labels
-            plt.xlabel('Resource Metadata')
-            plt.ylabel("# Metadata Occurrences")
+            fig = px.bar(
+                all_dates_df,
+                x="metadata",
+                y="count",
+                color="metadata",
+                animation_frame="Date",
+                title="Used metadata over time",
+                text="count"           # show count on bars
+            )
 
-            # Plot Title
-            plt.title("[PAYLOAD] Metadata Distribution over CoAP Resources")
+            fig.show()
 
+        
+        # 7
+        case 'Content Type Metadata':
 
-    #sns.kdeplot(data=data_df, x='Payload Size (bytes)', fill=True, color="lightgreen")
-    #sns.boxplot(data=data_df, x='Payload Size (bytes)', color="lightgreen")
+            # empty list to collect results
+            all_resources = []
+            
+            for date in sorted(data_df['Date'].unique()):
+                date_df = data_df[data_df['Date'] == date]
+                metadata_ct_dict = Counter()
 
-    
+                for i, raw_payload in enumerate(date_df['Payload']):
+
+                    if date_df.iloc[i, 9] == False: # check wheter the machine is not exposing CoAP
+                        continue
+
+                    if date_df.iloc[i, 10] != '2.05 Content': # analyse only 2.05 code responses
+                        continue
+
+                    resources_list = payload_handling.resource_list_of(raw_payload)
+
+                    for resource in resources_list:
+
+                        ct_value = payload_handling.get_metadata_value_of(resource, 'ct')
+
+                        if ct_value is not None:
+                            metadata_ct_dict.update(ct_value)
+
+                # dictionary -> pd DataFrame
+                metadata_ct_df = pd.DataFrame(metadata_ct_dict.items(), columns=['content_type', 'count'])
+                metadata_ct_df['Date'] = date # add the date
+                all_resources.append(metadata_ct_df)
+
+            # concatenate all dates
+            all_dates_df = pd.concat(all_resources, ignore_index=True)
+
+            fig = px.bar(
+                all_dates_df,
+                x="content_type",
+                y="count",
+                color="content_type",
+                animation_frame="Date",
+                title="Used metadata over time",
+                text="count"           # show count on bars
+            )
+
+            fig.show()
+
     return

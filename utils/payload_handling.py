@@ -40,7 +40,6 @@ def resource_metadata_names_of(payload):
     if len(res_attributes) == 1: # no attributes present -> skip
         return None
     
-    #for attr in itertools.islice(res_attributes, 1, None): # skip resource name
     for attr in res_attributes[1:]: # skip resource name
 
         # getting metadata name
@@ -49,3 +48,25 @@ def resource_metadata_names_of(payload):
         attributes_list.append(attr_name)
 
     return attributes_list
+
+
+''''''
+def get_metadata_value_of(payload, metadata_name):
+
+    res_attributes = str(payload).split(';')
+
+    if len(res_attributes) == 1: # no attributes present -> skip
+        return None
+    
+    #for attr in itertools.islice(res_attributes, 1, None): # skip resource name
+    for attr in res_attributes[1:]: # skip resource name
+
+        # [metadata_name, metadata_value]
+        attribute_info = attr.split('=') 
+
+        if attribute_info[0] == metadata_name:
+            match metadata_name:
+                case 'ct':
+                    return [int(attribute_info[1])]
+
+    return None

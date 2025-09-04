@@ -21,7 +21,8 @@ def analysis_sel():
                     'URI Depth Levels': [3],
                     'Active/Inactive CoAP Machines': [4],
                     'Response Codes': [5],
-                    'Resources\' Metadata': [6]
+                    'Resources\' Metadata': [6],
+                    'Content Type Metadata': [7]
                     }
     ###########
     #----------
@@ -226,11 +227,13 @@ def perform_analysis(analysis, dataset):
                                     payload.instant_analysis(dataset, "Response Code")
                                 # Resources' Metadata
                                 case 6:
-                                    payload.instant_analysis(dataset, "Resource Metadata") 
+                                    payload.instant_analysis(dataset, "Resource Metadata")
+                                # Content Type Metadata
+                                case 7:
+                                    payload.instant_analysis(dataset, "Content Type Metadata")
 
                 # time-based
                 case 1:
-                    print("Time based analysis")
 
                     match analysis[2]:
 
@@ -241,12 +244,15 @@ def perform_analysis(analysis, dataset):
 
                                 # Country
                                 case 0:
+                                    print("Country Distribution over time")
                                     ip.time_analysis(dataset, "country")
                                 # Continent
                                 case 1:
+                                    print("Continent Distribution over time")
                                     ip.time_analysis(dataset, "continent")
                                 # AS Name
                                 case 2:
+                                    print("AS Name Distribution over time")
                                     ip.time_analysis(dataset, "as_name")
 
                         # Payload-based
@@ -256,25 +262,36 @@ def perform_analysis(analysis, dataset):
 
                                 # Size Statistics
                                 case 0:
+                                    print("Payload Sizes over time")
                                     payload.time_analysis(dataset, "Payload Size")
                                 # Top 30 Most Common URI
                                 case 1:
+                                    print("Top 30 Most Common URI over time")
                                     payload.time_analysis(dataset, "Most Common")
                                 # Number of Resources / CoAP Server
                                 case 2:
+                                    print("Number of Resources per CoAP machine over time")
                                     payload.time_analysis(dataset, "Resources Number")
                                 # URI Depth Levels
                                 case 3:
+                                    print("URI Depth Levels over time")
                                     payload.time_analysis(dataset, "Resource URI Depth")
                                 # Active/Inactive CoAP Machines
                                 case 4:
+                                    print("Active/Inactive CoAP Machines over time")
                                     payload.time_analysis(dataset, "Active CoAP Machines")
                                 # Response Codes
                                 case 5:
+                                    print("Response Codes over time")
                                     payload.time_analysis(dataset, "Response Code")
                                 # Resources' Metadata
                                 case 6:
-                                    payload.time_analysis(dataset, "Resource Metadata") 
+                                    print("Resources' Metadata over time")
+                                    payload.time_analysis(dataset, "Resource Metadata")
+                                # Content Type Metadata
+                                case 7:
+                                    print("Content Type Metadata over time")
+                                    payload.time_analysis(dataset, "Content Type Metadata") 
 
         # observe-based
         case 1:
