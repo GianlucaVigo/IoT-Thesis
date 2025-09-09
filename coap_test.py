@@ -1,4 +1,4 @@
-import asyncio
+'''import asyncio
 from aiocoap import *
 import logging
 
@@ -30,4 +30,41 @@ async def coap_get(ip_address, uri):
         print(f"\t{e}")
         return None # error
 
-asyncio.run(coap_get("176.101.247.159","/info"))
+asyncio.run(coap_get("120.238.223.180","/device/command/log"))
+'''
+
+import asyncio
+from aiocoap import Context, Message, GET
+
+async def observe_resource(uri: str):
+    protocol = await Context.create_client_context()
+
+    # Send GET with observe=0 to start observation
+    request = Message(code=GET, uri=uri, observe=0)
+    pr = protocol.request(request)
+
+    try:
+        # Handle initial response
+        first_response = await pr.response
+        print("First response:", first_response.payload.decode())
+        print("Observe option in response:", first_response.opt.observe)
+    except Exception as e:
+        print("Failed to fetch resource:", e)
+        return
+
+    # Iterate over observation updates
+    async for notification in pr.observation:
+        if notification.code.is_successful():
+            print("Notification:", notification.payload.decode())
+        else:
+            print("Error from server:", notification.code)
+
+if __name__ == "__main__":
+    ip_addr = "183.238.203.114"
+    uri = "/device/inform/data"
+    address = f"coap://{ip_addr}:5683{uri}"
+    asyncio.run(observe_resource(address))
+
+
+
+    

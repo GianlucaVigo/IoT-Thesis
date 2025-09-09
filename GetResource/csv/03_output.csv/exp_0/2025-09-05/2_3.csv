@@ -1,0 +1,22 @@
+IP address,as_name,country,continent,uri,Code,Message Type,Payload,Payload Size (bytes)
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</ndm/dis>,4.00 Bad Request,ACK,,0
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</ndm/ci>,4.00 Bad Request,ACK,,0
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</uhp>,4.05 Method Not Allowed,ACK,,0
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+81.215.210.244,Turk Telekomunikasyon Anonim Sirketi,Turkey,Asia,</info>,2.05 Content,ACK,"{""cloud"":true,""dpn"":true,""eula"":true,""password"":true,""cid"":""0a00d5fa-a031-11ed-9396-8991dc58d814"",""vendor"":""Keenetic"",""name"":""Keenetic Extra DSL"",""type"":""router"",""version"":""4.02.C.6.3-1"",""http_port"":80}",202
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.47.91,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4

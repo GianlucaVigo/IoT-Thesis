@@ -2,3 +2,4 @@ exp_name,date,n_partitions,dataset_name
 exp_0,2025-09-02,4,01_output.csv
 exp_0,2025-09-02,6,02_output.csv
 exp_0,2025-09-02,3,03_output.csv
+exp_0,2025-09-09,4,04_output.csv

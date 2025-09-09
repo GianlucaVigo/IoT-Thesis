@@ -1,0 +1,11 @@
+IP address,asn,as_name,as_domain,country_code,country,continent_code,continent,isCoAP,Code,Message Type,Payload,Payload Size (bytes)
+194.28.56.72,AS57803,TeleServis Ltd,tvinnet.ru,RU,Russia,EU,Europe,True,2.05 Content,ACK,"</register>,</ndm/dis>,</ndm/ci>,</mirror>,</uhp>,</ndm/logout>,</ndm/login>,</info>",84
+118.100.129.155,AS4788,TM TECHNOLOGY SERVICES SDN. BHD.,tm.com.my,MY,Malaysia,AS,Asia,False,,,,
+5.139.164.104,AS12389,PJSC Rostelecom,rt.ru,RU,Russia,EU,Europe,False,,,,
+134.17.129.240,AS25106,Mobile TeleSystems JLLC,mts.by,BY,Belarus,EU,Europe,False,,,,
+125.25.217.240,AS23969,TOT Public Company Limited,ntplc.co.th,TH,Thailand,AS,Asia,False,,,,
+185.41.123.254,AS199933,Elektranet Ltd.,mks-net.ru,RU,Russia,EU,Europe,False,,,,
+68.183.74.136,AS14061,"DigitalOcean, LLC",digitalocean.com,DE,Germany,EU,Europe,True,2.05 Content,ACK,"</fw>,</efento>,</efento/c>,</efento/i>,</efento/m>,</efento/t>,</sw>,</api>,</api/v1>,</.well-known/core>",106
+119.94.59.82,AS9299,Philippine Long Distance Telephone Company,pldt.com,PH,Philippines,AS,Asia,False,,,,
+121.29.160.69,AS4837,CHINA UNICOM China169 Backbone,chinaunicom.cn,CN,China,AS,Asia,False,,,,
+171.124.196.228,AS4837,CHINA UNICOM China169 Backbone,chinaunicom.cn,CN,China,AS,Asia,False,,,,

@@ -445,12 +445,13 @@ def time_analysis(data_df, mode):
 
         # 4
         case 'Active CoAP Machines':
-
+            
             all_dates_df = (
                 data_df
                 .groupby(["Date", "isCoAP", "country"])
                 .size()
-                .reset_index(name="count")
+                .to_frame('count')
+                .reset_index()
             )
 
             print(all_dates_df)

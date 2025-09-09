@@ -1,0 +1,19 @@
+IP address,as_name,country,continent,uri,Code,Message Type,Payload,Payload Size (bytes)
+194.28.56.72,TeleServis Ltd,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+194.28.56.72,TeleServis Ltd,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+194.28.56.72,TeleServis Ltd,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""ee6ab518-3679-11e6-8115-99d525b8001f"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</fw>,4.01 Unauthorized,CON,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</efento>,4.00 Bad Request,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</efento/c>,4.00 Bad Request,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</efento/i>,4.00 Bad Request,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</efento/m>,4.00 Bad Request,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</efento/t>,2.05 Content,ACK,b'h\xba\xf23',4
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</sw>,4.01 Unauthorized,CON,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</api>,4.05 Method Not Allowed,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</api/v1>,4.00 Bad Request,ACK,,0
+68.183.74.136,"DigitalOcean, LLC",Germany,Europe,</.well-known/core>,2.05 Content,ACK,"</fw>,</efento>,</efento/c>,</efento/i>,</efento/m>,</efento/t>,</sw>,</api>,</api/v1>,</.well-known/core>",106

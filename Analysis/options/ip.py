@@ -5,15 +5,15 @@ import plotly.express as px
 
 
 ''''''
-def instant_analysis(data, mode):
+def instant_analysis(data_df, mode):
 
-    count_s = data.groupby([mode]).size()
-    count_df = pd.DataFrame(count_s).reset_index()
-    count_df = count_df.rename(columns={0: 'count'})
+    df_plot = data_df[data_df["isCoAP"]].groupby([mode]).size().to_frame('count').reset_index()
+
+    print(df_plot)
 
     # Plot horizontal bar chart
     plt.figure(figsize=(8, 5))
-    ax = sns.barplot(data=count_df.sort_values('count'), y=mode, x="count", color="lightgreen")
+    ax = sns.barplot(data=df_plot.sort_values('count'), y=mode, x="count", color="lightgreen")
 
     # Add labels on each bar
     for p in ax.patches:
@@ -31,7 +31,7 @@ def instant_analysis(data, mode):
     if mode == 'country':
         # geographical representation of the country distribution
         fig = px.choropleth(
-            count_df,
+            df_plot,
             locations="country",
             color="count",
             hover_name="country",
@@ -47,10 +47,9 @@ def instant_analysis(data, mode):
 ''''''
 def time_analysis(data_df, mode):
 
-    # easier to read
-    print(data_df.groupby(['Date', mode]).size().to_frame('count'))
+    df_plot = data_df[data_df["isCoAP"]].groupby(['Date', mode]).size().to_frame('count').reset_index()
 
-    df_plot = data_df.value_counts(subset=['Date', mode]).reset_index(name='count')
+    print(df_plot)
 
     # OPTION 1
     plt.figure(figsize=(10,6))

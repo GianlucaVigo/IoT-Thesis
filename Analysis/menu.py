@@ -3,6 +3,8 @@ import os
 
 from Analysis.options import ip
 from Analysis.options import payload
+from Analysis.options import get_resource
+from Analysis.options import observe
 
 from utils import files_handling
 
@@ -25,30 +27,52 @@ def analysis_sel():
                     'Content Type Metadata': [7]
                     }
     ###########
+
+    ###########
+
     #----------
 
+
     # Level 2
-    instant_tree = {'IP-based': [ip_tree, 0],
+    disc_instant_tree = {'IP-based': [ip_tree, 0],
                     'Payload-based': [payload_tree, 1]
                     }
     
-    time_tree = {'IP-based': [ip_tree, 0],
+    disc_time_tree = {'IP-based': [ip_tree, 0],
                 'Payload-based': [payload_tree, 1]
                 }
     ###########
+
+    ###########
+    get_instant_tree = {'Data Format': [0],
+                        'Payload Size': [1],
+                        'Response Code': [2]
+                    }
+    
+    get_time_tree = {'Data Format': [0],
+                    'Payload Size': [1],
+                    'Response Code': [2]
+                    }
     #----------
 
+
     # Level 1
-    discovery_tree = {'Instant-based': [instant_tree, 0],
-                      'Time-based': [time_tree, 1]
+    discovery_tree = {'Instant-based': [disc_instant_tree, 0],
+                      'Time-based': [disc_time_tree, 1]
                      }
     ###########
     observe_tree = {'Prova': [0]}
+    ###########
+    get_tree = {'Instant-based': [get_instant_tree, 0],
+                'Time-based': [get_time_tree, 1]
+                }
     #----------
+
 
     # Level 0
     analysis_tree = {'Discovery-based': [discovery_tree, 0],
-                      'Observe-based': [observe_tree, 1]
+                      'Observe-based': [observe_tree, 1],
+                      'GetResource-based': [get_tree, 2]
                       }
     
     ''''''
@@ -104,73 +128,78 @@ def analysis_sel():
                 print("-" * 100)
                 break
 
-
     return user_selection
 
 
 def dataset_sel(analysis):
 
-    # discovery based
-    if analysis[0] == 0:
+    path = {'phase': 'Merging'}
 
-        # instant based -> ONLY 1 dataset to consider
-        if analysis[1] == 0:
+    match analysis[0]:
 
-            levels = ["dataset", "experiment", "date"]
-            path = {'phase': 'Merging', 'folder': 'csv'}
+        case 0:
+            # discovery based
+            path.update({'folder': 'discovery'})
+        case 1:
+            # observe based
+            path.update({'folder': 'observe'})
+        case 2:
+            # get based
+            path.update({'folder': 'get'})
 
-            for level in levels:
-                    choice = files_handling.level_selection(level, path)
 
-                    if choice == None:
-                        return None
-                    else: 
-                        path.update({level: choice})
+    # instant based -> ONLY 1 dataset to consider
+    if analysis[1] == 0:
+
+        levels = ["dataset", "experiment", "date"]
+
+        for level in levels:
+            choice = files_handling.level_selection(level, path)
+
+            if choice == None:
+                return None
+            else: 
+                path.update({level: choice})
             
-            # preloaded dataframe
-            data_df = pd.read_csv(files_handling.path_dict_to_str(path))
+        # preloaded dataframe
+        data_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
-            return data_df
+        return data_df
 
-        # time-series based -> MULTIPLE datasets must be considered
-        elif analysis[1] == 1:
+    # time-series based -> MULTIPLE datasets must be considered
+    elif analysis[1] == 1:
             
-            levels = ["dataset", "experiment"]
-            path = {'phase': 'Merging', 'folder': 'csv'}
+        levels = ["dataset", "experiment"]
 
-            for level in levels:
-                    choice = files_handling.level_selection(level, path)
+        for level in levels:
+            choice = files_handling.level_selection(level, path)
 
-                    if choice == None:
-                        return None
-                    else: 
-                        path.update({level: choice})
+            if choice == None:
+                return None
+            else: 
+                path.update({level: choice})
 
-            csvs = os.listdir(files_handling.path_dict_to_str(path))
-            csvs.sort()
 
-            frames = []
+        csvs = os.listdir(files_handling.path_dict_to_str(path))
+        csvs.sort()
 
-            for i, csv in enumerate(csvs):
-                path.update({'date': csv})
+        frames = []
+
+        for i, csv in enumerate(csvs):
+            path.update({'date': csv})
             
-                if i == 0:
-                    date_df = pd.read_csv(files_handling.path_dict_to_str(path), skiprows=0)
-                else:
-                    date_df = pd.read_csv(files_handling.path_dict_to_str(path))
+            if i == 0:
+                date_df = pd.read_csv(files_handling.path_dict_to_str(path), skiprows=0)
+            else:
+                date_df = pd.read_csv(files_handling.path_dict_to_str(path))
 
-                date_df['Date'] = csv.split('.')[0]
+            date_df['Date'] = csv.split('.')[0]
 
-                frames.append(date_df)
+            frames.append(date_df)
 
-            data_df = pd.concat(frames).reset_index()
+        data_df = pd.concat(frames).reset_index()
 
-            return data_df
-    
-    # Observe Based
-    else:
-        print("0bserve-based analysis")
-
+        return data_df
 
 
 def perform_analysis(analysis, dataset):
@@ -296,6 +325,53 @@ def perform_analysis(analysis, dataset):
         # observe-based
         case 1:
             print('Observe')
+
+        # get_resource-based
+        case 2:
+            
+            match analysis[1]:
+
+                # instant-based
+                case 0:
+                    
+                    match analysis[2]:
+
+                        # Data format
+                        case 0:
+                            print("Instant Data Format")
+                            get_resource.instant_analysis(dataset, "Data Format")
+
+                        # Payload Size
+                        case 1:
+                            print("Instant Payload Size")
+                            get_resource.instant_analysis(dataset, "Payload Size")
+
+                        # Response Code
+                        case 2:
+                            print("Instant Response Code")
+                            get_resource.instant_analysis(dataset, "Response Code")
+
+
+                # time-based
+                case 1:
+
+                    match analysis[2]:
+
+                        # Data format
+                        case 0:
+                            print("Data Format over time")
+                            get_resource.time_analysis(dataset, "Data Format")
+
+                        # Payload Size
+                        case 1:
+                            print("Payload Size over time")
+                            get_resource.time_analysis(dataset, "Payload Size")
+
+                        # Response Code
+                        case 2:
+                            print("Response Code over time")
+                            get_resource.time_analysis(dataset, "Response Code")
+
 
     print('-'*100)
       

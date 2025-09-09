@@ -8,9 +8,15 @@ def level_selection(level, path):
 
     string_path = path_dict_to_str(path)
 
-    #   List of all the available [zmap outputs/experiments/...] alphabetically sorted
-    options = os.listdir(string_path)       # Returns a <list> object
-    options.sort()                          # Sort the list alphabetically
+    try:
+        #   List of all the available [zmap outputs/experiments/...] alphabetically sorted
+        options = os.listdir(string_path)       # Returns a <list> object
+        options.sort()                          # Sort the list alphabetically
+
+    except Exception as e:
+        print(f"\t{e}")
+        print('-' * 100)
+        return None # -> to MAIN MENU
 
     match level:
         case "dataset":
@@ -40,8 +46,11 @@ def level_selection(level, path):
         # printing list of options
         for option_id in range(len(options)):
             print(f"\t{option_id}".ljust(10), end="")
-            for value in metadata_info[option_id].values():
-                print(str(value).ljust(20), end="")
+            try:
+                for value in metadata_info[option_id].values():
+                    print(str(value).ljust(20), end="")
+            except Exception as e:
+                print(f"\t[ERROR] No metadata have been collected yet\n\t\t{e}")
             print()
 
 
@@ -93,28 +102,36 @@ def store_data(data, file):
 
 
 
-def all_partitions_done(coap_path):
+def all_partitions_done(path):
 
     # csv containing info about experiments associated to a dataset
     csv_metadata = "utils/logs/experiments.csv"
     # csv -> pandas dataframe
     experiment_row = pd.read_csv(csv_metadata)
     # find the rows associated to the specified dataset and experiment -> partitions
-    experiment_row = experiment_row.loc[((experiment_row['exp_name'] == coap_path['experiment']) &
-                                        (experiment_row['dataset_name'] == coap_path['dataset']))]
+    experiment_row = experiment_row.loc[((experiment_row['exp_name'] == path['experiment']) &
+                                        (experiment_row['dataset_name'] == path['dataset']))]
     
     n_partitions = experiment_row['n_partitions'].iloc[0]
 
-    # csv containing log info about coap tests 
-    coap_tests_log = "utils/logs/coap_checks.csv"
-    # csv -> pandas dataframe
-    coap_tests_log_rows = pd.read_csv(coap_tests_log)
-    # find the rows associated to the specified dataset and experiment -> partitions
-    coap_tests_log_rows = coap_tests_log_rows.loc[((coap_tests_log_rows['exp_name'] == coap_path['experiment']) &
-                                                (coap_tests_log_rows['dataset_name'] == coap_path['dataset'])&
-                                                (coap_tests_log_rows['date'] == coap_path['date']))]
+    # csv containing log info about tests 
+    match path['phase']:
+        case 'Discovery':
+            tests_log = "utils/logs/discovery_checks.csv"
+        case 'GetResource':
+            tests_log = "utils/logs/get_checks.csv"
+        case 'Observe':
+            tests_log = "utils/logs/observe_checks.csv"
 
-    n_partitions_done = coap_tests_log_rows.shape[0]
+    
+    # csv -> pandas dataframe
+    tests_log_df = pd.read_csv(tests_log)
+    # find the rows associated to the specified dataset and experiment -> partitions
+    tests_log_df = tests_log_df.loc[((tests_log_df['exp_name'] == path['experiment']) &
+                                    (tests_log_df['dataset_name'] == path['dataset']) &
+                                    (tests_log_df['date'] == path['date']))]
+
+    n_partitions_done = tests_log_df.shape[0]
 
     if n_partitions == n_partitions_done:
         return True
@@ -123,17 +140,17 @@ def all_partitions_done(coap_path):
 
 
 
-def new_coap_test(partition_path):
+def new_discovery_test(partition_path):
 
     # Before: Partitioning/csv/02_output.csv/exp_0/4_4.csv
     coap_test_path = {
-        'phase' : 'CoapInfo',
+        'phase' : 'Discovery',
         'folder': 'csv',
         'dataset': partition_path['dataset'],
         'experiment': partition_path['experiment'],
         'date': datetime.date.today()
     }
-    # After: CoapInfo/csv/02_output.csv/exp_0/2025-08-23
+    # After: Discovery/csv/02_output.csv/exp_0/2025-08-23
 
     coap_test_path_str = path_dict_to_str(coap_test_path)
     
@@ -141,9 +158,9 @@ def new_coap_test(partition_path):
     if not os.path.exists(coap_test_path_str):
         os.makedirs(coap_test_path_str)
 
-    # Before: CoapInfo/csv/02_output.csv/exp_0/2025-08-23
+    # Before: Discovery/csv/02_output.csv/exp_0/2025-08-23
     coap_test_path.update({'partition': partition_path['partition']})
-    #  After: CoapInfo/csv/02_output.csv/exp_0/2025-08-23/4_4.csv
+    #  After: Discovery/csv/02_output.csv/exp_0/2025-08-23/4_4.csv
     
     coap_test_path_str = path_dict_to_str(coap_test_path)
 
@@ -158,6 +175,41 @@ def new_coap_test(partition_path):
     # return coap test path
     return coap_test_path
 
+
+def new_gets_test(partition_path):
+
+    # Before: Discovery/csv/02_output.csv/exp_0/2025-08-23/4_4.csv
+    get_test_path = {
+        'phase' : 'GetResource',
+        'folder': 'csv',
+        'dataset': partition_path['dataset'],
+        'experiment': partition_path['experiment'],
+        'date': partition_path['date']
+    }
+    # After: GetResource/csv/02_output.csv/exp_0/2025-08-23
+
+    get_test_path_str = path_dict_to_str(get_test_path)
+    
+    # if directories do not exit -> create them
+    if not os.path.exists(get_test_path_str):
+        os.makedirs(get_test_path_str)
+
+    # Before: GetResource/csv/02_output.csv/exp_0/2025-08-23
+    get_test_path.update({'partition': partition_path['partition']})
+    #  After: GetResource/csv/02_output.csv/exp_0/2025-08-23/4_4.csv
+    
+    get_test_path_str = path_dict_to_str(get_test_path)
+
+    # create empty file
+    with open(get_test_path_str, 'w') as get_partition_test:
+        # HEADER
+        writer = csv.writer(get_partition_test)
+        writer.writerow(["IP address", "as_name", "country", "continent",     # from the IpInfo API
+                        "uri", "Code", "Message Type", "Payload", "Payload Size (bytes)"])                                       # from Resource Discovery
+        get_partition_test.close()
+    
+    # return coap test path
+    return get_test_path
 
 
 def new_ip_test(zmap_filepath):
@@ -217,7 +269,7 @@ def get_datasets_info():
 
 
 
-# returns a list of dictionaries, one for each experiment performed over a zmap dataset together with additional info
+# returns a list of dictionaries, one for each experiment performed over a ipinfo dataset
 def get_exps_info(dataset_name):
 
     # csv containing info about experiments performed on datasets
@@ -269,10 +321,14 @@ def get_parts_info(zmap, exp):
         # extract valuable info: partition id, partition size
         part_id = partition_rows.iloc[i]['partition_id']
         part_size = partition_rows.iloc[i]['partition_size']
-        part_done = is_part_done(zmap, exp, part_id)
+        part_done = is_part_done(zmap, exp, str(datetime.date.today()), part_id)
         
         # organize info as dictionary
-        info_row = {'partition_id': part_id, 'partition_size': part_size, 'today_test': part_done}
+        info_row = {'partition_id': part_id,
+                    'partition_size': part_size,
+                    'discovery_test': part_done[0],
+                    'get_test': part_done[1],
+                    'observe_test': part_done[2]}
 
         # append dictionary to res
         res.append(info_row)
@@ -284,25 +340,34 @@ def get_parts_info(zmap, exp):
 
 # returns a metadata string needed to understand whether, during the current day, 
 # the coap test over a specified partition has been already performed or not
-def is_part_done(zmap, exp, part_id):
+def is_part_done(zmap, exp, date, part_id):
 
     # csv containing info about partitions of an experiment
-    csv_metadata = "utils/logs/coap_checks.csv"
-
-    # csv -> pandas dataframe
-    partition_rows = pd.read_csv(csv_metadata)
-
-    # find the rows associated to the specified dataset and experiment -> partitions
-    partition_rows = partition_rows.loc[((partition_rows['exp_name'] == exp) &
-                                        (partition_rows['dataset_name'] == zmap) &
-                                        (partition_rows['date'] == str(datetime.date.today())) &
-                                        (partition_rows['partition_id'] == part_id))]
+    csvs_metadata = ["utils/logs/discovery_checks.csv",
+                     "utils/logs/get_checks.csv",
+                     "utils/logs/observe_checks.csv"]
     
-    # return the partition state string
-    if partition_rows.empty:
-        return "[To Do]"
-    else:
-        return "[Done]"
+    metadata_res = []
+
+    for csv in csvs_metadata:
+
+        # csv -> pandas dataframe
+        partition_rows = pd.read_csv(csv)
+
+        # find the rows associated to the specified dataset, experiment, date and partition id
+        partition_rows = partition_rows.loc[((partition_rows['exp_name'] == exp) &
+                                            (partition_rows['dataset_name'] == zmap) &
+                                            (partition_rows['date'] == str(date)) &
+                                            (partition_rows['partition_id'] == int(part_id))
+                                            )]
+
+        # return the partition state string
+        if partition_rows.empty:
+            metadata_res.append("[To Do]")
+        else:
+            metadata_res.append("[Done]")
+    
+    return metadata_res
     
 
 
@@ -320,8 +385,8 @@ def get_dates_info(zmap_dataset, experiment):
     n_partitions = experiment_row['n_partitions'].iloc[0]
 
 
-    # csv containing log info about coap tests 
-    coap_tests_log = "utils/logs/coap_checks.csv"
+    # csv containing log info about discovery tests 
+    coap_tests_log = "utils/logs/discovery_checks.csv"
     # csv -> pandas dataframe
     coap_tests_log_rows = pd.read_csv(coap_tests_log)
     # find the rows associated to the specified dataset and experiment -> partitions
