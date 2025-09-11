@@ -51,6 +51,8 @@ async def findCoapServers(partition_path):
 
             for row in partition_csv:
 
+                print("^" * 75)
+
                 print(f"[{partition_csv.line_num}/{partition_size}] Testing: {row[0]}") # row[0] => ip address
 
                 '''
@@ -75,13 +77,11 @@ async def findCoapServers(partition_path):
                         
                     # Store also invalid IPs
                     row.extend([False, None, None, None, None])
-                
-                print("-" * 100)
 
                 files_handling.store_data(row, files_handling.path_dict_to_str(discovery_test_path))
                 
         
-        # 3. logging operations
+        # 3. logs info about current resource discovery
         exp_name = partition_path['experiment']
         date = str(datetime.date.today())
         part_id = partition_path['partition'][:1]

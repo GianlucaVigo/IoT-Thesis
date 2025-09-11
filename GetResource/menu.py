@@ -6,6 +6,12 @@ from GetResource import coap
 
 def getresource_menu():
 
+    # Header
+    print('-' * 50, '[GET RESOURCE]', '-' * 50)
+    # Description
+    print("Interact with CoAP resources and retrieve their content through a simple GET request\n")
+
+
     '''1) Partition selection'''
     # Levels:
     #   0. dataset (ex. 01_output.csv)
@@ -23,21 +29,28 @@ def getresource_menu():
 
         else:
             choice = files_handling.level_selection(level, path)
+
             if choice == None:
                 return
+            
             else: 
                 path.update({level: choice})
 
-
+    # dataset name
     dataset = path['dataset']
+    # experiment name
     experiment = path['experiment']
+    # date
     date = path['date']
+    # partition id
     partition = path['partition'][:1]
 
 
+    # is the discovery done?
     if files_handling.is_part_done(dataset, experiment, date, partition)[0] == '[Done]':
+
         '''2) Perform GET requests'''
         asyncio.run(coap.get_requests(path))
+
     else:
-        print("Requested Partition has not been processed yet at stage [Discovery] check")
-        print("-" * 100)
+        print("\nRequested Partition has not been processed yet at stage [Discovery] check\n")

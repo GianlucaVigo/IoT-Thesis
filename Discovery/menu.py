@@ -6,6 +6,12 @@ from utils import files_handling
         
 def discovery_menu():
 
+    # Header
+    print('-' * 50, '[DISCOVERY]', '-' * 50)
+    # Description
+    print("Resource Discovery of CoAP servers:\n\tGET requests to found IP addresses on port 5683 with uri = '/.well-known/core'\n")
+
+
     '''1) Partition selection'''
     # Levels:
     #   0. dataset (ex. 01_output.csv)
@@ -16,10 +22,12 @@ def discovery_menu():
     path = {'phase': 'Partitioning', 'folder': 'csv'}
 
     for level in levels:
+
         choice = files_handling.level_selection(level, path)
 
         if choice == None:
             return
+        
         else: 
             path.update({level: choice})
 

@@ -82,6 +82,7 @@ def analysis_sel():
 
     while(True):
 
+        print("$" * 75)
         print(f"On which kind of analysis are you interested in?\n")
 
         options = list(user_tree.keys())
@@ -96,7 +97,7 @@ def analysis_sel():
             choice = input()
 
             if (choice == 'e'):
-                print("-" * 100)
+                print("\n\t[Redirection to main menu ...]\n")
                 return # -> to MAIN MENU
                             
             choice = int(choice)
@@ -106,26 +107,22 @@ def analysis_sel():
         except Exception as e:
             print("\tINPUT ERROR: Invalid input")    # Invalid user input
             print(f"\t\t {e}")
-            print("-" * 100)
             continue
 
         else:
 
             if (choice not in range(len(options))):
                 print("\tINPUT ERROR: Invalid option -> Out of range!")    # Invalid user choice
-                print("-" * 100)
                 continue
                     
             elif (len(chosen_tree_list) == 2): # Go to next level
 
                 user_tree = chosen_tree_list[0]             # take next tree menù
                 user_selection.append(chosen_tree_list[1])  # append number identifying user choice
-                print("-" * 100)
 
             else: # Menù end reached
 
                 user_selection.append(chosen_tree_list[0])
-                print("-" * 100)
                 break
 
     return user_selection
@@ -377,6 +374,9 @@ def perform_analysis(analysis, dataset):
       
 
 def analysis_menu():
+
+    print('-' * 50, '[ANALYSIS]', '-' * 50)
+    print("Extract knowledge/insights out of collected data\n")
 
     while(True):
 

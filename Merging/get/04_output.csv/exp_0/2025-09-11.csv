@@ -1,0 +1,2494 @@
+IP address,as_name,country,continent,uri,Code,Message Type,Payload,Payload Size (bytes)
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</qlink/request>,2.05 Content,ACK,"should post example:{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",94
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</qlink/success>,2.05 Content,ACK,,0
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</qlink/ack>,2.05 Content,ACK,"should post example:{""password"":""ns2e5wm3"",""encrypt"":""MIXED-WPAPSK2"",""SSID"":""CMCC-aufd""}",88
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""password"":""123456""}",41
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</basic/searchgw>,2.05 Content,ACK,192.168.1.1,11
+36.35.161.70,CHINA UNICOM China169 Backbone,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/request>;title=""Qlink-Request Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/ack>;title=""Qlink-ACK Resource"",</basic>,</basic/show>;title=""Qlink-SHOW Resource"",</basic/regist>;title=""Qlink-Regist Resource"",</basic/searchgw>;title=""SearchGW Resource"",</.well-known/core>",351
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+112.18.220.127,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+147.124.65.168,CIK Telecom INC,Canada,North America,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+147.124.65.168,CIK Telecom INC,Canada,North America,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+147.124.65.168,CIK Telecom INC,Canada,North America,</async>,5.03 Service Unavailable,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+183.239.152.195,China Mobile communications corporation,China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+183.239.152.195,China Mobile communications corporation,China,Asia,</qlink/success>,2.05 Content,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_B454596081B8{""apmsOnlineStatus"":0}",38
+183.239.152.195,China Mobile communications corporation,China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+183.239.152.195,China Mobile communications corporation,China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+183.239.152.195,China Mobile communications corporation,China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+183.239.152.195,China Mobile communications corporation,China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+183.239.152.195,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+183.239.152.195,China Mobile communications corporation,China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+183.239.152.195,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+176.195.70.39,PJSC MegaFon,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+176.195.70.39,PJSC MegaFon,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+176.195.70.39,PJSC MegaFon,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""f7bcabe4-b713-11e9-8f23-cbb9d670e611"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_50558D28B9C0{""apmsOnlineStatus"":0}",38
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+111.59.177.198,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</qlink/success>,2.05 Content,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_8C8F8BEF10F0{""apmsOnlineStatus"":0}",38
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+223.72.44.106,China Mobile Communicaitons Corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+209.50.40.9,CIK Telecom INC,Canada,North America,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+209.50.40.9,CIK Telecom INC,Canada,North America,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+209.50.40.9,CIK Telecom INC,Canada,North America,</async>,5.03 Service Unavailable,ACK,,0
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+111.59.156.195,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+62.63.77.212,ArtX LLC,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+62.63.77.212,ArtX LLC,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+62.63.77.212,ArtX LLC,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""4035281e-417a-11e6-8115-3df852a03049"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+120.198.32.107,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.94.253.80,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.162.65,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+91.205.25.139,Digital Networks Ltd,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""174dc6a2-3bfa-11e6-8115-3dc9264e6981"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.151.73.134,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchdevice>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/netinfo>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchack>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/unbind>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/file>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/log>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/selfdetect>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchdevice?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchRouter?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/guide?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WiFiParameterSync>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WiFiSwitch>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/RadioConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WPS>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/MacFilter>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/Reboot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/LEDControl>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/RoamingConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/ApConfigInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""hardwareVersion"":	""HV2.0.0"",
+		""softwareVersion"":	""RAX1800-ZXW.CH.04"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	512,
+		""CPUOccupancyRate"":	17,
+		""RamOccupancyRate"":	25,
+		""UpTime"":	""694758"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-79,
+		""LowRSSI5G"":	-79,
+		""IPv6ConnStatus"":	""Connected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	""::"",
+		""IPv6DNSServers"":	""::"",
+		""IPv6PrefixDelegationEnabled"":	""FALSE"",
+		""IPv6PrefixOrigin"":	""PrefixDelegation"",
+		""IPv6Prefix"":	""::"",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	""fe80::aa6d:5fff:fe7a:f513"",
+		""Dslite_Enable"":	""FALSE"",
+		""IPv6Status"":	1,
+		""SyncCode"":	""0"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11b/g/n/ax"",
+				""NoiseLevel"":	""-80"",
+				""LoadRate"":	53,
+				""InterferencePercent"":	53,
+				""Channel"":	""11"",
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11a/n/ac/ax"",
+				""NoiseLevel"":	""-91"",
+				""LoadRate"":	1,
+				""InterferencePercent"":	1,
+				""Channel"":	""157"",
+				""Bandwidth"":	3
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""huahao"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""88888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-papu_Guest"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""huahao_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""88888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""huahao"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""88888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-7A0F6F-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-papu-5G_Guest"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""huahao-5G_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""88888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",3114
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/UplinkStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""340A985C311F"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""0.043"",
+		""TxRate_rt"":	""0.587"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",269
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/STAInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.2"",
+				""STAIPv6IPAddress"":	""fe80::f65b:73ff:fee0:9857"",
+				""MacAddress"":	""F45B73E09857"",
+				""VMacAddress"":	""F45B73E09857"",
+				""STAType"":	""other"",
+				""HostName"":	""anonymous"",
+				""UpTime"":	""694703"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""huahao"",
+				""RSSI"":	""-29"",
+				""RxRate"":	""72"",
+				""TxRate"":	""72"",
+				""RxRate_rt"":	""0.009"",
+				""TxRate_rt"":	""0.082""
+			}],
+		""STANumber"":	1
+	},
+	""deviceId"":	""""
+}",459
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WiFiStats>,2.05 Content,ACK,"{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""huahao"",
+				""TotalBytesSent"":	733362366,
+				""TotalBytesReceived"":	-295243605,
+				""TotalPacketsSent"":	11054043,
+				""TotalPacketsReceived"":	12492532,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""CMCC-papu_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""huahao_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""huahao"",
+				""TotalBytesSent"":	935,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	12,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""MESH-7A0F6F-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""CMCC-papu-5G_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""huahao-5G_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",2415
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WiFiStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""11"",
+				""LoadRate"":	37,
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""157"",
+				""LoadRate"":	1,
+				""Bandwidth"":	3
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""huahao"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""88888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-papu_Guest"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""huahao_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""88888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""huahao"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""88888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-7A0F6F-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-papu-5G_Guest"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""huahao-5G_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""88888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",2136
+183.234.82.76,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WlanNeighborInfo>,2.05 Content,ACK,"{
+	""respCode"":	1001,
+	""restCont"":	""invalid argument""
+}",54
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchdevice>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/netinfo>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchack>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/unbind>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/file>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/log>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/selfdetect>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchdevice?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchRouter?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/guide?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WiFiParameterSync>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WiFiSwitch>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/RadioConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/WPS>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/MacFilter>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/Reboot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/LEDControl>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/control/RoamingConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/ApConfigInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""hardwareVersion"":	""V1.0.0"",
+		""softwareVersion"":	""V1.0.0"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	3,
+		""RamOccupancyRate"":	48,
+		""UpTime"":	""1337358"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	0,
+		""LowRSSI5G"":	0,
+		""IPv6ConnStatus"":	""Connected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	"""",
+		""IPv6DNSServers"":	"""",
+		""IPv6PrefixDelegationEnabled"":	""TRUE"",
+		""IPv6PrefixOrigin"":	"""",
+		""IPv6Prefix"":	"""",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	"""",
+		""Dslite_Enable"":	""FALSE"",
+		""SyncStatus"":	0,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Channel"":	""1"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""SSIDStandard"":	""802.11ax"",
+				""NoiseLevel"":	""-96"",
+				""InterferencePercent"":	36
+			}, {
+				""Radio"":	""5G"",
+				""Channel"":	""36"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""SSIDStandard"":	""802.11ax"",
+				""NoiseLevel"":	""-101"",
+				""InterferencePercent"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""XSF88022111"",
+				""SSID"":	""xinshifa"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"">fk2XZwL"",
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""Index"":	2,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""WPA2-Personal""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID3"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""CMCC-QLINK"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""None""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""XSF88022111"",
+				""SSID"":	""xinshifa-5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""ybzf7693"",
+				""SSID"":	""MESH-673528"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID7"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID8"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}]
+	},
+	""deviceId"":	""""
+}",2796
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/UplinkStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""E84368673528"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""100"",
+		""TxRate"":	""100"",
+		""RxRate_rt"":	""0.0365"",
+		""TxRate_rt"":	""0.0012"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",269
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/STAInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.26"",
+				""STAIPv6IPAddress"":	""fe80::f426:b753:5392:39b9"",
+				""MacAddress"":	""A036BC2624DE"",
+				""VMacAddress"":	""A036BC2624DE"",
+				""STAType"":	""pc"",
+				""HostName"":	""PC-20240506WLHF"",
+				""UpTime"":	""322120"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0240"",
+				""TxRate_rt"":	""0.0100""
+			}, {
+				""IPAddress"":	""192.168.10.42"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""3497F6529CD9"",
+				""VMacAddress"":	""3497F6529CD9"",
+				""STAType"":	"""",
+				""HostName"":	"""",
+				""UpTime"":	""1337334"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0350"",
+				""TxRate_rt"":	""0.0260""
+			}, {
+				""IPAddress"":	""192.168.10.25"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""C0A5DD31D218"",
+				""VMacAddress"":	""C0A5DD31D218"",
+				""STAType"":	""pc"",
+				""HostName"":	"""",
+				""UpTime"":	""195"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0350"",
+				""TxRate_rt"":	""0.0260""
+			}, {
+				""IPAddress"":	""192.168.10.116"",
+				""STAIPv6IPAddress"":	""fe80::b809:8e55:62bb:1ea1"",
+				""MacAddress"":	""10FFE008A0C3"",
+				""VMacAddress"":	""10FFE008A0C3"",
+				""STAType"":	""pc"",
+				""HostName"":	""PC-20250313IRZQ"",
+				""UpTime"":	""476033"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0350"",
+				""TxRate_rt"":	""0.0260""
+			}, {
+				""IPAddress"":	""192.168.10.145"",
+				""STAIPv6IPAddress"":	""fe80::a8a0:3dac:3141:32f3"",
+				""MacAddress"":	""08BFB81D8685"",
+				""VMacAddress"":	""08BFB81D8685"",
+				""STAType"":	""pc"",
+				""HostName"":	""PCPM"",
+				""UpTime"":	""44352"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0350"",
+				""TxRate_rt"":	""0.0260""
+			}, {
+				""IPAddress"":	""192.168.10.122"",
+				""STAIPv6IPAddress"":	""fe80::ee51:bcff:feff:400d"",
+				""MacAddress"":	""EC51BCFF400D"",
+				""VMacAddress"":	""EC51BCFF400D"",
+				""STAType"":	""phone"",
+				""HostName"":	""android-60689a6c1c1c1fc0"",
+				""UpTime"":	""419435"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""xinshifa"",
+				""RSSI"":	""-81"",
+				""RxRate"":	""26"",
+				""TxRate"":	""2"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.123"",
+				""STAIPv6IPAddress"":	""fe80::8187:29a2:931f:7d6d"",
+				""MacAddress"":	""42C597D6500D"",
+				""VMacAddress"":	""42C597D6500D"",
+				""STAType"":	""phone"",
+				""HostName"":	""????_60-a5548318b3"",
+				""UpTime"":	""18217"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""xinshifa"",
+				""RSSI"":	""-83"",
+				""RxRate"":	""19"",
+				""TxRate"":	""13"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}],
+		""STANumber"":	7
+	},
+	""deviceId"":	""""
+}",2732
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WiFiStats>,2.05 Content,ACK,"{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""DiscardPacketsReceived"":	451060,
+				""SSID"":	""xinshifa"",
+				""Index"":	1,
+				""DiscardPacketsSent"":	824566,
+				""ErrorsSent"":	824566,
+				""TotalBytesReceived"":	36638609521,
+				""TotalPacketsReceived"":	96740047,
+				""TotalBytesSent"":	198213014153,
+				""TotalPacketsSent"":	164376695,
+				""ErrorsReceived"":	4658723
+			}, {
+				""Radio"":	""5G"",
+				""DiscardPacketsReceived"":	2150,
+				""SSID"":	""xinshifa-5G"",
+				""Index"":	5,
+				""DiscardPacketsSent"":	2993,
+				""ErrorsSent"":	2993,
+				""TotalBytesReceived"":	1382962849,
+				""TotalPacketsReceived"":	7753561,
+				""TotalBytesSent"":	26441189408,
+				""TotalPacketsSent"":	22076293,
+				""ErrorsReceived"":	374031
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	1,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	1703079067,
+				""TotalPacketsReceived"":	45772050,
+				""TotalBytesSent"":	520789133,
+				""TotalPacketsSent"":	68613568,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	2,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsReceived"":	0,
+				""TotalBytesSent"":	0,
+				""TotalPacketsSent"":	0,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	3,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsReceived"":	0,
+				""TotalBytesSent"":	0,
+				""TotalPacketsSent"":	0,
+				""ErrorsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",1588
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WiFiStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Channel"":	""1"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Channel"":	""36"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""XSF88022111"",
+				""SSID"":	""xinshifa"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"">fk2XZwL"",
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""Index"":	2,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""WPA2-Personal""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID3"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""CMCC-QLINK"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""None""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""XSF88022111"",
+				""SSID"":	""xinshifa-5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""ybzf7693"",
+				""SSID"":	""MESH-673528"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID7"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID8"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}]
+	},
+	""deviceId"":	""""
+}",1913
+112.5.55.137,"China Mobile Communications Group Co., Ltd.",China,Asia,</apdevice/query/WlanNeighborInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""Number"":	24,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSID"":	""ChinaNet-Xkqr"",
+				""MacAddress"":	""C814B45102C1"",
+				""Channel"":	""10"",
+				""RSSI"":	""-34""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Redmi_28B4"",
+				""MacAddress"":	""A439B31428B6"",
+				""Channel"":	""1"",
+				""RSSI"":	""-74""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-3Ky7"",
+				""MacAddress"":	""802D1A5A7664"",
+				""Channel"":	""11"",
+				""RSSI"":	""-75""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""822D1A1A7664"",
+				""Channel"":	""11"",
+				""RSSI"":	""-76""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""TP-LINK_989CD0"",
+				""MacAddress"":	""282CB2989CD0"",
+				""Channel"":	""11"",
+				""RSSI"":	""-77""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5688118260A2"",
+				""Channel"":	""6"",
+				""RSSI"":	""-77""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""xiaomi-repeater-v3_miap5b5e"",
+				""MacAddress"":	""3CCD57145B5E"",
+				""Channel"":	""1"",
+				""RSSI"":	""-78""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Redmi_xwc"",
+				""MacAddress"":	""5448E6A14846"",
+				""Channel"":	""11"",
+				""RSSI"":	""-79""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-s8mj"",
+				""MacAddress"":	""5088118260A2"",
+				""Channel"":	""6"",
+				""RSSI"":	""-81""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ChinaNet-U5Jx"",
+				""MacAddress"":	""841C70506601"",
+				""Channel"":	""4"",
+				""RSSI"":	""-82""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Tenda_052E60"",
+				""MacAddress"":	""0840F3052E61"",
+				""Channel"":	""2"",
+				""RSSI"":	""-87""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-s8mj-plus"",
+				""MacAddress"":	""B44D4306BA32"",
+				""Channel"":	""6"",
+				""RSSI"":	""-88""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""GOOD"",
+				""MacAddress"":	""C0A5DD31D217"",
+				""Channel"":	""13"",
+				""RSSI"":	""-89""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""B-LINK_B080D2"",
+				""MacAddress"":	""347DE4B080D2"",
+				""Channel"":	""12"",
+				""RSSI"":	""-90""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-1688"",
+				""MacAddress"":	""3CCD57D16E7D"",
+				""Channel"":	""6"",
+				""RSSI"":	""-90""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Xiaomi_28B4"",
+				""MacAddress"":	""D4DA21B470AB"",
+				""Channel"":	""1"",
+				""RSSI"":	""-90""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-etYK"",
+				""MacAddress"":	""802D1A5B02DE"",
+				""Channel"":	""6"",
+				""RSSI"":	""-91""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-vk5y"",
+				""MacAddress"":	""E83A4B09C481"",
+				""Channel"":	""11"",
+				""RSSI"":	""-91""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""822D1A1B02DE"",
+				""Channel"":	""6"",
+				""RSSI"":	""-92""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""kxQH-kxQH"",
+				""MacAddress"":	""AC710C2D323F"",
+				""Channel"":	""2"",
+				""RSSI"":	""-92""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Redmi_3L"",
+				""MacAddress"":	""64644A9A2789"",
+				""Channel"":	""11"",
+				""RSSI"":	""-94""
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-3Ky7-5G"",
+				""MacAddress"":	""802D1A5A7665"",
+				""Channel"":	""40"",
+				""RSSI"":	""-88""
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""822D1A1A7665"",
+				""Channel"":	""40"",
+				""RSSI"":	""-89""
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""Redmi_xwc_5G"",
+				""MacAddress"":	""5448E6A14847"",
+				""Channel"":	""153"",
+				""RSSI"":	""-93""
+			}]
+	},
+	""deviceId"":	""""
+}",3104
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</qlink>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</qlink/success>,2.05 Content,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</gw>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</gw/query>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_689FF00F4D9F{""apmsOnlineStatus"":0}",38
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</basic>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/command>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/command/data>,2.05 Content,ACK,[],2
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform>,4.05 Method Not Allowed,ACK,,0
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+79.174.24.79,PRIAM NET Sh.p.k.,Albania,Europe,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+119.92.49.246,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+164.215.86.205,Joint Stock Company TransTeleCom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""c3d47450-ba7d-11e6-8115-03500b3725ba"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+46.150.176.80,Opticom Group AO,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+46.150.176.80,Opticom Group AO,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+46.150.176.80,Opticom Group AO,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""f7beaed0-b713-11e9-8f23-95fc32655ec9"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+115.133.243.236,TM TECHNOLOGY SERVICES SDN. BHD.,Malaysia,Asia,</async>,2.05 Content,CON,done,4
+135.0.246.54,CIK Telecom INC,Canada,North America,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.246.54,CIK Telecom INC,Canada,North America,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+135.0.246.54,CIK Telecom INC,Canada,North America,</async>,2.05 Content,CON,done,4
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/queryGwExt>,2.05 Content,ACK,"{""gatewayMac"":""AC710C549550"",""firmwareVersion"":""CMDC;H2-3"",""type"":1,""gatewayManufacturer"":""CMDC"",""softwareVersion"":""V2.6.03.03;OSGI1.0;2.6.1-230712"",""gatewaySn"":""CMDCB15C8C26"",""andlinkVersion"":""2.6.0"",""provinceAbb"":""SCH""}",221
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"090_AC710C549550{""apmsOnlineStatus"":0}",38
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/requestSync>,2.05 Content,ACK,"{""respCode"":1}",14
+183.223.216.210,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</device/inform/requestSync>;title=""AP device request synchronization"",</.well-known/core>",1098
+176.115.69.68,Orbita Ltd.,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+176.115.69.68,Orbita Ltd.,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+176.115.69.68,Orbita Ltd.,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""91fd955e-4c7a-11e6-8115-45c5849ee103"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</ndm/dis>,4.00 Bad Request,ACK,,0
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</ndm/ci>,4.00 Bad Request,ACK,,0
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</uhp>,4.05 Method Not Allowed,ACK,,0
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+176.108.72.65,Svyaz-INKOM-Servis i telekommunikatsii Ltd.,Kazakhstan,Asia,</info>,2.05 Content,ACK,"{""cloud"":true,""dpn"":true,""eula"":true,""password"":true,""cid"":""8be8f9f0-a2b8-11ee-911a-6b11a56b6790"",""vendor"":""Keenetic"",""name"":""Keenetic Start"",""type"":""router"",""version"":""4.02.C.6.3-1"",""http_port"":80}",198
+183.212.75.94,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</qlink/queryGwExt>,2.05 Content,ACK,"{""gatewayMac"":""8427B6610DC8"",""firmwareVersion"":""CIOT;GM232"",""type"":0,""gatewayManufacturer"":""CIOT"",""softwareVersion"":""V1.3.00.208;1.0;2.5.2-220722"",""gatewaySn"":""CIOT26610DC8"",""andlinkVersion"":""2.5.1"",""provinceAbb"":""JSU""}",219
+183.212.75.94,China Mobile communications corporation,China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+183.212.75.94,China Mobile communications corporation,China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+183.212.75.94,China Mobile communications corporation,China,Asia,</qlink/success>,2.05 Content,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"090_8427B6610DC8{""apmsOnlineStatus"":0}",38
+183.212.75.94,China Mobile communications corporation,China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+183.212.75.94,China Mobile communications corporation,China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+183.212.75.94,China Mobile communications corporation,China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+183.212.75.94,China Mobile communications corporation,China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+183.212.75.94,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+183.212.75.94,China Mobile communications corporation,China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+183.212.75.94,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",1027
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+78.132.235.95,PJSC Rostelecom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""c433a2fe-d294-11e9-8f23-fb8d37d8fa43"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121
+78.153.0.85,MTS PJSC,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+78.153.0.85,MTS PJSC,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,,0
+78.153.0.85,MTS PJSC,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+78.153.0.85,MTS PJSC,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+78.153.0.85,MTS PJSC,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+78.153.0.85,MTS PJSC,Russia,Europe,</info>,2.05 Content,ACK,"{""cloud"":true,""dpn"":true,""eula"":true,""password"":true,""cid"":""70b2aca8-5118-11ea-8f23-210d1b55a30a"",""vendor"":""Keenetic"",""name"":""Keenetic Lite"",""type"":""router"",""version"":""4.02.C.6.3-1"",""http_port"":80}",197
+138.229.116.104,CIK Telecom INC,Canada,North America,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+138.229.116.104,CIK Telecom INC,Canada,North America,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+138.229.116.104,CIK Telecom INC,Canada,North America,</async>,2.05 Content,CON,done,4
+111.22.148.51,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.22.148.51,China Mobile communications corporation,China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.22.148.51,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.22.148.51,China Mobile communications corporation,China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+111.22.148.51,China Mobile communications corporation,China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+111.22.148.51,China Mobile communications corporation,China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.22.148.51,China Mobile communications corporation,China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.22.148.51,China Mobile communications corporation,China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.22.148.51,China Mobile communications corporation,China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.22.148.51,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+80.242.99.184,BCLan LLC,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+80.242.99.184,BCLan LLC,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+80.242.99.184,BCLan LLC,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""ee6d1ba0-3679-11e6-8115-3da13a5c54a0"",""http_port"":8080,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",132
+111.23.33.46,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.23.33.46,China Mobile communications corporation,China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.23.33.46,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.23.33.46,China Mobile communications corporation,China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+111.23.33.46,China Mobile communications corporation,China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+111.23.33.46,China Mobile communications corporation,China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.23.33.46,China Mobile communications corporation,China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.23.33.46,China Mobile communications corporation,China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.23.33.46,China Mobile communications corporation,China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.23.33.46,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+58.136.13.56,AIS Fibre,Thailand,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+58.136.13.56,AIS Fibre,Thailand,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.136.13.56,AIS Fibre,Thailand,Asia,</async>,2.05 Content,CON,done,4
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+91.105.164.114,Joint Stock Company TransTeleCom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""91ff2964-4c7a-11e6-8115-7d21e83e4f4a"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+95.221.205.84,PJSC MegaFon,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+95.221.205.84,PJSC MegaFon,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+95.221.205.84,PJSC MegaFon,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""26273bba-381f-11eb-8f23-f7e8ce52ba3c"",""http_port"":80,""type"":""router"",""name"":""Keenetic Omni"",""version"":""0.3.5-1""}",120
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+112.27.17.132,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+46.148.137.47,Trytek LLC,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+46.148.137.47,Trytek LLC,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,,0
+46.148.137.47,Trytek LLC,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+46.148.137.47,Trytek LLC,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+46.148.137.47,Trytek LLC,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+46.148.137.47,Trytek LLC,Russia,Europe,</info>,2.05 Content,ACK,"{""cloud"":true,""dpn"":false,""eula"":true,""password"":true,""cid"":""165d0f38-f5ac-11ec-911a-6b95ed1d3c19"",""vendor"":""Keenetic"",""name"":""Keenetic Start"",""type"":""router"",""version"":""4.03.C.6.0-5"",""http_port"":80}",199
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.32.230,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+162.208.203.130,CIK Telecom INC,Canada,North America,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+162.208.203.130,CIK Telecom INC,Canada,North America,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+162.208.203.130,CIK Telecom INC,Canada,North America,</async>,5.03 Service Unavailable,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+178.205.140.38,"PJSC ""TATTELECOM""",Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""f910b318-1578-11e6-8115-21aa81f641d9"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+58.69.126.7,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.205.218.113,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+188.226.121.169,"LLC ""KomTehCentr""",Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""7cb15106-8e7c-11e6-8115-49041464b98c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+112.27.15.37,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.209.172.212,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+185.56.129.58,INTERDOTLINK SYSELEVEN,Germany,Europe,</automaticmode>,4.05 Method Not Allowed,ACK,,0
+185.56.129.58,INTERDOTLINK SYSELEVEN,Germany,Europe,</automaticmode/location>,5.00 Internal Server Error,ACK,Object reference not set to an instance of an object.,53
+185.56.129.58,INTERDOTLINK SYSELEVEN,Germany,Europe,</searchmode>,4.05 Method Not Allowed,ACK,,0
+185.56.129.58,INTERDOTLINK SYSELEVEN,Germany,Europe,</searchmode/startsearch>,4.05 Method Not Allowed,ACK,,0
+185.56.129.58,INTERDOTLINK SYSELEVEN,Germany,Europe,</.well-known/core>,2.05 Content,ACK,"</automaticmode>,</automaticmode/location>,</searchmode>,</searchmode/startsearch>;title=""title..."",</.well-known/core>",119
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+49.146.200.100,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_50558DB75EE0{""apmsOnlineStatus"":0}",38
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+120.238.113.250,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+183.215.157.31,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.215.157.31,China Mobile communications corporation,China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+183.215.157.31,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+183.215.157.31,China Mobile communications corporation,China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+183.215.157.31,China Mobile communications corporation,China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+183.215.157.31,China Mobile communications corporation,China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.215.157.31,China Mobile communications corporation,China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+183.215.157.31,China Mobile communications corporation,China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+183.215.157.31,China Mobile communications corporation,China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+183.215.157.31,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+5.141.137.108,PJSC Rostelecom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""920029ae-4c7a-11e6-8115-c3df3c3f220d"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+124.105.198.83,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+31.3.24.192,BCLan LLC,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+31.3.24.192,BCLan LLC,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+31.3.24.192,BCLan LLC,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""8750d50e-6d7b-11e6-8115-2b0998093611"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+158.46.98.46,E-Light-Telecom Ltd.,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""d03027e2-0ff8-11e6-8115-0b71773aec40"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130
+36.141.108.43,China Mobile communications corporation,China,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/searchdevice>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/netinfo>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/searchack>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</device/command/unbind>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</device/command/file>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</device/command/log>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</device/command/selfdetect>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/searchdevice?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/searchRouter?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/guide?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</qlink/request?true>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/WiFiParameterSync>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/WiFiSwitch>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/RadioConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/WPS>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/MacFilter>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/Reboot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/LEDControl>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/control/RoamingConfig>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/ApConfigInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""hardwareVersion"":	""HV4.0.0"",
+		""softwareVersion"":	""RAX3000-ZXW.ZD.06"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	512,
+		""CPUOccupancyRate"":	20,
+		""RamOccupancyRate"":	18,
+		""UpTime"":	""856881"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	1,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-79,
+		""LowRSSI5G"":	-79,
+		""IPv6ConnStatus"":	""Connected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	""::"",
+		""IPv6DNSServers"":	""::"",
+		""IPv6PrefixDelegationEnabled"":	""FALSE"",
+		""IPv6PrefixOrigin"":	""PrefixDelegation"",
+		""IPv6Prefix"":	""::"",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	""::"",
+		""Dslite_Enable"":	""FALSE"",
+		""IPv6Status"":	1,
+		""SyncCode"":	""0"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11b/g/n/ax"",
+				""NoiseLevel"":	""-89"",
+				""LoadRate"":	3,
+				""InterferencePercent"":	3,
+				""Channel"":	""6"",
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11a/n/ac/ax"",
+				""NoiseLevel"":	""-92"",
+				""LoadRate"":	1,
+				""InterferencePercent"":	1,
+				""Channel"":	""36"",
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""SSG"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""ssg888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-a7n4_Guest"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""ssg888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""SSG"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""ssg888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-A985A7-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-a7n4-5G_Guest"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""ssg888888"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",3076
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/UplinkStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""00210543205D"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""0.034"",
+		""TxRate_rt"":	""0.403"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",269
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/STAInfo>,2.05 Content,ACK,"{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.2"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""4881D4FCA9DA"",
+				""VMacAddress"":	""4881D4FCA9DA"",
+				""STAType"":	""phone"",
+				""HostName"":	""Ruijie"",
+				""UpTime"":	""856846"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}],
+		""STANumber"":	1
+	},
+	""deviceId"":	""""
+}",424
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/WiFiStats>,2.05 Content,ACK,"{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""SSG"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""CMCC-a7n4_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""SSG"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""MESH-A985A7-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""CMCC-a7n4-5G_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",2366
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/WiFiStatus>,2.05 Content,ACK,"{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""6"",
+				""LoadRate"":	3,
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""36"",
+				""LoadRate"":	1,
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""SSG"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""ssg888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-a7n4_Guest"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""ssg888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""SSG"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""ssg888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-A985A7-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-a7n4-5G_Guest"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""SSG_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""ssg888888"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",2122
+36.141.108.43,China Mobile communications corporation,China,Asia,</apdevice/query/WlanNeighborInfo>,2.05 Content,ACK,"{
+	""respCode"":	1001,
+	""restCont"":	""invalid argument""
+}",54
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+46.47.53.116,Multifunctional Telecommunications Systems LTD,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""f7bc6c6a-b713-11e9-8f23-5501af735917"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_8C02CD359A68{""apmsOnlineStatus"":0}",38
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+117.156.237.99,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+213.109.10.153,"JSC ""ER-Telecom Holding""",Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""4034c3c4-417a-11e6-8115-3d2fac0d5406"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+46.173.53.36,Gorset Ltd.,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+46.173.53.36,Gorset Ltd.,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+46.173.53.36,Gorset Ltd.,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""15994c92-c57e-11e6-8115-b1ca58242a25"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.211.161.38,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.210.252.101,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/queryGwExt>,2.05 Content,ACK,"{""gatewayMac"":""688B0F36B108"",""firmwareVersion"":""CIOT;GM220-S"",""type"":1,""gatewayManufacturer"":""CIOT"",""softwareVersion"":""V1A0.A04.01;1.0;2.6.1-230712"",""gatewaySn"":""CIOT1036B108"",""andlinkVersion"":""2.6.0"",""provinceAbb"":""SCH""}",221
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"090_688B0F36B108{""apmsOnlineStatus"":0}",38
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/requestSync>,2.05 Content,ACK,"{""respCode"":1}",14
+183.221.24.182,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</device/inform/requestSync>;title=""AP device request synchronization"",</.well-known/core>",1098
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+5.143.60.181,PJSC Rostelecom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""ee6e5876-3679-11e6-8115-01081333b699"",""http_port"":80,""type"":""ap"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",126
+36.153.142.50,China Mobile communications corporation,China,Asia,</fw>,4.01 Unauthorized,CON,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</efento>,4.00 Bad Request,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</efento/c>,4.00 Bad Request,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</efento/i>,4.00 Bad Request,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</efento/m>,4.00 Bad Request,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</efento/t>,2.05 Content,ACK,b'h\xc3\x12\x1e',4
+36.153.142.50,China Mobile communications corporation,China,Asia,</sw>,4.01 Unauthorized,CON,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</api>,4.05 Method Not Allowed,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</api/v1>,4.00 Bad Request,ACK,,0
+36.153.142.50,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</fw>,</efento>,</efento/c>,</efento/i>,</efento/m>,</efento/t>,</sw>,</api>,</api/v1>,</.well-known/core>",106
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</device/inform/change>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+87.229.20.84,Celldomolki Kabeltelevizio Kft.,Hungary,Europe,</async>,5.03 Service Unavailable,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+94.253.47.250,Flex Ltd.,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+94.253.47.250,Flex Ltd.,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""174f9b62-3bfa-11e6-8115-01f48f1b091c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+112.204.177.48,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/success>,2.05 Content,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_E0456DA279A1{""apmsOnlineStatus"":0}",38
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+223.82.237.68,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+111.8.130.30,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</qlink/request>,2.05 Content,ACK,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242
+111.8.130.30,China Mobile communications corporation,China,Asia,</qlink/searchgw>,2.05 Content,ACK,"{""result"":1}",12
+111.8.130.30,China Mobile communications corporation,China,Asia,</qlink/success>,2.05 Content,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</gw>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</gw/query>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</gw/query/DiagnotorConnection>,2.05 Content,ACK,"010_7813E0DDA490{""apmsOnlineStatus"":0}",38
+111.8.130.30,China Mobile communications corporation,China,Asia,</gw/query/apdevices>,2.05 Content,ACK,"{""APDevices"":[]}",16
+111.8.130.30,China Mobile communications corporation,China,Asia,</gw/query/config>,2.05 Content,ACK,"""respCode"":1",12
+111.8.130.30,China Mobile communications corporation,China,Asia,</basic>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</basic/regist>,2.05 Content,ACK,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80
+111.8.130.30,China Mobile communications corporation,China,Asia,</basic/show>,2.05 Content,ACK,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54
+111.8.130.30,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/command>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/command/control>,2.05 Content,ACK,"{""respCode"":1}",14
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/command/data>,2.05 Content,ACK,[],2
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform/boot>,2.05 Content,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,2.05 Content,ACK,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform/data>,2.05 Content,ACK,"
+ postRequestText: null",23
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,2.05 Content,ACK,"{""respCode"":1}",14
+111.8.130.30,China Mobile communications corporation,China,Asia,</device/inform/offline>,2.05 Content,ACK,"{""respCode"":1}",14
+111.8.130.30,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.59.232.84,"China Mobile Communications Group Co., Ltd.",China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+183.239.87.27,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+183.239.87.27,China Mobile communications corporation,China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+183.239.87.27,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+183.239.87.27,China Mobile communications corporation,China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+183.239.87.27,China Mobile communications corporation,China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+183.239.87.27,China Mobile communications corporation,China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+183.239.87.27,China Mobile communications corporation,China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+183.239.87.27,China Mobile communications corporation,China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+183.239.87.27,China Mobile communications corporation,China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+183.239.87.27,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+46.158.181.222,PJSC Rostelecom,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""d91bc866-787b-11e6-8115-75516cb8c571"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</>,2.05 Content,ACK,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchfh>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/searchgw>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/request>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</qlink/success>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/bootstrap>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/boot>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/syncreq>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/offline>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/heartbeat>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</device/inform/data>,4.05 Method Not Allowed,ACK,Method Not Allowed,18
+180.195.43.173,Philippine Long Distance Telephone Company,Philippines,Asia,</async>,2.05 Content,CON,done,4
+111.23.106.176,China Mobile communications corporation,China,Asia,</qlink>,4.05 Method Not Allowed,ACK,,0
+111.23.106.176,China Mobile communications corporation,China,Asia,</qlink/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.23.106.176,China Mobile communications corporation,China,Asia,</device>,4.05 Method Not Allowed,ACK,,0
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform>,4.05 Method Not Allowed,ACK,,0
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform/data>,4.00 Bad Request,ACK,should post ,12
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.23.106.176,China Mobile communications corporation,China,Asia,</device/inform/offline>,4.00 Bad Request,ACK,should post ,12
+111.23.106.176,China Mobile communications corporation,China,Asia,</ekit>,4.05 Method Not Allowed,ACK,,0
+111.23.106.176,China Mobile communications corporation,China,Asia,</ekit/boot>,4.00 Bad Request,ACK,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194
+111.23.106.176,China Mobile communications corporation,China,Asia,</ekit/bootstrap>,4.00 Bad Request,ACK,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191
+111.23.106.176,China Mobile communications corporation,China,Asia,</ekit/heartbeat>,4.00 Bad Request,ACK,"should post example,{
+""deviceId"": ""deviceId""
+
+}",47
+111.23.106.176,China Mobile communications corporation,China,Asia,</ekit/searchgw>,4.00 Bad Request,ACK,not soupport GET,16
+111.23.106.176,China Mobile communications corporation,China,Asia,</.well-known/core>,2.05 Content,ACK,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270
+185.165.217.65,JSC DIVO,Russia,Europe,</register>,4.05 Method Not Allowed,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</ndm/dis>,4.00 Bad Request,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</ndm/ci>,4.00 Bad Request,ACK,0x1,3
+185.165.217.65,JSC DIVO,Russia,Europe,</mirror>,4.05 Method Not Allowed,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</uhp>,4.05 Method Not Allowed,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</ndm/logout>,4.05 Method Not Allowed,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</ndm/login>,4.05 Method Not Allowed,ACK,,0
+185.165.217.65,JSC DIVO,Russia,Europe,</info>,2.05 Content,ACK,"{""cid"":""b92babc8-db7e-11e6-8115-3977065b4f3b"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130

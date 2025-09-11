@@ -6,23 +6,35 @@ import pandas as pd
 
 def merging_menu():
 
+    # Header
+    print('-' * 50, '[MERGING]', '-' * 50)
+    # Description
+    print("Merge partitions of a particular date, experiment and dataset\n")
+
+
     '''1) What to merge?'''
     while(True):
 
-        print("On which kind of datasets are you interested? (Specify the associated number)\n")
+        print('°' * 75)
+        print("On which kind of datasets are you interested? (Specify the associated number) ['e' to main menu]\n")
         print("\t1. Resource Discovery")
         print("\t2. Get Requests")
         print("\t3. Resource Observation")
         print("\nOption: ")
             
         try:
-            # user choice saved as integer
-            dataset_type = int(input())
-            print("-" * 100)
+            # user choice
+            dataset_type = input()
 
-        except:
-            print("\tINPUT ERROR: Enter a valid option please!")    # Invalid user choice
-            print("-" * 100)
+            if (dataset_type == 'e'):
+                print("\n\t[Redirection to main menu ...]\n")
+                return None # -> to MAIN MENU
+                
+            dataset_type = int(dataset_type)
+
+        except Exception as e:
+            print("\tINPUT ERROR: Invalid input\n")    # Invalid user input
+            print(f"\t\t {e}")
             continue
 
         match dataset_type:
@@ -39,8 +51,7 @@ def merging_menu():
                 break
 
             case _:
-                print("\tINPUT ERROR: Invalid option -> Out of range!")     # Invalid user choice
-                print("-" * 100)
+                print("\n\tINPUT ERROR: Invalid option -> Out of range!\n")     # Invalid user choice
                 continue
 
 
@@ -89,13 +100,10 @@ def merging_menu():
         # Date
         merged_file_path.update({'date': f"{path['date']}.csv"})
         merged_file_path_str = files_handling.path_dict_to_str(merged_file_path)
-        print(merged_file_path)
 
         # Files to concatenate
         filenames = os.listdir(files_handling.path_dict_to_str(path))
         filenames.sort()
-        print(path)
-        print(filenames)
 
         # List containing dataframes to combine
         dataframes = []
@@ -117,10 +125,12 @@ def merging_menu():
         # Dataframes -> Merged CSV
         combined_dataframes.to_csv(merged_file_path_str, index=False)
 
+        print("Merging Completed ...")
+        print("... Return to Main Menu!\n")
+
     else:
         print("\t[ERROR] Some partitions are missing!\n\t\tPlease perform Discovery testing for all the experiment partitions generated")
         print('-' * 100)
-
 
 
     return None

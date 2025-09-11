@@ -8,6 +8,8 @@ from utils import files_handling
 
 def get_info(ip_address):
 
+    print("#" * 75)
+
     try: 
         # in order to be compliant with the max API rate (= 3 req/s)
         time.sleep(0.5)
@@ -33,30 +35,28 @@ def get_info(ip_address):
         # interpreting JSON format
         data = json.loads(response)
 
-
         # debug
         print(f"Extract info about: {ip_address}" ) # row[0] => ip address
         print(f"\tCountry: {data['country']}")
         print(f"\tAS name: {data['as_name']}")
         
-
         # append to data_to_store list all the available retrieved info
         data_to_store = []
         keys = ['asn', 'as_name', 'as_domain', 'country_code', 'country', 'continent_code', 'continent']
                 
         for key in keys:
+
             if key in response:
                 data_to_store.append(data[key])
+                
             else:
                 print(f"\t\t{key} is not available")
                 data_to_store.append(None)
-
-        print("#" * 50)
         
         return data_to_store
     
     except Exception as e:
-        print(e)
+        print(f"IpInfo/ip/get_info: {e}")
 
 
 
@@ -76,14 +76,15 @@ def findIpInfo(zmap_dataset_path):
 
             # Retrieve ip information
             ip_info = get_info(row[0])
-            # Store ip info data
+            # Store ip info data by exteding current row
             row.extend(ip_info)
-                    
+            
+            # store row in the ip_info_file
             files_handling.store_data(row, files_handling.path_dict_to_str(ip_info_file))
 
 
     except Exception as e:
-        print(e)
+        print(f"IpInfo/ip/findIpInfo: {e}")
     
 
     return None

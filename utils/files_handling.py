@@ -15,7 +15,7 @@ def level_selection(level, path):
 
     except Exception as e:
         print(f"\t{e}")
-        print('-' * 100)
+        print("\n\t[Redirection to main menu ...]\n")
         return None # -> to MAIN MENU
 
     match level:
@@ -34,6 +34,8 @@ def level_selection(level, path):
             metadata_info = get_dates_info(dataset, experiment)
 
     while(True):
+        print('?' * 40, f"{level.capitalize()} Selection", '?' * 40)
+
         #   Print all together with a zero based index
         print(f"Here's the list of available {level}s to work with:\n")
 
@@ -58,23 +60,21 @@ def level_selection(level, path):
         print(f"\nSelect the {level} index: ['e' to main menu] ")
         try:
             choice = input()
+            print()
+
             if (choice == 'e'):
-                print("-" * 100)
+                print("\n\t[Redirection to main menu ...]\n")
                 return None # -> to MAIN MENU
                 
             choice_id = int(choice)
 
-            print("-" * 100)
-
         except Exception as e:
-            print("\tINPUT ERROR: Invalid input")    # Invalid user input
+            print("\tINPUT ERROR: Invalid input\n")    # Invalid user input
             print(f"\t\t {e}")
-            print("-" * 100)
             continue
 
         if (choice_id not in range(len(options))):
-            print("\tINPUT ERROR: Invalid option -> Out of range!")    # Invalid user choice
-            print("-" * 100)
+            print("\tINPUT ERROR: Invalid option -> Out of range!\n")    # Invalid user choice
             continue
 
         break
@@ -87,7 +87,7 @@ def path_dict_to_str(dict_path):
 
     string_path = ""
 
-    for key, value in dict_path.items():
+    for value in dict_path.values():
         string_path += f"{value}/"
 
     return string_path[:-1]

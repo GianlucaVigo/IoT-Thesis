@@ -54,19 +54,19 @@ async def get_requests(partition_path):
                 if (partition_csv.line_num == 1):
                     continue
 
+                print("ç" * 100)
+
                 print(f"[{partition_csv.line_num-1}/{partition_size-1}] Testing: {row[0]}") # row[0] => ip address
                 
                 if (row[8] == False):
                     print(f"\tServer at {row[0]} was not active")
-                    print("-" * 100)
                     continue
 
                 if (row[9] != '2.05 Content'):
                     print(f"\tEmpty/Invalid Resource Discovery Response at {row[0]}")
-                    print("-" * 100)
                     continue
 
-                uris = payload_handling.uri_list_of(row[11]) # discovery payload 
+                uris = payload_handling.uri_list_of(row[11]) # discovery payload = list of uris + their metadata
 
                 for i, uri in enumerate(uris):
 
@@ -110,11 +110,9 @@ async def get_requests(partition_path):
                         print(f"\t\t\tPayload Size: {len(response.payload)}")
 
                         files_handling.store_data(data_to_store, files_handling.path_dict_to_str(get_test_path))
-                    
-                    print("-" * 100)
                 
         
-        # 3. logging operations
+        # 3. logs info about current get requests
         exp_name = partition_path['experiment']
         date = partition_path['date']
         part_id = partition_path['partition'].split('.')[0].split('_')[0]

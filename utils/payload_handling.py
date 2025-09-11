@@ -58,7 +58,6 @@ def get_metadata_value_of(payload, metadata_name):
     if len(res_attributes) == 1: # no attributes present -> skip
         return None
     
-    #for attr in itertools.islice(res_attributes, 1, None): # skip resource name
     for attr in res_attributes[1:]: # skip resource name
 
         # [metadata_name, metadata_value]

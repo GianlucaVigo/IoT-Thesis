@@ -1,10 +1,54 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-from collections import Counter
+import numpy as np
+import json
 import plotly.express as px
 
+from collections import Counter
 from utils import payload_handling
+from dateutil.parser import parse
+
+
+def detect_format(s: str):
+    # 1. Number first
+    try:
+        int(s)
+        return "int"
+    except ValueError:
+        try:
+            float(s)
+            return "float"
+        except ValueError:
+            try:
+                complex(s)
+                return "complex"
+            except ValueError:
+                pass
+
+    # 2. Boolean
+    if s.lower() in {"true", "false"}:
+        return "boolean"
+
+    # 3. Datetime
+    try:
+        parse(s)
+        return "datetime"
+    except Exception:
+        pass
+
+    # 4. JSON
+    try:
+        json.loads(s)
+        return "json"
+    except (json.JSONDecodeError, TypeError):
+        pass
+
+    # 5. Fallback: just a string
+    return "string"
+
+
+
 
 def instant_analysis(data_df, mode):
 
@@ -14,6 +58,55 @@ def instant_analysis(data_df, mode):
     stat_rows = []
 
     match mode:
+
+        # 0
+        case 'Data Format':
+
+            data_df.dropna(subset=['Payload'], inplace=True)
+            
+            format_counter = Counter()
+
+            for index, row in data_df[data_df["Code"] == "2.05 Content"].iterrows():
+
+                # extracting payload to be parsed
+                payload = row['Payload']
+                print(f"Payload: {payload}")
+
+                # parsing payload to get format
+                payload_format = detect_format(payload)
+                print(f"Payload Format: {payload_format}")
+
+                # format already present in the counter
+                if payload_format in format_counter.keys():
+                    format_counter[payload_format] += 1
+                else:
+                    format_counter[payload_format] = 1
+                
+                print("£"*50)
+            
+            # dictionary -> pd DataFrame
+            format_counter_df = pd.DataFrame(format_counter.items(), columns=['data_format', 'count'])
+
+            # define the %
+            valid_payloads = format_counter_df['count'].sum()
+            format_counter_df['percentage'] = (format_counter_df['count'] / valid_payloads) * 100
+
+            # Type of plot
+            sns.barplot(data=format_counter_df,
+                        y="percentage",
+                        x="data_format",
+                        hue="data_format",
+                        palette=sns.color_palette("bright"))
+
+            # Plot Labels
+            plt.xlabel('Payload Type')
+            plt.ylabel('Percentage of Resources')
+
+            # Plot Title
+            plt.title("Payload Type Distribution")
+
+            stat_rows.append(f"Payload Type Distribution:\n {format_counter_df}")
+
 
         # 1
         case 'Payload Size':

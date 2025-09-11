@@ -1,52 +1,73 @@
 import os
-from utils import files_handling
 import datetime
+
+from utils import files_handling
 
 def partitioning_menu():
 
+    # Header
+    print('-' * 50, '[PARTITIONING]', '-' * 50)
+    # Description
+    print("Partition the IP info list into N partitions to be analysed separately\n")
+
+
     '''1) IpInfo dataset selection'''
+    # level to choose by the user
+    level = 'dataset'
 
-    # info available at the moment
+    # path_source = IpInfo/csv/
     path_source = {'phase': 'IpInfo', 'folder': 'csv'}
-    # level chosen by the user
-    level = 'dataset'                                   
+                                     
 
-    # returns the dataset selected by the user (ex. 01_output.csv)
-    dataset = files_handling.level_selection(level, path_source)
+    # returns the ipinfo dataset selected by the user (ex. 01_output.csv)
+    ipinfo_dataset = files_handling.level_selection(level, path_source)
+                                                               
+    if ipinfo_dataset == None:
+        # to MAIN MENU
+        print("\n\t[Redirection to main menu ...]\n")                                      
+        return 
+    else: 
+        # path_source = IpInfo/csv/01_output.csv                                                          
+        path_source.update({level: ipinfo_dataset})
     
-    # IF
-    # T: return to 'main menu'                                                           
-    if dataset == None:                                             
-        return
-    # F: update path by adding dataset
-    else:                                                           
-        path_source.update({level: dataset})
-    
 
-    '''2) user defines the number of partitions to be created'''
-    # getting all experiments performed on the selected dataset
-    experiments = files_handling.get_exps_info(dataset)
 
-    if len(experiments) == 0: # no experiments available
-        print("\tNo experiments available!\n")
+    print('*' * 75)
+    '''2) print available experiments'''
+    # getting all experiments info performed on the selected dataset
+    experiments = files_handling.get_exps_info(ipinfo_dataset)
+
+    if len(experiments) == 0:
+        print("\n\tNo experiments available!\n")
     
     else:
-        print("Here's the list of experiments created over the selected dataset:\n")
+        print("\nHere's the list of experiments created over the selected dataset:\n")
 
-        # iterating over the experiment dictionaries
-        for i, exp in enumerate(experiments):
-            # print index                         
-            exp_info_row = f"\t{i:2d}. "                                
+        # printing header
+        print("\tindex".ljust(10), end="")
+        for key in experiments[0].keys():
+            print(key.ljust(20), end="")
+        print()
 
-            # print metadata info (exp_name, date, n_partitions)
-            for key, value in exp.items():                              
-                exp_info_row += f" {key}: {value} |"
-
-            print(exp_info_row[:-1])
+        # printing list of already created experiments
+        for exp_id, experiment in enumerate(experiments):
+            print(f"\t{exp_id}".ljust(10), end="")
+            try:
+                for exp_info in experiment.values():
+                    print(str(exp_info).ljust(20), end="")
+            except Exception as e:
+                print(f"\t[ERROR] No metadata have been collected yet\n\t\t{e}")
+            print()
+    
+    print()
 
     
 
+    '''3) user choose whether create or not a new experiment'''
     while(True):
+
+        print('*' * 75)
+
         # new experiment?                                                   
         print("\nDo you want to create a NEW experiment? [Y/n]")
 
@@ -54,23 +75,27 @@ def partitioning_menu():
         answer = input()                                            
 
         match answer:
-            # Create/Define a new experiment over the selected dataset
+            # "Y": Create/Define a new experiment over the selected dataset
             case "Y":                                               
                 break
 
-            # To main menu
+            # "n": to MAIN MENU
             case "n":
-                print("\t[Redirection to main menu ...]")           
-                print("-" * 100)
+                print("\n\t[Redirection to main menu ...]\n")           
                 return
                 
-            # Invalid user choice
+            # Default Case: Invalid user choice
             case _:
-                print("\tINPUT ERROR: Invalid input")               
-                print("-" * 100)
+                print("\n\tINPUT ERROR: Invalid input\n")               
+
+    print()
 
 
+    '''4) user defines the number of partitions to be created'''
     while(True):
+
+        print('*' * 75)
+
         print("\nHow many csv partitions do you want to create? MAX: 20 ['e' to main menu]")
 
         # upperbound limit over the number of partitions to be created
@@ -79,10 +104,10 @@ def partitioning_menu():
         try:
             # user input: number of partitions to be created
             choice = input()                                        
-            print("-" * 100)
 
             # -> to MAIN MENU
             if (choice == 'e'):
+                print("\n\t[Redirection to main menu ...]\n")           
                 return                                              
 
             # convert the user input: str -> int   
@@ -90,30 +115,28 @@ def partitioning_menu():
 
         # Invalid user input
         except Exception as e:
-            print("\tINPUT ERROR: Invalid input")                   
+            print("\n\tINPUT ERROR: Invalid input\n")                   
             print(f"\t\t {e}")
-            print("-" * 100)
             continue
 
         # Invalid user choice
         if (n_partitions > n_partitions_upperbound):
-            print("\tINPUT ERROR: Invalid option -> Too many partitions!")    
-            print("-" * 100)
+            print("\n\tINPUT ERROR: Invalid option -> Too many partitions!\n")    
             continue
             
         # Invalid user choice
         if (n_partitions <= 0):
-            print("\tINPUT ERROR: Invalid option -> Number of partitions can't be zero or negative!")    
-            print("-" * 100)
+            print("\n\tINPUT ERROR: Invalid option -> Number of partitions can't be zero or negative!\n")    
             continue
             
         break
 
+    print()
 
-    '''3) directory structure preparation'''
 
+    '''5) directory structure preparation'''
     # Source Dataset selection
-    path_partitions = {'phase': 'Partitioning', 'folder': 'csv', 'dataset': dataset}
+    path_partitions = {'phase': 'Partitioning', 'folder': 'csv', 'dataset': ipinfo_dataset}
     path_partitions_str = files_handling.path_dict_to_str(path_partitions)
 
     # if not already present the directory path...
@@ -133,7 +156,7 @@ def partitioning_menu():
 
 
 
-    # 4) split Source Dataset into N csv files (to increase concurrency among multiple Google VMs)
+    '''6) split Source Dataset into N csv files (to increase concurrency among multiple Google VMs)'''
     source_zmap_csv = open(files_handling.path_dict_to_str(path_source), 'r').readlines()
 
     #   partition size (last one will get the remaining entries)
@@ -155,14 +178,16 @@ def partitioning_menu():
             # END label
             end = (i+1)*partitions_size
         
-        files_handling.store_data(["exp_"+str(n_exp), i+1, end-start, dataset],
+        # logs info about current partition
+        files_handling.store_data(["exp_"+str(n_exp), i+1, end-start, ipinfo_dataset],
                                   "utils/logs/partitions.csv")
 
         with open(files_handling.path_dict_to_str(path_partitions), 'w+') as out_file:
             # writing one partition considering START and END labels
             out_file.writelines(source_zmap_csv[start:end])
 
-    files_handling.store_data(["exp_"+str(n_exp), datetime.date.today(), n_partitions, dataset],
+    # logs info about just created experiment
+    files_handling.store_data(["exp_"+str(n_exp), datetime.date.today(), n_partitions, ipinfo_dataset],
                               "utils/logs/experiments.csv")
 
     return None
