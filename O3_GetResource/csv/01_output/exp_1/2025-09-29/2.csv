@@ -1,0 +1,113 @@
+saddr,uri,version,mtype,token_size,code,mid,token,options,payload,payload_size
+135.0.77.56,/,1,ACK,2,2.05 Content,59842,3126,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.77.56,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,18561,cc2a,,Method Not Allowed,18
+135.0.77.56,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,1462,76a8,,Method Not Allowed,18
+135.0.77.56,/qlink/request,1,ACK,2,4.05 Method Not Allowed,30211,efcf,,Method Not Allowed,18
+135.0.77.56,/qlink/success,1,ACK,2,4.05 Method Not Allowed,41821,1341,,Method Not Allowed,18
+135.0.77.56,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,20012,6382,,Method Not Allowed,18
+135.0.77.56,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,48873,bf35,,Method Not Allowed,18
+135.0.77.56,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,21379,e134,,Method Not Allowed,18
+135.0.77.56,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,14067,4172,,Method Not Allowed,18
+135.0.77.56,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,35419,e617,,Method Not Allowed,18
+135.0.77.56,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,63340,4774,,Method Not Allowed,18
+135.0.77.56,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,56690,1e34,,Method Not Allowed,18
+135.0.77.56,/async,1,CON,2,2.05 Content,62882,06ec,,done,4
+135.0.11.50,/,1,ACK,2,2.05 Content,5370,df8b,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.11.50,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,3190,0140,,Method Not Allowed,18
+135.0.11.50,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,56748,aea8,,Method Not Allowed,18
+135.0.11.50,/qlink/request,1,ACK,2,4.05 Method Not Allowed,58295,0154,,Method Not Allowed,18
+135.0.11.50,/qlink/success,1,ACK,2,4.05 Method Not Allowed,43850,8a0e,,Method Not Allowed,18
+135.0.11.50,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,24910,8b3f,,Method Not Allowed,18
+135.0.11.50,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,51795,6c84,,Method Not Allowed,18
+135.0.11.50,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,29109,6244,,Method Not Allowed,18
+135.0.11.50,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,40575,3210,,Method Not Allowed,18
+135.0.11.50,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,11408,4782,,Method Not Allowed,18
+135.0.11.50,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,5992,6cae,,Method Not Allowed,18
+135.0.11.50,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,24368,c19b,,Method Not Allowed,18
+135.0.11.50,/async,1,CON,2,2.05 Content,8468,de2b,,done,4
+135.0.159.143,/,1,ACK,2,2.05 Content,62169,5b44,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.159.143,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,55194,e02b,,Method Not Allowed,18
+135.0.159.143,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,53282,23d9,,Method Not Allowed,18
+135.0.159.143,/qlink/request,1,ACK,2,4.05 Method Not Allowed,63671,2c73,,Method Not Allowed,18
+135.0.159.143,/qlink/success,1,ACK,2,4.05 Method Not Allowed,44768,1e08,,Method Not Allowed,18
+135.0.159.143,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,62947,f01d,,Method Not Allowed,18
+135.0.159.143,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,56998,a353,,Method Not Allowed,18
+135.0.159.143,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,55698,341b,,Method Not Allowed,18
+135.0.159.143,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,49069,bbbc,,Method Not Allowed,18
+135.0.159.143,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,48586,dc43,,Method Not Allowed,18
+135.0.159.143,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,47189,682b,,Method Not Allowed,18
+135.0.159.143,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,5922,cc54,,Method Not Allowed,18
+135.0.159.143,/async,1,CON,2,2.05 Content,19446,43b2,,done,4
+135.0.41.83,/,1,ACK,2,2.05 Content,43703,3623,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.41.83,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,24878,bf28,,Method Not Allowed,18
+135.0.41.83,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,27893,3bb8,,Method Not Allowed,18
+135.0.41.83,/qlink/request,1,ACK,2,4.05 Method Not Allowed,35523,94a5,,Method Not Allowed,18
+135.0.41.83,/qlink/success,1,ACK,2,4.05 Method Not Allowed,31123,1536,,Method Not Allowed,18
+135.0.41.83,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,20232,e6f1,,Method Not Allowed,18
+135.0.41.83,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,2918,4356,,Method Not Allowed,18
+135.0.41.83,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,47533,97aa,,Method Not Allowed,18
+135.0.41.83,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,2048,8650,,Method Not Allowed,18
+135.0.41.83,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,35515,e80a,,Method Not Allowed,18
+135.0.41.83,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,35608,c28d,,Method Not Allowed,18
+135.0.41.83,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,14394,b675,,Method Not Allowed,18
+135.0.41.83,/async,1,CON,2,2.05 Content,29342,b9b7,,done,4
+76.70.164.224,/,1,ACK,2,2.05 Content,45223,126c,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","Trilliant coap server for NCC
+Copyright (C) 2019 Trilliant Networks inc.
+
+",74
+76.70.164.224,/c,1,ACK,2,5.01 Not Implemented,47896,028b,,,0
+76.70.164.224,/ft,1,ACK,2,2.05 Content,58443,58c8,{'CONTENT_FORMAT': 'LINKFORMAT'},,0
+76.70.164.224,/log,1,ACK,2,2.05 Content,8852,fd9d,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","Mon Sep 29 04:46:15 2025 daemon.info dhcpd: Reply NA: address fd0f:f1c3:ba53:6a37::ff:fe00:40f0 to client with duid 00:03:00:1b:00:14:77:00:18:04:ac:01 iaid = 28050456 valid for 10368000 seconds
+Mon Sep 29 04:46:15 2025 daemon.info dhcpd: Sending Relay-reply to fd0f:f1c3:ba53:6a37::ff:fe00:5d2a port 547
+Mon Sep 29 04:46:15 2025 daemon.info dhcpd: Added new forward map from 001477001804AC01.smv6.net. to fd0f:f1c3:ba53:6a37::ff:fe00:40f0
+Mon Sep 29 04:46:15 2025 daemon.info dhcpd: Added reverse map from 0.f.0.4.0.0.e.f.f.f.0.0.0.0.0.0.7.3.a.6.3.5.a.b.3.c.1.f.f.0.d.f.ip6.arpa. to 001477001804AC01.smv6.net.
+Mon Sep 29 04:47:23 2025 daemon.info dhcpd: Relay-forward message from fd0f:f1c3:ba53:6a37::ff:fe00:b7ea port 547, link address fd0f:f1c3:ba53:6a37::ff:fe00:b7ea, peer address fe80::214:7700:1804:b3d4
+Mon Sep 29 04:47:23 2025 daemon.info dhcpd: Reply NA: address fd0f:f1c3:ba53:6a37::ff:fe00:a324 to client with duid 00:03:00:1b:00:14:77:00:18:04:b3:d4 iaid = -726465512 valid for 10368000 seconds
+Mon Sep 29 04:47:23 2025 daemon.info dhcpd: Sending Relay-reply to fd0f:f1c3:ba53:6a37::ff:fe00:b7ea port 547
+Mon Sep 29 04:47:23 2025 daemon.info dhcpd: Added new forward map from 001477001804B3D4.smv6.net. to fd0f:f1c3:ba53:6a37::ff:fe00:a324
+Mon Sep 29 04:47:23 2025 daemon.info dhcpd: Added reverse map from 4.2.3.a.0.0.e.f.f.f.0.0.0.0.0.0.7.3.a.6.3.5.a.b.3.c.1.f.f.0.d.<...>",1388
+76.70.164.224,/syslog,1,ACK,2,2.05 Content,24909,d897,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","Mon Sep 29 08:29:25 2025 daemon.info dhcpd: Added new forward map from 0014770018063196.smv6.net. to fd0f:f1c3:ba53:6a37::ff:fe00:21bc
+Mon Sep 29 08:29:25 2025 daemon.info dhcpd: Added reverse map from c.b.1.2.0.0.e.f.f.f.0.0.0.0.0.0.7.3.a.6.3.5.a.b.3.c.1.f.f.0.d.f.ip6.arpa. to 0014770018063196.smv6.net.
+Mon Sep 29 08:29:28 2025 daemon.info dhcpd: Relay-forward message from fd0f:f1c3:ba53:6a37::ff:fe00:4f3b port 547, link address fd0f:f1c3:ba53:6a37::ff:fe00:4f3b, peer address fe80::214:7700:1804:b9df
+Mon Sep 29 08:29:28 2025 daemon.info dhcpd: Reply NA: address fd0f:f1c3:ba53:6a37::ff:fe00:2914 to client with duid 00:03:00:1b:00:14:77:00:18:04:b9:df iaid = -541522920 valid for 10368000 seconds
+Mon Sep 29 08:29:28 2025 daemon.info dhcpd: Sending Relay-reply to fd0f:f1c3:ba53:6a37::ff:fe00:4f3b port 547
+Mon Sep 29 08:29:28 2025 daemon.info dhcpd: Added new forward map from 001477001804B9DF.smv6.net. to fd0f:f1c3:ba53:6a37::ff:fe00:2914
+Mon Sep 29 08:29:28 2025 daemon.info dhcpd: Added reverse map from 4.1.9.2.0.0.e.f.f.f.0.0.0.0.0.0.7.3.a.6.3.5.a.b.3.c.1.f.f.0.d.f.ip6.arpa. to 001477001804B9DF.smv6.net.
+Mon Sep 29 08:29:29 2025 daemon.info dhcpd: Relay-forward message from fd0f:f1c3:ba53:6a37::ff:fe00:b7ea port 547, link address fd0f:f1c3:ba53:6a37::ff:fe00:b7ea, peer address fe80::214:7700:1804:b3d4
+Mon Sep 29 08:29:29 2025 daemon.info dhcpd: Reply NA: address <...>",1388
+45.158.188.248,/register,1,ACK,2,4.05 Method Not Allowed,27272,8b71,,,0
+45.158.188.248,/ndm/dis,1,ACK,2,4.00 Bad Request,44425,1004,,,0
+45.158.188.248,/ndm/ci,1,ACK,2,4.00 Bad Request,4456,6a4b,,0x1,3
+45.158.188.248,/mirror,1,ACK,2,4.05 Method Not Allowed,2238,37f3,,,0
+45.158.188.248,/uhp,1,ACK,2,4.05 Method Not Allowed,4529,f7da,,,0
+45.158.188.248,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,62097,f7c0,,,0
+45.158.188.248,/ndm/login,1,ACK,2,4.05 Method Not Allowed,60016,ab70,,,0
+45.158.188.248,/info,1,ACK,2,2.05 Content,39116,7cd6,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""b92ab83a-db7e-11e6-8115-d94bf6218c67"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+162.208.179.194,/,1,ACK,2,2.05 Content,60853,3b15,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+162.208.179.194,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,51806,06eb,,Method Not Allowed,18
+162.208.179.194,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,14161,4312,,Method Not Allowed,18
+162.208.179.194,/qlink/request,1,ACK,2,4.05 Method Not Allowed,28309,b51e,,Method Not Allowed,18
+162.208.179.194,/qlink/success,1,ACK,2,4.05 Method Not Allowed,33842,415b,,Method Not Allowed,18
+162.208.179.194,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,18843,b74e,,Method Not Allowed,18
+162.208.179.194,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,19166,f69c,,Method Not Allowed,18
+162.208.179.194,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,20225,0ae6,,Method Not Allowed,18
+162.208.179.194,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,56610,8bf7,,Method Not Allowed,18
+162.208.179.194,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,58833,a5de,,Method Not Allowed,18
+162.208.179.194,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,8976,7437,,Method Not Allowed,18
+162.208.179.194,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,2745,c6a0,,Method Not Allowed,18
+162.208.179.194,/async,1,CON,2,2.05 Content,49676,e5c6,,done,4

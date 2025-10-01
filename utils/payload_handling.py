@@ -1,13 +1,22 @@
-import itertools
-import math
-
 ''''''
 def uri_list_of(payload):
 
     uri_list = []
 
     for resource in str(payload).split(','):
-        uri = resource[resource.find("<"):resource.find(">")+1]
+        # start label
+        start = resource.find("<")
+        if start == -1:
+            continue
+
+        # end label
+        end = resource.find(">")
+        if end == -1:
+            uri = resource[start:] # allowing also truncated resources
+        else:
+            end += 1
+            uri = resource[start:end]
+
         uri_list.append(uri)
 
     return uri_list
@@ -27,7 +36,7 @@ def resource_list_of(payload):
 ''''''
 def n_levels_of(uri):
 
-    return len(uri.split('/'))
+    return len(uri.split('/'))-1 # ex. /gw/help -> not 3 but 2 levels
 
 
 ''''''

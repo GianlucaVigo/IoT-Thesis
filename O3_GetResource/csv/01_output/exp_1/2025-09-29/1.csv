@@ -1,0 +1,65 @@
+saddr,uri,version,mtype,token_size,code,mid,token,options,payload,payload_size
+31.148.121.153,/register,1,ACK,2,4.05 Method Not Allowed,51697,2571,,,0
+31.148.121.153,/ndm/dis,1,ACK,2,4.00 Bad Request,29827,a6db,,,0
+31.148.121.153,/ndm/ci,1,ACK,2,4.00 Bad Request,54310,29fa,,0x1,3
+31.148.121.153,/mirror,1,ACK,2,4.05 Method Not Allowed,2241,a294,,,0
+31.148.121.153,/uhp,1,ACK,2,4.05 Method Not Allowed,56148,6b57,,,0
+31.148.121.153,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,48215,ba44,,,0
+31.148.121.153,/ndm/login,1,ACK,2,4.05 Method Not Allowed,15718,6172,,,0
+31.148.121.153,/info,1,ACK,2,2.05 Content,10148,e087,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""f9102a1a-1578-11e6-8115-b1a145fabfd4"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128
+89.200.216.252,/register,1,ACK,2,4.05 Method Not Allowed,63605,a908,,,0
+89.200.216.252,/ndm/dis,1,ACK,2,4.00 Bad Request,40216,fb0d,,,0
+89.200.216.252,/ndm/ci,1,ACK,2,4.00 Bad Request,58266,a884,,0x1,3
+89.200.216.252,/mirror,1,ACK,2,4.05 Method Not Allowed,58547,85f7,,,0
+89.200.216.252,/uhp,1,ACK,2,4.05 Method Not Allowed,59825,87b7,,,0
+89.200.216.252,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,13044,c9b2,,,0
+89.200.216.252,/ndm/login,1,ACK,2,4.05 Method Not Allowed,32318,0701,,,0
+89.200.216.252,/info,1,ACK,2,2.05 Content,43052,9efc,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""35edd3b6-7a92-11e9-8f23-0991e0c26ea0"",""http_port"":80,""type"":""router"",""name"":""Keenetic Lite"",""version"":""0.3.5""}",118
+176.195.153.135,/register,1,ACK,2,4.05 Method Not Allowed,9026,422d,,,0
+176.195.153.135,/ndm/dis,1,ACK,2,4.00 Bad Request,33196,def0,,,0
+176.195.153.135,/ndm/ci,1,ACK,2,4.00 Bad Request,53176,4309,,0x1,3
+176.195.153.135,/mirror,1,ACK,2,4.05 Method Not Allowed,35418,9ada,,,0
+176.195.153.135,/uhp,1,ACK,2,4.05 Method Not Allowed,6938,5928,,,0
+176.195.153.135,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,24360,8abb,,,0
+176.195.153.135,/ndm/login,1,ACK,2,4.05 Method Not Allowed,6519,30a8,,,0
+176.195.153.135,/info,1,ACK,2,2.05 Content,33766,e092,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""8ef0c356-7799-11ea-9396-61b7b4d96564"",""http_port"":80,""type"":""router"",""name"":""Keenetic Viva"",""version"":""0.3.5""}",118
+5.129.19.68,/register,1,ACK,2,4.05 Method Not Allowed,31351,1c6e,,,0
+5.129.19.68,/ndm/dis,1,ACK,2,4.00 Bad Request,18778,b6e9,,,0
+5.129.19.68,/ndm/ci,1,ACK,2,4.00 Bad Request,62393,9151,,0x1,3
+5.129.19.68,/mirror,1,ACK,2,4.05 Method Not Allowed,36217,348a,,,0
+5.129.19.68,/uhp,1,ACK,2,4.05 Method Not Allowed,31866,889d,,,0
+5.129.19.68,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,27925,7943,,,0
+5.129.19.68,/ndm/login,1,ACK,2,4.05 Method Not Allowed,56950,94b7,,,0
+5.129.19.68,/info,1,ACK,2,2.05 Content,48313,bf95,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""174da8c0-3bfa-11e6-8115-71bf5b02f45a"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130
+135.0.86.162,/,1,ACK,2,2.05 Content,34063,7076,"{'CONTENT_FORMAT': 'TEXT', 'MAX_AGE': '196607'}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127
+135.0.86.162,/qlink/searchfh,1,ACK,2,4.05 Method Not Allowed,35299,e7d7,,Method Not Allowed,18
+135.0.86.162,/qlink/searchgw,1,ACK,2,4.05 Method Not Allowed,65030,54d7,,Method Not Allowed,18
+135.0.86.162,/qlink/request,1,ACK,2,4.05 Method Not Allowed,11243,202d,,Method Not Allowed,18
+135.0.86.162,/qlink/success,1,ACK,2,4.05 Method Not Allowed,48249,4255,,Method Not Allowed,18
+135.0.86.162,/device/inform/bootstrap,1,ACK,2,4.05 Method Not Allowed,53289,3c28,,Method Not Allowed,18
+135.0.86.162,/device/inform/boot,1,ACK,2,4.05 Method Not Allowed,6999,12ec,,Method Not Allowed,18
+135.0.86.162,/device/inform/syncreq,1,ACK,2,4.05 Method Not Allowed,14922,1043,,Method Not Allowed,18
+135.0.86.162,/device/inform/offline,1,ACK,2,4.05 Method Not Allowed,16867,aeee,,Method Not Allowed,18
+135.0.86.162,/device/inform/heartbeat,1,ACK,2,4.05 Method Not Allowed,7777,01b2,,Method Not Allowed,18
+135.0.86.162,/device/inform/data,1,ACK,2,4.05 Method Not Allowed,43219,d314,,Method Not Allowed,18
+135.0.86.162,/device/inform/change,1,ACK,2,4.05 Method Not Allowed,50364,9b2f,,Method Not Allowed,18
+135.0.86.162,/async,1,CON,2,2.05 Content,6656,06cc,,done,4
+89.232.193.190,/register,1,ACK,2,4.05 Method Not Allowed,17811,f9cf,,,0
+89.232.193.190,/ndm/dis,1,ACK,2,4.00 Bad Request,2380,f289,,,0
+89.232.193.190,/ndm/ci,1,ACK,2,4.00 Bad Request,43389,c5b9,,0x1,3
+89.232.193.190,/mirror,1,ACK,2,4.05 Method Not Allowed,38474,da9c,,,0
+89.232.193.190,/uhp,1,ACK,2,4.05 Method Not Allowed,13412,b793,,,0
+89.232.193.190,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,5442,de2e,,,0
+89.232.193.190,/ndm/login,1,ACK,2,4.05 Method Not Allowed,19672,aa60,,,0
+89.232.193.190,/info,1,ACK,2,2.05 Content,54865,457b,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""49863462-c214-11e9-8f23-31cef2f386b9"",""http_port"":80,""type"":""router"",""name"":""Keenetic 4G"",""version"":""0.3.5-1""}",118
+178.208.240.111,/register,1,ACK,2,4.05 Method Not Allowed,28679,4b12,,,0
+178.208.240.111,/ndm/dis,1,ACK,2,4.00 Bad Request,52008,ed42,,,0
+178.208.240.111,/ndm/ci,1,ACK,2,4.00 Bad Request,34370,fe1e,,0x1,3
+178.208.240.111,/mirror,1,ACK,2,4.05 Method Not Allowed,35441,edc1,,,0
+178.208.240.111,/uhp,1,ACK,2,4.05 Method Not Allowed,38472,c63e,,,0
+178.208.240.111,/ndm/logout,1,ACK,2,4.05 Method Not Allowed,28873,b1ba,,,0
+178.208.240.111,/ndm/login,1,ACK,2,4.05 Method Not Allowed,14055,27f8,,,0
+178.208.240.111,/info,1,ACK,2,2.05 Content,24339,850f,{'CONTENT_FORMAT': 'TEXT'},"{""cid"":""e0b86044-8299-11ea-9396-139bcf587533"",""http_port"":80,""type"":""router"",""name"":""Keenetic Ultra"",""version"":""0.3.5""}",119
