@@ -1,3 +1,5 @@
+import json
+
 ''''''
 def uri_list_of(payload):
 
@@ -76,5 +78,191 @@ def get_metadata_value_of(payload, metadata_name):
             match metadata_name:
                 case 'ct':
                     return [int(attribute_info[1])]
+                case 'obs':
+                    return True
 
     return None
+
+
+def get_version(response):
+
+    try:
+        version = response.version
+    except Exception:
+        print("[ERROR] Version extraction")
+        return None
+
+    return version
+
+
+def get_mtype(response):
+
+    try:
+        mtype = response.mtype
+    except Exception:
+        print("[ERROR] Message Type extraction")
+        return None
+
+    return mtype
+
+
+def get_token_length(response):
+
+    try:
+        token_length = len(response.token)
+    except Exception:
+        print("[ERROR] Token Length extraction")
+        return None
+
+    return token_length
+
+
+def get_code(response):
+
+    try:
+        code= str(response.code)
+    except Exception:
+        print("[ERROR] Code extraction")
+        return None
+
+    return code
+
+
+def get_mid(response):
+
+    try:
+        mid= response.mid
+    except Exception:
+        print("[ERROR] MessageID extraction")
+        return None
+
+    return mid
+
+
+def get_token(response):
+
+    try:
+        token= response.token.hex()
+    except Exception:
+        print("[ERROR] Token extraction")
+        return None
+
+    return token
+
+
+def get_options(response):
+
+    try:
+
+        options = None
+
+        # if options are defined
+        if (len(response.opt._options.keys()) > 0):
+            options = {}
+
+            options_key = []
+            for option in response.opt._options:
+                options_key.append(str(option))
+
+            options_value = []
+            for option in response.opt.option_list():
+                options_value.append(str(option))
+
+            for i in range(len(options_key)):
+                options.update({options_key[i]: options_value[i]})
+    
+    except Exception:
+        print("[ERROR] Options extraction")
+        return None
+    
+    return options
+
+
+def get_payload(response):
+
+    if isinstance(response.payload, bytes):
+        try:
+            payload = response.payload.decode("utf-8")
+        except UnicodeDecodeError as e:
+            print(f"\t\t\tFailed to decode payload: {e}")
+            payload = response.payload  # fallback to raw bytes
+    else:
+        payload = response.payload  # already a str
+
+    return payload
+
+
+def get_payload_length(response):
+
+    try:
+        payload_length = len(response.payload)
+    except Exception:
+        print("[ERROR] Payload Length extraction")
+        return None
+
+    return payload_length
+
+
+def get_observe(response, uri):
+
+    try:
+        observe = response.opt.observe
+    except Exception:
+        print("[ERROR] Observe Option extraction")
+        return None
+    
+    if observe is not None:
+        print(f"\t\t\tOBS: {uri}")
+        return True
+    else:
+        return False
+    
+
+def options_to_json(discovery_df):
+
+    discovery_df["options"] = discovery_df["options"].apply(
+        lambda x: json.dumps(x) if isinstance(x, dict) else x
+    )
+
+    return discovery_df
+
+
+def detect_truncated_discovery(udp_pkt_size, raw_coap_message, decoded_msg):
+
+    truncated = False
+
+    # Handle Block2
+    # if options is not empty/None + 'BLOCK2' is part of the option list
+    #   -> ZMap got a truncated result
+    if decoded_msg['options'] and 'BLOCK2' in decoded_msg['options'].keys():
+        print(f"\nBlock2 detected!")
+        truncated = True
+
+
+
+    # Check UDP Pkt Size
+    # UDP Packet
+    # = UDP Header [8 B - fixed] + UDP Payload
+    #
+    # UDP Payload
+    # = CoAP Header [(#hex chars until 'ff' / 2 Bytes) - variable] + CoAP Payload
+    #
+    # I have the UDP Pkt Size: 
+    # if by subtracting the UDP Header and the CoAP Header, 
+    # I don't get the payload length this means that is truncated
+    if len(decoded_msg['data']) > 0:
+
+        # getting Coap Header size
+        raw_coap_delimeter = raw_coap_message.find('ff')
+        raw_coap_header_size = (raw_coap_delimeter + 2) / 2 # in Bytes
+        # getting raw Coap Payload size
+        raw_coap_payload_size = (len(raw_coap_message) / 2) - raw_coap_header_size # in Bytes
+
+        udp_header_size = 8 # fixed
+
+        if (udp_pkt_size - udp_header_size - raw_coap_header_size != raw_coap_payload_size):
+            print("\nTruncated payload: a new discovery must be performed!")
+            truncated = True
+
+
+    return truncated

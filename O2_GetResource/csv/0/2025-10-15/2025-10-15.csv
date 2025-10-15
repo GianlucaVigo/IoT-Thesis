@@ -1,0 +1,2894 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+2.194.86.25,/,1.0,2.0,2.0,2.00 (Unknown),38773.0,ea2d,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","CAE Mhaster coap server
+Copyright (C) 2017 CAE S.p.A.
+
+",55.0,3.0,False
+2.194.86.25,/station,1.0,2.0,2.0,4.01 Unauthorized,38774.0,ea2e,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/elements,1.0,2.0,2.0,4.01 Unauthorized,38775.0,ea2f,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/status,1.0,2.0,2.0,4.01 Unauthorized,38776.0,ea30,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/reboot.py,1.0,2.0,2.0,4.01 Unauthorized,38777.0,ea31,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/photo,1.0,2.0,2.0,4.01 Unauthorized,38778.0,ea32,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/data,1.0,2.0,2.0,4.01 Unauthorized,38779.0,ea33,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/blocks,1.0,2.0,2.0,4.01 Unauthorized,38780.0,ea34,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/photoproperties,1.0,2.0,2.0,4.01 Unauthorized,38781.0,ea35,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/reports,1.0,2.0,2.0,4.01 Unauthorized,38782.0,ea36,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/reportitems,1.0,2.0,2.0,4.01 Unauthorized,38783.0,ea37,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/reportitemxml,1.0,2.0,2.0,4.01 Unauthorized,38784.0,ea38,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/adv/reportitemphoto,1.0,2.0,2.0,4.01 Unauthorized,38785.0,ea39,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/cfg/cfg,1.0,2.0,2.0,4.01 Unauthorized,38786.0,ea3a,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/cfg/cfgverify,1.0,2.0,2.0,4.01 Unauthorized,38787.0,ea3b,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/cfg/template,1.0,2.0,2.0,4.01 Unauthorized,38788.0,ea3c,"{""CONTENT_FORMAT"": ""<ContentFormat 255>"", ""MAX_AGE"": ""196607""}",,0.0,3.0,False
+2.194.86.25,/cfg/setstatus,1.0,2.0,2.0,4.05 Method Not Allowed,38789.0,ea3d,,Method Not Allowed,18.0,3.0,False
+5.3.170.250,/register,1.0,2.0,2.0,4.05 Method Not Allowed,42634.0,7567,,,0.0,3.0,False
+5.3.170.250,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,42635.0,7568,,,0.0,3.0,False
+5.3.170.250,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,42636.0,7569,,0x1,3.0,3.0,False
+5.3.170.250,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,42637.0,756a,,,0.0,3.0,False
+5.3.170.250,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,42638.0,756b,,,0.0,3.0,False
+5.3.170.250,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42639.0,756c,,,0.0,3.0,False
+5.3.170.250,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,42640.0,756d,,,0.0,3.0,False
+5.3.170.250,/info,1.0,2.0,2.0,2.05 Content,42641.0,756e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159d0b2a-c57e-11e6-8115-1b6bbe67ba48"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.3.170.250,/,1.0,2.0,2.0,4.04 Not Found,42642.0,756f,,,0.0,3.0,True
+5.165.45.11,/register,1.0,2.0,2.0,4.05 Method Not Allowed,16422.0,37c7,,,0.0,3.0,False
+5.165.45.11,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,16423.0,37c8,,,0.0,3.0,False
+5.165.45.11,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,16424.0,37c9,,0x1,3.0,3.0,False
+5.165.45.11,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,16425.0,37ca,,,0.0,3.0,False
+5.165.45.11,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,16426.0,37cb,,,0.0,3.0,False
+5.165.45.11,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,16427.0,37cc,,,0.0,3.0,False
+5.165.45.11,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,16428.0,37cd,,,0.0,3.0,False
+5.165.45.11,/info,1.0,2.0,2.0,2.05 Content,16429.0,37ce,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b929e9b4-db7e-11e6-8115-57b4103789e9"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.165.45.11,/,1.0,2.0,2.0,4.04 Not Found,16430.0,37cf,,,0.0,3.0,True
+31.192.61.202,/register,1.0,2.0,2.0,4.05 Method Not Allowed,28866.0,83b7,,,0.0,3.0,False
+31.192.61.202,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,28867.0,83b8,,,0.0,3.0,False
+31.192.61.202,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,28868.0,83b9,,0x1,3.0,3.0,False
+31.192.61.202,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,28869.0,83ba,,,0.0,3.0,False
+31.192.61.202,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,28870.0,83bb,,,0.0,3.0,False
+31.192.61.202,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,28871.0,83bc,,,0.0,3.0,False
+31.192.61.202,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,28872.0,83bd,,,0.0,3.0,False
+31.192.61.202,/info,1.0,2.0,2.0,2.05 Content,28873.0,83be,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""7e611da0-04f8-11e6-8115-c140cb9328e2"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.192.61.202,/,1.0,2.0,2.0,4.04 Not Found,28874.0,83bf,,,0.0,3.0,True
+31.202.36.27,/register,1.0,2.0,2.0,4.05 Method Not Allowed,60276.0,ad68,,,0.0,3.0,False
+31.202.36.27,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,60277.0,ad69,,,0.0,3.0,False
+31.202.36.27,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,60278.0,ad6a,,0x1,3.0,3.0,False
+31.202.36.27,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,60279.0,ad6b,,,0.0,3.0,False
+31.202.36.27,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,60280.0,ad6c,,,0.0,3.0,False
+31.202.36.27,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,60281.0,ad6d,,,0.0,3.0,False
+31.202.36.27,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,60282.0,ad6e,,,0.0,3.0,False
+31.202.36.27,/info,1.0,2.0,2.0,2.05 Content,60283.0,ad6f,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ce7381e8-997c-11e6-8115-e3dd6aae911a"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.202.36.27,/,1.0,2.0,2.0,4.04 Not Found,60284.0,ad70,,,0.0,3.0,True
+27.152.73.225,/,1.0,2.0,2.0,2.05 Content,3730.0,dca0,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+27.152.73.225,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,3731.0,dca1,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,3732.0,dca2,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,3733.0,dca3,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/device/command/unbind,1.0,2.0,2.0,4.05 Method Not Allowed,3734.0,dca4,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/device/command/file,1.0,2.0,2.0,4.05 Method Not Allowed,3735.0,dca5,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/device/command/log,1.0,2.0,2.0,4.05 Method Not Allowed,3736.0,dca6,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/device/command/selfdetect,1.0,2.0,2.0,4.05 Method Not Allowed,3737.0,dca7,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/searchdevice?true,1.0,2.0,2.0,4.05 Method Not Allowed,3738.0,dca8,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/searchRouter?true,1.0,2.0,2.0,4.05 Method Not Allowed,3739.0,dca9,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/guide?true,1.0,2.0,2.0,4.05 Method Not Allowed,3740.0,dcaa,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/qlink/request?true,1.0,2.0,2.0,4.05 Method Not Allowed,3741.0,dcab,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/WiFiParameterSync,1.0,2.0,2.0,4.05 Method Not Allowed,3742.0,dcac,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/WiFiSwitch,1.0,2.0,2.0,4.05 Method Not Allowed,3743.0,dcad,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/RadioConfig,1.0,2.0,2.0,4.05 Method Not Allowed,3744.0,dcae,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/WPS,1.0,2.0,2.0,4.05 Method Not Allowed,3745.0,dcaf,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/MacFilter,1.0,2.0,2.0,4.05 Method Not Allowed,3746.0,dcb0,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/Reboot,1.0,2.0,2.0,4.05 Method Not Allowed,3747.0,dcb1,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/LEDControl,1.0,2.0,2.0,4.05 Method Not Allowed,3748.0,dcb2,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/control/RoamingConfig,1.0,2.0,2.0,4.05 Method Not Allowed,3749.0,dcb3,,Method Not Allowed,18.0,2.0,False
+27.152.73.225,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,3750.0,dcb4,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""hardwareVersion"":	""1.0"",
+		""softwareVersion"":	""MA_1.0(1)"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	29,
+		""RamOccupancyRate"":	76,
+		""UpTime"":	""401580"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	95,
+		""LowRSSI5G"":	95,
+		""IPv6ConnStatus"":	""Unconnected"",
+		""IPv6IPAddressOrigin"":	""DHCPv6"",
+		""IPv6IPAddress"":	"""",
+		""IPv6DNSServers"":	"""",
+		""IPv6PrefixDelegationEnabled"":	""FALSE"",
+		""IPv6PrefixOrigin"":	""PrefixDelegatio"",
+		""IPv6Prefix"":	"""",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	"""",
+		""Dslite_Enable"":	""FALSE"",
+		""SyncStatus"":	0,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""1""
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""36""
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""Index"":	1,
+				""SSID"":	""再遇见"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	0,
+				""Index"":	3,
+				""SSID"":	""CMCC-p4bN-Guest"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""1234567890"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	0,
+				""Index"":	4,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""Index"":	5,
+				""SSID"":	""再遇见-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	0,
+				""Index"":	7,
+				""SSID"":	""CMCC-p4bN-Guest-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""1234567890"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	0,
+				""Index"":	8,
+				""SSID"":	""CMCC-p4bN-Guest7-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""3z7yCagQ"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""Index"":	6,
+				""SSID"":	""Ruijie-MeshAB649430"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""3z7yCagQ"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",2661.0,2.0,False
+27.152.73.225,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,3751.0,dcb5,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""C470AB649430"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""31.45"",
+		""TxRate_rt"":	""5.65"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",268.0,2.0,False
+27.152.73.225,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,3752.0,dcb6,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.1.218"",
+				""STAIPv6IPAddress"":	""fe80::3d7c:9724:e05b:c9d7"",
+				""MacAddress"":	""94C691881D9E"",
+				""VMacAddress"":	""94C691881D9E"",
+				""STAType"":	""pc"",
+				""HostName"":	"""",
+				""UpTime"":	""11982"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.99"",
+				""TxRate_rt"":	""1.58""
+			}, {
+				""IPAddress"":	""192.168.1.106"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""CC08FB9A71BC"",
+				""VMacAddress"":	""CC08FB9A71BC"",
+				""STAType"":	""pc"",
+				""HostName"":	""TL-WDR7660千兆版"",
+				""UpTime"":	""11926"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""19.69"",
+				""TxRate_rt"":	""11.81""
+			}, {
+				""IPAddress"":	""192.168.1.105"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""CC08FB993B72"",
+				""VMacAddress"":	""CC08FB993B72"",
+				""STAType"":	""pc"",
+				""HostName"":	""TL-WDR7660千兆版"",
+				""UpTime"":	""92654"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""19.70"",
+				""TxRate_rt"":	""11.82""
+			}, {
+				""IPAddress"":	""192.168.1.101"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""CC08FB9A71B3"",
+				""VMacAddress"":	""CC08FB9A71B3"",
+				""STAType"":	""pc"",
+				""HostName"":	""TL-WDR7660千兆版"",
+				""UpTime"":	""3811"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""19.70"",
+				""TxRate_rt"":	""11.82""
+			}, {
+				""IPAddress"":	""192.168.1.100"",
+				""STAIPv6IPAddress"":	""fe80::c670:abff:fe5c:86a1"",
+				""MacAddress"":	""C470AB5C86A1"",
+				""VMacAddress"":	""C470AB5C86A1"",
+				""STAType"":	""pc"",
+				""HostName"":	""301101"",
+				""UpTime"":	""34"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""19.71"",
+				""TxRate_rt"":	""11.83""
+			}],
+		""STANumber"":	5
+	},
+	""deviceId"":	""""
+}",1908.0,2.0,False
+27.152.73.225,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,3753.0,dcb7,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""再遇见"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""CMCC-p4bN-Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""CMCC-QLINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""再遇见-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""Ruijie-MeshAB649430"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""CMCC-p4bN-Guest-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""CMCC-p4bN-Guest7-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	1,
+				""SSID"":	"""",
+				""TotalBytesSent"":	4294967295,
+				""TotalBytesReceived"":	4294967295,
+				""TotalPacketsSent"":	65160520,
+				""TotalPacketsReceived"":	131394129,
+				""ErrorsSent"":	20,
+				""ErrorsReceived"":	21608,
+				""DiscardPacketsSent"":	65159602,
+				""DiscardPacketsReceived"":	131291096
+			}, {
+				""Radio"":	""0"",
+				""Index"":	2,
+				""SSID"":	"""",
+				""TotalBytesSent"":	1636028,
+				""TotalBytesReceived"":	128,
+				""TotalPacketsSent"":	16669,
+				""TotalPacketsReceived"":	2,
+				""ErrorsSent"":	3881,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	12,
+				""DiscardPacketsReceived"":	2
+			}, {
+				""Radio"":	""0"",
+				""Index"":	3,
+				""SSID"":	"""",
+				""TotalBytesSent"":	4294967295,
+				""TotalBytesReceived"":	4294967295,
+				""TotalPacketsSent"":	97430791,
+				""TotalPacketsReceived"":	41142038,
+				""ErrorsSent"":	25791,
+				""ErrorsReceived"":	27364,
+				""DiscardPacketsSent"":	97380335,
+				""DiscardPacketsReceived"":	41043751
+			}, {
+				""Radio"":	""0"",
+				""Index"":	4,
+				""SSID"":	"""",
+				""TotalBytesSent"":	338902801,
+				""TotalBytesReceived"":	12430613,
+				""TotalPacketsSent"":	276259,
+				""TotalPacketsReceived"":	96390,
+				""ErrorsSent"":	1732,
+				""ErrorsReceived"":	1762,
+				""DiscardPacketsSent"":	265086,
+				""DiscardPacketsReceived"":	94322
+			}]
+	},
+	""deviceId"":	""""
+}",3665.0,2.0,False
+27.152.73.225,/apdevice/query/WiFiStatus,1.0,2.0,2.0,2.05 Content,3754.0,dcb8,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""1""
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""36""
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""Index"":	1,
+				""SSID"":	""再遇见"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	0,
+				""Index"":	3,
+				""SSID"":	""CMCC-p4bN-Guest"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""1234567890"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Enable"":	0,
+				""Index"":	4,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""Index"":	5,
+				""SSID"":	""再遇见-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""Index"":	6,
+				""SSID"":	""Ruijie-MeshAB649430"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""3z7yCagQ"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	0,
+				""Index"":	7,
+				""SSID"":	""CMCC-p4bN-Guest-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""1234567890"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	0,
+				""Index"":	8,
+				""SSID"":	""CMCC-p4bN-Guest7-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""3z7yCagQ"",
+				""MaxAssociateNum"":	40,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",1942.0,2.0,False
+27.152.73.225,/apdevice/query/WlanNeighborInfo,,,,,,,,,,,
+31.148.46.208,/register,1.0,2.0,2.0,4.05 Method Not Allowed,13504.0,e125,,,0.0,3.0,False
+31.148.46.208,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,13505.0,e126,,,0.0,3.0,False
+31.148.46.208,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,13506.0,e127,,0x1,3.0,3.0,False
+31.148.46.208,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,13507.0,e128,,,0.0,3.0,False
+31.148.46.208,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,13508.0,e129,,,0.0,3.0,False
+31.148.46.208,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13509.0,e12a,,,0.0,3.0,False
+31.148.46.208,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,13510.0,e12b,,,0.0,3.0,False
+31.148.46.208,/info,1.0,2.0,2.0,2.05 Content,13511.0,e12c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d97e8cee-9092-11e9-8f23-6588256b8c30"",""http_port"":80,""type"":""router"",""name"":""Keenetic Lite"",""version"":""0.3.5-1""}",120.0,3.0,False
+31.148.46.208,/,1.0,2.0,2.0,4.04 Not Found,13512.0,e12d,,,0.0,3.0,True
+18.194.24.148,/api,1.0,2.0,2.0,4.05 Method Not Allowed,35575.0,f0ac,,,0.0,3.0,False
+18.194.24.148,/api/v1,1.0,2.0,2.0,4.00 Bad Request,35576.0,f0ad,,,0.0,2.0,False
+18.194.24.148,/efento,1.0,2.0,2.0,4.00 Bad Request,35577.0,f0ae,,,0.0,2.0,False
+18.194.24.148,/efento/c,1.0,2.0,2.0,4.00 Bad Request,35578.0,f0af,,,0.0,3.0,False
+18.194.24.148,/efento/i,1.0,2.0,2.0,4.00 Bad Request,35579.0,f0b0,,,0.0,3.0,False
+18.194.24.148,/efento/m,1.0,2.0,2.0,4.00 Bad Request,35580.0,f0b1,,,0.0,3.0,False
+18.194.24.148,/efento/t,1.0,2.0,2.0,2.05 Content,35581.0,f0b2,"{""OBSERVE"": ""0""}",b'h\xef|\x9d',4.0,1.0,False
+18.194.24.148,/fw,1.0,0.0,2.0,4.01 Unauthorized,16270.0,f0b3,,,0.0,2.0,False
+18.194.24.148,/sw,1.0,0.0,2.0,4.01 Unauthorized,16271.0,f0b4,,,0.0,2.0,False
+18.194.24.148,/,1.0,2.0,2.0,2.05 Content,35584.0,f0b5,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2023 Institute for Pervasive Computing, ETH Zurich
+              and others
+****************************************************************",420.0,3.0,True
+31.23.24.194,/register,1.0,2.0,2.0,4.05 Method Not Allowed,35562.0,0f19,,,0.0,3.0,False
+31.23.24.194,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35563.0,0f1a,,,0.0,3.0,False
+31.23.24.194,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,35564.0,0f1b,,0x1,3.0,3.0,False
+31.23.24.194,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,35565.0,0f1c,,,0.0,3.0,False
+31.23.24.194,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,35566.0,0f1d,,,0.0,3.0,False
+31.23.24.194,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,35567.0,0f1e,,,0.0,3.0,False
+31.23.24.194,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,35568.0,0f1f,,,0.0,3.0,False
+31.23.24.194,/info,1.0,2.0,2.0,2.05 Content,35569.0,0f20,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c8f3a0-88fc-11e6-8115-1d4231206a15"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.23.24.194,/,1.0,2.0,2.0,4.04 Not Found,35570.0,0f21,,,0.0,3.0,True
+5.165.219.232,/register,1.0,2.0,2.0,4.05 Method Not Allowed,21718.0,e18e,,,0.0,3.0,False
+5.165.219.232,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,21719.0,e18f,,,0.0,3.0,False
+5.165.219.232,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,21720.0,e190,,0x1,3.0,3.0,False
+5.165.219.232,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,21721.0,e191,,,0.0,3.0,False
+5.165.219.232,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,21722.0,e192,,,0.0,3.0,False
+5.165.219.232,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,21723.0,e193,,,0.0,3.0,False
+5.165.219.232,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,21724.0,e194,,,0.0,3.0,False
+5.165.219.232,/info,1.0,2.0,2.0,2.05 Content,21725.0,e195,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b1efae1c-e977-11e5-8115-01e06706fd76"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.165.219.232,/,1.0,2.0,2.0,4.04 Not Found,21726.0,e196,,,0.0,3.0,True
+1.32.35.29,/,1.0,2.0,2.0,2.05 Content,63932.0,fab7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+1.32.35.29,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,63933.0,fab8,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,63934.0,fab9,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,63935.0,faba,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,63936.0,fabb,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,63937.0,fabc,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,63938.0,fabd,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,63939.0,fabe,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,63940.0,fabf,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,63941.0,fac0,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,63942.0,fac1,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63943.0,fac2,,Method Not Allowed,18.0,3.0,False
+1.32.35.29,/async,,,,,,,,,,,
+5.139.143.3,/register,1.0,2.0,2.0,4.05 Method Not Allowed,62914.0,fe85,,,0.0,3.0,False
+5.139.143.3,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,62915.0,fe86,,,0.0,3.0,False
+5.139.143.3,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,62916.0,fe87,,0x1,3.0,3.0,False
+5.139.143.3,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,62917.0,fe88,,,0.0,3.0,False
+5.139.143.3,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,62918.0,fe89,,,0.0,3.0,False
+5.139.143.3,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,62919.0,fe8a,,,0.0,3.0,False
+5.139.143.3,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,62920.0,fe8b,,,0.0,3.0,False
+5.139.143.3,/info,1.0,2.0,2.0,2.05 Content,62921.0,fe8c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""174ea2f2-3bfa-11e6-8115-b389275335b1"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.139.143.3,/,1.0,2.0,2.0,4.04 Not Found,62922.0,fe8d,,,0.0,3.0,True
+5.79.236.36,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,2751.0,168d,,,0.0,3.0,False
+5.79.236.36,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,2752.0,168e,,,0.0,3.0,False
+5.79.236.36,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,2753.0,168f,,,0.0,3.0,False
+5.79.236.36,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,2754.0,1690,,,0.0,3.0,False
+5.79.236.36,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,2755.0,1691,,,0.0,3.0,False
+5.79.236.36,/info,1.0,2.0,2.0,2.05 Content,2756.0,1692,"{""CONTENT_FORMAT"": ""TEXT""}","{""cloud"":true,""dpn"":false,""eula"":true,""password"":true,""cid"":""f4b5d9b8-e232-11ed-9396-bbeee0a47b76"",""vendor"":""Keenetic"",""name"":""Keenetic Giga"",""type"":""extender"",""version"":""4.03.C.6.0-5"",""http_port"":80}",200.0,3.0,False
+5.79.236.36,/,1.0,2.0,2.0,4.04 Not Found,2757.0,1693,,,0.0,3.0,True
+18.153.159.175,/api,1.0,2.0,2.0,4.05 Method Not Allowed,1797.0,cec2,,,0.0,3.0,False
+18.153.159.175,/api/v1,1.0,2.0,2.0,4.00 Bad Request,1798.0,cec3,,,0.0,2.0,False
+18.153.159.175,/efento,1.0,2.0,2.0,4.00 Bad Request,1799.0,cec4,,,0.0,2.0,False
+18.153.159.175,/efento/c,1.0,2.0,2.0,4.00 Bad Request,1800.0,cec5,,,0.0,3.0,False
+18.153.159.175,/efento/i,1.0,2.0,2.0,4.00 Bad Request,1801.0,cec6,,,0.0,3.0,False
+18.153.159.175,/efento/m,1.0,2.0,2.0,4.00 Bad Request,1802.0,cec7,,,0.0,3.0,False
+18.153.159.175,/efento/t,1.0,2.0,2.0,2.05 Content,1803.0,cec8,"{""OBSERVE"": ""0""}",b'h\xef|\xaf',4.0,1.0,False
+18.153.159.175,/fw,,,,,,,,,,,
+18.153.159.175,/sw,1.0,0.0,2.0,4.01 Unauthorized,20947.0,ceca,,,0.0,2.0,False
+18.153.159.175,/,1.0,2.0,2.0,2.05 Content,1806.0,cecb,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2023 Institute for Pervasive Computing, ETH Zurich
+              and others
+****************************************************************",420.0,3.0,True
+1.55.198.146,/,1.0,2.0,2.0,2.05 Content,36519.0,47b7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+1.55.198.146,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,36520.0,47b8,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,36521.0,47b9,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,36522.0,47ba,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/device/command/unbind,1.0,2.0,2.0,4.05 Method Not Allowed,36523.0,47bb,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/device/command/file,1.0,2.0,2.0,4.05 Method Not Allowed,36524.0,47bc,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/device/command/log,1.0,2.0,2.0,4.05 Method Not Allowed,36525.0,47bd,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/device/command/selfdetect,1.0,2.0,2.0,4.05 Method Not Allowed,36526.0,47be,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/searchdevice?true,1.0,2.0,2.0,4.05 Method Not Allowed,36527.0,47bf,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/searchRouter?true,1.0,2.0,2.0,4.05 Method Not Allowed,36528.0,47c0,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/guide?true,1.0,2.0,2.0,4.05 Method Not Allowed,36529.0,47c1,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/qlink/request?true,1.0,2.0,2.0,4.05 Method Not Allowed,36530.0,47c2,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/WiFiParameterSync,1.0,2.0,2.0,4.05 Method Not Allowed,36531.0,47c3,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/WiFiSwitch,1.0,2.0,2.0,4.05 Method Not Allowed,36532.0,47c4,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/RadioConfig,1.0,2.0,2.0,4.05 Method Not Allowed,36533.0,47c5,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/WPS,1.0,2.0,2.0,4.05 Method Not Allowed,36534.0,47c6,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/MacFilter,1.0,2.0,2.0,4.05 Method Not Allowed,36535.0,47c7,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/Reboot,1.0,2.0,2.0,4.05 Method Not Allowed,36536.0,47c8,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/LEDControl,1.0,2.0,2.0,4.05 Method Not Allowed,36537.0,47c9,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/control/RoamingConfig,1.0,2.0,2.0,4.05 Method Not Allowed,36538.0,47ca,,Method Not Allowed,18.0,2.0,False
+1.55.198.146,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,36539.0,47cb,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""hardwareVersion"":	""V1.0.0"",
+		""softwareVersion"":	""V1.0.0"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	2,
+		""RamOccupancyRate"":	35,
+		""UpTime"":	""458411"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-75,
+		""LowRSSI5G"":	-80,
+		""IPv6ConnStatus"":	""Unconnected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	"""",
+		""IPv6DNSServers"":	"""",
+		""IPv6PrefixDelegationEnabled"":	""FALSE"",
+		""IPv6PrefixOrigin"":	"""",
+		""IPv6Prefix"":	"""",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	"""",
+		""Dslite_Enable"":	""FALSE"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSIDStandard "":	""802.11b,g,n,ax"",
+				""Channel"":	6,
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""NoiseLevel"":	0,
+				""InterferencePercent"":	50
+			}, {
+				""Radio"":	""5G"",
+				""SSIDStandard "":	""802.11a,n,ac,ax"",
+				""Channel"":	153,
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""NoiseLevel"":	0,
+				""InterferencePercent"":	50
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""19901964"",
+				""SSID"":	""Dragon Phoenix 1"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID3"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""19901964"",
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}],
+		""SyncCode"":	""""
+	},
+	""deviceId"":	""""
+}",1757.0,2.0,False
+1.55.198.146,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,36540.0,47cc,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""304240A21150"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""0.5246"",
+		""TxRate_rt"":	""0.2679"",
+		""Channel"":	""0""
+	},
+	""deviceId"":	""""
+}",272.0,2.0,False
+1.55.198.146,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,36541.0,47cd,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.2"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""20BEB4149E0C"",
+				""VMacAddress"":	""20BEB4149E0C"",
+				""HostName"":	"""",
+				""UpTime"":	""329758"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.3"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""085BD6E5C374"",
+				""VMacAddress"":	""085BD6E5C374"",
+				""STAType"":	""pc"",
+				""HostName"":	""TABLET-U75NSRT9"",
+				""UpTime"":	""80749"",
+				""Radio"":	""5G"",
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""RSSI"":	""-48"",
+				""RxRate"":	""144"",
+				""TxRate"":	""143"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.18"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""CABA7BF3C304"",
+				""VMacAddress"":	""CABA7BF3C304"",
+				""HostName"":	"""",
+				""UpTime"":	""2478"",
+				""Radio"":	""5G"",
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""RSSI"":	""-58"",
+				""RxRate"":	""702"",
+				""TxRate"":	""526"",
+				""RxRate_rt"":	""0.2250"",
+				""TxRate_rt"":	""0.0980""
+			}, {
+				""IPAddress"":	""192.168.10.21"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""6E78D1F556AE"",
+				""VMacAddress"":	""6E78D1F556AE"",
+				""HostName"":	"""",
+				""UpTime"":	""2617"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Dragon Phoenix 1"",
+				""RSSI"":	""-47"",
+				""RxRate"":	""156"",
+				""TxRate"":	""130"",
+				""RxRate_rt"":	""1.6790"",
+				""TxRate_rt"":	""0.4540""
+			}, {
+				""IPAddress"":	""192.168.10.15"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""7A8D0D1EC3E3"",
+				""VMacAddress"":	""7A8D0D1EC3E3"",
+				""HostName"":	"""",
+				""UpTime"":	""53"",
+				""Radio"":	""5G"",
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""RSSI"":	""-82"",
+				""RxRate"":	""144"",
+				""TxRate"":	""48"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0010""
+			}, {
+				""IPAddress"":	""192.168.10.20"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""82B9A0A9A33A"",
+				""VMacAddress"":	""82B9A0A9A33A"",
+				""HostName"":	"""",
+				""UpTime"":	""2760"",
+				""Radio"":	""5G"",
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""RSSI"":	""-71"",
+				""RxRate"":	""432"",
+				""TxRate"":	""432"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}]
+	},
+	""deviceId"":	""""
+}",2155.0,2.0,False
+1.55.198.146,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,36542.0,47ce,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""DiscardPacketsReceived"":	243695,
+				""SSID"":	""Dragon Phoenix 1"",
+				""Index"":	1,
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	131231036,
+				""TotalPacketsReceived"":	986978,
+				""TotalBytesSent"":	2626485944,
+				""TotalPacketsSent"":	2105521,
+				""ErrorsReceived"":	243695
+			}, {
+				""Radio"":	""5G"",
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	""Dragon  Phoenix 1 5G"",
+				""Index"":	5,
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	1359637200,
+				""TotalPacketsReceived"":	2725272,
+				""TotalBytesSent"":	8574654,
+				""TotalPacketsSent"":	7128250,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	1,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	226364612,
+				""TotalPacketsReceived"":	2994738,
+				""TotalBytesSent"":	3658690939,
+				""TotalPacketsSent"":	8337540,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	2,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsReceived"":	0,
+				""TotalBytesSent"":	0,
+				""TotalPacketsSent"":	0,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	3,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsReceived"":	0,
+				""TotalBytesSent"":	0,
+				""TotalPacketsSent"":	0,
+				""ErrorsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",1565.0,2.0,False
+5.167.71.148,/register,1.0,2.0,2.0,4.05 Method Not Allowed,447.0,bcd3,,,0.0,3.0,False
+5.167.71.148,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,448.0,bcd4,,,0.0,3.0,False
+5.167.71.148,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,449.0,bcd5,,0x1,3.0,3.0,False
+5.167.71.148,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,450.0,bcd6,,,0.0,3.0,False
+5.167.71.148,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,451.0,bcd7,,,0.0,3.0,False
+5.167.71.148,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,452.0,bcd8,,,0.0,3.0,False
+5.167.71.148,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,453.0,bcd9,,,0.0,3.0,False
+5.167.71.148,/info,1.0,2.0,2.0,2.05 Content,454.0,bcda,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159da9ea-c57e-11e6-8115-7f981a3c0679"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.167.71.148,/,1.0,2.0,2.0,4.04 Not Found,455.0,bcdb,,,0.0,3.0,True
+23.94.200.134,/dp,1.0,2.0,2.0,4.05 Method Not Allowed,57403.0,5f80,,,0.0,3.0,False
+23.94.200.134,/rd,1.0,2.0,2.0,4.05 Method Not Allowed,57404.0,5f81,,,0.0,3.0,False
+23.94.200.134,/,1.0,2.0,2.0,4.04 Not Found,57405.0,5f82,,,0.0,3.0,True
+31.23.48.193,/register,1.0,2.0,2.0,4.05 Method Not Allowed,64876.0,35e4,,,0.0,3.0,False
+31.23.48.193,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,64877.0,35e5,,,0.0,3.0,False
+31.23.48.193,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,64878.0,35e6,,0x1,3.0,3.0,False
+31.23.48.193,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,64879.0,35e7,,,0.0,3.0,False
+31.23.48.193,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,64880.0,35e8,,,0.0,3.0,False
+31.23.48.193,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,64881.0,35e9,,,0.0,3.0,False
+31.23.48.193,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,64882.0,35ea,,,0.0,3.0,False
+31.23.48.193,/info,1.0,2.0,2.0,2.05 Content,64883.0,35eb,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d919b972-787b-11e6-8115-1d1d14627597"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.23.48.193,/,1.0,2.0,2.0,4.04 Not Found,64884.0,35ec,,,0.0,3.0,True
+27.159.140.230,/,1.0,2.0,2.0,2.05 Content,13471.0,3529,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+27.159.140.230,/qlink/searchdevice,,,,,,,,,,,
+27.159.140.230,/qlink/netinfo,,,,,,,,,,,
+27.159.140.230,/qlink/searchack,,,,,,,,,,,
+27.159.140.230,/device/command/unbind,,,,,,,,,,,
+27.159.140.230,/device/command/file,,,,,,,,,,,
+27.159.140.230,/device/command/log,,,,,,,,,,,
+27.159.140.230,/device/command/selfdetect,,,,,,,,,,,
+27.159.140.230,/qlink/searchdevice?true,,,,,,,,,,,
+27.159.140.230,/qlink/searchRouter?true,,,,,,,,,,,
+27.159.140.230,/qlink/guide?true,,,,,,,,Network error: ConRetransmitsExceeded,,,
+27.159.140.230,/qlink/request?true,,,,,,,,,,,
+27.159.140.230,/device/inform/data,,,,,,,,,,,
+27.159.140.230,/apdevice/control/WiFiParameterSync,,,,,,,,,,,
+27.159.140.230,/apdevice/control/WiFiSwitch,,,,,,,,,,,
+27.159.140.230,/apdevice/control/RadioConfig,,,,,,,,,,,
+27.159.140.230,/apdevice/control/WPS,,,,,,,,,,,
+27.159.140.230,/apdevice/control/MacFilter,,,,,,,,,,,
+27.159.140.230,/apdevice/control/Reboot,,,,,,,,,,,
+27.159.140.230,/apdevice/control/LEDControl,,,,,,,,,,,
+27.159.140.230,/apdevice/control/RoamingConfig,,,,,,,,Network error: ConRetransmitsExceeded,,,
+27.159.140.230,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,13492.0,353e,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""hardwareVersion"":	""V1.0.0"",
+		""softwareVersion"":	""V1.0.4"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	4,
+		""RamOccupancyRate"":	36,
+		""UpTime"":	""1224178"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	1,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-89,
+		""LowRSSI5G"":	-89,
+		""IPv6ConnStatus"":	""Unconnected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	"""",
+		""IPv6DNSServers"":	"""",
+		""IPv6PrefixDelegationEnabled"":	""TRUE"",
+		""IPv6PrefixOrigin"":	"""",
+		""IPv6Prefix"":	"""",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	"""",
+		""Dslite_Enable"":	""FALSE"",
+		""IPv6Status"":	1,
+		""SyncStatus"":	0,
+		""SyncCode"":	""0"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11b/g/n/ax"",
+				""NoiseLevel"":	""-91"",
+				""LoadRate"":	68,
+				""InterferencePercent"":	68,
+				""Channel"":	""6"",
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11a/n/ac/ax"",
+				""NoiseLevel"":	""-91"",
+				""LoadRate"":	9,
+				""InterferencePercent"":	9,
+				""Channel"":	""48"",
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""CMCC-9h6b"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""dfkh2627"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	10,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""SSID3"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	0,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""CMCC-9h6b"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""dfkh2627"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-F53B76"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""dfkh2627"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""SSID7"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""SSID8"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",3058.0,2.0,False
+27.159.140.230,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,13493.0,353f,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""B08B92F53B76"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""7.3181"",
+		""TxRate_rt"":	""0.6591"",
+		""Channel"":	"""",
+		""FiberTXPower"":	"""",
+		""FiberRXPower"":	""""
+	},
+	""deviceId"":	""""
+}",315.0,2.0,False
+27.159.140.230,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,13494.0,3540,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.4"",
+				""STAIPv6IPAddress"":	""fe80::81e2:a46a:22ee:e98c"",
+				""MacAddress"":	""88DA3313F207"",
+				""VMacAddress"":	""88DA3313F207"",
+				""STAType"":	""others"",
+				""HostName"":	""Xiaodu-SmartDisplay-0586"",
+				""UpTime"":	""1224131"",
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-9h6b"",
+				""RSSI"":	""-62"",
+				""RxRate"":	""90"",
+				""TxRate"":	""90"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.10"",
+				""STAIPv6IPAddress"":	""fe80::28f4:a4ff:fea3:c174"",
+				""MacAddress"":	""2AF4A4A3C174"",
+				""VMacAddress"":	""2AF4A4A3C174"",
+				""STAType"":	""Phone"",
+				""HostName"":	""OPPO-Find-X6"",
+				""UpTime"":	""4257"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-9h6b"",
+				""RSSI"":	""-75"",
+				""RxRate"":	""17"",
+				""TxRate"":	""17"",
+				""RxRate_rt"":	""5.5000"",
+				""TxRate_rt"":	""0.2440""
+			}, {
+				""IPAddress"":	""192.168.10.7"",
+				""STAIPv6IPAddress"":	""fe80::dd6d:59c4:e0ca:a036"",
+				""MacAddress"":	""B2B4B2A7F513"",
+				""VMacAddress"":	""B2B4B2A7F513"",
+				""STAType"":	""others"",
+				""HostName"":	""TYH622M"",
+				""UpTime"":	""672237"",
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-9h6b"",
+				""RSSI"":	""-67"",
+				""RxRate"":	""433"",
+				""TxRate"":	""433"",
+				""RxRate_rt"":	""0.0150"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.11"",
+				""STAIPv6IPAddress"":	""fe80::1801:2dda:ca19:7591"",
+				""MacAddress"":	""8A24DD7D2148"",
+				""VMacAddress"":	""8A24DD7D2148"",
+				""STAType"":	""others"",
+				""HostName"":	"""",
+				""UpTime"":	""4436"",
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-9h6b"",
+				""RSSI"":	""-68"",
+				""RxRate"":	""243"",
+				""TxRate"":	""243"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.14"",
+				""STAIPv6IPAddress"":	""fe80::892:7a48:d52f:287d"",
+				""MacAddress"":	""1AB5A38485B0"",
+				""VMacAddress"":	""1AB5A38485B0"",
+				""STAType"":	""Phone"",
+				""HostName"":	""iPhone"",
+				""UpTime"":	""2183"",
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-9h6b"",
+				""RSSI"":	""-70"",
+				""RxRate"":	""864"",
+				""TxRate"":	""720"",
+				""RxRate_rt"":	""6.9910"",
+				""TxRate_rt"":	""0.0790""
+			}],
+		""STANumber"":	5
+	},
+	""deviceId"":	""""
+}",2058.0,2.0,False
+27.159.140.230,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,13495.0,3541,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""CMCC-9h6b"",
+				""TotalBytesSent"":	2091789571,
+				""TotalBytesReceived"":	2147483647,
+				""TotalPacketsSent"":	138409313,
+				""TotalPacketsReceived"":	102802414,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	7477026,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	7477026
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""CMCC-9h6b"",
+				""TotalBytesSent"":	2045445353,
+				""TotalBytesReceived"":	2106979777,
+				""TotalPacketsSent"":	162901028,
+				""TotalPacketsReceived"":	112687070,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	1,
+				""SSID"":	"""",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	2,
+				""SSID"":	"""",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	3,
+				""SSID"":	"""",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",1533.0,2.0,False
+27.159.140.230,/apdevice/query/WiFiStatus,1.0,2.0,2.0,2.05 Content,13496.0,3542,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""6"",
+				""LoadRate"":	69,
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""48"",
+				""LoadRate"":	13,
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""CMCC-9h6b"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""dfkh2627"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	10,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""SSID3"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	0,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""CMCC-9h6b"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""dfkh2627"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-F53B76"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""dfkh2627"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""SSID7"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""SSID8"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",2120.0,2.0,False
+27.159.140.230,/apdevice/query/WlanNeighborInfo,1.0,2.0,2.0,2.05 Content,13497.0,3543,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Number"":	24,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD0641"",
+				""Channel"":	""6"",
+				""RSSI"":	""-61"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD00A1"",
+				""Channel"":	""6"",
+				""RSSI"":	""-72"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BCF558"",
+				""Channel"":	""6"",
+				""RSSI"":	""-72"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""EE314A47B2E4"",
+				""Channel"":	""6"",
+				""RSSI"":	""-72"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD0770"",
+				""Channel"":	""6"",
+				""RSSI"":	""-72"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""HONOR-5109T7"",
+				""MacAddress"":	""60AAEF3D13A4"",
+				""Channel"":	""6"",
+				""RSSI"":	""-72"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""3647D449A1E0"",
+				""Channel"":	""6"",
+				""RSSI"":	""-73"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD0116"",
+				""Channel"":	""6"",
+				""RSSI"":	""-73"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""CA8646885480"",
+				""Channel"":	""6"",
+				""RSSI"":	""-74"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""1AF9F808D5B3"",
+				""Channel"":	""6"",
+				""RSSI"":	""-74"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""MIFI-1551"",
+				""MacAddress"":	""00905C76C064"",
+				""Channel"":	""6"",
+				""RSSI"":	""-75"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""58C41E748920"",
+				""Channel"":	""6"",
+				""RSSI"":	""-76"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BCF46F"",
+				""Channel"":	""40"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BCF46F"",
+				""Channel"":	""40"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BD00DB"",
+				""Channel"":	""44"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD0117"",
+				""Channel"":	""48"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BD0117"",
+				""Channel"":	""48"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""CMCC-302-5G"",
+				""MacAddress"":	""14D864BB403F"",
+				""Channel"":	""36"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BD0285"",
+				""Channel"":	""40"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BD0285"",
+				""Channel"":	""40"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""16D864BB403F"",
+				""Channel"":	""36"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BCFC7F"",
+				""Channel"":	""36"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	"""",
+				""MacAddress"":	""5A6A48BCFC7F"",
+				""Channel"":	""36"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	5
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""FDXZ-5G"",
+				""MacAddress"":	""3C6A48BCFC4C"",
+				""Channel"":	""40"",
+				""RSSI"":	""-83"",
+				""Bandwidth"":	3,
+				""Wifistandard"":	5
+			}]
+	},
+	""deviceId"":	""""
+}",3965.0,2.0,False
+5.130.30.4,/register,1.0,2.0,2.0,4.05 Method Not Allowed,61510.0,6d36,,,0.0,3.0,False
+5.130.30.4,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,61511.0,6d37,,,0.0,3.0,False
+5.130.30.4,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,61512.0,6d38,,0x1,3.0,3.0,False
+5.130.30.4,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,61513.0,6d39,,,0.0,3.0,False
+5.130.30.4,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,61514.0,6d3a,,,0.0,3.0,False
+5.130.30.4,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,61515.0,6d3b,,,0.0,3.0,False
+5.130.30.4,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,61516.0,6d3c,,,0.0,3.0,False
+5.130.30.4,/info,1.0,2.0,2.0,2.05 Content,61517.0,6d3d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ce7334fe-997c-11e6-8115-b9ee81493412"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.130.30.4,/,1.0,2.0,2.0,4.04 Not Found,61518.0,6d3e,,,0.0,3.0,True
+2.10.219.133,/,1.0,2.0,2.0,2.00 (Unknown),21522.0,38a8,,,0.0,3.0,False
+5.100.98.72,/register,1.0,2.0,2.0,4.05 Method Not Allowed,35784.0,67a5,,,0.0,3.0,False
+5.100.98.72,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35785.0,67a6,,,0.0,3.0,False
+5.100.98.72,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,35786.0,67a7,,0x1,3.0,3.0,False
+5.100.98.72,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,35787.0,67a8,,,0.0,3.0,False
+5.100.98.72,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,35788.0,67a9,,,0.0,3.0,False
+5.100.98.72,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,35789.0,67aa,,,0.0,3.0,False
+5.100.98.72,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,35790.0,67ab,,,0.0,3.0,False
+5.100.98.72,/info,1.0,2.0,2.0,2.05 Content,35791.0,67ac,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c9e26a-88fc-11e6-8115-13f084d9286e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.100.98.72,/,1.0,2.0,2.0,4.04 Not Found,35792.0,67ad,,,0.0,3.0,True
+5.167.241.189,/register,1.0,2.0,2.0,4.05 Method Not Allowed,54163.0,99da,,,0.0,3.0,False
+5.167.241.189,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,54164.0,99db,,,0.0,3.0,False
+5.167.241.189,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,54165.0,99dc,,0x1,3.0,3.0,False
+5.167.241.189,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,54166.0,99dd,,,0.0,3.0,False
+5.167.241.189,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,54167.0,99de,,,0.0,3.0,False
+5.167.241.189,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,54168.0,99df,,,0.0,3.0,False
+5.167.241.189,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,54169.0,99e0,,,0.0,3.0,False
+5.167.241.189,/info,1.0,2.0,2.0,2.05 Content,54170.0,99e1,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""1cd25b9e-b785-11e7-8f23-150fa8798ce5"",""http_port"":80,""type"":""router"",""name"":""Keenetic 4G"",""version"":""0.3.5-1""}",118.0,3.0,False
+5.167.241.189,/,1.0,2.0,2.0,4.04 Not Found,54171.0,99e2,,,0.0,3.0,True
+27.207.78.197,/,1.0,2.0,2.0,2.05 Content,60644.0,cc45,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+27.207.78.197,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,60645.0,cc46,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,60646.0,cc47,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,60647.0,cc48,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/device/command/unbind,1.0,2.0,2.0,4.05 Method Not Allowed,60648.0,cc49,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/device/command/file,1.0,2.0,2.0,4.05 Method Not Allowed,60649.0,cc4a,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/device/command/log,1.0,2.0,2.0,4.05 Method Not Allowed,60650.0,cc4b,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/device/command/selfdetect,1.0,2.0,2.0,4.05 Method Not Allowed,60651.0,cc4c,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/searchdevice?true,1.0,2.0,2.0,4.05 Method Not Allowed,60652.0,cc4d,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/searchRouter?true,1.0,2.0,2.0,4.05 Method Not Allowed,60653.0,cc4e,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/guide?true,1.0,2.0,2.0,4.05 Method Not Allowed,60654.0,cc4f,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/qlink/request?true,1.0,2.0,2.0,4.05 Method Not Allowed,60655.0,cc50,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,60656.0,cc51,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/WiFiParameterSync,1.0,2.0,2.0,4.05 Method Not Allowed,60657.0,cc52,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/WiFiSwitch,1.0,2.0,2.0,4.05 Method Not Allowed,60658.0,cc53,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/RadioConfig,1.0,2.0,2.0,4.05 Method Not Allowed,60659.0,cc54,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/WPS,1.0,2.0,2.0,4.05 Method Not Allowed,60660.0,cc55,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/MacFilter,1.0,2.0,2.0,4.05 Method Not Allowed,60661.0,cc56,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/Reboot,1.0,2.0,2.0,4.05 Method Not Allowed,60662.0,cc57,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/LEDControl,1.0,2.0,2.0,4.05 Method Not Allowed,60663.0,cc58,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/control/RoamingConfig,1.0,2.0,2.0,4.05 Method Not Allowed,60664.0,cc59,,Method Not Allowed,18.0,2.0,False
+27.207.78.197,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,60665.0,cc5a,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""hardwareVersion"":	""V1.0"",
+		""softwareVersion"":	""V1.0.0"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	3,
+		""RamOccupancyRate"":	66,
+		""UpTime"":	""2185724"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	0,
+		""LowRSSI5G"":	0,
+		""IPv6ConnStatus"":	""Connected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	""2408:8214:6900:4f06:1920:3888:d7b1:e5ab"",
+		""IPv6DNSServers"":	""2408:8888::8"",
+		""IPv6PrefixDelegationEnabled"":	""TRUE"",
+		""IPv6PrefixOrigin"":	""PrefixDelegation"",
+		""IPv6Prefix"":	""2408:8214:6900:4f06::"",
+		""IPv6PrefixPltime"":	172800,
+		""IPv6PrefixVltime"":	259200,
+		""DefaultIPv6Gateway"":	""fe80::cecc:81ff:fe70:4fa0"",
+		""Dslite_Enable"":	""FALSE"",
+		""IPv6Status"":	1,
+		""SyncStatus"":	0,
+		""SyncCode"":	""0"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11b/g/n/ax"",
+				""NoiseLevel"":	""-79"",
+				""LoadRate"":	19,
+				""InterferencePercent"":	19,
+				""Channel"":	""6"",
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11a/n/ac/ax"",
+				""NoiseLevel"":	""-90"",
+				""LoadRate"":	1,
+				""InterferencePercent"":	1,
+				""Channel"":	""52"",
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""体彩"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""Zuo12345678"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	"">fk2XZwL"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	10,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-Guest"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""12345678"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	0,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""体彩-5G"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""Zuo12345678"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""CMCC-Mesh-358D"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""f8KO26Zk"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-Guest-5G"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""12345678"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""CMCC-8888"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Pwd"":	""12345678"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",3197.0,2.0,False
+27.207.78.197,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,60666.0,cc5b,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""886EDDAC358D"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""100"",
+		""TxRate"":	""100"",
+		""RxRate_rt"":	""0.008789"",
+		""TxRate_rt"":	""0.043945"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",273.0,2.0,False
+27.207.78.197,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,60667.0,cc5c,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""169.254.1.10"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""00B585280AB9"",
+				""VMacAddress"":	""00B585280AB9"",
+				""STAType"":	""others"",
+				""HostName"":	""nvr"",
+				""UpTime"":	""137"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100.00"",
+				""TxRate"":	""100.00"",
+				""RxRate_rt"":	""0.00"",
+				""TxRate_rt"":	""0.00""
+			}, {
+				""IPAddress"":	""192.168.10.71"",
+				""STAIPv6IPAddress"":	""2408:8214:6913:aba0:c445:9cff:fe29:fc4"",
+				""MacAddress"":	""C6459C290FC4"",
+				""VMacAddress"":	""C6459C290FC4"",
+				""STAType"":	""Phone"",
+				""HostName"":	""android-9ca81b0df8690533"",
+				""UpTime"":	""39139"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100.00"",
+				""TxRate"":	""100.00"",
+				""RxRate_rt"":	""0.00"",
+				""TxRate_rt"":	""0.00""
+			}, {
+				""IPAddress"":	""192.168.10.248"",
+				""STAIPv6IPAddress"":	""2408:8214:6913:aba0:887a:aec:415e:2f32"",
+				""MacAddress"":	""9E16A2DC0549"",
+				""VMacAddress"":	""9E16A2DC0549"",
+				""STAType"":	""Phone"",
+				""HostName"":	""OPPO-1huo-li-ban5G"",
+				""UpTime"":	""6864"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""体彩"",
+				""RSSI"":	""-56"",
+				""RxRate"":	""0.00"",
+				""TxRate"":	""84.00"",
+				""RxRate_rt"":	""0.00"",
+				""TxRate_rt"":	""0.00""
+			}, {
+				""IPAddress"":	""192.168.10.134"",
+				""STAIPv6IPAddress"":	""2408:8214:6913:aba0:15df:4824:f567:3518"",
+				""MacAddress"":	""DC31D1E51D6B"",
+				""VMacAddress"":	""DC31D1E51D6B"",
+				""STAType"":	""Phone"",
+				""HostName"":	""vivo-Z3i-Basic"",
+				""UpTime"":	""5391"",
+				""Radio"":	""5G"",
+				""SSID"":	""体彩-5G"",
+				""RSSI"":	""-52"",
+				""RxRate"":	""423.00"",
+				""TxRate"":	""423.00"",
+				""RxRate_rt"":	""0.00"",
+				""TxRate_rt"":	""0.00""
+			}, {
+				""IPAddress"":	""192.168.10.96"",
+				""STAIPv6IPAddress"":	""2408:8214:6913:aba0:e013:4ef2:463b:319a"",
+				""MacAddress"":	""CC812AD87287"",
+				""VMacAddress"":	""CC812AD87287"",
+				""STAType"":	""Phone"",
+				""HostName"":	""vivo-Y51s"",
+				""UpTime"":	""4253"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""体彩"",
+				""RSSI"":	""-53"",
+				""RxRate"":	""84.00"",
+				""TxRate"":	""105.00"",
+				""RxRate_rt"":	""0.01"",
+				""TxRate_rt"":	""0.01""
+			}],
+		""STANumber"":	5
+	},
+	""deviceId"":	""""
+}",2081.0,2.0,False
+27.207.78.197,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,60668.0,cc5d,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""体彩"",
+				""TotalBytesSent"":	4294967295,
+				""TotalBytesReceived"":	4294967295,
+				""TotalPacketsSent"":	109101299,
+				""TotalPacketsReceived"":	58398315,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	6060
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""CMCC-Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""CMCC-QLINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""体彩-5G"",
+				""TotalBytesSent"":	4294967295,
+				""TotalBytesReceived"":	4294967295,
+				""TotalPacketsSent"":	105347305,
+				""TotalPacketsReceived"":	65198024,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	36049
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""CMCC-Mesh-358D"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""CMCC-Guest-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""CMCC-8888"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	1,
+				""SSID"":	"""",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""0"",
+				""Index"":	2,
+				""SSID"":	"""",
+				""TotalBytesSent"":	331545684,
+				""TotalBytesReceived"":	5369067285,
+				""TotalPacketsSent"":	3408116,
+				""TotalPacketsReceived"":	7555298,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	418445
+			}, {
+				""Radio"":	""0"",
+				""Index"":	3,
+				""SSID"":	"""",
+				""TotalBytesSent"":	3591441339,
+				""TotalBytesReceived"":	155926969,
+				""TotalPacketsSent"":	5471422,
+				""TotalPacketsReceived"":	1688226,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	30
+			}, {
+				""Radio"":	""0"",
+				""Index"":	4,
+				""SSID"":	"""",
+				""TotalBytesSent"":	191290561746,
+				""TotalBytesReceived"":	264030620890,
+				""TotalPacketsSent"":	252750340,
+				""TotalPacketsReceived"":	345113951,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",3647.0,2.0,False
+27.207.78.197,/apdevice/query/WiFiStatus,1.0,2.0,2.0,2.05 Content,60669.0,cc5e,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""6"",
+				""LoadRate"":	23,
+				""Bandwidth"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""52"",
+				""LoadRate"":	1,
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""体彩"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""Zuo12345678"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	"">fk2XZwL"",
+				""MaxAssociateNum"":	10,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""CMCC-Guest"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSID"":	""CMCC-QLINK"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	0,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""体彩-5G"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""Zuo12345678"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""CMCC-Mesh-358D"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""f8KO26Zk"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""CMCC-Guest-5G"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	1,
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSID"":	""CMCC-8888"",
+				""SecurityMode"":	""MIXED-WPAPSK2"",
+				""Encrypt"":	3,
+				""Pwd"":	""12345678"",
+				""MaxAssociateNum"":	128,
+				""SSIDAdvertisementEnabled"":	1
+			}]
+	},
+	""deviceId"":	""""
+}",2143.0,2.0,False
+27.207.78.197,/apdevice/query/WlanNeighborInfo,1.0,2.0,2.0,2.05 Content,60670.0,cc5f,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Number"":	17,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSID"":	""MIFI-A81D"",
+				""MacAddress"":	""3C680193A81D"",
+				""Channel"":	""9"",
+				""RSSI"":	""-46"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CU_QKSS"",
+				""MacAddress"":	""301F48EF32CC"",
+				""Channel"":	""4"",
+				""RSSI"":	""-56"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""4G-UFI-50BF"",
+				""MacAddress"":	""A05A719050BF"",
+				""Channel"":	""9"",
+				""RSSI"":	""-57"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""CU_QKSS_5G"",
+				""MacAddress"":	""301F48EF32CD"",
+				""Channel"":	""44"",
+				""RSSI"":	""-58"",
+				""Bandwidth"":	4,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ChinaNet-cEsy"",
+				""MacAddress"":	""C0B1018DED58"",
+				""Channel"":	""9"",
+				""RSSI"":	""-65"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""TP-LINK_C353"",
+				""MacAddress"":	""B8F88396C353"",
+				""Channel"":	""11"",
+				""RSSI"":	""-68"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-3aHD"",
+				""MacAddress"":	""9C7F81CC2B0F"",
+				""Channel"":	""6"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	3
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""TP-LINK_6BFD"",
+				""MacAddress"":	""7844FDD66BFD"",
+				""Channel"":	""1"",
+				""RSSI"":	""-83"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""TP-LINK_6364"",
+				""MacAddress"":	""487D2EED6364"",
+				""Channel"":	""11"",
+				""RSSI"":	""-88"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""苏7"",
+				""MacAddress"":	""D2B5E80E5250"",
+				""Channel"":	""149"",
+				""RSSI"":	""-88"",
+				""Bandwidth"":	3,
+				""Wifistandard"":	3
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""@PHICOMM_CF"",
+				""MacAddress"":	""68DB54BF60D1"",
+				""Channel"":	""10"",
+				""RSSI"":	""-90"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CU_yDJb"",
+				""MacAddress"":	""E47E9A9366E0"",
+				""Channel"":	""11"",
+				""RSSI"":	""-90"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Repeater-E218"",
+				""MacAddress"":	""00167889E218"",
+				""Channel"":	""11"",
+				""RSSI"":	""-90"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ycsw1"",
+				""MacAddress"":	""94D9B32CC683"",
+				""Channel"":	""11"",
+				""RSSI"":	""-91"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""YCSW"",
+				""MacAddress"":	""3447D4645079"",
+				""Channel"":	""3"",
+				""RSSI"":	""-91"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""5G"",
+				""SSID"":	""DIRECT-Xiaomi SU7_862092"",
+				""MacAddress"":	""1A803D0907AC"",
+				""Channel"":	""149"",
+				""RSSI"":	""-91"",
+				""Bandwidth"":	3,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""MY BUICK7424"",
+				""MacAddress"":	""ECA7ADC8155B"",
+				""Channel"":	""6"",
+				""RSSI"":	""-92"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	3
+			}]
+	},
+	""deviceId"":	""""
+}",2963.0,2.0,False
+31.28.229.27,/register,1.0,2.0,1.0,4.05 Method Not Allowed,44509.0,ed,,,0.0,3.0,False
+31.28.229.27,/ndm/dis,1.0,2.0,1.0,4.00 Bad Request,44510.0,ee,,,0.0,3.0,False
+31.28.229.27,/ndm/ci,1.0,2.0,1.0,4.00 Bad Request,44511.0,ef,,0x1,3.0,3.0,False
+31.28.229.27,/mirror,1.0,2.0,1.0,4.05 Method Not Allowed,44512.0,f0,,,0.0,3.0,False
+31.28.229.27,/uhp,1.0,2.0,1.0,4.05 Method Not Allowed,44513.0,f1,,,0.0,3.0,False
+31.28.229.27,/ndm/logout,1.0,2.0,1.0,4.05 Method Not Allowed,44514.0,f2,,,0.0,3.0,False
+31.28.229.27,/ndm/login,1.0,2.0,1.0,4.05 Method Not Allowed,44515.0,f3,,,0.0,3.0,False
+31.28.229.27,/info,1.0,2.0,1.0,2.05 Content,44516.0,f4,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""c584ada0-30f9-11e6-8115-b9446859a9db"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.28.229.27,/,1.0,2.0,1.0,4.04 Not Found,44517.0,f5,,,0.0,3.0,True
+5.189.114.117,/register,1.0,2.0,2.0,4.05 Method Not Allowed,10004.0,377a,,,0.0,3.0,False
+5.189.114.117,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,10005.0,377b,,,0.0,3.0,False
+5.189.114.117,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,10006.0,377c,,0x1,3.0,3.0,False
+5.189.114.117,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,10007.0,377d,,,0.0,3.0,False
+5.189.114.117,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,10008.0,377e,,,0.0,3.0,False
+5.189.114.117,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,10009.0,377f,,,0.0,3.0,False
+5.189.114.117,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,10010.0,3780,,,0.0,3.0,False
+5.189.114.117,/info,1.0,2.0,2.0,2.05 Content,10011.0,3781,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""7cb0fc1a-8e7c-11e6-8115-8126195df097"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.189.114.117,/,1.0,2.0,2.0,4.04 Not Found,10012.0,3782,,,0.0,3.0,True
+5.165.129.77,/register,1.0,2.0,2.0,4.05 Method Not Allowed,1083.0,db9b,,,0.0,3.0,False
+5.165.129.77,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,1084.0,db9c,,,0.0,3.0,False
+5.165.129.77,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,1085.0,db9d,,0x1,3.0,3.0,False
+5.165.129.77,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,1086.0,db9e,,,0.0,3.0,False
+5.165.129.77,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,1087.0,db9f,,,0.0,3.0,False
+5.165.129.77,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,1088.0,dba0,,,0.0,3.0,False
+5.165.129.77,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,1089.0,dba1,,,0.0,3.0,False
+5.165.129.77,/info,1.0,2.0,2.0,2.05 Content,1090.0,dba2,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""174ee2ee-3bfa-11e6-8115-e7bc978d4dc7"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.165.129.77,/,1.0,2.0,2.0,4.04 Not Found,1091.0,dba3,,,0.0,3.0,True
+31.58.245.218,/api,1.0,2.0,2.0,4.05 Method Not Allowed,17832.0,60b1,,,0.0,3.0,False
+31.58.245.218,/api/v1,1.0,2.0,2.0,4.00 Bad Request,17833.0,60b2,,,0.0,2.0,False
+31.58.245.218,/efento,1.0,2.0,2.0,4.00 Bad Request,17834.0,60b3,,,0.0,2.0,False
+31.58.245.218,/efento/c,1.0,2.0,2.0,4.00 Bad Request,17835.0,60b4,,,0.0,3.0,False
+31.58.245.218,/efento/i,1.0,2.0,2.0,4.00 Bad Request,17836.0,60b5,,,0.0,3.0,False
+31.58.245.218,/efento/m,1.0,2.0,2.0,4.00 Bad Request,17837.0,60b6,,,0.0,3.0,False
+31.58.245.218,/efento/t,1.0,2.0,2.0,2.05 Content,17838.0,60b7,"{""OBSERVE"": ""0""}",b'h\xef}w',4.0,1.0,False
+31.58.245.218,/fw,1.0,0.0,2.0,4.01 Unauthorized,36770.0,60b8,,,0.0,2.0,False
+31.58.245.218,/sw,1.0,0.0,2.0,4.01 Unauthorized,36771.0,60b9,,,0.0,2.0,False
+31.58.245.218,/,1.0,2.0,2.0,2.05 Content,17841.0,60ba,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2023 Institute for Pervasive Computing, ETH Zurich
+              and others
+****************************************************************",420.0,3.0,True
+1.22.174.11,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,23365.0,e1e1,,,0.0,3.0,False
+1.22.174.11,/qlink/ack,,,,,,,,Network error: MessageError,,,
+1.22.174.11,/qlink/request,1.0,2.0,2.0,2.05 Content,23367.0,e1e3,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+1.22.174.11,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,23368.0,e1e4,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+1.22.174.11,/qlink/success,1.0,2.0,2.0,2.05 Content,23369.0,e1e5,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+1.22.174.11,/qlink/wlantest,,,,,,,,,,,
+1.22.174.11,/gw,,,,,,,,,,,
+1.22.174.11,/gw/query,,,,,,,,,,,
+1.22.174.11,/gw/query/DiagnotorConnection,,,,,,,,,,,
+1.22.174.11,/gw/query/apdevices,,,,,,,,,,,
+1.22.174.11,/gw/query/config,,,,,,,,,,,
+1.22.174.11,/basic,,,,,,,,,,,
+1.22.174.11,/basic/regist,,,,,,,,,,,
+1.22.174.11,/basic/show,,,,,,,,,,,
+1.22.174.11,/device,,,,,,,,,,,
+1.22.174.11,/device/command,,,,,,,,,,,
+1.22.174.11,/device/command/control,,,,,,,,Network error: ConRetransmitsExceeded,,,
+1.22.174.11,/device/command/data,1.0,2.0,2.0,2.05 Content,23382.0,e1f2,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+1.22.174.11,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,23383.0,e1f3,,,0.0,3.0,False
+1.22.174.11,/device/inform/boot,1.0,2.0,2.0,2.05 Content,23384.0,e1f4,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+1.22.174.11,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,23385.0,e1f5,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+1.22.174.11,/device/inform/data,1.0,2.0,2.0,2.05 Content,23386.0,e1f6,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+1.22.174.11,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,23387.0,e1f7,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+1.22.174.11,/device/inform/offline,1.0,2.0,2.0,2.05 Content,23388.0,e1f8,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+1.22.174.11,/.well-known/core,1.0,2.0,2.0,2.05 Content,23389.0,e1f9,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+1.22.174.11,/,1.0,2.0,2.0,2.05 Content,23390.0,e1fa,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+5.137.34.41,/register,1.0,2.0,2.0,4.05 Method Not Allowed,62591.0,f860,,,0.0,3.0,False
+5.137.34.41,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,62592.0,f861,,,0.0,3.0,False
+5.137.34.41,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,62593.0,f862,,0x1,3.0,3.0,False
+5.137.34.41,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,62594.0,f863,,,0.0,3.0,False
+5.137.34.41,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,62595.0,f864,,,0.0,3.0,False
+5.137.34.41,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,62596.0,f865,,,0.0,3.0,False
+5.137.34.41,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,62597.0,f866,,,0.0,3.0,False
+5.137.34.41,/info,1.0,2.0,2.0,2.05 Content,62598.0,f867,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""40364f96-417a-11e6-8115-dbcc6b1c8531"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.137.34.41,/,1.0,2.0,2.0,4.04 Not Found,62599.0,f868,,,0.0,3.0,True
+27.11.231.30,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,56627.0,65e3,,Method Not Allowed,18.0,3.0,False
+27.11.231.30,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,56628.0,65e4,,Method Not Allowed,18.0,3.0,False
+27.11.231.30,/,1.0,2.0,2.0,4.04 Not Found,56629.0,65e5,,Not Found,9.0,3.0,True
+14.175.7.234,/,1.0,2.0,2.0,2.05 Content,18387.0,203b,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+14.175.7.234,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,18388.0,203c,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,18389.0,203d,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,18390.0,203e,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/device/command/unbind,1.0,2.0,2.0,4.05 Method Not Allowed,18391.0,203f,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/device/command/file,1.0,2.0,2.0,4.05 Method Not Allowed,18392.0,2040,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/device/command/log,1.0,2.0,2.0,4.05 Method Not Allowed,18393.0,2041,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/device/command/selfdetect,1.0,2.0,2.0,4.05 Method Not Allowed,18394.0,2042,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/searchdevice?true,1.0,2.0,2.0,4.05 Method Not Allowed,18395.0,2043,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/searchRouter?true,1.0,2.0,2.0,4.05 Method Not Allowed,18396.0,2044,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/guide?true,1.0,2.0,2.0,4.05 Method Not Allowed,18397.0,2045,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/qlink/request?true,1.0,2.0,2.0,4.05 Method Not Allowed,18398.0,2046,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/WiFiParameterSync,1.0,2.0,2.0,4.05 Method Not Allowed,18399.0,2047,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/WiFiSwitch,1.0,2.0,2.0,4.05 Method Not Allowed,18400.0,2048,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/RadioConfig,1.0,2.0,2.0,4.05 Method Not Allowed,18401.0,2049,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/WPS,1.0,2.0,2.0,4.05 Method Not Allowed,18402.0,204a,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/MacFilter,1.0,2.0,2.0,4.05 Method Not Allowed,18403.0,204b,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/Reboot,1.0,2.0,2.0,4.05 Method Not Allowed,18404.0,204c,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/LEDControl,1.0,2.0,2.0,4.05 Method Not Allowed,18405.0,204d,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/control/RoamingConfig,1.0,2.0,2.0,4.05 Method Not Allowed,18406.0,204e,,Method Not Allowed,18.0,2.0,False
+14.175.7.234,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,18407.0,204f,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""hardwareVersion"":	""V1.0.0"",
+		""softwareVersion"":	""V1.0.1"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	1,
+		""RamOccupancyRate"":	25,
+		""UpTime"":	""267597"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-75,
+		""LowRSSI5G"":	-80,
+		""IPv6ConnStatus"":	""Unconnected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	"""",
+		""IPv6DNSServers"":	"""",
+		""IPv6PrefixDelegationEnabled"":	""TRUE"",
+		""IPv6PrefixOrigin"":	"""",
+		""IPv6Prefix"":	"""",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	"""",
+		""Dslite_Enable"":	""FALSE"",
+		""SyncStatus"":	0,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Channel"":	""11"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""SSIDStandard"":	""802.11ax"",
+				""NoiseLevel"":	""-95"",
+				""InterferencePercent"":	6
+			}, {
+				""Radio"":	""5G"",
+				""Channel"":	""36"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1,
+				""SSIDStandard"":	""802.11ax"",
+				""NoiseLevel"":	""-95"",
+				""InterferencePercent"":	1
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""khongcomatkhau"",
+				""SSID"":	""Mylove"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"">fk2XZwL"",
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""Index"":	2,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""WPA2-Personal""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID3"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"""",
+				""SSID"":	""CMCC-QLINK"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""None""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""khongcomatkhau"",
+				""SSID"":	""Wifi6"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""dcez2392"",
+				""SSID"":	""MESH-DCF341"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID7"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID8"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}]
+	},
+	""deviceId"":	""""
+}",2788.0,2.0,False
+14.175.7.234,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,18408.0,2050,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""544617DCF341"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""9.8854"",
+		""TxRate_rt"":	""0.5239"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",271.0,2.0,False
+14.175.7.234,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,18409.0,2051,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.6"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""94A408839274"",
+				""VMacAddress"":	""94A408839274"",
+				""STAType"":	""GWIPC-8255786920"",
+				""HostName"":	""GWIPC-8255786920"",
+				""UpTime"":	""267542"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Mylove"",
+				""RSSI"":	""-61"",
+				""RxRate"":	""65"",
+				""TxRate"":	""72"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.5"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""A843A4E76A94"",
+				""VMacAddress"":	""A843A4E76A94"",
+				""STAType"":	""GWIPC-6038577857"",
+				""HostName"":	""GWIPC-6038577857"",
+				""UpTime"":	""267544"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Mylove"",
+				""RSSI"":	""-46"",
+				""RxRate"":	""72"",
+				""TxRate"":	""72"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.3"",
+				""STAIPv6IPAddress"":	""fe80::aa31:62ff:fecc:b34a"",
+				""MacAddress"":	""A83162CCB34A"",
+				""VMacAddress"":	""A83162CCB34A"",
+				""STAType"":	""NOMI-IPC-S7XE-10M0WED-D4BD"",
+				""HostName"":	""NOMI-IPC-S7XE-10M0WED-D4BD"",
+				""UpTime"":	""267559"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Mylove"",
+				""RSSI"":	""-67"",
+				""RxRate"":	""103"",
+				""TxRate"":	""81"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.4"",
+				""STAIPv6IPAddress"":	""fe80::d8ac:7eff:fef9:9409"",
+				""MacAddress"":	""DAAC7EF99409"",
+				""VMacAddress"":	""DAAC7EF99409"",
+				""STAType"":	""OPPO-A2m-5G"",
+				""HostName"":	""OPPO-A2m-5G"",
+				""UpTime"":	""5004"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""11.5990"",
+				""TxRate_rt"":	""0.5220""
+			}, {
+				""IPAddress"":	""192.168.10.2"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""E4246C83A58C"",
+				""VMacAddress"":	""E4246C83A58C"",
+				""STAType"":	""Nha"",
+				""HostName"":	""Nha"",
+				""UpTime"":	""267560"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""0.0010"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.25"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""C4E98459E331"",
+				""VMacAddress"":	""C4E98459E331"",
+				""STAType"":	""TL-WR841N"",
+				""HostName"":	""TL-WR841N"",
+				""UpTime"":	""189824"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""11.5990"",
+				""TxRate_rt"":	""0.5220""
+			}, {
+				""IPAddress"":	""192.168.10.7"",
+				""STAIPv6IPAddress"":	"""",
+				""MacAddress"":	""145D34FE333A"",
+				""VMacAddress"":	""145D34FE333A"",
+				""STAType"":	""GWIPC-8588559071"",
+				""HostName"":	""GWIPC-8588559071"",
+				""UpTime"":	""267537"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Mylove"",
+				""RSSI"":	""-42"",
+				""RxRate"":	""114"",
+				""TxRate"":	""114"",
+				""RxRate_rt"":	""0.0000"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.19"",
+				""STAIPv6IPAddress"":	""fe80::7456:88ad:96b8:780"",
+				""MacAddress"":	""38B8000CB58D"",
+				""VMacAddress"":	""38B8000CB58D"",
+				""STAType"":	"""",
+				""HostName"":	"""",
+				""UpTime"":	""2175"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""11.5990"",
+				""TxRate_rt"":	""0.5220""
+			}, {
+				""IPAddress"":	""192.168.10.17"",
+				""STAIPv6IPAddress"":	""fe80::c09f:83ff:fee2:8d2f"",
+				""MacAddress"":	""C29F83E28D2F"",
+				""VMacAddress"":	""C29F83E28D2F"",
+				""STAType"":	""vivo-1906"",
+				""HostName"":	""vivo-1906"",
+				""UpTime"":	""911"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""100"",
+				""TxRate"":	""100"",
+				""RxRate_rt"":	""11.5990"",
+				""TxRate_rt"":	""0.5220""
+			}, {
+				""IPAddress"":	""192.168.10.22"",
+				""STAIPv6IPAddress"":	""fe80::f41c:a5ff:fe7d:4d09"",
+				""MacAddress"":	""F61CA57D4D09"",
+				""VMacAddress"":	""F61CA57D4D09"",
+				""STAType"":	""Galaxy-A10s"",
+				""HostName"":	""Galaxy-A10s"",
+				""UpTime"":	""1568"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""Mylove"",
+				""RSSI"":	""-94"",
+				""RxRate"":	""1"",
+				""TxRate"":	""1"",
+				""RxRate_rt"":	""0.0010"",
+				""TxRate_rt"":	""0.0000""
+			}, {
+				""IPAddress"":	""192.168.10.46"",
+				""STAIPv6IPAddress"":	""fe80::b054:30ff:fec0:11a8"",
+				""MacAddress"":	""B25430C011A8"",
+				""VMacAddress"":	""B25430C011A8"",
+				""STAType"":	""A21s-cua-Toan"",
+				""Ho",4087.0,2.0,False
+14.175.7.234,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,18410.0,2052,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""DiscardPacketsReceived"":	1023800,
+				""SSID"":	""Mylove"",
+				""Index"":	1,
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	2434540580,
+				""TotalPacketsReceived"":	6413892,
+				""TotalBytesSent"":	2950144427,
+				""TotalPacketsSent"":	10775858,
+				""ErrorsReceived"":	1023800
+			}, {
+				""Radio"":	""5G"",
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	""Wifi6"",
+				""Index"":	5,
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	262279937,
+				""TotalPacketsReceived"":	922538,
+				""TotalBytesSent"":	555054245,
+				""TotalPacketsSent"":	4170579,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	1,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsReceived"":	0,
+				""TotalBytesSent"":	0,
+				""TotalPacketsSent"":	0,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	2,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	3789534967,
+				""TotalPacketsReceived"":	14507730,
+				""TotalBytesSent"":	1124928327,
+				""TotalPacketsSent"":	58199934,
+				""ErrorsReceived"":	0
+			}, {
+				""DiscardPacketsReceived"":	0,
+				""SSID"":	"""",
+				""Index"":	3,
+				""Radio"":	""0"",
+				""DiscardPacketsSent"":	0,
+				""ErrorsSent"":	0,
+				""TotalBytesReceived"":	13202687,
+				""TotalPacketsReceived"":	59857,
+				""TotalBytesSent"":	40259948,
+				""TotalPacketsSent"":	370215,
+				""ErrorsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",1571.0,2.0,False
+14.175.7.234,/apdevice/query/WiFiStatus,1.0,2.0,2.0,2.05 Content,18411.0,2053,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Channel"":	""11"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Channel"":	""36"",
+				""TransmitPower"":	""100"",
+				""Enable"":	1
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""khongcomatkhau"",
+				""SSID"":	""Mylove"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"">fk2XZwL"",
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""Index"":	2,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""WPA2-Personal""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID3"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""2.4G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	"""",
+				""SSID"":	""CMCC-QLINK"",
+				""Index"":	4,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""None""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""khongcomatkhau"",
+				""SSID"":	""Wifi6"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""dcez2392"",
+				""SSID"":	""MESH-DCF341"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID7"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	1,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}, {
+				""Radio"":	""5G"",
+				""MaxAssociateNum"":	64,
+				""Pwd"":	""!@#$%12345"",
+				""SSID"":	""SSID8"",
+				""Index"":	8,
+				""Enable"":	0,
+				""SSIDAdvertisementEnabled"":	0,
+				""SecurityMode"":	""MIXED-WPAPSK2""
+			}]
+	},
+	""deviceId"":	""""
+}",1902.0,2.0,False
+14.175.7.234,/apdevice/query/WlanNeighborInfo,1.0,2.0,2.0,2.05 Content,18412.0,2054,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Number"":	3,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSID"":	""BOI THANH"",
+				""MacAddress"":	""C4E98459E330"",
+				""Channel"":	""9"",
+				""RSSI"":	""-87""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ONG SY_2G"",
+				""MacAddress"":	""589B4A528001"",
+				""Channel"":	""6"",
+				""RSSI"":	""-96""
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Bui Ngoc Diep "",
+				""MacAddress"":	""589B4A51DA19"",
+				""Channel"":	""1"",
+				""RSSI"":	""-96""
+			}]
+	},
+	""deviceId"":	""""
+}",445.0,2.0,False
+5.164.234.53,/register,1.0,2.0,2.0,4.05 Method Not Allowed,24200.0,d8e6,,,0.0,3.0,False
+5.164.234.53,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,24201.0,d8e7,,,0.0,3.0,False
+5.164.234.53,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,24202.0,d8e8,,0x1,3.0,3.0,False
+5.164.234.53,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,24203.0,d8e9,,,0.0,3.0,False
+5.164.234.53,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,24204.0,d8ea,,,0.0,3.0,False
+5.164.234.53,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,24205.0,d8eb,,,0.0,3.0,False
+5.164.234.53,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,24206.0,d8ec,,,0.0,3.0,False
+5.164.234.53,/info,1.0,2.0,2.0,2.05 Content,24207.0,d8ed,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""542ad700-a113-11e9-8f23-4919ea43f2df"",""http_port"":80,""type"":""router"",""name"":""Keenetic Air"",""version"":""0.3.5-1""}",119.0,3.0,False
+5.164.234.53,/,1.0,2.0,2.0,4.04 Not Found,24208.0,d8ee,,,0.0,3.0,True
+5.138.9.140,/register,1.0,2.0,2.0,4.05 Method Not Allowed,51529.0,59bc,,,0.0,3.0,False
+5.138.9.140,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,51530.0,59bd,,,0.0,3.0,False
+5.138.9.140,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,51531.0,59be,,0x1,3.0,3.0,False
+5.138.9.140,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,51532.0,59bf,,,0.0,3.0,False
+5.138.9.140,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,51533.0,59c0,,,0.0,3.0,False
+5.138.9.140,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,51534.0,59c1,,,0.0,3.0,False
+5.138.9.140,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,51535.0,59c2,,,0.0,3.0,False
+5.138.9.140,/info,1.0,2.0,2.0,2.05 Content,51536.0,59c3,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ee6cf30a-3679-11e6-8115-8d582401a484"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.138.9.140,/,1.0,2.0,2.0,4.04 Not Found,51537.0,59c4,,,0.0,3.0,True
+1.58.7.243,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,65336.0,5767,,,0.0,3.0,False
+1.58.7.243,/qlink/searchgw,1.0,2.0,2.0,4.00 Bad Request,65337.0,5768,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+1.58.7.243,/device,1.0,2.0,2.0,4.05 Method Not Allowed,65338.0,5769,,,0.0,3.0,False
+1.58.7.243,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,65339.0,576a,,,0.0,3.0,False
+1.58.7.243,/device/inform/boot,1.0,2.0,2.0,4.00 Bad Request,65340.0,576b,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+1.58.7.243,/device/inform/bootstrap,1.0,2.0,2.0,4.00 Bad Request,65341.0,576c,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+1.58.7.243,/device/inform/data,1.0,2.0,2.0,4.00 Bad Request,65342.0,576d,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+1.58.7.243,/device/inform/heartbeat,1.0,2.0,2.0,4.00 Bad Request,65343.0,576e,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+1.58.7.243,/device/inform/offline,1.0,2.0,2.0,4.00 Bad Request,65344.0,576f,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+1.58.7.243,/ekit,1.0,2.0,2.0,4.05 Method Not Allowed,65345.0,5770,,,0.0,3.0,False
+1.58.7.243,/ekit/boot,1.0,2.0,2.0,4.00 Bad Request,65346.0,5771,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+1.58.7.243,/ekit/bootstrap,1.0,2.0,2.0,4.00 Bad Request,65347.0,5772,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+1.58.7.243,/ekit/heartbeat,1.0,2.0,2.0,4.00 Bad Request,65348.0,5773,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+1.58.7.243,/ekit/searchgw,1.0,2.0,2.0,4.00 Bad Request,65349.0,5774,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+1.58.7.243,/.well-known/core,1.0,2.0,2.0,2.05 Content,65350.0,5775,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270.0,3.0,False
+1.58.7.243,/,1.0,2.0,2.0,2.05 Content,65351.0,5776,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+31.181.234.233,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40686.0,0773,,,0.0,3.0,False
+31.181.234.233,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40687.0,0774,,,0.0,3.0,False
+31.181.234.233,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,40688.0,0775,,0x1,3.0,3.0,False
+31.181.234.233,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,40689.0,0776,,,0.0,3.0,False
+31.181.234.233,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,40690.0,0777,,,0.0,3.0,False
+31.181.234.233,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,40691.0,0778,,,0.0,3.0,False
+31.181.234.233,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,40692.0,0779,,,0.0,3.0,False
+31.181.234.233,/info,1.0,2.0,2.0,2.05 Content,40693.0,077a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c86912-88fc-11e6-8115-f3aeabdcb7b5"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+31.181.234.233,/,1.0,2.0,2.0,4.04 Not Found,40694.0,077b,,,0.0,3.0,True
+5.42.49.132,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52682.0,41e7,,,0.0,3.0,False
+5.42.49.132,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,52683.0,41e8,,,0.0,3.0,False
+5.42.49.132,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52684.0,41e9,,0x1,3.0,3.0,False
+5.42.49.132,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,52685.0,41ea,,,0.0,3.0,False
+5.42.49.132,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,52686.0,41eb,,,0.0,3.0,False
+5.42.49.132,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,52687.0,41ec,,,0.0,3.0,False
+5.42.49.132,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,52688.0,41ed,,,0.0,3.0,False
+5.42.49.132,/info,1.0,2.0,2.0,2.05 Content,52689.0,41ee,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""87524736-6d7b-11e6-8115-bfd90ce19e44"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+5.42.49.132,/,1.0,2.0,2.0,4.04 Not Found,52690.0,41ef,,,0.0,3.0,True

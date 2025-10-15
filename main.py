@@ -1,8 +1,5 @@
 from O1_ZMap.menu import zmap_menu
-from O2_Partitioning.menu import partitioning_menu
-from O3_GetResource.menu import getresource_menu
-from O4_Observe.menu import observe_menu
-from O5_Analysis.menu import analysis_menu
+from O4_Analysis.menu import analysis_menu
 
 
 def main():
@@ -14,11 +11,8 @@ def main():
 
         print("What kind of operation you want to perform? (Specify the associated number)\n")
         print("\t 0. [ZMAP] ZMap utilities")
-        print("\t 1. [PARTITIONING] partition the IP info list into N partitions to be analysed separately")
-        print("\t 2. [GET RESOURCE] interact with CoAP resources and retrieve their content through a GET request")
-        print("\t 3. [OBSERVATION] observe the observable resources found and store updates")
-        print("\t 4. [ANALYSIS] extract knowledge/insights")
-        print("\t 5. [EXIT] exit from the application")
+        print("\t 1. [ANALYSIS] extract knowledge/insights")
+        print("\t 2. [EXIT] exit from the application")
         print("\nOption: ")
 
         try:
@@ -36,22 +30,10 @@ def main():
                 continue
 
             case 1:
-                partitioning_menu()                                         # Partitioning
-                continue
-
-            case 2:
-                getresource_menu()                                          # Get Resource
-                continue
-
-            case 3:
-                observe_menu()                                              # Observe
-                continue
-
-            case 4:
                 analysis_menu()                                             # Analysis
                 continue
 
-            case 5:
+            case 2:
                 print("Bye!")                                               # End the program execution
                 break
 

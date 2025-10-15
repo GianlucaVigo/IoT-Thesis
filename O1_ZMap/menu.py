@@ -1,18 +1,36 @@
-import csv
 import os
 import asyncio
 import pandas as pd
-import pycurl
-import json
 import time
-from datetime import date as dt
+import datetime
+import subprocess
+import maxminddb
+import json
 
 from aiocoap import *
-from utils import files_handling
+from collections import Counter
 
+from utils import payload_handling
+from O2_GetResource.coap import get_requests
+from O3_Observe.coap import observe_resources
+
+################################################################################################
 
 # perform the resource discovery operation -> GET (/.well-known/core)
 async def discovery(ip_address):
+
+    decoded_msg = {
+        'version': None,
+        'mtype': None,
+        'token-length': None,
+        'code': None,
+        'mid': None,
+        'token': None,
+        'options': None,
+        'data': None
+    }
+
+    print("\t\t\tPerforming new discovery ...")
 
     # client context creation
     protocol = await Context.create_client_context()
@@ -21,369 +39,521 @@ async def discovery(ip_address):
     # build the request message
     request = Message(code=GET, uri=uri_to_check)
 
+
     try:
         # send the request and obtained the response
         response = await protocol.request(request).response
 
     except Exception as e:
         print(f"\t{e}")
-        return e # error
+        return decoded_msg
 
     else:
-        return response # success
+
+        decoded_msg.update({
+            'version': payload_handling.get_version(response),
+            'mtype': payload_handling.get_mtype(response),
+            'token-length': payload_handling.get_token_length(response),
+            'code': payload_handling.get_code(response),
+            'mid': payload_handling.get_mid(response),
+            'token': payload_handling.get_token(response),
+            'options': payload_handling.get_options(response),
+            'data': payload_handling.get_payload(response)
+        })
+
+        return decoded_msg # success
 
 
-async def decode_payload(df_zmap):
+def decode_payload(binary_payload):
+
+    decoded_msg = {
+        'version': None,
+        'mtype': None,
+        'token-length': None,
+        'code': None,
+        'mid': None,
+        'token': None,
+        'options': None,
+        'data': binary_payload     # maintain the raw payload
+    }
+
+    # ----- decoding ZMap binary message -----
+
+    try:
+
+        msg = Message.decode(bytes.fromhex(binary_payload))
+
+    # unable to decode the message
+    except Exception as e:
+
+        print(f'Message decoding error: {e}')
+        return decoded_msg
+    
+    # ----------------------------------------
+
+    decoded_msg.update({
+            'version': payload_handling.get_version(msg),
+            'mtype': payload_handling.get_mtype(msg),
+            'token-length': payload_handling.get_token_length(msg),
+            'code': payload_handling.get_code(msg),
+            'mid': payload_handling.get_mid(msg),
+            'token': payload_handling.get_token(msg),
+            'options': payload_handling.get_options(msg),
+            'data': payload_handling.get_payload(msg)
+        })
+
+    return decoded_msg
+
+
+async def decode(df_zmap):
 
     new_data_list = []
+    decode_results = Counter()
 
     for index, row in df_zmap.iterrows():
 
+        decoded_msg = {
+            'version': None,
+            'mtype': None,
+            'token-length': None,
+            'code': None,
+            'mid': None,
+            'token': None,
+            'options': None,
+            'data': None
+        }
+
+        #try:
+        # if success field is equal to 1 (all udp kind of result)
+        if row['success'] == 1:
+
+                # decoding binary data and get a dictionary as result
+                decoded_msg = decode_payload(row['data'])
+
+                print(f"ZMap Payload decoded: {decoded_msg['data']}")
+
+                # if code field is equal to None -> something went wrong
+                if decoded_msg['code'] is None:
+                    decode_results.update([f"unsuccess/{decoded_msg['data']}"])
+
+                # otherwise it is a success
+                else:
+                    decode_results.update(['success'])
+
+                    if payload_handling.detect_truncated_discovery(row['udp_pkt_size'], row['data'], decoded_msg):
+
+                        decoded_msg = await discovery(row['saddr'])
+
+                        print(f"ZMap Complete Payload decoded: {decoded_msg['data']}")
+
+            # if success field is equal to 0 (all icmp, ... kind of result)
+        else:
+                decode_results.update([f"unsuccess/{row['icmp_unreach_str']}"])
+
+        #except Exception as e:
+        #    print(f"Error decoding row {index}: {e}")
+
+        #finally:
+        new_data_list.append(decoded_msg)
         print('£' * 50)
 
-        # getting binary data 
-        binary_data = row['data']
-        # interpreting binary data through aiocoap library
-        msg = Message.decode(bytes.fromhex(binary_data))
-        # discovery payload = list of uris + their metadata
-        decoded_payload = msg.payload.decode('utf-8')
-        print(f"\tRaw Payload Decoded: {decoded_payload}")
+    # Build dataframe safely
+    columns = ['version', 'mtype', 'token-length', 'code', 'mid', 'token', 'options', 'data']
+    for col in columns:
+        df_zmap[col] = [d[col] for d in new_data_list]
 
-        # is BLOCK 2 option enabled?
-        block2 = msg.opt.block2
-
-        # T: Block based communication -> ZMap collected only first block ingnoring the remaining ones
-        # -> perform a new discovery to get a complete result
-        if block2:
-            print(f"\nBlock2 detected!")
-            print(f"\tBlock number: {block2.block_number}")
-            print(f"\tMore blocks flag: {block2.more}")
-            print(f"\tBlock size: {block2.size} bytes\n")
+    return [df_zmap, decode_results]
 
 
-            # perform discovery
-            print("\tPerforming a new discovery ...\n")
-            complete_discovery = await discovery(row[0])
-
-            print(f"\t\tComplete Payload Decoded: {complete_discovery.payload.decode('utf-8')}")
-
-            new_data_list.append(complete_discovery.payload.decode('utf-8'))
-
-        # F: No block based communication -> ZMap result is already complete
-        else:
-            print("\nNo Block2 option detected. Full payload in single message.")
-            new_data_list.append(decoded_payload)
-
-    df_zmap['data'] = new_data_list
-    
-    return df_zmap
-
-
-
-def update_discovery_log():
-
-    # dataset selection
-    dataset_to_update = files_handling.level_selection('dataset', None)
-    discovery_datasets_path = "O1_ZMap/scan_results/csv/" + dataset_to_update
-
-    # LIST OF DATES IN THE FILE SYSTEM
-    # get all dates associated to selected dataset
-    discovery_dates = os.listdir(discovery_datasets_path)
-    discovery_dates.sort()
-
-    # path of discovery.csv log
-    discovery_log_path = "utils/logs/discovery.csv"
-
-    # LIST OF DATES IN THE LOG
-    # list of available dates 
-    discovery_dates_log = []
-
-    # open discovery log file
-    with open(discovery_log_path, newline='') as discovery_log:
-
-        # interprete the file as a csv
-        discovery_log_rows = csv.reader(discovery_log)
-
-        # iterating over discovery log rows
-        for row in discovery_log_rows:
-                
-            # skip header
-            if (discovery_log_rows.line_num == 1): 
-                continue
-
-            # checks only entries related to the user selected dataset
-            # column 1 -> dataset
-            if row[1] == dataset_to_update:
-                    
-                # append the date
-                # column 0 -> date
-                discovery_dates_log.append(row[0])
-    
-
-    # LOG SYNCHRONIZATION
-    # check if dates in the filesystem are already in the log or not
-    for date_csv in discovery_dates:
-
-        print(";" * 50)
-
-        # cut '.csv' part of the string
-        date = date_csv[:-4]
-
-        # date already in the log
-        if date in discovery_dates_log:
-            print(f"{date} already present in the log")
-        # date NOT in the log
-        else:
-            print(f"{date} NOT present in the log!")
-            print(f"\tUpdating the log with new info!")
-            # add entry in the log
-            files_handling.store_data([date, dataset_to_update], discovery_log_path)
-
-    print()
-
-    return
-
-
+################################################################################################
 
 def remove_duplicates(df_zmap):
 
+    # [subset=['saddr', 'data']] Remove duplicates considering 'saddr' and 'data' fields
+    # [keep='first'] Keep the first instance (not delete all duplicates)
+    # [inplace=True] Whether to modify the DataFrame rather than creating a new one.
     df_zmap.drop_duplicates(subset=['saddr', 'data'], keep='first', inplace=True)
 
+    # [inplace=True] Whether to modify the DataFrame rather than creating a new one.
+    # [drop=True] Do not try to insert index into dataframe columns. This resets the index to the default integer index.
     df_zmap.reset_index(inplace=True, drop=True)
 
     return df_zmap
 
-
-
-def get_info(ip_address):
-
-    print("#" * 75)
-
-    try: 
-        # in order to be compliant with the max API rate (= 3 req/s)
-        time.sleep(0.5)
-
-        # Create a Curl object
-        curl = pycurl.Curl()
-
-        # requested URL -> passing IP address to test + auth token
-        url = f"https://api.ipinfo.io/lite/{ip_address}?token=9730afaa10492f"
-        # response type -> JSON
-        header = ['Accept: application/json']
-
-        # Set the URL to send the GET request
-        curl.setopt(curl.URL, url)
-        curl.setopt(curl.HTTPHEADER, header)
-
-        # Perform the request - perform_rs
-        response = curl.perform_rs()
-
-        # Close the Curl object
-        curl.close()
-
-        # interpreting JSON format
-        data = json.loads(response)
-
-        # debug
-        print(f"Extract info about: {ip_address}" ) # row[0] => ip address
-        print(f"\tCountry: {data.get('country')}")
-        print(f"\tAS name: {data.get('as_name')}")
-
-        # build one-row DataFrame
-        data_to_store = pd.DataFrame([{
-            "asn": data.get("asn"),
-            "as_name": data.get("as_name"),
-            "as_domain": data.get("as_domain"),
-            "country_code": data.get("country_code"),
-            "country": data.get("country"),
-            "continent_code": data.get("continent_code"),
-            "continent": data.get("continent"),
-        }])
-
-        return data_to_store
-    
-    except Exception as e:
-        print(f"get_info: {e}")
-        return pd.DataFrame()
-
+################################################################################################
 
 def extract_ip_info(ip_list_df):
+
     ip_info_df = pd.DataFrame()
 
-    for index, row in ip_list_df.iterrows():
-        info = get_info(row['saddr'])
-        ip_info_df = pd.concat([ip_info_df, info], ignore_index=True)
+    with maxminddb.open_database('utils/ipinfo/ipinfo_lite.mmdb') as reader:
+
+        for index, row in ip_list_df.iterrows():
+            info = reader.get(row['saddr'])
+            info_df = pd.DataFrame.from_dict([info])
+            ip_info_df = pd.concat([ip_info_df, info_df], ignore_index=True)
+
+        reader.close()
         
     # merge original IPs with retrieved info
     ip_info_df = pd.concat([ip_list_df.reset_index(drop=True), ip_info_df], axis=1)
 
     return ip_info_df
 
+################################################################################################
 
-######################################################################################################
+'''NEW INTERNET WIDE SEARCH'''
+def new_internet_wide_search(cidr, cidr_id, zmap_user_cmd):
 
-def new_master_dataset_check():
-
-    print("New Master Datasets utility ...")
+    # CSV output files creation
+    output_paths = [f'O1_ZMap/scan_results/csv/{cidr_id}/{datetime.date.today()}/',         # 1) Raw ZMap csv file
+                    f'O1_ZMap/scan_results/cleaned/{cidr_id}/{datetime.date.today()}/',     # 2) Cleaned/Decoded csv file
+                    f'O1_ZMap/scan_results/ip_lists/{cidr_id}/',                            # 3) Ip List csv file
+                    f'O1_ZMap/scan_results/ip_info/{cidr_id}/',                             # 4) Ip Info csv file
+                    f'O2_GetResource/csv/{cidr_id}/{datetime.date.today()}/',               # 5) Get Resources
+                    f'O3_Observe/csv/{cidr_id}/{datetime.date.today()}/']                   # 6) Observe Resources
     
-    # zmap datasets locations
-    zmap_datasets_path = {'phase': 'O1_ZMap/scan_results', 'folder': 'csv'}
-    # available datesets
-    available_datasets = os.listdir(files_handling.path_dict_to_str(zmap_datasets_path))
-    available_datasets.sort()
+    for file_path in output_paths:
+
+        if not os.path.exists(file_path):
+            os.makedirs(file_path)
+
+        file_path += f"{datetime.date.today()}.csv"
+
+        with open(file_path, 'w') as new_csv:
+            pass
+
+    #################################################
+
+    # ZMap command definition
+
+    cmd = [
+        "zmap",
+        "--target-port=5683",
+        "--probe-module=udp",
+        "--blocklist-file=utils/zmap/conf/blocklist.conf",
+        "--probe-args=file:utils/zmap/examples/udp-probes/coap_5683.pkt",
+        "--output-module=csv",
+        "--output-fields=*",
+        "-q",
+        "--output-file=" + output_paths[0] + f"{datetime.date.today()}.csv"
+    ]
+
+    cmd.extend(zmap_user_cmd)
+    cmd.append(cidr)
+    
+    #################################################
+
+    # ZMap Command Execution
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+
+    # Print lines as zmap runs (also useful for debug)
+    try:
+        while True:
+            line = p.stdout.readline()
+            if not line and p.poll() is not None:
+                break
+            if line:
+                print("[zmap]", line.rstrip())
+    finally:
+        p.stdout.close()
+        ret = p.wait()
+
+    print("zmap exit:", ret)
+
+    # ----------- raw-master-dataset -----------
+    print('-' * 100)
+    print("\t1. ZMAP RAW DATASET")
+    discovery_df = pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv")
+    print(f"\t\tNumber of entries: {discovery_df.shape[0]}")
+
+    # ----------- remove-duplicates -----------
+    print('-' * 100)
+    print("\t2. DUPLICATES REMOVAL")
+    time.sleep(5)
+    discovery_df = remove_duplicates(discovery_df)
+    print(f"\t\tNumber of unique entries: {discovery_df.shape[0]}")
+
+    # ----------- decode-zmap-payload -----------
+    print('-' * 100)
+    print("\t3. ZMAP BINARY DECODE")
+    time.sleep(5)
+    decode_res = asyncio.run(decode(discovery_df))
+    discovery_df = decode_res[0]
+    print(f"\n\t\t{decode_res[1]}")
+
+    # ----------- store-discovery-dataframe -----------
+    # The filtered/cleaned version of the discovery dataset is going to be stored in the 'cleaned' folder
+    print('-' * 100)
+    print("\t4. DISCOVERY DATASET STORAGE")
+    time.sleep(5)
+    payload_handling.options_to_json(discovery_df).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False)
+    print("\t\tCleaned version stored correctly!")
+
+    # ----------- ip-list -----------
+    print('-' * 100)
+    print("\t5. EXTRACTING IP LIST")
+    time.sleep(5)
+    discovery_df[['saddr']].to_csv(output_paths[2] + f"{datetime.date.today()}.csv", index=False, header=False)
+
+    # ----------- ip-info -----------
+    print('-' * 100)
+    print("\t6. ADDITIONAL IP INFORMATION EXTRACTION")
+    time.sleep(5)
+    ip_info_df = extract_ip_info(discovery_df[['saddr']])
+    # The additional IP information is going to be stored in a proper file stored inside the 'ip_info' folder
+    ip_info_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False)
 
 
-    # datasets log path
-    zmap_datasets_log_path = "utils/logs/zmap_datasets.csv"
-    zmap_discovery_log_path = "utils/logs/discovery.csv"
-    # logged datasets
-    logged_datasets = []
+    # ----------- get-resources -----------
+    print('-' * 100)
+    print("\t7. GET RESOURCES")
+    time.sleep(5)
+    get_resources_df = asyncio.run(get_requests(discovery_df[['saddr','code','success','data']]))
+    payload_handling.options_to_json(get_resources_df).to_csv(output_paths[4] + f"{datetime.date.today()}.csv", index=False)
 
-    zmap_datasets_log = pd.read_csv(zmap_datasets_log_path)
 
-    for index, row in zmap_datasets_log.iterrows():
-        logged_datasets.append(row['dataset'])
+    # ----------- observe -----------
+    print('-' * 100)
+    print("\t8. OBSERVE RESOURCES")
+    time.sleep(5)
+    observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
+    print(f"\t\tObservable Resources: \n{observable_resources_df}")
 
-    print(f"Available Datasets in FS: {available_datasets}")
-    print(f"Logged Datasets: {logged_datasets}")
+    if observable_resources_df.empty:
+        print("\n\t\tThere were NOT observable resources within the collected dataset")
+    else:
+        observe_resources_df = asyncio.run(observe_resources(observable_resources_df[['saddr','uri']]))
 
-    for dataset in available_datasets:
-        # NEW DATASET to be logged
-        if dataset not in logged_datasets:
-
-            print(f"{dataset} not logged yet!")
-
-            zmap_datasets_path.update({'dataset': dataset})
-
-            print(zmap_datasets_path)
-
-            # ----------- date -----------
-            master_date = os.listdir(files_handling.path_dict_to_str(zmap_datasets_path))
-            master_date = master_date[0][:-4]
-
-            print(f"Current Date: {dt.today()} | Master Date: {master_date}")
-
-            if str(dt.today()) != master_date:
-                continue
-
-            zmap_datasets_path.update({'date': master_date})
-
-            # ----------- cleaned-zmap-dataset -----------
-            clean_zmap_datasets_path = {'phase': zmap_datasets_path['phase'],
-                                        'folder': 'cleaned',
-                                        'dataset': zmap_datasets_path['dataset']}
-            # if directories do not exist -> create them
-            if not os.path.exists(files_handling.path_dict_to_str(clean_zmap_datasets_path)):
-                os.makedirs(files_handling.path_dict_to_str(clean_zmap_datasets_path))
-            
-            clean_zmap_datasets_path.update({'date': zmap_datasets_path['date']})
-
-            # ----------- raw-master-dataset -----------
-            master_df = pd.read_csv(files_handling.path_dict_to_str(zmap_datasets_path) + '.csv')
-
-            # ----------- remove-duplicates -----------
-            master_df = remove_duplicates(master_df)
-
-            # ----------- decode-zmap-payload -----------
-            master_df = asyncio.run(decode_payload(master_df))
-
-            # ----------- extract-ip-info -----------
-            ip_info_path = {'phase': zmap_datasets_path['phase'],
-                            'folder': 'ip_info',
-                            'dataset': zmap_datasets_path['dataset']}
-            ip_info_df = extract_ip_info(master_df[['saddr']])
-
-            ip_info_df.to_csv(files_handling.path_dict_to_str(ip_info_path) + '.csv', index=False)
-
-            # ----------- n-ips -----------
-            n_ips = master_df.shape[0]
-
-            # ----------- store-master-dataframe -----------
-            master_df.to_csv(files_handling.path_dict_to_str(clean_zmap_datasets_path) + '.csv', index=False)
-
-            # ----------- ZMAP_DATASETS-log -----------
-            files_handling.store_data([zmap_datasets_path['dataset'], zmap_datasets_path['date'], n_ips], zmap_datasets_log_path)
-            # ----------- ZMAP_DISCOVERY-log -----------
-            files_handling.store_data([zmap_datasets_path['date'], zmap_datasets_path['dataset']], zmap_discovery_log_path)
-
-            zmap_datasets_path.pop('date')
-        else:
-            print(f"{dataset} is already logged")
+        observe_resources_df['updates'] = observe_resources_df['updates'].apply(
+            lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x
+        )
         
-    return 
-
-
-
-def new_dataset_dates_check():
-
-    # ----------- DISCOVERIES LOGGED -----------
-    # discovery log path
-    zmap_discovery_log_path = "utils/logs/discovery.csv"
-    # logged discovery  
-    zmap_discovery_log_df = pd.read_csv(zmap_discovery_log_path)
-
-
-    # ----------- DISCOVERIES in FILE SYSTEM -----------
-    # zmap dates locations
-    zmap_dates_path = {'phase': 'O1_ZMap/scan_results', 'folder': 'csv'}
-    # available datesets
-    available_datasets = os.listdir(files_handling.path_dict_to_str(zmap_dates_path))
-    available_datasets.sort()
-
-    for dataset in available_datasets:
-        zmap_dates_path.update({'dataset': dataset})
-
-        # available dates
-        available_dates = os.listdir(files_handling.path_dict_to_str(zmap_dates_path))
-        available_dates.sort()
-
-        for date in available_dates:
-
-            if str(dt.today()) != date[:-4]:
-                continue
-            
-            res_df = zmap_discovery_log_df[(zmap_discovery_log_df['date'] == date[:-4]) & (zmap_discovery_log_df['dataset'] == dataset)]
-
-            # current date of the current dataset has not been inserted in the log
-            if res_df.empty: 
-
-                # ----------- date -----------
-                zmap_dates_path.update({'date': date[:-4]})
-
-                # ----------- cleaned-zmap-dataset -----------
-                clean_zmap_datasets_path = {'phase': zmap_dates_path['phase'],
-                                            'folder': 'cleaned',
-                                            'dataset': zmap_dates_path['dataset']}
-                # if directories do not exist -> create them
-                if not os.path.exists(files_handling.path_dict_to_str(clean_zmap_datasets_path)):
-                    os.makedirs(files_handling.path_dict_to_str(clean_zmap_datasets_path))
-                
-                clean_zmap_datasets_path.update({'date': zmap_dates_path['date']})
-
-                # ----------- raw-master-dataset -----------
-                discovery_df = pd.read_csv(files_handling.path_dict_to_str(zmap_dates_path) + '.csv')
-
-                # ----------- remove-duplicates -----------
-                discovery_df = remove_duplicates(discovery_df)
-
-                # ----------- decode-zmap-payload -----------
-                discovery_df = asyncio.run(decode_payload(discovery_df))
-
-                # ----------- store-master-dataframe -----------
-                discovery_df.to_csv(files_handling.path_dict_to_str(clean_zmap_datasets_path) + '.csv', index=False)
-
-                # ----------- DISCOVERY-log -----------
-                files_handling.store_data([zmap_dates_path['date'], zmap_dates_path['dataset']], zmap_discovery_log_path)
-
-                zmap_dates_path.pop('date')
+        observe_resources_df.to_csv(output_paths[5] + f"{datetime.date.today()}.csv", index=False)
 
     return
 
 
+################################################################################################
+
+'''STABILITY LOOKUPS'''
+def stability_lookups(cidr_id, zmap_user_cmd):
+
+    # First check: are there any past dates?
+    base_path = f'O1_ZMap/scan_results/csv/{cidr_id}/'
+
+    dates = os.listdir(base_path)
+
+    if len(dates) == 0:
+        print("\t\tNo data recorded yet!")
+        return
+
+    ##################################################
+
+    # ZMap command definition
+    cmd = [
+        "zmap",
+        "--target-port=5683",
+        "--probe-module=udp",
+        "--blocklist-file=utils/zmap/conf/blocklist.conf",
+        "--probe-args=file:utils/zmap/examples/udp-probes/coap_5683.pkt",
+        "--output-module=csv",
+        "--output-fields=*",
+        "-q"
+    ]
+
+    cmd.extend(zmap_user_cmd)
+    
+    ##################################################
+    
+    # Get the IPs to check from a previously created csv file
+    ip_list_path = f'O1_ZMap/scan_results/ip_lists/{cidr_id}/'
+
+    ##################################################
+
+    # must update all dates seen so far
+    for date in dates:
+
+        # CSV output files creation
+        output_paths = [f'O1_ZMap/scan_results/csv/{cidr_id}/{date}/',              # 1) Raw ZMap csv file
+                        f'O1_ZMap/scan_results/cleaned/{cidr_id}/{date}/',          # 2) Cleaned/Decoded csv file
+                        f'O2_GetResource/csv/{cidr_id}/{date}/',                    # 3) Get Resources
+                        f'O3_Observe/csv/{cidr_id}/{date}/']                        # 4) Observe Resources
+        
+        for file_path in output_paths:
+
+            if not os.path.exists(file_path):
+                os.makedirs(file_path)
+
+            file_path += f"{datetime.date.today()}.csv"
+
+            with open(file_path, 'w') as new_csv:
+                pass
+
+        #################################################
+
+        # Update ZMap commad
+        cmd.append("--output-file=" + output_paths[0] + f"{datetime.date.today()}.csv")
+        cmd.append("--allowlist-file=" + ip_list_path + f"{date}.csv")
+    
+        #################################################
+
+        # ZMap Command Execution
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+
+        # Print lines as zmap runs (also useful for debug)
+        try:
+            while True:
+                line = p.stdout.readline()
+                if not line and p.poll() is not None:
+                    break
+                if line:
+                    print("[zmap]", line.rstrip())
+        finally:
+            p.stdout.close()
+            ret = p.wait()
+
+        print("zmap exit:", ret)
+
+        # ----------- raw-master-dataset -----------
+        print('-' * 100)
+        print("\t1. ZMAP RAW DATASET")
+        discovery_df = pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv")
+        print(f"\t\tNumber of entries: {discovery_df.shape[0]}")
+
+        # ----------- remove-duplicates -----------
+        print('-' * 100)
+        print("\t2. DUPLICATES REMOVAL")
+        time.sleep(5)
+        discovery_df = remove_duplicates(discovery_df)
+        print(f"\t\tNumber of unique entries: {discovery_df.shape[0]}")
+
+        # ----------- decode-zmap-payload -----------
+        print('-' * 100)
+        print("\t3. ZMAP BINARY DECODE")
+        time.sleep(5)
+        decode_res = asyncio.run(decode(discovery_df))
+        discovery_df = decode_res[0]
+        print(f"\n\t\t{decode_res[1]}")
+
+        # ----------- store-discovery-dataframe -----------
+        print('-' * 100)
+        print("\t4. DISCOVERY DATASET STORAGE")
+        time.sleep(5)
+        payload_handling.options_to_json(discovery_df).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False)
+        print("\t\tCleaned version stored correctly!")
+
+        # ----------- get-resources -----------
+        print('-' * 100)
+        print("\t5. GET RESOURCES")
+        time.sleep(5)
+        get_resources_df = asyncio.run(get_requests(discovery_df[['saddr','code','success','data']]))
+        payload_handling.options_to_json(get_resources_df).to_csv(output_paths[2] + f"{datetime.date.today()}.csv", index=False)
+
+        # ----------- observe -----------
+        print('-' * 100)
+        print("\t6. OBSERVE RESOURCES")
+        time.sleep(5)
+        observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
+        print(f"\t\tObservable Resources: \n{observable_resources_df}")
+
+        if observable_resources_df.empty:
+            print("\n\t\tThere were NOT observable resources within the collected dataset")
+        else:
+            observe_resources_df = asyncio.run(observe_resources(observable_resources_df[['saddr','uri']]))
+            
+            observe_resources_df['updates'] = observe_resources_df['updates'].apply(
+                lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x
+            )
+            
+            observe_resources_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False)
+
+        #################################################
+
+        # Update ZMap commad
+        cmd.pop() # output-file specs
+        cmd.pop() # allowlist-file specs
+    
+        #################################################
+        
+    return
+
+
+################################################################################################
+
+def zmap(cidr, cidr_id):
+
+    user_options = ['bandwidth', 'probes', 'max-results']
+    zmap_user_cmd = []
+
+    print("\n-----ZMap-Command-Specifications-----")
+
+    for option in user_options:
+        print(f"\tSpecify {option}:", end="")
+
+        user_choice = input()
+
+        if not user_choice:
+            continue
+        else:
+            zmap_user_cmd.append(f"--{option}={user_choice}")
+
+    print("-------------------------------------")
+
+    print()
+    print('=' * 75)
+
+    print("\n1. [Stability Lookups] utility\n\tTest previously collected IP address to assess their stability")
+    stability_lookups(cidr_id, zmap_user_cmd[:-1])
+
+    print()
+    print('=' * 75)
+
+    print("\n2. [New Internet Wide Lookup] utility\n\tPerform a complete new Internet discovery related to the portion selected -> FRESH/NEW DATA")
+    new_internet_wide_search(cidr, cidr_id, zmap_user_cmd)
+
+    return
+
+
+
 def zmap_menu():
 
-    new_master_dataset_check()
+    # Header
+    print('-' * 50, '[ZMAP]', '-' * 50)
+    # Description
+    print("Welcome to the ZMAP utility!")
 
-    new_dataset_dates_check()
+    # NB: 224.0.0.0/3 -> not considered because of the blocklist
+    internet_portions = ['0.0.0.0/3', '32.0.0.0/3', '64.0.0.0/3', '96.0.0.0/3', '128.0.0.0/3', '160.0.0.0/3', '192.0.0.0/3']
+
+    path = 'O1_ZMap/scan_results/csv'
+
+    print("From which portion of the Internet do you want to start?\n")
+
+    # printing header
+    print("\tindex".ljust(10), "cidr".ljust(19), "daily test".ljust(18))
+
+    # printing options
+    for index, portion in enumerate(internet_portions):
+
+        portion_dates = os.listdir(f"{path}/{index}")
+        today = str(datetime.date.today())
+
+        info_line = "\t"
+        info_line += f"{index}".ljust(10)
+        info_line += f"{portion}".ljust(20)
+
+        if today in portion_dates:
+            info_line += "[Done]".ljust(20)
+        else:
+            info_line += "[To Do]".ljust(20) 
+    
+        print(info_line)
+    
+
+    print("\nPlease select the index: ", end="")
+    internet_portion_id = int(input())
+
+    zmap(internet_portions[internet_portion_id], internet_portion_id)
 
     return

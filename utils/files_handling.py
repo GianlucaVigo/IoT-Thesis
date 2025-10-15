@@ -365,3 +365,25 @@ def extract_partitions(partitions_path):
     else:
         print("Some partitions have not been processed yet!")
         return None
+    
+
+
+def read_file_system(base_path):
+
+    file_system = []
+
+    items = os.listdir(base_path)
+    items.sort()
+
+    if not items:
+        return []
+
+    for item in items:
+        to_test = base_path + f"/{item}"
+
+        if os.path.isfile(to_test):
+            file_system.append(to_test)
+        else:
+            file_system.extend(read_file_system(to_test))
+
+    return file_system
