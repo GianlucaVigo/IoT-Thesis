@@ -1,0 +1,15 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+59.95.130.128,/device/inform/data,1.0,2.0,1.0,2.05 Content,37286.0,9d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+59.95.113.130,/device/inform/data,1.0,2.0,1.0,2.05 Content,37288.0,9f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.231.104,/device/inform/data,1.0,2.0,1.0,2.05 Content,37289.0,a0,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.184.200.77,/device/inform/data,1.0,2.0,1.0,2.05 Content,37291.0,a2,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+59.182.245.46,/device/inform/data,1.0,2.0,1.0,2.05 Content,37292.0,a3,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+61.1.133.126,/device/inform/data,1.0,2.0,1.0,2.05 Content,37294.0,a5,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.95.66,/device/inform/data,1.0,2.0,2.0,2.05 Content,23496.0,6874,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

@@ -1,0 +1,13 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+36.33.232.250,/device/inform/data,1.0,2.0,2.0,2.05 Content,32226.0,4b0b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.187.64.99,/device/inform/data,1.0,2.0,2.0,2.05 Content,14336.0,59ae,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+59.183.114.218,/device/inform/data,1.0,2.0,2.0,2.05 Content,32229.0,4b0e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.230.225,/device/inform/data,1.0,2.0,2.0,2.05 Content,32231.0,4b10,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+59.183.165.123,/device/inform/data,1.0,2.0,2.0,2.05 Content,32233.0,4b12,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+42.63.117.234,/device/inform/data,1.0,2.0,2.0,2.05 Content,32234.0,4b13,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

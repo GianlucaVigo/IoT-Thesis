@@ -1,0 +1,12 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+165.232.144.56,/efento/t,1.0,2.0,2.0,2.05 Content,45648.0,60f8,"{""OBSERVE"": ""0""}",b'h\xfa=\xbf',4.0,1.0,False
+183.233.214.146,/device/inform/data,1.0,2.0,2.0,2.05 Content,60803.0,c3ba,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.236.66.91,/device/inform/data,1.0,2.0,2.0,2.05 Content,60808.0,c3bf,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+171.38.217.59,/device/inform/data,1.0,2.0,2.0,2.05 Content,60809.0,c3c0,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.221.225.57,/device/inform/data,1.0,2.0,2.0,2.05 Content,60811.0,c3c2,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.220.29.66,/device/inform/data,1.0,2.0,2.0,2.05 Content,48392.0,4e1b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

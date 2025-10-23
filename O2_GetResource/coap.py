@@ -11,101 +11,101 @@ from utils import payload_handling
 # log info settings
 logging.basicConfig(level=logging.INFO)
 
+CONCURRENCY = 30
+
 
 # perform a CoAP GET request of a specified CoAP resource (IP addr + Resource URI)
-async def get(ip_address, uri, context, declared_obs, home_path_inserted, progress_counter):
-
-    MAX_TRANSMIT_WAIT = (
-        aiocoap.numbers.TransportTuning.ACK_TIMEOUT *
-        (2 ** (aiocoap.numbers.TransportTuning.MAX_RETRANSMIT + 1) - 1) *
-        aiocoap.numbers.TransportTuning.ACK_RANDOM_FACTOR
-    )
-
-    data_to_store = None
-
-    # resource URI to be checked
-    uri_to_check = f"coap://{ip_address}:5683{uri}"
-    # build the request message
-    request = Message(code=GET, uri=uri_to_check, observe=0)
-
-    try:
-        print(f"\t\t[{progress_counter + 1}] GET request to: {uri}")
-        # send the request and obtained the response
-        response = await asyncio.wait_for(context.request(request).response, timeout=MAX_TRANSMIT_WAIT + 5)
-
-        await asyncio.sleep(0.05)
-
-
-        if payload_handling.get_observe(response, uri) == True:  # OBS resource        
-            if declared_obs == True:                                #   -> declared OBS = CORRECT
-                observable_status = 0
-            else:                                                   #   -> NOT declared OBS = WRONG
-                observable_status = 1
-        else:                                               # NOT OBS resource
-            if declared_obs == True:                                #   -> declared OBS = WRONG
-                observable_status = 2               
-            else:                                                   #   -> NOT declared OBS = CORRECT
-                observable_status = 3
-
-
-        # --------- home path resource managing ---------
-        # NB: at the moment I considered only to add '/' resource to get some info about server used
-        if uri == '/':
-            user_inserted_status = home_path_inserted
-        else:
-            user_inserted_status = False
+async def get(ip_address, uri, context, declared_obs, home_path_inserted, progress_counter, semaphore):
         
-        data_to_store = {'saddr': ip_address,
-                        'uri': uri,
-                        'version': payload_handling.get_version(response),
-                        'mtype': payload_handling.get_mtype(response),
-                        'token-length': payload_handling.get_token_length(response),
-                        'code': payload_handling.get_code(response),
-                        'mid': payload_handling.get_mid(response),
-                        'token': payload_handling.get_token(response),
-                        'options': payload_handling.get_options(response),
-                        'payload': payload_handling.get_payload(response),
-                        'payload-length': payload_handling.get_payload_length(response),
-                        'observable': observable_status,
-                        'user_inserted': user_inserted_status
-        }
+    async with semaphore:
 
-    except asyncio.TimeoutError:
-        print(f"\t\t\tRequest to {ip_address}{uri} timed out")
+        MAX_TRANSMIT_WAIT = (
+            aiocoap.numbers.TransportTuning.ACK_TIMEOUT *
+            (2 ** (aiocoap.numbers.TransportTuning.MAX_RETRANSMIT + 1) - 1) *
+            aiocoap.numbers.TransportTuning.ACK_RANDOM_FACTOR
+        )
 
-        data_to_store = {'saddr': ip_address,
-                        'uri': uri,
-                        'version': None,
-                        'mtype': None,
-                        'token-length': None,
-                        'code': None,
-                        'mid': None,
-                        'token': None,
-                        'options': None,
-                        'payload': 'timeout',
-                        'payload-length': None,
-                        'observable': None
-        }
+        data_to_store = None
 
-    except Exception as e:
-        print(f"\t\t{e}")
-        
-        data_to_store = {'saddr': ip_address,
-                        'uri': uri,
-                        'version': None,
-                        'mtype': None,
-                        'token-length': None,
-                        'code': None,
-                        'mid': None,
-                        'token': None,
-                        'options': None,
-                        'payload': e,
-                        'payload-length': None,
-                        'observable': None
-        }
+        # resource URI to be checked
+        uri_to_check = f"coap://{ip_address}:5683{uri}"
+        # build the request message
+        request = Message(code=GET, uri=uri_to_check, observe=0)
 
-    
-    return data_to_store
+        try:
+            print(f"\t\t[{"{:2d}".format(progress_counter + 1)}] ({time.ctime(time.time())})\tPerforming GET request to: {uri}")
+            # send the request and obtained the response
+            response = await asyncio.wait_for(context.request(request).response, timeout=MAX_TRANSMIT_WAIT + 5)
+
+            if payload_handling.get_observe(response, uri) == True:  # OBS resource        
+                if declared_obs == True:                                #   -> declared OBS = CORRECT
+                    observable_status = 0
+                else:                                                   #   -> NOT declared OBS = WRONG
+                    observable_status = 1
+            else:                                               # NOT OBS resource
+                if declared_obs == True:                                #   -> declared OBS = WRONG
+                    observable_status = 2               
+                else:                                                   #   -> NOT declared OBS = CORRECT
+                    observable_status = 3
+
+
+            # --------- home path resource managing ---------
+            # NB: at the moment I considered only to add '/' resource to get some info about server used
+            if uri == '/':
+                user_inserted_status = home_path_inserted
+            else:
+                user_inserted_status = False
+                
+            data_to_store = {'saddr': ip_address,
+                                'uri': uri,
+                                'version': payload_handling.get_version(response),
+                                'mtype': payload_handling.get_mtype(response),
+                                'token-length': payload_handling.get_token_length(response),
+                                'code': payload_handling.get_code(response),
+                                'mid': payload_handling.get_mid(response),
+                                'token': payload_handling.get_token(response),
+                                'options': payload_handling.get_options(response),
+                                'payload': payload_handling.get_payload(response),
+                                'payload-length': payload_handling.get_payload_length(response),
+                                'observable': observable_status,
+                                'user_inserted': user_inserted_status
+            }
+
+        except asyncio.TimeoutError:
+            print(f"\t\t\tRequest to {ip_address}{uri} timed out")
+
+            data_to_store = {'saddr': ip_address,
+                                'uri': uri,
+                                'version': None,
+                                'mtype': None,
+                                'token-length': None,
+                                'code': None,
+                                'mid': None,
+                                'token': None,
+                                'options': None,
+                                'payload': 'timeout',
+                                'payload-length': None,
+                                'observable': None
+            }
+
+        except Exception as e:
+            print(f"\t\t{e}")
+                
+            data_to_store = {'saddr': ip_address,
+                                'uri': uri,
+                                'version': None,
+                                'mtype': None,
+                                'token-length': None,
+                                'code': None,
+                                'mid': None,
+                                'token': None,
+                                'options': None,
+                                'payload': e,
+                                'payload-length': None,
+                                'observable': None
+            }
+
+        return data_to_store
 
 
 
@@ -117,6 +117,16 @@ async def get_requests(discovery_df):
     total_ips = discovery_df.shape[0]
 
     responses = []
+
+    # modify the MAX_RETRANSMIT from 4 to 2
+    aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 2
+
+    semaphore = asyncio.Semaphore(CONCURRENCY)
+
+    # client context creation
+    contexts = [await Context.create_client_context() for _ in range(CONCURRENCY)]
+
+    await asyncio.sleep(2)
 
     for index, row in discovery_df.iterrows():
 
@@ -149,12 +159,6 @@ async def get_requests(discovery_df):
 
         #########################################
 
-        # modify the MAX_RETRANSMIT from 4 to 2
-        aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 2 
-
-        # client context creation
-        context = await Context.create_client_context()
-
         # resources = list of uris + their metadata
         resources = payload_handling.resource_list_of(row['data'])
         # uris = list of uris (no more metadata)
@@ -183,25 +187,31 @@ async def get_requests(discovery_df):
 
         #########################################
 
+        tasks = []
+
         for i, res in enumerate(resources):
 
             # ------------- observability handling -------------
             declared_obs = payload_handling.get_metadata_value_of(res, 'obs')
 
-            # resource discovery response
-            result = await get(row['saddr'], uris[i][1:-1], context, declared_obs, home_path_inserted, i)
+            slot_idx= i % CONCURRENCY
+            context = contexts[slot_idx]
 
-            # extending the responses list with the just got ones
-            responses.append(result)
+            tasks.append(get(row['saddr'], uris[i][1:-1], context, declared_obs, home_path_inserted, i, semaphore))
 
-        # -------------------------------------
-        await asyncio.sleep(0.1)
-        await context.shutdown()
-        await asyncio.sleep(0.05)
 
-        print(f"Elapsed: {time.time() - start_time}")
+        results = await asyncio.gather(*tasks)
+
+        responses.extend(results)
+
+    # -------------------------------------
+
+    for ctx in contexts:
+        await ctx.shutdown()
+
     
-   
+    print(f"Elapsed: {time.time() - start_time}")
+    
     responses_df = pd.DataFrame(responses)
 
     return responses_df

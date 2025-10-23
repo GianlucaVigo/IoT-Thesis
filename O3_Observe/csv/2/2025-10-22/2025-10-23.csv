@@ -1,0 +1,3 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+78.31.165.196,/device/inform/data,1.0,2.0,2.0,2.05 Content,10693.0,5bf4,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

@@ -5,7 +5,6 @@ import time
 import datetime
 import subprocess
 import maxminddb
-import json
 
 from aiocoap import *
 from collections import Counter
@@ -13,6 +12,9 @@ from collections import Counter
 from utils import payload_handling
 from O2_GetResource.coap import get_requests
 from O3_Observe.coap import observe_resources
+
+MENU_WAIT = 3
+CHUNK_SIZE = 10000
 
 ################################################################################################
 
@@ -146,14 +148,10 @@ async def decode(df_zmap):
 
                         print(f"ZMap Complete Payload decoded: {decoded_msg['data']}")
 
-            # if success field is equal to 0 (all icmp, ... kind of result)
+        # if success field is equal to 0 (all icmp, ... kind of result)
         else:
-                decode_results.update([f"unsuccess/{row['icmp_unreach_str']}"])
+            decode_results.update([f"unsuccess/{row['icmp_unreach_str']}"])
 
-        #except Exception as e:
-        #    print(f"Error decoding row {index}: {e}")
-
-        #finally:
         new_data_list.append(decoded_msg)
         print('£' * 50)
 
@@ -241,6 +239,8 @@ def new_internet_wide_search(cidr, cidr_id, zmap_user_cmd):
 
     cmd.extend(zmap_user_cmd)
     cmd.append(cidr)
+
+    print(cmd)
     
     #################################################
 
@@ -261,75 +261,79 @@ def new_internet_wide_search(cidr, cidr_id, zmap_user_cmd):
 
     print("zmap exit:", ret)
 
-    # ----------- raw-master-dataset -----------
-    print('-' * 100)
-    print("\t1. ZMAP RAW DATASET")
-    discovery_df = pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv")
-    print(f"\t\tNumber of entries: {discovery_df.shape[0]}")
+    with pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv", chunksize=CHUNK_SIZE) as csv_reader:
 
-    # ----------- remove-duplicates -----------
-    print('-' * 100)
-    print("\t2. DUPLICATES REMOVAL")
-    time.sleep(5)
-    discovery_df = remove_duplicates(discovery_df)
-    print(f"\t\tNumber of unique entries: {discovery_df.shape[0]}")
+        add_header = True
 
-    # ----------- decode-zmap-payload -----------
-    print('-' * 100)
-    print("\t3. ZMAP BINARY DECODE")
-    time.sleep(5)
-    decode_res = asyncio.run(decode(discovery_df))
-    discovery_df = decode_res[0]
-    print(f"\n\t\t{decode_res[1]}")
+        for i, chunk in enumerate(csv_reader):
 
-    # ----------- store-discovery-dataframe -----------
-    # The filtered/cleaned version of the discovery dataset is going to be stored in the 'cleaned' folder
-    print('-' * 100)
-    print("\t4. DISCOVERY DATASET STORAGE")
-    time.sleep(5)
-    payload_handling.options_to_json(discovery_df).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False)
-    print("\t\tCleaned version stored correctly!")
+            # ----------- chunk-info -----------
+            print(f"\tChunk nr [{i+1}]")
 
-    # ----------- ip-list -----------
-    print('-' * 100)
-    print("\t5. EXTRACTING IP LIST")
-    time.sleep(5)
-    discovery_df[['saddr']].to_csv(output_paths[2] + f"{datetime.date.today()}.csv", index=False, header=False)
+            # ----------- raw-master-dataset -----------
+            print('-' * 100)
+            print("\t1. ZMAP RAW DATASET")
+            print(f"\t\tNumber of entries: {chunk.shape[0]}")
 
-    # ----------- ip-info -----------
-    print('-' * 100)
-    print("\t6. ADDITIONAL IP INFORMATION EXTRACTION")
-    time.sleep(5)
-    ip_info_df = extract_ip_info(discovery_df[['saddr']])
-    # The additional IP information is going to be stored in a proper file stored inside the 'ip_info' folder
-    ip_info_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False)
+            # ----------- remove-duplicates -----------
+            print('-' * 100)
+            print("\t2. DUPLICATES REMOVAL")
+            time.sleep(MENU_WAIT)
+            chunk = remove_duplicates(chunk)
+            print(f"\t\tNumber of unique entries: {chunk.shape[0]}")
+
+            # ----------- decode-zmap-payload -----------
+            print('-' * 100)
+            print("\t3. ZMAP BINARY DECODE")
+            time.sleep(MENU_WAIT)
+            decode_res = asyncio.run(decode(chunk))
+            chunk = decode_res[0]
+            print(f"\n\t\t{decode_res[1]}")
+
+            # ----------- store-discovery-dataframe -----------
+            # The filtered/cleaned version of the discovery dataset is going to be stored in the 'cleaned' folder
+            print('-' * 100)
+            print("\t4. DISCOVERY DATASET STORAGE")
+            time.sleep(MENU_WAIT)
+            payload_handling.options_to_json(chunk).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
+            print("\t\tCleaned version stored correctly!")
+
+            # ----------- ip-list -----------
+            print('-' * 100)
+            print("\t5. EXTRACTING IP LIST")
+            time.sleep(MENU_WAIT)
+            chunk[['saddr']].to_csv(output_paths[2] + f"{datetime.date.today()}.csv", index=False, header=False, mode='a')
+
+            # ----------- ip-info -----------
+            print('-' * 100)
+            print("\t6. ADDITIONAL IP INFORMATION EXTRACTION")
+            time.sleep(MENU_WAIT)
+            ip_info_df = extract_ip_info(chunk[['saddr']])
+            # The additional IP information is going to be stored in a proper file stored inside the 'ip_info' folder
+            ip_info_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
 
 
-    # ----------- get-resources -----------
-    print('-' * 100)
-    print("\t7. GET RESOURCES")
-    time.sleep(5)
-    get_resources_df = asyncio.run(get_requests(discovery_df[['saddr','code','success','data']]))
-    payload_handling.options_to_json(get_resources_df).to_csv(output_paths[4] + f"{datetime.date.today()}.csv", index=False)
+            # ----------- get-resources -----------
+            print('-' * 100)
+            print("\t7. GET RESOURCES")
+            time.sleep(MENU_WAIT)
+            get_resources_df = asyncio.run(get_requests(chunk[['saddr','code','success','data']]))
+            payload_handling.options_to_json(get_resources_df).to_csv(output_paths[4] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
 
 
-    # ----------- observe -----------
-    print('-' * 100)
-    print("\t8. OBSERVE RESOURCES")
-    time.sleep(5)
-    observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
-    print(f"\t\tObservable Resources: \n{observable_resources_df}")
+            # ----------- observe -----------
+            print('-' * 100)
+            print("\t8. OBSERVE RESOURCES")
+            time.sleep(MENU_WAIT)
+            observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
+            print(f"\t\tObservable Resources: \n{observable_resources_df}")
 
-    if observable_resources_df.empty:
-        print("\n\t\tThere were NOT observable resources within the collected dataset")
-    else:
-        observe_resources_df = asyncio.run(observe_resources(observable_resources_df[['saddr','uri']]))
+            if observable_resources_df.empty:
+                print("\n\t\tThere were NOT observable resources within the collected dataset")
+            else:
+                observable_resources_df.to_csv(output_paths[5] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
 
-        observe_resources_df['updates'] = observe_resources_df['updates'].apply(
-            lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x
-        )
-        
-        observe_resources_df.to_csv(output_paths[5] + f"{datetime.date.today()}.csv", index=False)
+            add_header = False
 
     return
 
@@ -363,6 +367,8 @@ def stability_lookups(cidr_id, zmap_user_cmd):
     ]
 
     cmd.extend(zmap_user_cmd)
+
+    print(cmd)
     
     ##################################################
     
@@ -415,59 +421,63 @@ def stability_lookups(cidr_id, zmap_user_cmd):
 
         print("zmap exit:", ret)
 
-        # ----------- raw-master-dataset -----------
-        print('-' * 100)
-        print("\t1. ZMAP RAW DATASET")
-        discovery_df = pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv")
-        print(f"\t\tNumber of entries: {discovery_df.shape[0]}")
+        with pd.read_csv(output_paths[0] + f"{datetime.date.today()}.csv", chunksize=CHUNK_SIZE) as csv_reader:
 
-        # ----------- remove-duplicates -----------
-        print('-' * 100)
-        print("\t2. DUPLICATES REMOVAL")
-        time.sleep(5)
-        discovery_df = remove_duplicates(discovery_df)
-        print(f"\t\tNumber of unique entries: {discovery_df.shape[0]}")
+            add_header = True
 
-        # ----------- decode-zmap-payload -----------
-        print('-' * 100)
-        print("\t3. ZMAP BINARY DECODE")
-        time.sleep(5)
-        decode_res = asyncio.run(decode(discovery_df))
-        discovery_df = decode_res[0]
-        print(f"\n\t\t{decode_res[1]}")
+            for i, chunk in enumerate(csv_reader):
 
-        # ----------- store-discovery-dataframe -----------
-        print('-' * 100)
-        print("\t4. DISCOVERY DATASET STORAGE")
-        time.sleep(5)
-        payload_handling.options_to_json(discovery_df).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False)
-        print("\t\tCleaned version stored correctly!")
+                # ----------- chunk-info -----------
+                print(f"\tChunk nr [{i+1}]")
 
-        # ----------- get-resources -----------
-        print('-' * 100)
-        print("\t5. GET RESOURCES")
-        time.sleep(5)
-        get_resources_df = asyncio.run(get_requests(discovery_df[['saddr','code','success','data']]))
-        payload_handling.options_to_json(get_resources_df).to_csv(output_paths[2] + f"{datetime.date.today()}.csv", index=False)
+                # ----------- raw-master-dataset -----------
+                print('-' * 100)
+                print("\t1. ZMAP RAW DATASET")
+                print(f"\t\tNumber of entries: {chunk.shape[0]}")
 
-        # ----------- observe -----------
-        print('-' * 100)
-        print("\t6. OBSERVE RESOURCES")
-        time.sleep(5)
-        observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
-        print(f"\t\tObservable Resources: \n{observable_resources_df}")
+                # ----------- remove-duplicates -----------
+                print('-' * 100)
+                print("\t2. DUPLICATES REMOVAL")
+                time.sleep(MENU_WAIT)
+                chunk = remove_duplicates(chunk)
+                print(f"\t\tNumber of unique entries: {chunk.shape[0]}")
 
-        if observable_resources_df.empty:
-            print("\n\t\tThere were NOT observable resources within the collected dataset")
-        else:
-            observe_resources_df = asyncio.run(observe_resources(observable_resources_df[['saddr','uri']]))
-            
-            observe_resources_df['updates'] = observe_resources_df['updates'].apply(
-                lambda x: json.dumps(x) if isinstance(x, (list, dict)) else x
-            )
-            
-            observe_resources_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False)
+                # ----------- decode-zmap-payload -----------
+                print('-' * 100)
+                print("\t3. ZMAP BINARY DECODE")
+                time.sleep(MENU_WAIT)
+                decode_res = asyncio.run(decode(chunk))
+                chunk = decode_res[0]
+                print(f"\n\t\t{decode_res[1]}")
 
+                # ----------- store-discovery-dataframe -----------
+                print('-' * 100)
+                print("\t4. DISCOVERY DATASET STORAGE")
+                time.sleep(MENU_WAIT)
+                payload_handling.options_to_json(chunk).to_csv(output_paths[1] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
+                print("\t\tCleaned version stored correctly!")
+
+                # ----------- get-resources -----------
+                print('-' * 100)
+                print("\t5. GET RESOURCES")
+                time.sleep(MENU_WAIT)
+                get_resources_df = asyncio.run(get_requests(chunk[['saddr','code','success','data']]))
+                payload_handling.options_to_json(get_resources_df).to_csv(output_paths[2] + f"{datetime.date.today()}.csv",  index=False, header=add_header, mode='a')
+
+                # ----------- observe -----------
+                print('-' * 100)
+                print("\t6. OBSERVE RESOURCES")
+                time.sleep(MENU_WAIT)
+                observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
+                print(f"\t\tObservable Resources: \n{observable_resources_df}")
+
+                if observable_resources_df.empty:
+                    print("\n\t\tThere were NOT observable resources within the collected dataset")
+                else:
+                    observable_resources_df.to_csv(output_paths[3] + f"{datetime.date.today()}.csv", index=False, header=add_header, mode='a')
+
+                add_header = False
+                
         #################################################
 
         # Update ZMap commad

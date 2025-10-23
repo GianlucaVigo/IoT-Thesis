@@ -1,0 +1,723 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+35.181.79.159,/api,1.0,2.0,2.0,4.05 Method Not Allowed,25919.0,409a,,,0.0,3.0,False
+35.181.79.159,/api/v1,1.0,2.0,2.0,4.00 Bad Request,45679.0,ffee,,,0.0,3.0,False
+35.181.79.159,/.well-known/core,1.0,2.0,2.0,2.05 Content,9986.0,9fc6,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</api>,</api/v1>,</.well-known/core>",36.0,3.0,False
+35.181.79.159,/,1.0,2.0,2.0,2.05 Content,46668.0,216d,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Californium (Cf) CoAP framework
+published by the Eclipse Foundation under EPL+EDL:
+http://www.eclipse.org/californium/
+
+(c) 2014, Institute for Pervasive Computing, ETH Zurich
+Contact: Matthias Kovatsch <kovatsch@inf.ethz.ch>
+************************************************************",494.0,3.0,True
+46.72.165.111,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25920.0,409b,,,0.0,3.0,False
+46.72.165.111,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45680.0,ffef,,,0.0,3.0,False
+46.72.165.111,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9987.0,9fc7,,0x1,3.0,3.0,False
+46.72.165.111,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46669.0,216e,,,0.0,3.0,False
+46.72.165.111,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12358.0,1f5d,,,0.0,3.0,False
+46.72.165.111,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13581.0,b0ca,,,0.0,3.0,False
+46.72.165.111,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6931.0,fddb,,,0.0,3.0,False
+46.72.165.111,/info,1.0,2.0,2.0,2.05 Content,27516.0,345f,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9c9ef15a-2b79-11e6-8115-21925c845172"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+46.72.165.111,/,1.0,2.0,2.0,4.04 Not Found,64536.0,6d9d,,,0.0,3.0,True
+37.113.187.140,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25921.0,409c,,,0.0,3.0,False
+37.113.187.140,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45681.0,fff0,,,0.0,3.0,False
+37.113.187.140,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9988.0,9fc8,,0x1,3.0,3.0,False
+37.113.187.140,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46670.0,216f,,,0.0,3.0,False
+37.113.187.140,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12359.0,1f5e,,,0.0,3.0,False
+37.113.187.140,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13582.0,b0cb,,,0.0,3.0,False
+37.113.187.140,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6932.0,fddc,,,0.0,3.0,False
+37.113.187.140,/info,1.0,2.0,2.0,2.05 Content,27517.0,3460,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""15957626-c57e-11e6-8115-bf050c2d9ddf"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+37.113.187.140,/,1.0,2.0,2.0,4.04 Not Found,64537.0,6d9e,,,0.0,3.0,True
+46.44.38.11,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25922.0,409d,,,0.0,3.0,False
+46.44.38.11,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45682.0,fff1,,,0.0,3.0,False
+46.44.38.11,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9989.0,9fc9,,0x1,3.0,3.0,False
+46.44.38.11,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46671.0,2170,,,0.0,3.0,False
+46.44.38.11,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12360.0,1f5f,,,0.0,3.0,False
+46.44.38.11,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13583.0,b0cc,,,0.0,3.0,False
+46.44.38.11,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6933.0,fddd,,,0.0,3.0,False
+46.44.38.11,/info,1.0,2.0,2.0,2.05 Content,27518.0,3461,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""f90e032a-1578-11e6-8115-2be235c302f5"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+46.44.38.11,/,1.0,2.0,2.0,4.04 Not Found,64538.0,6d9f,,,0.0,3.0,True
+62.140.233.64,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25923.0,409e,,,0.0,3.0,False
+62.140.233.64,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45683.0,fff2,,,0.0,3.0,False
+62.140.233.64,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9990.0,9fca,,0x1,3.0,3.0,False
+62.140.233.64,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46672.0,2171,,,0.0,3.0,False
+62.140.233.64,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12361.0,1f60,,,0.0,3.0,False
+62.140.233.64,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13584.0,b0cd,,,0.0,3.0,False
+62.140.233.64,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6934.0,fdde,,,0.0,3.0,False
+62.140.233.64,/info,1.0,2.0,2.0,2.05 Content,27519.0,3462,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c7860a-88fc-11e6-8115-a9effcc34bff"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+62.140.233.64,/,1.0,2.0,2.0,4.04 Not Found,64539.0,6da0,,,0.0,3.0,True
+37.75.203.6,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25924.0,409f,,,0.0,3.0,False
+37.75.203.6,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45684.0,fff3,,,0.0,3.0,False
+37.75.203.6,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9991.0,9fcb,,0x1,3.0,3.0,False
+37.75.203.6,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46673.0,2172,,,0.0,3.0,False
+37.75.203.6,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12362.0,1f61,,,0.0,3.0,False
+37.75.203.6,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13585.0,b0ce,,,0.0,3.0,False
+37.75.203.6,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6935.0,fddf,,,0.0,3.0,False
+37.75.203.6,/info,1.0,2.0,2.0,2.05 Content,27520.0,3463,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4984ea76-c214-11e9-8f23-99278d526d75"",""http_port"":80,""type"":""router"",""name"":""Keenetic Lite"",""version"":""0.3.5-1""}",120.0,3.0,False
+37.75.203.6,/,1.0,2.0,2.0,4.04 Not Found,64540.0,6da1,,,0.0,3.0,True
+46.165.16.121,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25925.0,40a0,,,0.0,3.0,False
+46.165.16.121,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45685.0,fff4,,,0.0,3.0,False
+46.165.16.121,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9992.0,9fcc,,0x1,3.0,3.0,False
+46.165.16.121,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46674.0,2173,,,0.0,3.0,False
+46.165.16.121,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12363.0,1f62,,,0.0,3.0,False
+46.165.16.121,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13586.0,b0cf,,,0.0,3.0,False
+46.165.16.121,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6936.0,fde0,,,0.0,3.0,False
+46.165.16.121,/info,1.0,2.0,2.0,2.05 Content,27521.0,3464,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""f90e0f32-1578-11e6-8115-559499c33410"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+46.165.16.121,/,1.0,2.0,2.0,4.04 Not Found,64541.0,6da2,,,0.0,3.0,True
+37.113.187.136,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25926.0,40a1,,,0.0,3.0,False
+37.113.187.136,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45686.0,fff5,,,0.0,3.0,False
+37.113.187.136,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9993.0,9fcd,,0x1,3.0,3.0,False
+37.113.187.136,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46675.0,2174,,,0.0,3.0,False
+37.113.187.136,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12364.0,1f63,,,0.0,3.0,False
+37.113.187.136,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13587.0,b0d0,,,0.0,3.0,False
+37.113.187.136,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6937.0,fde1,,,0.0,3.0,False
+37.113.187.136,/info,1.0,2.0,2.0,2.05 Content,27522.0,3465,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159e0eee-c57e-11e6-8115-5bc5e042181e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+37.113.187.136,/,1.0,2.0,2.0,4.04 Not Found,64542.0,6da3,,,0.0,3.0,True
+37.232.152.205,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25927.0,40a2,,,0.0,3.0,False
+37.232.152.205,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45687.0,fff6,,,0.0,3.0,False
+37.232.152.205,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9994.0,9fce,,0x1,3.0,3.0,False
+37.232.152.205,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46676.0,2175,,,0.0,3.0,False
+37.232.152.205,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12365.0,1f64,,,0.0,3.0,False
+37.232.152.205,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13588.0,b0d1,,,0.0,3.0,False
+37.232.152.205,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6938.0,fde2,,,0.0,3.0,False
+37.232.152.205,/info,1.0,2.0,2.0,2.05 Content,27523.0,3466,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4033a57a-417a-11e6-8115-55132477fa28"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+37.232.152.205,/,1.0,2.0,2.0,4.04 Not Found,64543.0,6da4,,,0.0,3.0,True
+46.173.188.12,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25928.0,40a3,,,0.0,3.0,False
+46.173.188.12,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45688.0,fff7,,,0.0,3.0,False
+46.173.188.12,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9995.0,9fcf,,0x1,3.0,3.0,False
+46.173.188.12,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46677.0,2176,,,0.0,3.0,False
+46.173.188.12,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12366.0,1f65,,,0.0,3.0,False
+46.173.188.12,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13589.0,b0d2,,,0.0,3.0,False
+46.173.188.12,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6939.0,fde3,,,0.0,3.0,False
+46.173.188.12,/info,1.0,2.0,2.0,2.05 Content,27524.0,3467,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159986a8-c57e-11e6-8115-df26ef840dc6"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+46.173.188.12,/,1.0,2.0,2.0,4.04 Not Found,64544.0,6da5,,,0.0,3.0,True
+62.33.123.109,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25929.0,40a4,,,0.0,3.0,False
+62.33.123.109,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45689.0,fff8,,,0.0,3.0,False
+62.33.123.109,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,9996.0,9fd0,,0x1,3.0,3.0,False
+62.33.123.109,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46678.0,2177,,,0.0,3.0,False
+62.33.123.109,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12367.0,1f66,,,0.0,3.0,False
+62.33.123.109,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13590.0,b0d3,,,0.0,3.0,False
+62.33.123.109,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6940.0,fde4,,,0.0,3.0,False
+62.33.123.109,/info,1.0,2.0,2.0,2.05 Content,27525.0,3468,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""5e6fb3d8-67fb-11e6-8115-393a37787e9e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+62.33.123.109,/,1.0,2.0,2.0,4.04 Not Found,64545.0,6da6,,,0.0,3.0,True
+58.69.75.242,/,1.0,2.0,2.0,2.05 Content,25930.0,40a5,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+58.69.75.242,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,45690.0,fff9,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,9997.0,9fd1,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46679.0,2178,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12368.0,1f67,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13591.0,b0d4,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6941.0,fde5,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27526.0,3469,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64546.0,6da7,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28659.0,edea,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58142.0,b3ac,,Method Not Allowed,18.0,3.0,False
+58.69.75.242,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a11,,done,4.0,3.0,False
+60.52.192.247,/,1.0,2.0,2.0,2.05 Content,25931.0,40a6,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+60.52.192.247,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,45691.0,fffa,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,9998.0,9fd2,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46680.0,2179,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12369.0,1f68,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13592.0,b0d5,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6942.0,fde6,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27527.0,346a,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64547.0,6da8,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28660.0,edeb,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58143.0,b3ad,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,59120.0,7a12,,Method Not Allowed,18.0,3.0,False
+60.52.192.247,/async,1.0,0.0,2.0,2.05 Content,7091.0,d9e4,,done,4.0,3.0,False
+60.52.111.42,/,1.0,2.0,2.0,2.05 Content,25932.0,40a7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+60.52.111.42,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,45692.0,fffb,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,9999.0,9fd3,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46681.0,217a,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12370.0,1f69,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13593.0,b0d6,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6943.0,fde7,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27528.0,346b,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64548.0,6da9,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28661.0,edec,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58144.0,b3ae,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,59121.0,7a13,,Method Not Allowed,18.0,3.0,False
+60.52.111.42,/async,1.0,0.0,2.0,2.05 Content,53183.0,d9e5,,done,4.0,3.0,False
+60.49.71.66,/,1.0,2.0,2.0,2.05 Content,25933.0,40a8,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+60.49.71.66,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,45693.0,fffc,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10000.0,9fd4,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46682.0,217b,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12371.0,1f6a,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13594.0,b0d7,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6944.0,fde8,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27529.0,346c,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64549.0,6daa,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28662.0,eded,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58145.0,b3af,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,59122.0,7a14,,Method Not Allowed,18.0,3.0,False
+60.49.71.66,/async,1.0,0.0,2.0,2.05 Content,25587.0,d9e6,,done,4.0,3.0,False
+62.182.74.183,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25934.0,40a9,,,0.0,3.0,False
+62.182.74.183,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45694.0,fffd,,,0.0,3.0,False
+62.182.74.183,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,10001.0,9fd5,,0x1,3.0,3.0,False
+62.182.74.183,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46683.0,217c,,,0.0,3.0,False
+62.182.74.183,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12372.0,1f6b,,,0.0,3.0,False
+62.182.74.183,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13595.0,b0d8,,,0.0,3.0,False
+62.182.74.183,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6945.0,fde9,,,0.0,3.0,False
+62.182.74.183,/info,1.0,2.0,2.0,2.05 Content,27530.0,346d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""cb6bce80-c49b-11ea-9396-ff92ca1b5e49"",""http_port"":80,""type"":""router"",""name"":""Keenetic Viva"",""version"":""0.3.5""}",118.0,3.0,False
+62.182.74.183,/,1.0,2.0,2.0,4.04 Not Found,64550.0,6dab,,,0.0,3.0,True
+46.167.72.170,/register,1.0,2.0,2.0,4.05 Method Not Allowed,25935.0,40aa,,,0.0,3.0,False
+46.167.72.170,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,45695.0,fffe,,,0.0,3.0,False
+46.167.72.170,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,10002.0,9fd6,,0x1,3.0,3.0,False
+46.167.72.170,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,46684.0,217d,,,0.0,3.0,False
+46.167.72.170,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,12373.0,1f6c,,,0.0,3.0,False
+46.167.72.170,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,13596.0,b0d9,,,0.0,3.0,False
+46.167.72.170,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6946.0,fdea,,,0.0,3.0,False
+46.167.72.170,/info,1.0,2.0,2.0,2.05 Content,27531.0,346e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d03013ba-0ff8-11e6-8115-65e55ea2df48"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+46.167.72.170,/,1.0,2.0,2.0,4.04 Not Found,64551.0,6dac,,,0.0,3.0,True
+49.144.147.45,/,1.0,2.0,2.0,2.05 Content,25936.0,40ab,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.144.147.45,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,45696.0,ffff,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10003.0,9fd7,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46685.0,217e,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12374.0,1f6d,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13597.0,b0da,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6947.0,fdeb,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27532.0,346f,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64552.0,6dad,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28663.0,edee,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58146.0,b3b0,,Method Not Allowed,18.0,3.0,False
+49.144.147.45,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a15,,done,4.0,3.0,False
+47.104.136.240,/rd,1.0,2.0,2.0,4.05 Method Not Allowed,25937.0,40ac,,,0.0,3.0,False
+47.104.136.240,/dp,1.0,2.0,3.0,4.05 Method Not Allowed,45697.0,010000,,,0.0,3.0,False
+47.104.136.240,/,1.0,2.0,2.0,4.04 Not Found,10004.0,9fd8,,,0.0,3.0,True
+49.144.26.41,/,1.0,2.0,2.0,2.05 Content,25938.0,40ad,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.144.26.41,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45698.0,010001,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10005.0,9fd9,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46686.0,217f,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12375.0,1f6e,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13598.0,b0db,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6948.0,fdec,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27533.0,3470,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64553.0,6dae,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28664.0,edef,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58147.0,b3b1,,Method Not Allowed,18.0,3.0,False
+49.144.26.41,/async,1.0,0.0,2.0,2.05 Content,7200.0,7a16,,done,4.0,3.0,False
+49.146.206.69,/,1.0,2.0,2.0,2.05 Content,25939.0,40ae,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.146.206.69,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45699.0,010002,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10006.0,9fda,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46687.0,2180,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12376.0,1f6f,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13599.0,b0dc,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6949.0,fded,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27534.0,3471,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64554.0,6daf,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28665.0,edf0,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58148.0,b3b2,,Method Not Allowed,18.0,3.0,False
+49.146.206.69,/async,1.0,0.0,2.0,2.05 Content,7200.0,7a17,,done,4.0,3.0,False
+49.147.241.209,/,1.0,2.0,2.0,2.05 Content,25940.0,40af,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.241.209,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45700.0,010003,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10007.0,9fdb,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46688.0,2181,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12377.0,1f70,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13600.0,b0dd,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6950.0,fdee,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27535.0,3472,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64555.0,6db0,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28666.0,edf1,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58149.0,b3b3,,Method Not Allowed,18.0,3.0,False
+49.147.241.209,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a18,,done,4.0,3.0,False
+49.147.55.37,/,1.0,2.0,2.0,2.05 Content,25941.0,40b0,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.55.37,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45701.0,010004,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10008.0,9fdc,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46689.0,2182,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12378.0,1f71,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13601.0,b0de,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6951.0,fdef,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27536.0,3473,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64556.0,6db1,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28667.0,edf2,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58150.0,b3b4,,Method Not Allowed,18.0,3.0,False
+49.147.55.37,/async,1.0,0.0,2.0,2.05 Content,7200.0,7a19,,done,4.0,3.0,False
+49.228.44.63,/,1.0,2.0,2.0,2.05 Content,25942.0,40b1,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.228.44.63,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45702.0,010005,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10009.0,9fdd,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46690.0,2183,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12379.0,1f72,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13602.0,b0df,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6952.0,fdf0,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27537.0,3474,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64557.0,6db2,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28668.0,edf3,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58151.0,b3b5,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,59128.0,7a1a,,Method Not Allowed,18.0,3.0,False
+49.228.44.63,/async,1.0,0.0,2.0,2.05 Content,37483.0,d9e7,,done,4.0,3.0,False
+49.147.36.153,/,1.0,2.0,2.0,2.05 Content,25943.0,40b2,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.36.153,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45703.0,010006,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10010.0,9fde,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46691.0,2184,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12380.0,1f73,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13603.0,b0e0,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6953.0,fdf1,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27538.0,3475,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64558.0,6db3,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28669.0,edf4,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58152.0,b3b6,,Method Not Allowed,18.0,3.0,False
+49.147.36.153,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a1b,,done,4.0,3.0,False
+49.144.216.87,/,1.0,2.0,2.0,2.05 Content,25944.0,40b3,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.144.216.87,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45704.0,010007,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10011.0,9fdf,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46692.0,2185,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12381.0,1f74,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13604.0,b0e1,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6954.0,fdf2,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27539.0,3476,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64559.0,6db4,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28670.0,edf5,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58153.0,b3b7,,Method Not Allowed,18.0,3.0,False
+49.144.216.87,/async,1.0,0.0,2.0,2.05 Content,7200.0,7a1c,,done,4.0,3.0,False
+49.144.62.207,/,1.0,2.0,2.0,2.05 Content,25945.0,40b4,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.144.62.207,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45705.0,010008,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10012.0,9fe0,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46693.0,2186,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12382.0,1f75,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13605.0,b0e2,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6955.0,fdf3,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27540.0,3477,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64560.0,6db5,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28671.0,edf6,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58154.0,b3b8,,Method Not Allowed,18.0,3.0,False
+49.144.62.207,/async,1.0,0.0,2.0,2.05 Content,7198.0,7a1d,,done,4.0,3.0,False
+58.56.57.162,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,25946.0,40b5,,Method Not Allowed,18.0,3.0,False
+58.56.57.162,/qlink/netinfo,1.0,2.0,3.0,4.05 Method Not Allowed,45706.0,010009,,Method Not Allowed,18.0,3.0,False
+58.56.57.162,/,1.0,2.0,2.0,4.04 Not Found,10013.0,9fe1,,Not Found,9.0,3.0,True
+49.147.52.169,/,1.0,2.0,2.0,2.05 Content,25947.0,40b6,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.52.169,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45707.0,01000a,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10014.0,9fe2,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46694.0,2187,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12383.0,1f76,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13606.0,b0e3,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6956.0,fdf4,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27541.0,3478,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64561.0,6db6,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28672.0,edf7,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58155.0,b3b9,,Method Not Allowed,18.0,3.0,False
+49.147.52.169,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a1e,,done,4.0,3.0,False
+49.147.56.221,/,1.0,2.0,2.0,2.05 Content,25948.0,40b7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.56.221,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45708.0,01000b,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10015.0,9fe3,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46695.0,2188,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12384.0,1f77,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13607.0,b0e4,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6957.0,fdf5,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27542.0,3479,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64562.0,6db7,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28673.0,edf8,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58156.0,b3ba,,Method Not Allowed,18.0,3.0,False
+49.147.56.221,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a1f,,done,4.0,3.0,False
+49.145.248.214,/,1.0,2.0,2.0,2.05 Content,25949.0,40b8,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.145.248.214,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45709.0,01000c,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10016.0,9fe4,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46696.0,2189,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12385.0,1f78,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13608.0,b0e5,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6958.0,fdf6,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27543.0,347a,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64563.0,6db8,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28674.0,edf9,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58157.0,b3bb,,Method Not Allowed,18.0,3.0,False
+49.145.248.214,/async,1.0,2.0,2.0,5.03 Service Unavailable,59134.0,7a20,,,0.0,3.0,False
+49.149.3.201,/,1.0,2.0,2.0,2.05 Content,25950.0,40b9,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.149.3.201,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45710.0,01000d,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10017.0,9fe5,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46697.0,218a,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12386.0,1f79,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13609.0,b0e6,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6959.0,fdf7,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27544.0,347b,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64564.0,6db9,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28675.0,edfa,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58158.0,b3bc,,Method Not Allowed,18.0,3.0,False
+49.149.3.201,/async,1.0,0.0,2.0,2.05 Content,7200.0,7a21,,done,4.0,3.0,False
+49.147.98.253,/,1.0,2.0,2.0,2.05 Content,25951.0,40ba,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.147.98.253,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45711.0,01000e,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10018.0,9fe6,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46698.0,218b,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12387.0,1f7a,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13610.0,b0e7,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6960.0,fdf8,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27545.0,347c,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64565.0,6dba,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28676.0,edfb,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58159.0,b3bd,,Method Not Allowed,18.0,3.0,False
+49.147.98.253,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a22,,done,4.0,3.0,False
+49.146.146.140,/,1.0,2.0,2.0,2.05 Content,25952.0,40bb,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.146.146.140,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45712.0,01000f,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10019.0,9fe7,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46699.0,218c,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12388.0,1f7b,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13611.0,b0e8,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6961.0,fdf9,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27546.0,347d,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64566.0,6dbb,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28677.0,edfc,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58160.0,b3be,,Method Not Allowed,18.0,3.0,False
+49.146.146.140,/async,1.0,0.0,2.0,2.05 Content,7198.0,7a23,,done,4.0,3.0,False
+49.148.97.53,/,1.0,2.0,2.0,2.05 Content,25953.0,40bc,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.148.97.53,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45713.0,010010,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10020.0,9fe8,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46700.0,218d,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12389.0,1f7c,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13612.0,b0e9,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6962.0,fdfa,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27547.0,347e,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64567.0,6dbc,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28678.0,edfd,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58161.0,b3bf,,Method Not Allowed,18.0,3.0,False
+49.148.97.53,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a24,,done,4.0,3.0,False
+36.136.55.104,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25954.0,40bd,,,0.0,3.0,False
+36.136.55.104,/qlink/searchgw,1.0,2.0,3.0,4.00 Bad Request,45714.0,010011,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.136.55.104,/device,1.0,2.0,2.0,4.05 Method Not Allowed,10021.0,9fe9,,,0.0,3.0,False
+36.136.55.104,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,46701.0,218e,,,0.0,3.0,False
+36.136.55.104,/device/inform/boot,1.0,2.0,2.0,4.00 Bad Request,12390.0,1f7d,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.136.55.104,/device/inform/bootstrap,1.0,2.0,2.0,4.00 Bad Request,13613.0,b0ea,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.136.55.104,/device/inform/data,1.0,2.0,2.0,4.00 Bad Request,6963.0,fdfb,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.136.55.104,/device/inform/heartbeat,1.0,2.0,2.0,4.00 Bad Request,27548.0,347f,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.136.55.104,/device/inform/offline,1.0,2.0,2.0,4.00 Bad Request,64568.0,6dbd,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.136.55.104,/ekit,1.0,2.0,2.0,4.05 Method Not Allowed,28679.0,edfe,,,0.0,3.0,False
+36.136.55.104,/ekit/boot,1.0,2.0,2.0,4.00 Bad Request,58162.0,b3c0,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.136.55.104,/ekit/bootstrap,1.0,2.0,2.0,4.00 Bad Request,59139.0,7a25,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.136.55.104,/ekit/heartbeat,1.0,2.0,2.0,4.00 Bad Request,62497.0,d9e8,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.136.55.104,/ekit/searchgw,1.0,2.0,2.0,4.00 Bad Request,37933.0,6c67,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.136.55.104,/.well-known/core,1.0,2.0,2.0,2.05 Content,50297.0,4ca1,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270.0,3.0,False
+36.136.55.104,/,1.0,2.0,2.0,2.05 Content,33265.0,875b,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+36.136.84.22,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25955.0,40be,,,0.0,3.0,False
+36.136.84.22,/qlink/searchgw,1.0,2.0,3.0,4.00 Bad Request,45715.0,010012,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.136.84.22,/device,1.0,2.0,2.0,4.05 Method Not Allowed,10022.0,9fea,,,0.0,3.0,False
+36.136.84.22,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,46702.0,218f,,,0.0,3.0,False
+36.136.84.22,/device/inform/boot,1.0,2.0,2.0,4.00 Bad Request,12391.0,1f7e,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.136.84.22,/device/inform/bootstrap,1.0,2.0,2.0,4.00 Bad Request,13614.0,b0eb,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.136.84.22,/device/inform/data,1.0,2.0,2.0,4.00 Bad Request,6964.0,fdfc,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.136.84.22,/device/inform/heartbeat,1.0,2.0,2.0,4.00 Bad Request,27549.0,3480,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.136.84.22,/device/inform/offline,1.0,2.0,2.0,4.00 Bad Request,64569.0,6dbe,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.136.84.22,/ekit,1.0,2.0,2.0,4.05 Method Not Allowed,28680.0,edff,,,0.0,3.0,False
+36.136.84.22,/ekit/boot,1.0,2.0,2.0,4.00 Bad Request,58163.0,b3c1,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.136.84.22,/ekit/bootstrap,1.0,2.0,2.0,4.00 Bad Request,59140.0,7a26,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.136.84.22,/ekit/heartbeat,1.0,2.0,2.0,4.00 Bad Request,62498.0,d9e9,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.136.84.22,/ekit/searchgw,1.0,2.0,2.0,4.00 Bad Request,37934.0,6c68,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.136.84.22,/.well-known/core,1.0,2.0,2.0,2.05 Content,50298.0,4ca2,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270.0,3.0,False
+36.136.84.22,/,1.0,2.0,2.0,2.05 Content,33266.0,875c,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+39.165.48.247,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25956.0,40bf,,,0.0,3.0,False
+39.165.48.247,/qlink/searchgw,1.0,2.0,3.0,4.00 Bad Request,45716.0,010013,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+39.165.48.247,/device,1.0,2.0,2.0,4.05 Method Not Allowed,10023.0,9feb,,,0.0,3.0,False
+39.165.48.247,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,46703.0,2190,,,0.0,3.0,False
+39.165.48.247,/device/inform/boot,1.0,2.0,2.0,4.00 Bad Request,12392.0,1f7f,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.165.48.247,/device/inform/bootstrap,1.0,2.0,2.0,4.00 Bad Request,13615.0,b0ec,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+39.165.48.247,/device/inform/data,1.0,2.0,2.0,4.00 Bad Request,6965.0,fdfd,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+39.165.48.247,/device/inform/heartbeat,1.0,2.0,2.0,4.00 Bad Request,27550.0,3481,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+39.165.48.247,/device/inform/offline,1.0,2.0,2.0,4.00 Bad Request,64570.0,6dbf,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+39.165.48.247,/ekit,1.0,2.0,2.0,4.05 Method Not Allowed,28681.0,ee00,,,0.0,3.0,False
+39.165.48.247,/ekit/boot,1.0,2.0,2.0,4.00 Bad Request,58164.0,b3c2,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.165.48.247,/ekit/bootstrap,1.0,2.0,2.0,4.00 Bad Request,59141.0,7a27,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+39.165.48.247,/ekit/heartbeat,1.0,2.0,2.0,4.00 Bad Request,62499.0,d9ea,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+39.165.48.247,/ekit/searchgw,1.0,2.0,2.0,4.00 Bad Request,37935.0,6c69,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+39.165.48.247,/.well-known/core,1.0,2.0,2.0,2.05 Content,50299.0,4ca3,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270.0,3.0,False
+39.165.48.247,/,1.0,2.0,2.0,2.05 Content,33267.0,875d,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+39.165.56.38,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,25957.0,40c0,,Method Not Allowed,18.0,3.0,False
+39.165.56.38,/qlink/netinfo,1.0,2.0,3.0,4.05 Method Not Allowed,45717.0,010014,,Method Not Allowed,18.0,3.0,False
+39.165.56.38,/,1.0,2.0,2.0,4.04 Not Found,10024.0,9fec,,Not Found,9.0,3.0,True
+39.129.95.66,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25958.0,40c1,,,0.0,3.0,False
+39.129.95.66,/qlink/ack,,,,,,,,Network error: MessageError,,,
+39.129.95.66,/qlink/queryGwExt,1.0,2.0,2.0,2.05 Content,10025.0,9fed,"{""CONTENT_FORMAT"": ""TEXT""}","{""gatewayMac"":""74694AC49B68"",""firmwareVersion"":""SCTY;TEWA-220G"",""type"":1,""gatewayManufacturer"":""SCTY"",""softwareVersion"":""COGI.V1.0.0.2;1.0;2.5.1-200908"",""gatewaySn"":""SCTY15C63A4B"",""andlinkVersion"":""2.5"",""provinceAbb"":""YUN""}",223.0,3.0,False
+39.129.95.66,/qlink/request,1.0,2.0,2.0,2.05 Content,46704.0,2191,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+39.129.95.66,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,12393.0,1f80,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+39.129.95.66,/qlink/success,1.0,2.0,2.0,2.05 Content,13616.0,b0ed,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+39.129.95.66,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+39.129.95.66,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,27551.0,3482,,,0.0,3.0,False
+39.129.95.66,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,64571.0,6dc0,,,0.0,3.0,False
+39.129.95.66,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,28682.0,ee01,"{""CONTENT_FORMAT"": ""TEXT""}","090_74694AC49B68{""apmsOnlineStatus"":0}",38.0,3.0,False
+39.129.95.66,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,58165.0,b3c3,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+39.129.95.66,/gw/query/config,1.0,2.0,2.0,2.05 Content,59142.0,7a28,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+39.129.95.66,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,62500.0,d9eb,,,0.0,3.0,False
+39.129.95.66,/basic/regist,1.0,2.0,2.0,2.05 Content,37936.0,6c6a,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+39.129.95.66,/basic/show,1.0,2.0,2.0,2.05 Content,50300.0,4ca4,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+39.129.95.66,/device,1.0,2.0,2.0,4.05 Method Not Allowed,33268.0,875e,,,0.0,3.0,False
+39.129.95.66,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,37435.0,ba47,,,0.0,3.0,False
+39.129.95.66,/device/command/Intranet,1.0,2.0,2.0,2.05 Content,65440.0,756e,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.95.66,/device/command/control,1.0,2.0,2.0,2.05 Content,15452.0,815e,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.95.66,/device/command/data,1.0,2.0,2.0,2.05 Content,25312.0,2e13,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+39.129.95.66,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,15334.0,ed98,,,0.0,3.0,False
+39.129.95.66,/device/inform/boot,1.0,2.0,2.0,2.05 Content,32976.0,e7d8,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.129.95.66,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,30182.0,7739,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+39.129.95.66,/device/inform/data,1.0,2.0,2.0,2.05 Content,31780.0,b548,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.95.66,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,13179.0,e90e,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.95.66,/device/inform/offline,1.0,2.0,2.0,2.05 Content,12030.0,7dcc,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.95.66,/.well-known/core,1.0,2.0,2.0,2.05 Content,7677.0,d2f3,"{""CONTENT_FORMAT"": ""LINKFORMAT"", ""SIZE2"": ""BlockwiseTuple(block_number=2, more=False, size_exponent=5)"", ""BLOCK2"": ""1087""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/Intranet>;title=""Device Intranet Resource"",</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",1087.0,3.0,False
+39.129.95.66,/,1.0,2.0,2.0,2.05 Content,14574.0,a996,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+36.158.107.113,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25959.0,40c2,,,0.0,3.0,False
+36.158.107.113,/qlink/searchgw,1.0,2.0,3.0,4.00 Bad Request,45719.0,010016,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.158.107.113,/device,1.0,2.0,2.0,4.05 Method Not Allowed,10026.0,9fee,,,0.0,3.0,False
+36.158.107.113,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,46705.0,2192,,,0.0,3.0,False
+36.158.107.113,/device/inform/boot,1.0,2.0,2.0,4.00 Bad Request,12394.0,1f81,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.158.107.113,/device/inform/bootstrap,1.0,2.0,2.0,4.00 Bad Request,13617.0,b0ee,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.158.107.113,/device/inform/data,1.0,2.0,2.0,4.00 Bad Request,6967.0,fdff,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.158.107.113,/device/inform/heartbeat,1.0,2.0,2.0,4.00 Bad Request,27552.0,3483,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.158.107.113,/device/inform/offline,1.0,2.0,2.0,4.00 Bad Request,64572.0,6dc1,"{""CONTENT_FORMAT"": ""TEXT""}",should post ,12.0,3.0,False
+36.158.107.113,/ekit,1.0,2.0,2.0,4.05 Method Not Allowed,28683.0,ee02,,,0.0,3.0,False
+36.158.107.113,/ekit/boot,1.0,2.0,2.0,4.00 Bad Request,58166.0,b3c4,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.158.107.113,/ekit/bootstrap,1.0,2.0,2.0,4.00 Bad Request,59143.0,7a29,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",191.0,3.0,False
+36.158.107.113,/ekit/heartbeat,1.0,2.0,2.0,4.00 Bad Request,62501.0,d9ec,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,{
+""deviceId"": ""deviceId""
+
+}",47.0,3.0,False
+36.158.107.113,/ekit/searchgw,1.0,2.0,2.0,4.00 Bad Request,37937.0,6c6b,"{""CONTENT_FORMAT"": ""TEXT""}",not soupport GET,16.0,3.0,False
+36.158.107.113,/.well-known/core,1.0,2.0,2.0,2.05 Content,50301.0,4ca5,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",270.0,3.0,False
+36.158.107.113,/,1.0,2.0,2.0,2.05 Content,33269.0,875f,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+39.129.231.104,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25960.0,40c3,,,0.0,3.0,False
+39.129.231.104,/qlink/ack,,,,,,,,Network error: MessageError,,,
+39.129.231.104,/qlink/request,1.0,2.0,2.0,2.05 Content,10027.0,9fef,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+39.129.231.104,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,46706.0,2193,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+39.129.231.104,/qlink/success,1.0,2.0,2.0,2.05 Content,12395.0,1f82,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+39.129.231.104,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+39.129.231.104,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,6968.0,fe00,,,0.0,3.0,False
+39.129.231.104,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,27553.0,3484,,,0.0,3.0,False
+39.129.231.104,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,64573.0,6dc2,"{""CONTENT_FORMAT"": ""TEXT""}","010_348511BBA0B8{""apmsOnlineStatus"":0}",38.0,3.0,False
+39.129.231.104,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,28684.0,ee03,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+39.129.231.104,/gw/query/config,1.0,2.0,2.0,2.05 Content,58167.0,b3c5,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+39.129.231.104,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,59144.0,7a2a,,,0.0,3.0,False
+39.129.231.104,/basic/regist,1.0,2.0,2.0,2.05 Content,62502.0,d9ed,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+39.129.231.104,/basic/show,1.0,2.0,2.0,2.05 Content,37938.0,6c6c,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+39.129.231.104,/device,1.0,2.0,2.0,4.05 Method Not Allowed,50302.0,4ca6,,,0.0,3.0,False
+39.129.231.104,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,33270.0,8760,,,0.0,3.0,False
+39.129.231.104,/device/command/control,1.0,2.0,2.0,2.05 Content,37436.0,ba48,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.231.104,/device/command/data,1.0,2.0,2.0,2.05 Content,65441.0,756f,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+39.129.231.104,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,15453.0,815f,,,0.0,3.0,False
+39.129.231.104,/device/inform/boot,1.0,2.0,2.0,2.05 Content,25313.0,2e14,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.129.231.104,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,15335.0,ed99,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+39.129.231.104,/device/inform/data,1.0,2.0,2.0,2.05 Content,32977.0,e7d9,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.231.104,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,30183.0,773a,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.231.104,/device/inform/offline,1.0,2.0,2.0,2.05 Content,31781.0,b549,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.231.104,/.well-known/core,1.0,2.0,2.0,2.05 Content,13180.0,e90f,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+39.129.231.104,/,1.0,2.0,2.0,2.05 Content,12031.0,7dcd,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+49.146.145.57,/,1.0,2.0,2.0,2.05 Content,25961.0,40c4,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.146.145.57,/qlink/searchfh,1.0,2.0,3.0,4.05 Method Not Allowed,45721.0,010018,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,10028.0,9ff0,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,46707.0,2194,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,12396.0,1f83,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,13619.0,b0f0,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6969.0,fe01,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,27554.0,3485,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,64574.0,6dc3,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,28685.0,ee04,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,58168.0,b3c6,,Method Not Allowed,18.0,3.0,False
+49.146.145.57,/async,1.0,0.0,2.0,2.05 Content,7197.0,7a2b,,done,4.0,3.0,False
+39.184.200.77,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25962.0,40c5,,,0.0,3.0,False
+39.184.200.77,/qlink/ack,,,,,,,,Network error: MessageError,,,
+39.184.200.77,/qlink/request,1.0,2.0,2.0,2.05 Content,10029.0,9ff1,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+39.184.200.77,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,46708.0,2195,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+39.184.200.77,/qlink/success,1.0,2.0,2.0,2.05 Content,12397.0,1f84,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+39.184.200.77,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+39.184.200.77,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,6970.0,fe02,,,0.0,3.0,False
+39.184.200.77,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,27555.0,3486,,,0.0,3.0,False
+39.184.200.77,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,64575.0,6dc4,"{""CONTENT_FORMAT"": ""TEXT""}","010_34559483E180{""apmsOnlineStatus"":0}",38.0,3.0,False
+39.184.200.77,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,28686.0,ee05,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+39.184.200.77,/gw/query/config,1.0,2.0,2.0,2.05 Content,58169.0,b3c7,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+39.184.200.77,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,59146.0,7a2c,,,0.0,3.0,False
+39.184.200.77,/basic/regist,1.0,2.0,2.0,2.05 Content,62503.0,d9ee,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+39.184.200.77,/basic/show,1.0,2.0,2.0,2.05 Content,37939.0,6c6d,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+39.184.200.77,/device,1.0,2.0,2.0,4.05 Method Not Allowed,50303.0,4ca7,,,0.0,3.0,False
+39.184.200.77,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,33271.0,8761,,,0.0,3.0,False
+39.184.200.77,/device/command/control,1.0,2.0,2.0,2.05 Content,37437.0,ba49,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.184.200.77,/device/command/data,1.0,2.0,2.0,2.05 Content,65442.0,7570,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+39.184.200.77,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,15454.0,8160,,,0.0,3.0,False
+39.184.200.77,/device/inform/boot,1.0,2.0,2.0,2.05 Content,25314.0,2e15,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.184.200.77,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,15336.0,ed9a,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+39.184.200.77,/device/inform/data,1.0,2.0,2.0,2.05 Content,32978.0,e7da,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.184.200.77,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,30184.0,773b,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.184.200.77,/device/inform/offline,1.0,2.0,2.0,2.05 Content,31782.0,b54a,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.184.200.77,/.well-known/core,1.0,2.0,2.0,2.05 Content,13181.0,e910,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+39.184.200.77,/,1.0,2.0,2.0,2.05 Content,12032.0,7dce,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+45.119.85.225,/mqtt,1.0,2.0,2.0,4.00 Bad Request,25963.0,40c6,,,0.0,3.0,False
+45.119.85.225,/ps,1.0,2.0,3.0,4.00 Bad Request,45723.0,01001a,,,0.0,3.0,False
+45.119.85.225,/,1.0,2.0,2.0,4.04 Not Found,10030.0,9ff2,,,0.0,3.0,True
+39.129.227.24,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,25964.0,40c7,,,0.0,3.0,False
+39.129.227.24,/qlink/ack,,,,,,,,Network error: MessageError,,,
+39.129.227.24,/qlink/request,1.0,2.0,2.0,2.05 Content,10031.0,9ff3,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+39.129.227.24,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,46709.0,2196,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+39.129.227.24,/qlink/success,1.0,2.0,2.0,2.05 Content,12398.0,1f85,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+39.129.227.24,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+39.129.227.24,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,6971.0,fe03,,,0.0,3.0,False
+39.129.227.24,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,27556.0,3487,,,0.0,3.0,False
+39.129.227.24,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,64576.0,6dc5,"{""CONTENT_FORMAT"": ""TEXT""}","010_348511BC5D38{""apmsOnlineStatus"":0}",38.0,3.0,False
+39.129.227.24,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,28687.0,ee06,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+39.129.227.24,/gw/query/config,1.0,2.0,2.0,2.05 Content,58170.0,b3c8,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+39.129.227.24,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,59147.0,7a2d,,,0.0,3.0,False
+39.129.227.24,/basic/regist,1.0,2.0,2.0,2.05 Content,62504.0,d9ef,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+39.129.227.24,/basic/show,1.0,2.0,2.0,2.05 Content,37940.0,6c6e,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+39.129.227.24,/device,1.0,2.0,2.0,4.05 Method Not Allowed,50304.0,4ca8,,,0.0,3.0,False
+39.129.227.24,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,33272.0,8762,,,0.0,3.0,False
+39.129.227.24,/device/command/control,1.0,2.0,2.0,2.05 Content,37438.0,ba4a,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.227.24,/device/command/data,1.0,2.0,2.0,2.05 Content,65443.0,7571,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+39.129.227.24,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,15455.0,8161,,,0.0,3.0,False
+39.129.227.24,/device/inform/boot,1.0,2.0,2.0,2.05 Content,25315.0,2e16,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+39.129.227.24,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,15337.0,ed9b,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+39.129.227.24,/device/inform/data,1.0,2.0,2.0,2.05 Content,32979.0,e7db,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+39.129.227.24,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,30185.0,773c,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.227.24,/device/inform/offline,1.0,2.0,2.0,2.05 Content,31783.0,b54b,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+39.129.227.24,/.well-known/core,1.0,2.0,2.0,2.05 Content,13182.0,e911,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+39.129.227.24,/,1.0,2.0,2.0,2.05 Content,12033.0,7dcf,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True

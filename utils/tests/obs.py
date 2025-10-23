@@ -2,6 +2,9 @@ import asyncio
 from aiocoap import *
 
 async def observe_with_timeout(context, uri, name, duration=10):
+
+    print(f"Observation on {name} has started!")
+
     """Observe a resource and cancel after a given duration"""
     request = Message(code=GET, uri=uri, observe=0)
     pr = context.request(request)
@@ -24,8 +27,8 @@ async def main():
     context = await Context.create_client_context()
 
     await asyncio.gather(
-        observe_with_timeout(context, "coap://localhost/temperature", "Temperature", duration=10),
-        observe_with_timeout(context, "coap://localhost/humidity", "Humidity", duration=15),
+        observe_with_timeout(context, "coap://129.232.178.234:5683/efento/t", "Efento_1", duration=600),
+        observe_with_timeout(context, "coap://157.245.204.199:5683/efento/t", "Efento_2", duration=600),
     )
 
 asyncio.run(main())

@@ -379,6 +379,7 @@ def read_file_system(base_path):
         return []
 
     for item in items:
+
         to_test = base_path + f"/{item}"
 
         if os.path.isfile(to_test):

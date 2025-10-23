@@ -1,0 +1,25 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+116.149.191.105,/device/inform/data,1.0,2.0,2.0,2.05 Content,46814.0,0f9b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.18.111.51,/device/inform/data,1.0,2.0,2.0,2.05 Content,35689.0,464d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.172.227.199,/device/inform/data,1.0,2.0,2.0,2.05 Content,35690.0,464e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.19.63.78,/device/inform/data,1.0,2.0,2.0,2.05 Content,46818.0,0f9f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.176.195.179,/device/inform/data,1.0,2.0,2.0,2.05 Content,35692.0,4650,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+120.211.44.11,/device/inform/data,1.0,2.0,2.0,2.05 Content,51932.0,7f30,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.18.110.241,/device/inform/data,1.0,2.0,2.0,2.05 Content,35694.0,4652,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.139.247.16,/device/inform/data,1.0,2.0,2.0,2.05 Content,35695.0,4653,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.18.119.71,/device/inform/data,1.0,2.0,2.0,2.05 Content,35696.0,4654,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.18.110.233,/device/inform/data,1.0,2.0,2.0,2.05 Content,35697.0,4655,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.173.191.254,/device/inform/data,1.0,2.0,2.0,2.05 Content,46826.0,0fa7,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+111.22.97.250,/device/inform/data,1.0,2.0,2.0,2.05 Content,46828.0,0fa9,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

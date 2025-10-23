@@ -1,0 +1,7 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+5.9.183.182,/efento/t,1.0,2.0,2.0,2.05 Content,7785.0,5e68,"{""OBSERVE"": ""0""}",b'h\xf7EG',4.0,1.0,False
+18.156.23.126,/efento/t,1.0,2.0,2.0,2.05 Content,7786.0,5e69,"{""OBSERVE"": ""0""}",b'h\xf7EG',4.0,1.0,False
+3.77.105.192,/efento/t,1.0,2.0,2.0,2.05 Content,7787.0,5e6a,"{""OBSERVE"": ""0""}",b'h\xf7EH',4.0,1.0,False
+20.67.233.91,/efento/t,1.0,2.0,2.0,2.05 Content,7790.0,5e6d,"{""OBSERVE"": ""0""}",b'h\xf7EZ',4.0,1.0,False
+3.81.151.211,/efento/t,1.0,2.0,2.0,2.05 Content,7812.0,5e83,"{""OBSERVE"": ""0""}",b'h\xf7E]',4.0,1.0,False
+18.219.195.131,/efento/t,1.0,2.0,2.0,2.05 Content,29936.0,f594,"{""OBSERVE"": ""0""}",b'h\xf7Ed',4.0,1.0,False

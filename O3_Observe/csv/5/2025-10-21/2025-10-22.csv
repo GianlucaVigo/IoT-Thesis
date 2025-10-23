@@ -1,0 +1,23 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+177.23.17.22,/device/inform/data,1.0,2.0,2.0,2.05 Content,54120.0,0b93,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+191.96.200.192,/device/inform/data,1.0,2.0,2.0,2.05 Content,54121.0,0b94,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.236.64.91,/device/inform/data,1.0,2.0,2.0,2.05 Content,54123.0,0b96,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.221.3.204,/device/inform/data,1.0,2.0,2.0,2.05 Content,59539.0,c568,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.237.2.70,/device/inform/data,1.0,2.0,2.0,2.05 Content,59540.0,c569,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.221.123.220,/device/inform/data,1.0,2.0,2.0,2.05 Content,59541.0,c56a,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.221.174.72,/device/inform/data,1.0,2.0,2.0,2.05 Content,59542.0,c56b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.222.84.238,/device/inform/data,1.0,2.0,2.0,2.05 Content,59544.0,c56d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.238.251.46,/device/inform/data,1.0,2.0,2.0,2.05 Content,59545.0,c56e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.222.86.224,/device/inform/data,1.0,2.0,2.0,2.05 Content,59546.0,c56f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+183.220.223.95,/device/inform/data,1.0,2.0,2.0,2.05 Content,59547.0,c570,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

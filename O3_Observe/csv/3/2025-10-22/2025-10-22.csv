@@ -1,0 +1,27 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+112.29.67.200,/device/inform/data,1.0,2.0,2.0,2.05 Content,24427.0,7c8e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+111.22.116.99,/device/inform/data,1.0,2.0,2.0,2.05 Content,24428.0,7c8f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+120.211.91.244,/device/inform/data,1.0,2.0,2.0,2.05 Content,41685.0,25c5,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+120.237.253.246,/device/inform/data,1.0,2.0,2.0,2.05 Content,24430.0,7c91,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.174.241.186,/device/inform/data,1.0,2.0,2.0,2.05 Content,41690.0,25ca,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+120.237.116.84,/device/inform/data,1.0,2.0,2.0,2.05 Content,24435.0,7c96,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.31.177.39,/device/inform/data,1.0,2.0,2.0,2.05 Content,24436.0,7c97,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+120.237.178.202,/device/inform/data,1.0,2.0,2.0,2.05 Content,24437.0,7c98,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+112.27.13.9,/device/inform/data,1.0,2.0,2.0,2.05 Content,24441.0,7c9c,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+111.9.45.198,/device/inform/data,1.0,2.0,2.0,2.05 Content,41698.0,25d2,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.175.43.86,/device/inform/data,1.0,2.0,2.0,2.05 Content,41700.0,25d4,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.139.94.115,/device/inform/data,1.0,2.0,2.0,2.05 Content,41701.0,25d5,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+117.212.173.131,/device/inform/data,1.0,2.0,2.0,2.05 Content,24446.0,7ca1,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

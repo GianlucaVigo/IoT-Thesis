@@ -9,37 +9,38 @@ import datetime
 from utils import files_handling
 from collections import Counter
 
+CHUNK_SIZE = 10000
 
-def parse_csv(data_paths, mode, ip_info_df, focused_analysis):
-
-    # DATA
-    data_paths_str = files_handling.path_dict_to_str(data_paths)
-    
-    # consider only the IP addresses
-    data_df = pd.read_csv(data_paths_str, usecols=['saddr'])
+def parse_csv(data_path, mode, ip_info_df, focused_analysis):
 
     # data dict to plot
     dict_plot = Counter()
 
-    for index, data_row in data_df.iterrows():
+    with pd.read_csv(data_path, chunksize=CHUNK_SIZE, usecols=['saddr']) as csv_reader:
 
-        if focused_analysis != None:
-            df_to_analyse = ip_info_df[(ip_info_df['saddr'] == data_row['saddr']) & (ip_info_df[mode] == focused_analysis)]
-        else:
-            df_to_analyse = ip_info_df[ip_info_df['saddr'] == data_row['saddr']]
+        for chunk in csv_reader:
 
-        for index, ip_info_row in df_to_analyse.iterrows():
+            for index, data_row in chunk.iterrows():
 
-            # format already present in the counter
-            if ip_info_row[mode] in dict_plot.keys():
-                dict_plot[ip_info_row[mode]] += 1
-            else:
-                dict_plot[ip_info_row[mode]] = 1
+                if focused_analysis != None:
+                    df_to_analyse = ip_info_df[(ip_info_df['saddr'] == data_row['saddr']) & (ip_info_df[mode] == focused_analysis)]
+                else:
+                    df_to_analyse = ip_info_df[ip_info_df['saddr'] == data_row['saddr']]
 
-    # clean the memory
-    del ip_info_df
-    del data_df
-    gc.collect()
+                for index, ip_info_row in df_to_analyse.iterrows():
+
+                    # format already present in the counter
+                    dict_plot.update([ip_info_row[mode]])
+
+            # clean the memory
+            del chunk
+
+            
+        # clean the memory
+        del ip_info_df
+        gc.collect()
+
+    print(dict_plot)
 
     return dict_plot
 
@@ -69,87 +70,20 @@ def complete_or_partial_analysis(mode, ip_info_df):
 
 
 ''''''
-def stability_analysis(data_paths, mode):
+def analysis(paths, mode):
 
     # IP INFO DATAFRAME
-    ip_info_dataset = {'phase': 'O3_IpInfo', 'folder': 'csv', 'dataset': data_paths['dataset']}
-    ip_info_dataset_str = files_handling.path_dict_to_str(ip_info_dataset) + '.csv'
+    ip_info_df_frames = []
 
-    # considering only necessary columns
-    ip_info_df = pd.read_csv(ip_info_dataset_str, usecols=['saddr', mode])
+    for path_dict in paths:
 
-    #######################################
+        with pd.read_csv(path_dict['ip_info'], chunksize=CHUNK_SIZE, usecols=['saddr', mode]) as csv_reader:
 
-    # COMPLETE or PARTIAL ANALYSIS
-    focused_analysis = complete_or_partial_analysis(mode, ip_info_df)
+            for chunk in csv_reader:
 
-    #######################################
-    
-    # MODE DISTRIBUTION DICTIONARY
-    dict_plot = parse_csv(data_paths, mode, ip_info_df, focused_analysis)
+                ip_info_df_frames.append(chunk)
 
-    #######################################
-
-    # DICTIONARY CONVERTION
-    # Converting the dictionary into DataFrame
-    df_plot = pd.DataFrame(dict_plot.items(), columns = [mode, 'count'])
-    df_plot = df_plot.sort_values('count', ascending=False)
-    print(f"Total Count: {df_plot['count'].sum()}\n")
-    print(df_plot)
-
-    #######################################
-
-    # PLOTTING
-    # Plot horizontal bar chart
-    plt.figure(figsize=(8, 5))
-    ax = sns.barplot(data=df_plot, y=mode, x='count', color="lightgreen")
-
-    # Add labels on each bar
-    for p in ax.patches:
-        ax.text(p.get_width(),                # x-position (end of bar)
-                p.get_y() + p.get_height()/2, # y-position (center of bar)
-                int(p.get_width()),           # label text
-                ha="left", va="center")
-
-    plt.xlabel("Number of associated IPs")
-    plt.ylabel(f"{mode.capitalize()}")
-    if focused_analysis != None:
-        plt.title(f"[IP] {focused_analysis.capitalize()} Distribution")
-    else:
-        plt.title(f"[IP] {mode.capitalize()} Distribution")
-    plt.tight_layout()
-    plt.show()
-
-    # geographical representation of the country distribution
-    if mode == 'country':
-
-        fig = px.choropleth(
-            df_plot,
-            locations="country",
-            color="count",
-            hover_name="country",
-            projection="natural earth",
-            locationmode="country names" 
-        )
-
-        fig.show()
-
-    # clean the memory
-    del df_plot
-    gc.collect()
-
-    return
-
-
-''''''
-def evolution_analysis(data_paths, mode):
-
-    # IP INFO DATAFRAME
-    ip_info_dataset = {'phase': 'O3_IpInfo', 'folder': 'csv', 'dataset': data_paths['dataset']}
-    ip_info_dataset_str = files_handling.path_dict_to_str(ip_info_dataset) + '.csv'
-
-    # considering only necessary columns
-    ip_info_df = pd.read_csv(ip_info_dataset_str, usecols=['saddr', mode])
+    ip_info_df = pd.concat(ip_info_df_frames, ignore_index=True)
 
     #######################################
 
@@ -160,67 +94,59 @@ def evolution_analysis(data_paths, mode):
 
     # MODE DISTRIBUTION DATAFRAME
     # dataframes to concatenate
-    df_frames = []
+    data_per_date_dict = []
 
-    # available dates
-    dates = data_paths['date']
+    # internet partition level
+    for path_dict in paths:
 
-    for date in dates:
-        csv_path = {'phase': data_paths['phase'], 
-                    'folder': data_paths['folder'],
-                    'dataset': data_paths['dataset'],
-                    'date': date}
+        # dates level
+        for date_path in path_dict['data']:
+
+            # take only date and ignore '.csv' part of the string
+            current_date = date_path.split('/')[5][:-4]
         
-        # get the counter dictionary considering the selected csv and mode
-        date_dict = parse_csv(csv_path, mode, ip_info_df, focused_analysis)
-        # converting it to a dataframe with columns ('mode' and 'count')
-        date_df = pd.DataFrame(date_dict.items(), columns = [mode, 'count'])
-        # sort by count
-        date_df = date_df.sort_values('count', ascending=False)
-        # take only date and ignore '.csv' part of the string
-        current_date = csv_path['date'].split('.')[0]
-        # adding column date
-        date_df['date'] = datetime.datetime.strptime(current_date, '%Y-%m-%d')
-        
+            # get the counter dictionary considering the selected csv partition and mode
+            date_dict = parse_csv(date_path, mode, ip_info_df, focused_analysis)
 
-        # print additional info
-        print('+' * 50)
-        print(f"{current_date} @ Total count: {date_df['count'].sum()}\n")
-        print(date_df)
-        
-        # parse a single dataset which has been not partitioned
-        df_frames.append(date_df)
+            to_store = {'date': current_date, 'data': date_dict}
 
-    # concatenate all dates
-    df_plot = pd.concat(df_frames, ignore_index=True)
+            appended = False 
+            for date in data_per_date_dict:
+                if date['date'] == to_store['date']:
+                    date['data'].update(to_store['data'])
+                    appended = True
 
-    #######################################
+            if not appended:
+                data_per_date_dict.append(to_store)
+
+    # flatten the structure
+    rows = [
+        {"date": entry["date"], mode: country, "count": count}
+        for entry in data_per_date_dict
+        for country, count in entry["data"].items()
+    ]
+
+    # convert the list of dictionaries into a pandas dataframe for plotting
+    df_plot = pd.DataFrame(rows)
+    df_plot.sort_values(by=['date', 'count'], ignore_index=True, inplace=True, ascending=True)
+
+    print(df_plot)
+
+   #######################################
 
     # PLOTTING
 
     # OPTION 1
-    plt.figure(figsize=(10,6))
-    sns.lineplot(data=df_plot, x="date", y="count", hue=mode, marker="o")
-    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-    plt.gca().xaxis.set_major_locator(mdates.DayLocator())
-    plt.xticks(rotation=45)
-    if focused_analysis != None:
-        plt.title(f"{focused_analysis.capitalize()} Distribution over Time")
-    else:
-        plt.title(f"{mode.capitalize()} Distribution over Time")
-    plt.show()
+    fig = px.line(
+        df_plot, 
+        x="date", 
+        y="count", 
+        title=f'{mode} distribution',
+        color=mode
+    )
+    fig.show()
 
     # OPTION 2
-    plt.figure(figsize=(10,6))
-    sns.barplot(data=df_plot, x=mode, y="count", hue="date")
-    plt.xticks(rotation=45)
-    if focused_analysis != None:
-        plt.title(f"{focused_analysis.capitalize()} Distribution over Time")
-    else:
-        plt.title(f"{mode.capitalize()} Distribution over Time")
-    plt.show()
-
-    # OPTION 3
     heatmap_data = df_plot.pivot(index=mode, columns="date", values="count").fillna(0)
     plt.figure(figsize=(8,6))
     sns.heatmap(heatmap_data, annot=True, fmt=".0f", cmap="Blues")
@@ -230,7 +156,7 @@ def evolution_analysis(data_paths, mode):
         plt.title(f"Counts Heatmap: {mode.capitalize()}")
     plt.show()
 
-    # OPTION 4 - NB: only for 'country' option
+    # OPTION 3 - NB: only for 'country' option
     if mode == 'country':
 
         fig = px.choropleth(
@@ -239,17 +165,6 @@ def evolution_analysis(data_paths, mode):
             locationmode="country names",
             color="count",              # value to color by
             animation_frame="date",     # adds a time slider
-            title="Counts per Country over Time"
-        )
-        fig.show()
-
-        fig = px.scatter_geo(
-            df_plot,
-            locations="country",
-            locationmode="country names",
-            size="count",               # bubble size = count
-            color="country",
-            animation_frame="date",
             projection="natural earth",
             title="Counts per Country over Time"
         )

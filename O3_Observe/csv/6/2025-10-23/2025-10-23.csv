@@ -1,0 +1,29 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+221.182.99.217,/device/inform/data,1.0,2.0,2.0,2.05 Content,29824.0,b80e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.82.18.54,/device/inform/data,1.0,2.0,2.0,2.05 Content,29825.0,b80f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+211.103.46.167,/device/inform/data,1.0,2.0,2.0,2.05 Content,21699.0,cb8d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+218.200.167.61,/device/inform/data,1.0,2.0,2.0,2.05 Content,21700.0,cb8e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.82.93.168,/device/inform/data,1.0,2.0,2.0,2.05 Content,21701.0,cb8f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.83.97.89,/device/inform/data,1.0,2.0,2.0,2.05 Content,29831.0,b815,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.113.170.142,/device/inform/data,1.0,2.0,2.0,2.05 Content,21705.0,cb93,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+218.207.234.74,/device/inform/data,1.0,2.0,2.0,2.05 Content,29835.0,b819,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+221.182.106.77,/device/inform/data,1.0,2.0,2.0,2.05 Content,29837.0,b81b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.85.65.6,/device/inform/data,1.0,2.0,2.0,2.05 Content,29838.0,b81c,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+218.203.232.193,/device/inform/data,1.0,2.0,2.0,2.05 Content,29839.0,b81d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.83.7.33,/device/inform/data,1.0,2.0,2.0,2.05 Content,21713.0,cb9b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+221.178.199.69,/device/inform/data,1.0,2.0,2.0,2.05 Content,25883.0,2f0a,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+217.117.135.230,/device/inform/data,1.0,2.0,2.0,2.05 Content,21715.0,cb9d,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

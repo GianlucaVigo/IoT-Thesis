@@ -1,13 +1,34 @@
-import seaborn as sns
 import pandas as pd
-import matplotlib.pyplot as plt
 import json
 import plotly.express as px
 
 from collections import Counter
 from dateutil.parser import parse
 
-from utils import files_handling
+CHUNK_SIZE = 10000
+
+def detect_server_version(payload):
+
+    # Eclipse Californium
+    if payload.find('Californium') != -1:
+
+        version_index_start = payload.find('(c)')+4
+        version_index_end = payload.find('Institute')-1
+
+        version = payload[version_index_start:version_index_end]
+
+        if version.endswith(','):
+            version = version[:-1]
+
+        return(f"Eclipse Californium/{version}")
+    
+    elif payload.find('libcoap') != -1:
+
+        version_index = payload.find('(C)') + 4
+
+        return(f"Libcoap/{payload[version_index: version_index + 10]}")
+
+    return None
 
 
 def detect_format(s: str):
@@ -48,396 +69,354 @@ def detect_format(s: str):
     return "string"
 
 
-def parse_csv(data_path, mode):
-
-    cols = []
-
-    match mode:
-
-        # 'udp_pkt_size' column
-        case 'Data Format':
-            cols.extend(['code', 'payload'])
-        # 'success' column
-        case 'Payload Size':
-            cols.extend(['code', 'payload_size'])
-        # 'data' column
-        case 'Response Code' :
-            cols.append('code')
-        # 'options' column
-        case 'Options' :
-            cols.append('options')
-        
-    data_df = pd.read_csv(files_handling.path_dict_to_str(data_path), usecols=cols)
-
-    return data_df
-
-
-def stability_analysis(data_paths, mode):
-
-    # Plot Figure Size
-    plt.figure(figsize=(8, 5))
+def analysis(data_paths, mode):
 
     match mode:
 
         # 0
         case 'Data Format':
 
-            # FORMAT DICTIONARY
-            # instantiating a Counter Dictionary
-            format_dict = Counter()
+            to_plot = []
 
-            for partition in data_paths['partition']:
+            # internet partition level
+            for path_dict in data_paths:
 
-                # GETTING A DATE DATASET
-                part_path = {'phase': data_paths['phase'],
-                             'folder': data_paths['folder'],
-                             'dataset': data_paths['dataset'],
-                             'experiment': data_paths['experiment'],
-                             'date': data_paths['date'],
-                             'partition': partition}
-                part_df = parse_csv(part_path, mode)
+                # dates level
+                for date_path in path_dict['data']:
 
-                ##############################
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
 
-                # DATA CLEANING
-                # deleting rows with data field equal to nan
-                part_df.dropna(ignore_index=True, inplace=True, subset='payload')
-                # keeping only entries associated to a 2.05 Content result
-                part_df = part_df[part_df["code"] == "2.05 Content"]
+                    formats = Counter()
 
-                ##############################
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['payload', 'code']) as csv_reader:
 
-                # iterating over data_df rows
-                for index, row in part_df.iterrows():
+                        for chunk in csv_reader:
 
-                    # extracting payload to be parsed
-                    payload = row['payload']
-                    print(f"Payload: {payload}")
+                            # DATA CLEANING
+                            # keeping only entries associated to a 2.05 Content result
+                            chunk = chunk[chunk["code"] != None]
+                            # deleting rows with data field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['payload'])
 
-                    # parsing payload to get format
-                    payload_format = detect_format(payload)
-                    print(f"Payload Format: {payload_format}")
+                            ##############################
 
-                    # format already present in the counter
-                    if payload_format in format_dict.keys():
-                        format_dict[payload_format] += 1
-                    else:
-                        format_dict[payload_format] = 1
-                    
-                    print("£"*50)
+                            formats += Counter(chunk['payload'].apply(detect_format))
 
+                    to_plot.extend(
+                        {'date': current_date, 'format': format, 'count': count}
+                        for format, count in formats.items()
+                    )
 
             ##############################
 
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(format_dict.items(), columns = ['data_format', 'count'])
-            df_plot = df_plot.sort_values('count').reset_index(drop=True)
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'format', 'count'])
+            df_plot = df_plot.groupby(['date', 'format'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'format'], ascending=[True, False]).reset_index(drop=True)
 
             ##############################
 
-            # define the %
-            valid_payloads = df_plot['count'].sum()
-            df_plot['percentage'] = (df_plot['count'] / valid_payloads) * 100
-
-            ##############################
-
-            # STATS
-            print(df_plot)
-
-            ##############################
-
-            # PLOTTING
-            sns.barplot(data=df_plot,
-                        y="percentage",
-                        x="data_format",
-                        hue="data_format",
-                        palette=sns.color_palette("bright"))
-
-            # Plot Labels
-            plt.xlabel('Payload Type')
-            plt.ylabel('Percentage of Resources')
-
-            # Plot Title
-            plt.title("Payload Type Distribution")
-
-            plt.show()
-
-
-        # 1
-        case 'Payload Size':
-
-            # PAYLOAD SIZE DICTIONARY
-            # instantiating a Dictionary
-            payload_sizes_dict = {}
-
-            for partition in data_paths['partition']:
-
-                print(partition)
-
-                # GETTING A DATE DATASET
-                part_path = {'phase': data_paths['phase'],
-                             'folder': data_paths['folder'],
-                             'dataset': data_paths['dataset'],
-                             'experiment': data_paths['experiment'],
-                             'date': data_paths['date'],
-                             'partition': partition}
-                part_df = parse_csv(part_path, mode)
-
-                ##############################
-
-                # DATA CLEANING
-                # deleting rows with data field equal to nan
-                part_df.dropna(ignore_index=True, inplace=True, subset='payload_size')
-
-                ##############################
-
-                # iterating over data_df rows
-                for index, row in part_df.iterrows():
-
-                    # payload size
-                    payload_size = row['payload_size']
-                    print(payload_size)
-
-                    # response code
-                    code = row['code']
-                    print(code)
-                    
-                    if code in payload_sizes_dict.keys():
-
-                        if payload_size in payload_sizes_dict[code].keys():
-                            payload_sizes_dict[code][payload_size] += 1
-                        else:
-                            payload_sizes_dict[code][payload_size] = 1
-
-                    else:
-                        payload_sizes_dict[code] = {payload_size: 1}
-
-            ##############################
-
-            # DICTIONARY TO DATAFRAME
-            # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame.from_dict(payload_sizes_dict)
-            df_plot.sort_index(inplace=True)
-            df_plot.index.name = 'size'
-
-            ##############################
-
-            # STATS
-            print(df_plot)
-        
-            ##############################
-
-            # PLOTTING
-            df_plot.plot.bar(subplots=True, layout=(-1, 2), sharex=True, sharey=False)
-            plt.suptitle("Distributions of Payload Sizes by Status Code")
-            plt.show()
-
-            # melt df into long format
-            df_long = df_plot.reset_index().melt(
-                id_vars="size",
-                var_name="status",
-                value_name="count"
-            ).dropna()
-
-            fig = px.histogram(
-                            df_long,
-                            x="size",
-                            y="count",
-                            color="status",
-                            title="Restaurant data"
-            )
-            fig.show()
-
-            fig = px.sunburst(df_long,
-                  path=["status", "size", "count"],
-                  values="count",
-                  title="Sunburst plot")
-            
-            fig.show()
-
-
-        # 2
-        case 'Response Code':
-
-            # PAYLOAD SIZE DICTIONARY
-            # instantiating a Dictionary
-            response_codes_dict = {}
-
-            for partition in data_paths['partition']:
-
-                # GETTING A DATE DATASET
-                part_path = {'phase': data_paths['phase'],
-                             'folder': data_paths['folder'],
-                             'dataset': data_paths['dataset'],
-                             'experiment': data_paths['experiment'],
-                             'date': data_paths['date'],
-                             'partition': partition}
-                part_df = parse_csv(part_path, mode)
-
-                ##############################
-
-                # DATA CLEANING
-                # deleting rows with data field equal to nan
-                part_df.dropna(ignore_index=True, inplace=True, subset='code')
-
-                ##############################
-
-                # iterating over data_df rows
-                for index, row in part_df.iterrows():
-                    
-                    code = row['code']
-                    # format already present in the counter
-                    if code in response_codes_dict.keys():
-                        response_codes_dict[code] += 1
-                    else:
-                        response_codes_dict[code] = 1
-
-            ##############################
-
-            # DICTIONARY TO DATAFRAME
-            # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(response_codes_dict.items(), columns = ['code', 'count'])
-            df_plot = df_plot.sort_values('count').reset_index(drop=True)
-
-            ##############################
-
-            # STATS
-            print(df_plot)
-        
-            ##############################
-
-            # PLOTTING
-            colors = sns.color_palette('pastel')[0:5]
-            plt.pie(df_plot['count'], labels = df_plot['code'], colors = colors, autopct='%.0f%%')
-            plt.show()
-
-        
-        # 3
-        case 'Options':
-
-            # PAYLOAD SIZE DICTIONARY
-            # instantiating a Dictionary
-            options_dict = Counter()
-
-            for partition in data_paths['partition']:
-
-                # GETTING A DATE DATASET
-                part_path = {'phase': data_paths['phase'],
-                             'folder': data_paths['folder'],
-                             'dataset': data_paths['dataset'],
-                             'experiment': data_paths['experiment'],
-                             'date': data_paths['date'],
-                             'partition': partition}
-                part_df = parse_csv(part_path, mode)
-
-                ##############################
-
-                # DATA CLEANING
-                # deleting rows with data field equal to nan
-                part_df.dropna(ignore_index=True, inplace=True, subset='options')
-
-                ##############################
-
-                # iterating over data_df rows
-                for index, row in part_df.iterrows():
-                    
-                    options = eval(row['options'])
-
-                    options_dict.update(options.keys())
-                    
-
-            ##############################
-
-            # DICTIONARY TO DATAFRAME
-            # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(options_dict.items(), columns = ['option', 'count'])
-
-            ##############################
-
-            # STATS
-            print(df_plot)
-        
-            ##############################
-
-            # PLOTTING
             # PLOTTING
             fig = px.bar(
                 df_plot,
-                x="option",
-                y="count",
-                color="option",
-                title="Options",
-                text="count"           # show count on bars
+                x='format',
+                y='count',
+                color="date",
+                barmode='group',
+                title="Data Format Distribution over Time"
             )
-
             fig.show()
-
-            
-
-    return
-
-
-
-def evolution_analysis(data_df, mode):
-
-    match mode:
+    
 
         # 1
         case 'Payload Size':
 
-            plt.figure(figsize=(12,6))
-            sns.boxplot(data=data_df, x="Date", y="Payload Size (bytes)")
-            plt.xticks(rotation=45)
-            plt.title("Payload Size Distribution per Date")
-            plt.show()
+            to_plot = []
 
-            plt.figure(figsize=(12,6))
-            sns.stripplot(data=data_df, x="Date", y="Payload Size (bytes)", hue="country", jitter=True, alpha=0.6)
-            plt.xticks(rotation=45)
-            plt.title("Payload Size Distribution per Date")
-            plt.show()
+            # internet partition level
+            for path_dict in data_paths:
 
+                # dates level
+                for date_path in path_dict['data']:
+
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
+
+                    sizes = Counter()
+
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['payload-length', 'code']) as csv_reader:
+
+                        for chunk in csv_reader:
+
+                            # DATA CLEANING
+                            # keeping only entries associated to a 2.05 Content result
+                            chunk = chunk[chunk["code"] != None]
+                            # deleting rows with data field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['payload-length'])
+
+                            ##############################
+                            sizes += Counter(chunk['payload-length'])
+
+                    to_plot.extend(
+                        {'date': current_date, 'size': size, 'count': count}
+                        for size, count in sizes.items()
+                    )
+
+            ##############################
+
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'size', 'count'])
+            df_plot = df_plot.groupby(['date', 'size'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'size'], ascending=[True, False]).reset_index(drop=True)
+
+            ##############################
+
+            # PLOTTING
             fig = px.scatter(
-                data_df,
-                x="Date",
-                y="Payload Size (bytes)",
-                color="country",
-                title="Payload Size Distribution per Date",
-                opacity=0.7
+                df_plot, 
+                x="date", 
+                y="size",
+                size="count",
+                color="date",
+                hover_name="size", 
+                log_y=True, 
+                size_max=60
             )
-
             fig.show()
 
         # 2
         case 'Response Code':
 
-            # empty list to collect results
-            all_resources = []
-            
-            for date in sorted(data_df['Date'].unique()):
-                date_df = data_df[data_df['Date'] == date]
+            to_plot = []
 
-                response_codes_dict = Counter(date_df['Code'])
+            # internet partition level
+            for path_dict in data_paths:
 
-                # dictionary -> pd DataFrame
-                response_codes_df = pd.DataFrame(response_codes_dict.items(), columns=['response_code', 'count'])
-                response_codes_df['Date'] = date # add the date
-                all_resources.append(response_codes_df)
+                # dates level
+                for date_path in path_dict['data']:
 
-            # concatenate all dates
-            all_dates_df = pd.concat(all_resources, ignore_index=True)
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
 
+                    response_codes = Counter()
+
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['code']) as csv_reader:
+
+                        for chunk in csv_reader:
+
+                            # DATA CLEANING
+                            # deleting rows with code field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['code'])
+
+                            ##############################
+
+                            response_codes += Counter(chunk['code'])
+
+                    to_plot.extend(
+                        {'date': current_date, 'code': code, 'count': count}
+                        for code, count in response_codes.items()
+                    )
+
+            ##############################
+
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'code', 'count'])
+            df_plot = df_plot.groupby(['date', 'code'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'code'], ascending=[True, False]).reset_index(drop=True)
+
+            ##############################
+
+            # PLOTTING
             fig = px.bar(
-                all_dates_df,
-                x="response_code",
-                y="count",
-                color="response_code",
-                animation_frame="Date",
-                title="Active CoAP Machine per Dates",
-                text="count"           # show count on bars
+                df_plot,
+                x='code',
+                y='count',
+                color="date",
+                barmode='group',
+                title="Response Code Distribution over Time"
             )
-
             fig.show()
+
+        # 3
+        case 'Options':
+
+            to_plot = []
+
+            # internet partition level
+            for path_dict in data_paths:
+
+                # dates level
+                for date_path in path_dict['data']:
+
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
+
+                    options = Counter()
+
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['options']) as csv_reader:
+
+                        for chunk in csv_reader:
+
+                            # DATA CLEANING
+                            # deleting rows with code field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['options'])
+
+                            ##############################
+
+                           # Parse JSON safely
+                            for raw in chunk['options']:
+                                try:
+                                    parsed = json.loads(raw.replace('""', '"'))
+                                    # only option keys and NOT values
+                                    options.update(parsed.keys())
+
+                                # ignore malformed entries
+                                except Exception:
+                                    continue  
+
+                    to_plot.extend(
+                        {'date': current_date, 'option': option, 'count': count}
+                        for option, count in options.items()
+                    )
+
+            ##############################
+
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'option', 'count'])
+            df_plot = df_plot.groupby(['date', 'option'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'option'], ascending=[True, False]).reset_index(drop=True)
+
+            ##############################
+
+            # PLOTTING
+            fig = px.bar(
+                df_plot,
+                x='option',
+                y='count',
+                color="date",
+                barmode='group',
+                title="Options Distribution over Time"
+            )
+            fig.show()
+
+        # 4
+        case 'Server Specifications':
+
+            to_plot = []
+
+            # internet partition level
+            for path_dict in data_paths:
+
+                # dates level
+                for date_path in path_dict['data']:
+
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
+
+                    server_specs = Counter()
+
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['payload', 'code', 'uri']) as csv_reader:
+
+                        for chunk in csv_reader:
+
+                            # DATA CLEANING
+                            chunk = chunk[(chunk['code'] == '2.05 Content') & (chunk['uri'] == '/')]
+
+                            # deleting rows with code field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['payload'])
+
+                            ##############################
+
+                            server_specs += Counter(chunk['payload'].apply(detect_server_version))
+
+                    to_plot.extend(
+                        {'date': current_date, 'server': spec, 'count': count}
+                        for spec, count in server_specs.items()
+                    )
+
+            ##############################
+        
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'server', 'count'])
+            df_plot = df_plot.groupby(['date', 'server'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'server'], ascending=[True, False]).reset_index(drop=True)
+
+            print(df_plot)
+
+            ##############################
+
+            # PLOTTING
+            fig = px.bar(
+                df_plot,
+                x='server',
+                y='count',
+                color="date",
+                barmode='group',
+                title="Server Specs Distribution over Time"
+            )
+            fig.show()
+
+
+        # 5
+        case 'OBS Resources':
+
+            to_plot = []
+
+            # internet partition level
+            for path_dict in data_paths:
+
+                # dates level
+                for date_path in path_dict['data']:
+
+                    # take only date and ignore '.csv' part of the string
+                    current_date = date_path.split('/')[4][:-4]
+
+                    obs_types = Counter()
+
+                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['observable']) as csv_reader:
+
+                        for chunk in csv_reader:
+
+                            # DATA CLEANING
+                            # deleting rows with code field equal to nan
+                            chunk.dropna(ignore_index=True, inplace=True, subset=['observable'])
+
+                            ##############################
+
+                            obs_types += Counter(chunk['observable'])
+
+                    to_plot.extend(
+                        {'date': current_date, 'obs_type': obs_type, 'count': count}
+                        for obs_type, count in obs_types.items()
+                    )
+
+            ##############################
+        
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(to_plot, columns=['date', 'obs_type', 'count'])
+            df_plot = df_plot.groupby(['date', 'obs_type'], as_index=False)['count'].sum()
+            df_plot = df_plot.sort_values(['date', 'obs_type'], ascending=[True, False]).reset_index(drop=True)
+
+            ##############################
+
+            # PLOTTING
+            fig = px.bar(
+                df_plot,
+                x='obs_type',
+                y='count',
+                color="date",
+                barmode='group',
+                title="Observable Types Distribution over Time"
+            )
+            fig.show()
+
+
 
     return

@@ -1,0 +1,8 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+157.18.147.211,/device/inform/data,1.0,2.0,2.0,2.05 Content,20084.0,84cc,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+153.5.78.206,/efento/t,1.0,2.0,2.0,2.05 Content,19256.0,cd24,"{""OBSERVE"": ""0""}",b'h\xf7\x8d\xc8',4.0,1.0,False
+157.245.204.199,/efento/t,1.0,2.0,2.0,2.05 Content,19270.0,cd32,"{""OBSERVE"": ""0""}",b'h\xf7\x8e\x0e',4.0,1.0,False
+157.156.235.239,/device/inform/data,1.0,2.0,2.0,2.05 Content,20086.0,84ce,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+129.232.178.234,/efento/t,1.0,2.0,2.0,2.05 Content,49254.0,3dc7,"{""OBSERVE"": ""0""}",b'h\xf7\x8e\xd2',4.0,1.0,False

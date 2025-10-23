@@ -1,6 +1,3 @@
-import pandas as pd
-import os
-
 from O4_Analysis.options import ip
 from O4_Analysis.options import payload
 from O4_Analysis.options import get_resource
@@ -49,7 +46,8 @@ def analysis_sel():
         'Payload Size': [1],
         'Response Code': [2],
         'Options': [3],
-        'Server Specifications': [4]
+        'Server Specifications': [4],
+        'OBS Resources': [5]
     }
 
     #----------
@@ -136,13 +134,22 @@ def analysis_sel():
 
 def dataset_sel(analysis):
 
-    path = {}
+    data_paths = []
 
+    # --------- IP info datasets ---------
+    path = {'phase': 'O1_ZMap/scan_results', 'folder': 'ip_info'}
+
+    ip_info_datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
+    ip_info_datasets.sort()
+
+    # --------- Scope-oriented datasets ---------
+    master_date_index = 3
     match analysis[0]:
 
         case 0:
             # discovery based
-            path.update({'phase': 'O1_ZMap/scan_results', 'folder': 'cleaned'})
+            path.update({'folder': 'cleaned'})
+            master_date_index = 4
         case 1:
             # observe based
             path.update({'phase': 'O3_Observe', 'folder': 'csv'})
@@ -150,19 +157,19 @@ def dataset_sel(analysis):
             # get based
             path.update({'phase': 'O2_GetResource', 'folder': 'csv'})
 
+    datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
+    datasets.sort()
 
     # stability-based
     if analysis[1] == 0:
 
-        cleaned_datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
-        path.update({'folder': 'ip_info'})
-        ip_info_datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
-
         master_dates = set()
 
-        for file_path in cleaned_datasets:
-            date = file_path.split('/')[4]
+        for file_path in datasets:
+            date = file_path.split('/')[master_date_index]
             master_dates.update([date])
+
+        master_dates = sorted(master_dates)
 
         ###
         # available_dates is the UNION of all partitions dates
@@ -208,67 +215,33 @@ def dataset_sel(analysis):
         print(f"You have selected: {master_dates[choice_id]}")
 
 
-        cleaned_datasets_filtered = []
-        ip_info_datasets_filtered = []
-
-
-        # cleaned datasets
-        for path in cleaned_datasets:
-            if path.split('/')[4] == master_dates[choice_id]:
-                cleaned_datasets_filtered.append(path)
-
         for path in ip_info_datasets:
             if path.split('/')[4] == f"{master_dates[choice_id]}.csv":
-                ip_info_datasets_filtered.append(path)
+                data_paths.append({'ip_info': path, 'data': []})
 
-        print(cleaned_datasets_filtered)
-        print(ip_info_datasets_filtered)
+        for path in datasets:
+            if path.split('/')[master_date_index] == master_dates[choice_id]:
+                partition_index = int(path.split('/')[master_date_index - 1]) # internet partition
+                data_paths[partition_index]['data'].extend([path])        
 
-        return
-
-        
 
     # evolution-based
     elif analysis[1] == 1:
 
-        for level in levels:
-            choice = files_handling.level_selection(level, path)
+        for path in ip_info_datasets:
+            data_paths.append({'ip_info': path, 'data': []})
 
-            if choice == None:
-                return None
-            else: 
-                path.update({level: choice})
+        for path in datasets:
+            master_date = path.split('/')[master_date_index]
+            date = path.split('/')[master_date_index + 1][:-4]
 
-        # elements can be a list of files (csv) or a list of directories
-        elements = os.listdir(files_handling.path_dict_to_str(path))
-        elements.sort()
+            if master_date == date:
+                partition_index = int(path.split('/')[master_date_index - 1]) # internet partition
+                data_paths[partition_index]['data'].extend([path])  
 
-        # discovery -> list of csvs
-        if analysis[0] == 0:
-
-            csvs_path = path.copy()
-
-            csvs_path.update({'date': elements})
-
-            data_paths = csvs_path
-        
-        # observe & get -> list of directories
-        else:
-            data_paths = []
-            for element in elements:
-
-                dir_path = path.copy()
-
-                dir_path.update({'date': element})
-                dir_path.update({'partition': files_handling.extract_partitions(dir_path)})
-
-                data_paths.append(dir_path)
     
-    if data_paths is None:
-            return None
-    else: 
-        return data_paths
-
+    return data_paths
+    
 
 def perform_analysis(analysis, data_paths):
 
@@ -276,154 +249,86 @@ def perform_analysis(analysis, data_paths):
 
         # discovery-based
         case 0:
-            
-            match analysis[1]:
-
-                # instant-based
-                case 0:
                     
-                    match analysis[2]:
+            match analysis[2]:
 
-                        # IP-based
+                # IP-based
+                case 0:
+
+                    match analysis[3]:
+
+                        # Country
                         case 0:
-
-                            match analysis[3]:
-
-                                # Country
-                                case 0:
-                                    ip.instant_analysis(data_paths, "country")
-                                # Continent
-                                case 1:
-                                    ip.instant_analysis(data_paths, "continent")
-                                # AS Name
-                                case 2:
-                                    ip.instant_analysis(data_paths, "as_name")
-
-                        # Payload-based
+                            ip.analysis(data_paths, "country")
+                        # Continent
                         case 1:
-                            
-                            match analysis[3]:
+                            ip.analysis(data_paths, "continent")
+                        # AS Name
+                        case 2:
+                            ip.analysis(data_paths, "as_name")
 
-                                # Size Statistics
-                                case 0:
-                                    payload.instant_analysis(data_paths, "Payload Size")
-                                # Top 30 Most Common URI
-                                case 1:
-                                    payload.instant_analysis(data_paths, "Most Common")
-                                # Number of Resources / CoAP Server
-                                case 2:
-                                    payload.instant_analysis(data_paths, "Resources Number")
-                                # URI Depth Levels
-                                case 3:
-                                    payload.instant_analysis(data_paths, "Resource URI Depth")
-                                # Active/Inactive CoAP Machines
-                                case 4:
-                                    payload.instant_analysis(data_paths, "Active CoAP Machines")
-                                # Response Codes
-                                case 5:
-                                    payload.instant_analysis(data_paths, "/.well-known/core Visibility")
-                                # Resources' Metadata
-                                case 6:
-                                    payload.instant_analysis(data_paths, "Resource Metadata")
-                                # Content Type Metadata
-                                case 7:
-                                    payload.instant_analysis(data_paths, "Content Type Metadata")
-
-                # time-based
+                # Payload-based
                 case 1:
-
-                    match analysis[2]:
-
-                        # IP-based
-                        case 0:
-
-                            match analysis[3]:
-
-                                # Country
-                                case 0:
-                                    ip.time_analysis(data_paths, "country")
-                                # Continent
-                                case 1:
-                                    ip.time_analysis(data_paths, "continent")
-                                # AS Name
-                                case 2:
-                                    ip.time_analysis(data_paths, "as_name")
-
-                        # Payload-based
-                        case 1:
                             
-                            match analysis[3]:
+                    match analysis[3]:
 
-                                # Size Statistics
-                                case 0:
-                                    payload.time_analysis(data_paths, "Payload Size")
-                                # Top 30 Most Common URI
-                                case 1:
-                                    payload.time_analysis(data_paths, "Most Common")
-                                # Number of Resources / CoAP Server
-                                case 2:
-                                    payload.time_analysis(data_paths, "Resources Number")
-                                # URI Depth Levels
-                                case 3:
-                                    payload.time_analysis(data_paths, "Resource URI Depth")
-                                # Active/Inactive CoAP Machines
-                                case 4:
-                                    payload.time_analysis(data_paths, "Active CoAP Machines")
-                                # Response Codes
-                                case 5:
-                                    payload.time_analysis(data_paths, "/.well-known/core Visibility")
-                                # Resources' Metadata
-                                case 6:
-                                    payload.time_analysis(data_paths, "Resource Metadata")
-                                # Content Type Metadata
-                                case 7:
-                                    payload.time_analysis(data_paths, "Content Type Metadata") 
+                        # Size Statistics
+                        case 0:
+                            payload.analysis(data_paths, "Payload Size")
+                        # Top 30 Most Common URI
+                        case 1:
+                            payload.analysis(data_paths, "Most Common")
+                        # Number of Resources / CoAP Server
+                        case 2:
+                            payload.analysis(data_paths, "Resources Number")
+                        # URI Depth Levels
+                        case 3:
+                            payload.analysis(data_paths, "Resource URI Depth")
+                        # Active/Inactive CoAP Machines
+                        case 4:
+                            payload.analysis(data_paths, "Active CoAP Machines")
+                        # Response Codes
+                        case 5:
+                            payload.analysis(data_paths, "/.well-known/core Visibility")
+                        # Resources' Metadata
+                        case 6:
+                            payload.analysis(data_paths, "Resource Metadata")
+                        # Content Type Metadata
+                        case 7:
+                            payload.analysis(data_paths, "Content Type Metadata")
+                        # ZMap Results
+                        case 8:
+                            payload.analysis(data_paths, "ZMap Results")
 
         # observe-based
         case 1:
-            print('Observe')
+
+            print("Observe-kind of analysis")
+
 
         # get_resource-based
         case 2:
-            
-            match analysis[1]:
-
-                # instant-based
-                case 0:
                     
-                    match analysis[2]:
+            match analysis[2]:
 
-                        # Data format
-                        case 0:
-                            get_resource.instant_analysis(data_paths, "Data Format")
-                        # Payload Size
-                        case 1:
-                            get_resource.instant_analysis(data_paths, "Payload Size")
-                        # Response Code
-                        case 2:
-                            get_resource.instant_analysis(data_paths, "Response Code")
-                        # Options
-                        case 3:
-                            get_resource.instant_analysis(data_paths, "Options")
-
-
-                # time-based
+                # Data format
+                case 0:
+                    get_resource.analysis(data_paths, "Data Format")
+                # Payload Size
                 case 1:
-
-                    match analysis[2]:
-
-                        # Data format
-                        case 0:
-                            get_resource.time_analysis(data_paths, "Data Format")
-                        # Payload Size
-                        case 1:
-                            get_resource.time_analysis(data_paths, "Payload Size")
-                        # Response Code
-                        case 2:
-                            get_resource.time_analysis(data_paths, "Response Code")
-                        # Options
-                        case 3:
-                            get_resource.time_analysis(data_paths, "Options")
+                    get_resource.analysis(data_paths, "Payload Size")
+                # Response Code
+                case 2:
+                    get_resource.analysis(data_paths, "Response Code")
+                # Options
+                case 3:
+                    get_resource.analysis(data_paths, "Options")
+                # Server Specs
+                case 4:
+                    get_resource.analysis(data_paths, "Server Specifications")
+                # Real/Fake Obs Resources
+                case 5:
+                    get_resource.analysis(data_paths, "OBS Resources")
 
 
     print('-'*100)
@@ -441,20 +346,16 @@ def analysis_menu():
 
         if chosen_analysis == None:
             return
-        
+
         print(chosen_analysis)
 
         # 2) dataset/s selection
         data_paths = dataset_sel(chosen_analysis)
 
-        return
-
-        # debug
-        print('ç' * 50)
-        print(f"dataset paths:\n {data_paths}")
-
         if data_paths is None:
             return
         
+        print(data_paths)
+
         # 3) perform analysis
         perform_analysis(chosen_analysis, data_paths)

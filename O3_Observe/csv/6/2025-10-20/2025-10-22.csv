@@ -1,0 +1,29 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+195.201.229.48,/efento/t,1.0,2.0,2.0,2.05 Content,49032.0,c1d6,"{""OBSERVE"": ""0""}",b'h\xf8\xe2t',4.0,1.0,False
+203.158.192.168,/efento/t,1.0,2.0,2.0,2.05 Content,49215.0,c28d,"{""OBSERVE"": ""0""}",b'h\xf8\xe1\xfe',4.0,1.0,False
+223.108.137.14,/device/inform/data,1.0,2.0,2.0,2.05 Content,33980.0,df2f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.82.93.244,/device/inform/data,1.0,2.0,2.0,2.05 Content,62933.0,dbfc,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+221.182.87.217,/device/inform/data,1.0,2.0,2.0,2.05 Content,6022.0,5a92,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+206.221.80.2,/device/inform/data,1.0,2.0,2.0,2.05 Content,62935.0,dbfe,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+220.200.245.129,/device/inform/data,1.0,2.0,2.0,2.05 Content,62936.0,dbff,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+211.139.166.155,/device/inform/data,1.0,2.0,2.0,2.05 Content,62938.0,dc01,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+218.207.141.68,/device/inform/data,1.0,2.0,2.0,2.05 Content,6027.0,5a97,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.87.162.37,/device/inform/data,1.0,2.0,2.0,2.05 Content,6029.0,5a99,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.86.110.247,/device/inform/data,1.0,2.0,2.0,2.05 Content,6030.0,5a9a,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+221.182.87.112,/device/inform/data,1.0,2.0,2.0,2.05 Content,6031.0,5a9b,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.108.174.186,/device/inform/data,1.0,2.0,2.0,2.05 Content,6032.0,5a9c,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+211.136.223.52,/device/inform/data,1.0,2.0,2.0,2.05 Content,6034.0,5a9e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+223.86.110.194,/device/inform/data,1.0,2.0,2.0,2.05 Content,6036.0,5aa0,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False

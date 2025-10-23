@@ -1,0 +1,486 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+85.238.102.56,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40939.0,4940,,,0.0,3.0,False
+85.238.102.56,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34974.0,e15d,,,0.0,3.0,False
+85.238.102.56,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19350.0,ffb5,,0x1,3.0,3.0,False
+85.238.102.56,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58285.0,8e37,,,0.0,3.0,False
+85.238.102.56,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59670.0,b66d,,,0.0,3.0,False
+85.238.102.56,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27908.0,f260,,,0.0,3.0,False
+85.238.102.56,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33965.0,bf8b,,,0.0,3.0,False
+85.238.102.56,/info,1.0,2.0,2.0,2.05 Content,49428.0,4283,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ee6d67b8-3679-11e6-8115-cb342b327a42"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+85.238.102.56,/,1.0,2.0,2.0,4.04 Not Found,30275.0,69ca,,,0.0,3.0,True
+94.124.177.67,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40940.0,4941,,,0.0,3.0,False
+94.124.177.67,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,34975.0,e15e,,,0.0,3.0,False
+94.124.177.67,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,19351.0,ffb6,,,0.0,3.0,False
+94.124.177.67,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,58286.0,8e38,,,0.0,3.0,False
+94.124.177.67,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,59671.0,b66e,,,0.0,3.0,False
+94.124.177.67,/info,1.0,2.0,2.0,2.05 Content,27909.0,f261,"{""CONTENT_FORMAT"": ""TEXT""}","{""cloud"":true,""dpn"":true,""eula"":true,""password"":true,""cid"":""9f80247e-ea3a-11ee-9396-8966d66bd227"",""vendor"":""Keenetic"",""name"":""Keenetic Giga"",""type"":""router"",""version"":""4.02.C.6.3-1"",""http_port"":80}",197.0,3.0,False
+94.124.177.67,/,1.0,2.0,2.0,4.04 Not Found,33966.0,bf8c,,,0.0,3.0,True
+81.94.245.48,/,1.0,2.0,2.0,2.05 Content,40941.0,4942,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+81.94.245.48,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,34976.0,e15f,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,19352.0,ffb7,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,58287.0,8e39,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,59672.0,b66f,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,27910.0,f262,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,33967.0,bf8d,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,49429.0,4284,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,30276.0,69cb,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,49303.0,bf89,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,61711.0,4c73,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,64967.0,c8cb,,Method Not Allowed,18.0,3.0,False
+81.94.245.48,/async,1.0,0.0,2.0,2.05 Content,55056.0,1232,,done,4.0,3.0,False
+95.181.245.253,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40942.0,4943,,,0.0,3.0,False
+95.181.245.253,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34977.0,e160,,,0.0,3.0,False
+95.181.245.253,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19353.0,ffb8,,0x1,3.0,3.0,False
+95.181.245.253,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58288.0,8e3a,,,0.0,3.0,False
+95.181.245.253,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59673.0,b670,,,0.0,3.0,False
+95.181.245.253,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27911.0,f263,,,0.0,3.0,False
+95.181.245.253,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33968.0,bf8e,,,0.0,3.0,False
+95.181.245.253,/info,1.0,2.0,2.0,2.05 Content,49430.0,4285,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b92be7aa-db7e-11e6-8115-315bf55606c4"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.181.245.253,/,1.0,2.0,2.0,4.04 Not Found,30277.0,69cc,,,0.0,3.0,True
+95.72.98.212,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40943.0,4944,,,0.0,3.0,False
+95.72.98.212,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34978.0,e161,,,0.0,3.0,False
+95.72.98.212,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19354.0,ffb9,,0x1,3.0,3.0,False
+95.72.98.212,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58289.0,8e3b,,,0.0,3.0,False
+95.72.98.212,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59674.0,b671,,,0.0,3.0,False
+95.72.98.212,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27912.0,f264,,,0.0,3.0,False
+95.72.98.212,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33969.0,bf8f,,,0.0,3.0,False
+95.72.98.212,/info,1.0,2.0,2.0,2.05 Content,49431.0,4286,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ee6c0684-3679-11e6-8115-3f5dba051025"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.72.98.212,/,1.0,2.0,2.0,4.04 Not Found,30278.0,69cd,,,0.0,3.0,True
+79.126.28.91,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40944.0,4945,,,0.0,3.0,False
+79.126.28.91,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34979.0,e162,,,0.0,3.0,False
+79.126.28.91,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19355.0,ffba,,0x1,3.0,3.0,False
+79.126.28.91,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58290.0,8e3c,,,0.0,3.0,False
+79.126.28.91,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59675.0,b672,,,0.0,3.0,False
+79.126.28.91,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27913.0,f265,,,0.0,3.0,False
+79.126.28.91,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33970.0,bf90,,,0.0,3.0,False
+79.126.28.91,/info,1.0,2.0,2.0,2.05 Content,49432.0,4287,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159d7c4a-c57e-11e6-8115-c5b1340355b3"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+79.126.28.91,/,1.0,2.0,2.0,4.04 Not Found,30279.0,69ce,,,0.0,3.0,True
+94.124.194.42,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40945.0,4946,,,0.0,3.0,False
+94.124.194.42,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34980.0,e163,,,0.0,3.0,False
+94.124.194.42,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19356.0,ffbb,,0x1,3.0,3.0,False
+94.124.194.42,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58291.0,8e3d,,,0.0,3.0,False
+94.124.194.42,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59676.0,b673,,,0.0,3.0,False
+94.124.194.42,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27914.0,f266,,,0.0,3.0,False
+94.124.194.42,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33971.0,bf91,,,0.0,3.0,False
+94.124.194.42,/info,1.0,2.0,2.0,2.05 Content,49433.0,4288,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ad2edbee-9e1a-11ea-8f23-1fd7b4042d0e"",""http_port"":80,""type"":""router"",""name"":""Keenetic Omni"",""version"":""0.3.5-1""}",120.0,3.0,False
+94.124.194.42,/,1.0,2.0,2.0,4.04 Not Found,30280.0,69cf,,,0.0,3.0,True
+78.31.165.196,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,40946.0,4947,,,0.0,3.0,False
+78.31.165.196,/qlink/ack,,,,,,,,Network error: MessageError,,,
+78.31.165.196,/qlink/request,1.0,2.0,2.0,2.05 Content,19357.0,ffbc,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+78.31.165.196,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,58292.0,8e3e,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+78.31.165.196,/qlink/success,1.0,2.0,2.0,2.05 Content,59677.0,b674,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+78.31.165.196,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+78.31.165.196,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,33972.0,bf92,,,0.0,3.0,False
+78.31.165.196,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,49434.0,4289,,,0.0,3.0,False
+78.31.165.196,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,30281.0,69d0,"{""CONTENT_FORMAT"": ""TEXT""}","010_781053171E5A{""apmsOnlineStatus"":0}",38.0,3.0,False
+78.31.165.196,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,49304.0,bf8a,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+78.31.165.196,/gw/query/config,1.0,2.0,2.0,2.05 Content,61712.0,4c74,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+78.31.165.196,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,64968.0,c8cc,,,0.0,3.0,False
+78.31.165.196,/basic/regist,1.0,2.0,2.0,2.05 Content,57507.0,1233,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+78.31.165.196,/basic/show,1.0,2.0,2.0,2.05 Content,62162.0,f028,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+78.31.165.196,/device,1.0,2.0,2.0,4.05 Method Not Allowed,48547.0,c555,,,0.0,3.0,False
+78.31.165.196,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,56398.0,bbae,,,0.0,3.0,False
+78.31.165.196,/device/command/control,1.0,2.0,2.0,2.05 Content,52074.0,c6ed,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+78.31.165.196,/device/command/data,1.0,2.0,2.0,2.05 Content,31638.0,84a9,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+78.31.165.196,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,47222.0,e769,,,0.0,3.0,False
+78.31.165.196,/device/inform/boot,1.0,2.0,2.0,2.05 Content,41810.0,e3a2,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+78.31.165.196,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,46080.0,54de,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+78.31.165.196,/device/inform/data,1.0,2.0,2.0,2.05 Content,10693.0,5bf4,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+78.31.165.196,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,59905.0,6827,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+78.31.165.196,/device/inform/offline,1.0,2.0,2.0,2.05 Content,35312.0,1ec6,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+78.31.165.196,/.well-known/core,1.0,2.0,2.0,2.05 Content,13084.0,ae1a,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+78.31.165.196,/,1.0,2.0,2.0,2.05 Content,15045.0,2d8b,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+95.66.161.117,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40947.0,4948,,,0.0,3.0,False
+95.66.161.117,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34982.0,e165,,,0.0,3.0,False
+95.66.161.117,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19358.0,ffbd,,0x1,3.0,3.0,False
+95.66.161.117,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58293.0,8e3f,,,0.0,3.0,False
+95.66.161.117,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59678.0,b675,,,0.0,3.0,False
+95.66.161.117,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27916.0,f268,,,0.0,3.0,False
+95.66.161.117,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33973.0,bf93,,,0.0,3.0,False
+95.66.161.117,/info,1.0,2.0,2.0,2.05 Content,49435.0,428a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159df2f6-c57e-11e6-8115-f54c23e4dad4"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.66.161.117,/,1.0,2.0,2.0,4.04 Not Found,30282.0,69d1,,,0.0,3.0,True
+80.221.18.179,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40948.0,4949,,,0.0,3.0,False
+80.221.18.179,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,34983.0,e166,,,0.0,3.0,False
+80.221.18.179,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,19359.0,ffbe,,,0.0,3.0,False
+80.221.18.179,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,58294.0,8e40,,,0.0,3.0,False
+80.221.18.179,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,59679.0,b676,,,0.0,3.0,False
+80.221.18.179,/info,1.0,2.0,2.0,2.05 Content,27917.0,f269,"{""CONTENT_FORMAT"": ""TEXT""}","{""cloud"":false,""dpn"":true,""eula"":true,""password"":true,""cid"":""4f6cf106-55b6-11ee-911a-2fe7d28a63c1"",""name"":""Keenetic Explorer"",""type"":""extender"",""version"":""4.00.C.7.0-0"",""http_port"":80}",184.0,3.0,False
+80.221.18.179,/,1.0,2.0,2.0,4.04 Not Found,33974.0,bf94,,,0.0,3.0,True
+78.81.76.84,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40949.0,494a,,,0.0,3.0,False
+78.81.76.84,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34984.0,e167,,,0.0,3.0,False
+78.81.76.84,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19360.0,ffbf,,0x1,3.0,3.0,False
+78.81.76.84,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58295.0,8e41,,,0.0,3.0,False
+78.81.76.84,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59680.0,b677,,,0.0,3.0,False
+78.81.76.84,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27918.0,f26a,,,0.0,3.0,False
+78.81.76.84,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33975.0,bf95,,,0.0,3.0,False
+78.81.76.84,/info,1.0,2.0,2.0,2.05 Content,49436.0,428b,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""c433b2f8-d294-11e9-8f23-59abe17a406e"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121.0,3.0,False
+78.81.76.84,/,1.0,2.0,2.0,4.04 Not Found,30283.0,69d2,,,0.0,3.0,True
+93.91.121.217,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40950.0,494b,,,0.0,3.0,False
+93.91.121.217,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34985.0,e168,,,0.0,3.0,False
+93.91.121.217,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19361.0,ffc0,,0x1,3.0,3.0,False
+93.91.121.217,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58296.0,8e42,,,0.0,3.0,False
+93.91.121.217,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59681.0,b678,,,0.0,3.0,False
+93.91.121.217,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27919.0,f26b,,,0.0,3.0,False
+93.91.121.217,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33976.0,bf96,,,0.0,3.0,False
+93.91.121.217,/info,1.0,2.0,2.0,2.05 Content,49437.0,428c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9ca3e87c-2b79-11e6-8115-c98026b42f48"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+93.91.121.217,/,1.0,2.0,2.0,4.04 Not Found,30284.0,69d3,,,0.0,3.0,True
+81.5.103.160,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40951.0,494c,,,0.0,3.0,False
+81.5.103.160,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34986.0,e169,,,0.0,3.0,False
+81.5.103.160,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19362.0,ffc1,,0x1,3.0,3.0,False
+81.5.103.160,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58297.0,8e43,,,0.0,3.0,False
+81.5.103.160,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59682.0,b679,,,0.0,3.0,False
+81.5.103.160,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27920.0,f26c,,,0.0,3.0,False
+81.5.103.160,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33977.0,bf97,,,0.0,3.0,False
+81.5.103.160,/info,1.0,2.0,2.0,2.05 Content,49438.0,428d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b9275d5c-db7e-11e6-8115-a1393745e741"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+81.5.103.160,/,1.0,2.0,2.0,4.04 Not Found,30285.0,69d4,,,0.0,3.0,True
+95.66.204.48,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40952.0,494d,,,0.0,3.0,False
+95.66.204.48,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34987.0,e16a,,,0.0,3.0,False
+95.66.204.48,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19363.0,ffc2,,0x1,3.0,3.0,False
+95.66.204.48,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58298.0,8e44,,,0.0,3.0,False
+95.66.204.48,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59683.0,b67a,,,0.0,3.0,False
+95.66.204.48,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27921.0,f26d,,,0.0,3.0,False
+95.66.204.48,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33978.0,bf98,,,0.0,3.0,False
+95.66.204.48,/info,1.0,2.0,2.0,2.05 Content,49439.0,428e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b928be0e-db7e-11e6-8115-e75a1442de67"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+95.66.204.48,/,1.0,2.0,2.0,4.04 Not Found,30286.0,69d5,,,0.0,3.0,True
+81.25.50.235,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40953.0,494e,,,0.0,3.0,False
+81.25.50.235,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34988.0,e16b,,,0.0,3.0,False
+81.25.50.235,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19364.0,ffc3,,0x1,3.0,3.0,False
+81.25.50.235,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58299.0,8e45,,,0.0,3.0,False
+81.25.50.235,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59684.0,b67b,,,0.0,3.0,False
+81.25.50.235,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27922.0,f26e,,,0.0,3.0,False
+81.25.50.235,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33979.0,bf99,,,0.0,3.0,False
+81.25.50.235,/info,1.0,2.0,2.0,2.05 Content,49440.0,428f,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d919d790-787b-11e6-8115-b5144085d707"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+81.25.50.235,/,1.0,2.0,2.0,4.04 Not Found,30287.0,69d6,,,0.0,3.0,True
+87.240.43.209,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40954.0,494f,,,0.0,3.0,False
+87.240.43.209,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34989.0,e16c,,,0.0,3.0,False
+87.240.43.209,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19365.0,ffc4,,0x1,3.0,3.0,False
+87.240.43.209,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58300.0,8e46,,,0.0,3.0,False
+87.240.43.209,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59685.0,b67c,,,0.0,3.0,False
+87.240.43.209,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27923.0,f26f,,,0.0,3.0,False
+87.240.43.209,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33980.0,bf9a,,,0.0,3.0,False
+87.240.43.209,/info,1.0,2.0,2.0,2.05 Content,49441.0,4290,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""cb09a728-ac84-11e7-8f23-599c7bb8868f"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start"",""version"":""0.3.5-1""}",121.0,3.0,False
+87.240.43.209,/,1.0,2.0,2.0,4.04 Not Found,30288.0,69d7,,,0.0,3.0,True
+77.37.199.10,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40955.0,4950,,,0.0,3.0,False
+77.37.199.10,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34990.0,e16d,,,0.0,3.0,False
+77.37.199.10,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19366.0,ffc5,,0x1,3.0,3.0,False
+77.37.199.10,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58301.0,8e47,,,0.0,3.0,False
+77.37.199.10,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59686.0,b67d,,,0.0,3.0,False
+77.37.199.10,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27924.0,f270,,,0.0,3.0,False
+77.37.199.10,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33981.0,bf9b,,,0.0,3.0,False
+77.37.199.10,/info,1.0,2.0,2.0,2.05 Content,49442.0,4291,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""8449c7b4-989a-11ea-9396-efabf7dd35a0"",""http_port"":80,""type"":""router"",""name"":""Keenetic Giga"",""version"":""0.3.5""}",118.0,3.0,False
+77.37.199.10,/,1.0,2.0,2.0,4.04 Not Found,30289.0,69d8,,,0.0,3.0,True
+94.102.19.153,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40956.0,4951,,,0.0,3.0,False
+94.102.19.153,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34991.0,e16e,,,0.0,3.0,False
+94.102.19.153,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19367.0,ffc6,,0x1,3.0,3.0,False
+94.102.19.153,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58302.0,8e48,,,0.0,3.0,False
+94.102.19.153,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59687.0,b67e,,,0.0,3.0,False
+94.102.19.153,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27925.0,f271,,,0.0,3.0,False
+94.102.19.153,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33982.0,bf9c,,,0.0,3.0,False
+94.102.19.153,/info,1.0,2.0,2.0,2.05 Content,49443.0,4292,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c65794-88fc-11e6-8115-0d9fdcd53229"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.102.19.153,/,1.0,2.0,2.0,4.04 Not Found,30290.0,69d9,,,0.0,3.0,True
+79.164.221.115,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40957.0,4952,,,0.0,3.0,False
+79.164.221.115,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34992.0,e16f,,,0.0,3.0,False
+79.164.221.115,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19368.0,ffc7,,0x1,3.0,3.0,False
+79.164.221.115,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58303.0,8e49,,,0.0,3.0,False
+79.164.221.115,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59688.0,b67f,,,0.0,3.0,False
+79.164.221.115,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27926.0,f272,,,0.0,3.0,False
+79.164.221.115,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33983.0,bf9d,,,0.0,3.0,False
+79.164.221.115,/info,1.0,2.0,2.0,2.05 Content,49444.0,4293,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9aed35de-b4fd-11e6-8115-2b79f9976521"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+79.164.221.115,/,1.0,2.0,2.0,4.04 Not Found,30291.0,69da,,,0.0,3.0,True
+94.241.204.28,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40958.0,4953,,,0.0,3.0,False
+94.241.204.28,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34993.0,e170,,,0.0,3.0,False
+94.241.204.28,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19369.0,ffc8,,0x1,3.0,3.0,False
+94.241.204.28,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58304.0,8e4a,,,0.0,3.0,False
+94.241.204.28,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59689.0,b680,,,0.0,3.0,False
+94.241.204.28,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27927.0,f273,,,0.0,3.0,False
+94.241.204.28,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33984.0,bf9e,,,0.0,3.0,False
+94.241.204.28,/info,1.0,2.0,2.0,2.05 Content,49445.0,4294,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4035d16a-417a-11e6-8115-8f65a97a17cb"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.241.204.28,/,1.0,2.0,2.0,4.04 Not Found,30292.0,69db,,,0.0,3.0,True
+91.226.175.68,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40959.0,4954,,,0.0,3.0,False
+91.226.175.68,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34994.0,e171,,,0.0,3.0,False
+91.226.175.68,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19370.0,ffc9,,0x1,3.0,3.0,False
+91.226.175.68,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58305.0,8e4b,,,0.0,3.0,False
+91.226.175.68,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59690.0,b681,,,0.0,3.0,False
+91.226.175.68,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27928.0,f274,,,0.0,3.0,False
+91.226.175.68,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33985.0,bf9f,,,0.0,3.0,False
+91.226.175.68,/info,1.0,2.0,2.0,2.05 Content,49446.0,4295,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9c9e9a16-2b79-11e6-8115-112ccb336215"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+91.226.175.68,/,1.0,2.0,2.0,4.04 Not Found,30293.0,69dc,,,0.0,3.0,True
+95.221.171.133,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40960.0,4955,,,0.0,3.0,False
+95.221.171.133,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34995.0,e172,,,0.0,3.0,False
+95.221.171.133,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19371.0,ffca,,0x1,3.0,3.0,False
+95.221.171.133,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58306.0,8e4c,,,0.0,3.0,False
+95.221.171.133,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59691.0,b682,,,0.0,3.0,False
+95.221.171.133,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27929.0,f275,,,0.0,3.0,False
+95.221.171.133,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33986.0,bfa0,,,0.0,3.0,False
+95.221.171.133,/info,1.0,2.0,2.0,2.05 Content,49447.0,4296,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""174f970c-3bfa-11e6-8115-5b4387da64e5"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.221.171.133,/,1.0,2.0,2.0,4.04 Not Found,30294.0,69dd,,,0.0,3.0,True
+95.165.220.178,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40961.0,4956,,,0.0,3.0,False
+95.165.220.178,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,34996.0,e173,,,0.0,3.0,False
+95.165.220.178,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,19372.0,ffcb,,,0.0,3.0,False
+95.165.220.178,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,58307.0,8e4d,,,0.0,3.0,False
+95.165.220.178,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,59692.0,b683,,,0.0,3.0,False
+95.165.220.178,/info,1.0,2.0,2.0,2.05 Content,27930.0,f276,"{""CONTENT_FORMAT"": ""TEXT""}","{""cloud"":true,""dpn"":true,""eula"":false,""password"":true,""cid"":""262678ce-381f-11eb-8f23-3932151688ee"",""name"":""Keenetic Omni"",""type"":""router"",""version"":""3.07.C.4.0-2"",""http_port"":80}",178.0,3.0,False
+95.165.220.178,/,1.0,2.0,2.0,4.04 Not Found,33987.0,bfa1,,,0.0,3.0,True
+88.210.58.19,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40962.0,4957,,,0.0,3.0,False
+88.210.58.19,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,34997.0,e174,,,0.0,3.0,False
+88.210.58.19,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,19373.0,ffcc,,,0.0,3.0,False
+88.210.58.19,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,58308.0,8e4e,,,0.0,3.0,False
+88.210.58.19,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,59693.0,b684,,,0.0,3.0,False
+88.210.58.19,/info,1.0,2.0,2.0,2.05 Content,27931.0,f277,"{""CONTENT_FORMAT"": ""TEXT""}","{""cloud"":true,""dpn"":true,""eula"":true,""password"":true,""cid"":""cd85537a-532e-11ed-9396-7167a1540135"",""vendor"":""Keenetic"",""name"":""Keenetic Peak"",""type"":""router"",""version"":""4.03.C.6.1-6"",""http_port"":80}",197.0,3.0,False
+88.210.58.19,/,1.0,2.0,2.0,4.04 Not Found,33988.0,bfa2,,,0.0,3.0,True
+88.231.112.201,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40963.0,4958,,,0.0,3.0,False
+88.231.112.201,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34998.0,e175,,,0.0,3.0,False
+88.231.112.201,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19374.0,ffcd,,0x1,3.0,3.0,False
+88.231.112.201,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58309.0,8e4f,,,0.0,3.0,False
+88.231.112.201,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59694.0,b685,,,0.0,3.0,False
+88.231.112.201,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27932.0,f278,,,0.0,3.0,False
+88.231.112.201,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33989.0,bfa3,,,0.0,3.0,False
+88.231.112.201,/info,1.0,2.0,2.0,2.05 Content,49448.0,4297,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""82938816-221e-11eb-8f23-85a1e29ba25f"",""http_port"":80,""type"":""router"",""name"":""Keenetic Extra DSL"",""version"":""0.3.5""}",123.0,3.0,False
+88.231.112.201,/,1.0,2.0,2.0,4.04 Not Found,30295.0,69de,,,0.0,3.0,True
+85.114.175.204,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40964.0,4959,,,0.0,3.0,False
+85.114.175.204,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,34999.0,e176,,,0.0,3.0,False
+85.114.175.204,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19375.0,ffce,,0x1,3.0,3.0,False
+85.114.175.204,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58310.0,8e50,,,0.0,3.0,False
+85.114.175.204,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59695.0,b686,,,0.0,3.0,False
+85.114.175.204,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27933.0,f279,,,0.0,3.0,False
+85.114.175.204,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33990.0,bfa4,,,0.0,3.0,False
+85.114.175.204,/info,1.0,2.0,2.0,2.05 Content,49449.0,4298,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d91c2db0-787b-11e6-8115-9f9b81de5110"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+85.114.175.204,/,1.0,2.0,2.0,4.04 Not Found,30296.0,69df,,,0.0,3.0,True
+95.221.182.55,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40965.0,495a,,,0.0,3.0,False
+95.221.182.55,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35000.0,e177,,,0.0,3.0,False
+95.221.182.55,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19376.0,ffcf,,0x1,3.0,3.0,False
+95.221.182.55,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58311.0,8e51,,,0.0,3.0,False
+95.221.182.55,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59696.0,b687,,,0.0,3.0,False
+95.221.182.55,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27934.0,f27a,,,0.0,3.0,False
+95.221.182.55,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33991.0,bfa5,,,0.0,3.0,False
+95.221.182.55,/info,1.0,2.0,2.0,2.05 Content,49450.0,4299,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""7cb0b304-8e7c-11e6-8115-3f07c2b5098a"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.221.182.55,/,1.0,2.0,2.0,4.04 Not Found,30297.0,69e0,,,0.0,3.0,True
+92.240.132.227,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40966.0,495b,,,0.0,3.0,False
+92.240.132.227,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35001.0,e178,,,0.0,3.0,False
+92.240.132.227,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19377.0,ffd0,,0x1,3.0,3.0,False
+92.240.132.227,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58312.0,8e52,,,0.0,3.0,False
+92.240.132.227,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59697.0,b688,,,0.0,3.0,False
+92.240.132.227,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27935.0,f27b,,,0.0,3.0,False
+92.240.132.227,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33992.0,bfa6,,,0.0,3.0,False
+92.240.132.227,/info,1.0,2.0,2.0,2.05 Content,49451.0,429a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9c9e943a-2b79-11e6-8115-37d58c54982c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+92.240.132.227,/,1.0,2.0,2.0,4.04 Not Found,30298.0,69e1,,,0.0,3.0,True
+79.111.140.211,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40967.0,495c,,,0.0,3.0,False
+79.111.140.211,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35002.0,e179,,,0.0,3.0,False
+79.111.140.211,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19378.0,ffd1,,0x1,3.0,3.0,False
+79.111.140.211,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58313.0,8e53,,,0.0,3.0,False
+79.111.140.211,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59698.0,b689,,,0.0,3.0,False
+79.111.140.211,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27936.0,f27c,,,0.0,3.0,False
+79.111.140.211,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33993.0,bfa7,,,0.0,3.0,False
+79.111.140.211,/info,1.0,2.0,2.0,2.05 Content,49452.0,429b,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""40355316-417a-11e6-8115-bf70d84c0825"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+79.111.140.211,/,1.0,2.0,2.0,4.04 Not Found,30299.0,69e2,,,0.0,3.0,True
+94.140.229.44,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40968.0,495d,,,0.0,3.0,False
+94.140.229.44,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35003.0,e17a,,,0.0,3.0,False
+94.140.229.44,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19379.0,ffd2,,0x1,3.0,3.0,False
+94.140.229.44,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58314.0,8e54,,,0.0,3.0,False
+94.140.229.44,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59699.0,b68a,,,0.0,3.0,False
+94.140.229.44,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27937.0,f27d,,,0.0,3.0,False
+94.140.229.44,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33994.0,bfa8,,,0.0,3.0,False
+94.140.229.44,/info,1.0,2.0,2.0,2.05 Content,49453.0,429c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b92ab970-db7e-11e6-8115-3fd74f2341e1"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.140.229.44,/,1.0,2.0,2.0,4.04 Not Found,30300.0,69e3,,,0.0,3.0,True
+85.114.186.42,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40969.0,495e,,,0.0,3.0,False
+85.114.186.42,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35004.0,e17b,,,0.0,3.0,False
+85.114.186.42,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19380.0,ffd3,,0x1,3.0,3.0,False
+85.114.186.42,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58315.0,8e55,,,0.0,3.0,False
+85.114.186.42,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59700.0,b68b,,,0.0,3.0,False
+85.114.186.42,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27938.0,f27e,,,0.0,3.0,False
+85.114.186.42,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33995.0,bfa9,,,0.0,3.0,False
+85.114.186.42,/info,1.0,2.0,2.0,2.05 Content,49454.0,429d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159e21fe-c57e-11e6-8115-f5251ea55b7c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+85.114.186.42,/,1.0,2.0,2.0,4.04 Not Found,30301.0,69e4,,,0.0,3.0,True
+95.183.21.19,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40970.0,495f,,,0.0,3.0,False
+95.183.21.19,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35005.0,e17c,,,0.0,3.0,False
+95.183.21.19,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19381.0,ffd4,,0x1,3.0,3.0,False
+95.183.21.19,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58316.0,8e56,,,0.0,3.0,False
+95.183.21.19,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59701.0,b68c,,,0.0,3.0,False
+95.183.21.19,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27939.0,f27f,,,0.0,3.0,False
+95.183.21.19,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33996.0,bfaa,,,0.0,3.0,False
+95.183.21.19,/info,1.0,2.0,2.0,2.05 Content,49455.0,429e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d91b6d58-787b-11e6-8115-7758f6ae2f24"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.183.21.19,/,1.0,2.0,2.0,4.04 Not Found,30302.0,69e5,,,0.0,3.0,True
+94.158.122.16,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40971.0,4960,,,0.0,3.0,False
+94.158.122.16,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35006.0,e17d,,,0.0,3.0,False
+94.158.122.16,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19382.0,ffd5,,0x1,3.0,3.0,False
+94.158.122.16,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58317.0,8e57,,,0.0,3.0,False
+94.158.122.16,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59702.0,b68d,,,0.0,3.0,False
+94.158.122.16,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27940.0,f280,,,0.0,3.0,False
+94.158.122.16,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33997.0,bfab,,,0.0,3.0,False
+94.158.122.16,/info,1.0,2.0,2.0,2.05 Content,49456.0,429f,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4034f718-417a-11e6-8115-37f379568722"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.158.122.16,/,1.0,2.0,2.0,4.04 Not Found,30303.0,69e6,,,0.0,3.0,True
+94.190.12.185,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,40972.0,4961,,,0.0,3.0,False
+94.190.12.185,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,35007.0,e17e,,,0.0,3.0,False
+94.190.12.185,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,19383.0,ffd6,,,0.0,3.0,False
+94.190.12.185,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,58318.0,8e58,,,0.0,3.0,False
+94.190.12.185,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,59703.0,b68e,,,0.0,3.0,False
+94.190.12.185,/info,1.0,2.0,2.0,2.05 Content,27941.0,f281,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""30ccc3fe-171e-11eb-8f23-69e8b0f7f235"",""http_port"":80,""type"":""router"",""name"":""Keenetic Start (KN-1111)"",""password"":false,""eula"":true,""version"":""3.02.C.1.0-0""}",165.0,3.0,False
+94.190.12.185,/,1.0,2.0,2.0,4.04 Not Found,33998.0,bfac,,,0.0,3.0,True
+91.219.157.248,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40973.0,4962,,,0.0,3.0,False
+91.219.157.248,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35008.0,e17f,,,0.0,3.0,False
+91.219.157.248,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19384.0,ffd7,,0x1,3.0,3.0,False
+91.219.157.248,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58319.0,8e59,,,0.0,3.0,False
+91.219.157.248,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59704.0,b68f,,,0.0,3.0,False
+91.219.157.248,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27942.0,f282,,,0.0,3.0,False
+91.219.157.248,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,33999.0,bfad,,,0.0,3.0,False
+91.219.157.248,/info,1.0,2.0,2.0,2.05 Content,49457.0,42a0,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b92b7d38-db7e-11e6-8115-bffaa4d1feef"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+91.219.157.248,/,1.0,2.0,2.0,4.04 Not Found,30304.0,69e7,,,0.0,3.0,True
+91.226.143.215,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40974.0,4963,,,0.0,3.0,False
+91.226.143.215,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35009.0,e180,,,0.0,3.0,False
+91.226.143.215,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19385.0,ffd8,,0x1,3.0,3.0,False
+91.226.143.215,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58320.0,8e5a,,,0.0,3.0,False
+91.226.143.215,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59705.0,b690,,,0.0,3.0,False
+91.226.143.215,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27943.0,f283,,,0.0,3.0,False
+91.226.143.215,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34000.0,bfae,,,0.0,3.0,False
+91.226.143.215,/info,1.0,2.0,2.0,2.05 Content,49458.0,42a1,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""c3d5ae74-ba7d-11e6-8115-ef29ccc008ce"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+91.226.143.215,/,1.0,2.0,2.0,4.04 Not Found,30305.0,69e8,,,0.0,3.0,True
+81.23.178.251,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40975.0,4964,,,0.0,3.0,False
+81.23.178.251,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35010.0,e181,,,0.0,3.0,False
+81.23.178.251,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19386.0,ffd9,,0x1,3.0,3.0,False
+81.23.178.251,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58321.0,8e5b,,,0.0,3.0,False
+81.23.178.251,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59706.0,b691,,,0.0,3.0,False
+81.23.178.251,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27944.0,f284,,,0.0,3.0,False
+81.23.178.251,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34001.0,bfaf,,,0.0,3.0,False
+81.23.178.251,/info,1.0,2.0,2.0,2.05 Content,49459.0,42a2,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""174d5ed8-3bfa-11e6-8115-af4ed182b05c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+81.23.178.251,/,1.0,2.0,2.0,4.04 Not Found,30306.0,69e9,,,0.0,3.0,True
+78.85.25.7,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40976.0,4965,,,0.0,3.0,False
+78.85.25.7,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35011.0,e182,,,0.0,3.0,False
+78.85.25.7,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19387.0,ffda,,0x1,3.0,3.0,False
+78.85.25.7,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58322.0,8e5c,,,0.0,3.0,False
+78.85.25.7,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59707.0,b692,,,0.0,3.0,False
+78.85.25.7,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27945.0,f285,,,0.0,3.0,False
+78.85.25.7,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34002.0,bfb0,,,0.0,3.0,False
+78.85.25.7,/info,1.0,2.0,2.0,2.05 Content,49460.0,42a3,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9ca336de-2b79-11e6-8115-e3d80fbf1d48"",""http_port"":8080,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",132.0,3.0,False
+78.85.25.7,/,1.0,2.0,2.0,4.04 Not Found,30307.0,69ea,,,0.0,3.0,True
+79.133.105.35,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40977.0,4966,,,0.0,3.0,False
+79.133.105.35,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35012.0,e183,,,0.0,3.0,False
+79.133.105.35,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19388.0,ffdb,,0x1,3.0,3.0,False
+79.133.105.35,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58323.0,8e5d,,,0.0,3.0,False
+79.133.105.35,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59708.0,b693,,,0.0,3.0,False
+79.133.105.35,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27946.0,f286,,,0.0,3.0,False
+79.133.105.35,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34003.0,bfb1,,,0.0,3.0,False
+79.133.105.35,/info,1.0,2.0,2.0,2.05 Content,49461.0,42a4,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""1597eb4a-c57e-11e6-8115-6de98e2b0900"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+79.133.105.35,/,1.0,2.0,2.0,4.04 Not Found,30308.0,69eb,,,0.0,3.0,True
+95.5.214.62,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40978.0,4967,,,0.0,3.0,False
+95.5.214.62,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35013.0,e184,,,0.0,3.0,False
+95.5.214.62,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19389.0,ffdc,,0x1,3.0,3.0,False
+95.5.214.62,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58324.0,8e5e,,,0.0,3.0,False
+95.5.214.62,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59709.0,b694,,,0.0,3.0,False
+95.5.214.62,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27947.0,f287,,,0.0,3.0,False
+95.5.214.62,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34004.0,bfb2,,,0.0,3.0,False
+95.5.214.62,/info,1.0,2.0,2.0,2.05 Content,49462.0,42a5,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""0d095bb2-7512-11e9-8f23-f9c92b61ad8b"",""http_port"":80,""type"":""router"",""name"":""Keenetic Omni DSL"",""version"":""0.3.5""}",122.0,3.0,False
+95.5.214.62,/,1.0,2.0,2.0,4.04 Not Found,30309.0,69ec,,,0.0,3.0,True
+85.172.191.206,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40979.0,4968,,,0.0,3.0,False
+85.172.191.206,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35014.0,e185,,,0.0,3.0,False
+85.172.191.206,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19390.0,ffdd,,0x1,3.0,3.0,False
+85.172.191.206,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58325.0,8e5f,,,0.0,3.0,False
+85.172.191.206,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59710.0,b695,,,0.0,3.0,False
+85.172.191.206,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27948.0,f288,,,0.0,3.0,False
+85.172.191.206,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34005.0,bfb3,,,0.0,3.0,False
+85.172.191.206,/info,1.0,2.0,2.0,2.05 Content,49463.0,42a6,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b927611c-db7e-11e6-8115-857ee4c1bd38"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+85.172.191.206,/,1.0,2.0,2.0,4.04 Not Found,30310.0,69ed,,,0.0,3.0,True
+83.239.97.7,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40980.0,4969,,,0.0,3.0,False
+83.239.97.7,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35015.0,e186,,,0.0,3.0,False
+83.239.97.7,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19391.0,ffde,,0x1,3.0,3.0,False
+83.239.97.7,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58326.0,8e60,,,0.0,3.0,False
+83.239.97.7,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59711.0,b696,,,0.0,3.0,False
+83.239.97.7,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27949.0,f289,,,0.0,3.0,False
+83.239.97.7,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34006.0,bfb4,,,0.0,3.0,False
+83.239.97.7,/info,1.0,2.0,2.0,2.05 Content,49464.0,42a7,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9ca0db78-2b79-11e6-8115-b5ec1e8eec0b"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+83.239.97.7,/,1.0,2.0,2.0,4.04 Not Found,30311.0,69ee,,,0.0,3.0,True
+94.251.98.82,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40981.0,496a,,,0.0,3.0,False
+94.251.98.82,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35016.0,e187,,,0.0,3.0,False
+94.251.98.82,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19392.0,ffdf,,0x1,3.0,3.0,False
+94.251.98.82,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58327.0,8e61,,,0.0,3.0,False
+94.251.98.82,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59712.0,b697,,,0.0,3.0,False
+94.251.98.82,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27950.0,f28a,,,0.0,3.0,False
+94.251.98.82,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34007.0,bfb5,,,0.0,3.0,False
+94.251.98.82,/info,1.0,2.0,2.0,2.05 Content,49465.0,42a8,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""b1ef9364-e977-11e5-8115-7124d9d40515"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.251.98.82,/,1.0,2.0,2.0,4.04 Not Found,30312.0,69ef,,,0.0,3.0,True
+94.253.45.7,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40982.0,496b,,,0.0,3.0,False
+94.253.45.7,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35017.0,e188,,,0.0,3.0,False
+94.253.45.7,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19393.0,ffe0,,0x1,3.0,3.0,False
+94.253.45.7,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58328.0,8e62,,,0.0,3.0,False
+94.253.45.7,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59713.0,b698,,,0.0,3.0,False
+94.253.45.7,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27951.0,f28b,,,0.0,3.0,False
+94.253.45.7,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34008.0,bfb6,,,0.0,3.0,False
+94.253.45.7,/info,1.0,2.0,2.0,2.05 Content,49466.0,42a9,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""f90e9d6c-1578-11e6-8115-59899f3008cd"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.253.45.7,/,1.0,2.0,2.0,4.04 Not Found,30313.0,69f0,,,0.0,3.0,True
+95.79.134.181,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40983.0,496c,,,0.0,3.0,False
+95.79.134.181,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35018.0,e189,,,0.0,3.0,False
+95.79.134.181,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19394.0,ffe1,,0x1,3.0,3.0,False
+95.79.134.181,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58329.0,8e63,,,0.0,3.0,False
+95.79.134.181,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59714.0,b699,,,0.0,3.0,False
+95.79.134.181,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27952.0,f28c,,,0.0,3.0,False
+95.79.134.181,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34009.0,bfb7,,,0.0,3.0,False
+95.79.134.181,/info,1.0,2.0,2.0,2.05 Content,49467.0,42aa,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4036186e-417a-11e6-8115-1d534bdae63c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.79.134.181,/,1.0,2.0,2.0,4.04 Not Found,30314.0,69f1,,,0.0,3.0,True
+87.225.77.161,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40984.0,496d,,,0.0,3.0,False
+87.225.77.161,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35019.0,e18a,,,0.0,3.0,False
+87.225.77.161,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19395.0,ffe2,,0x1,3.0,3.0,False
+87.225.77.161,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58330.0,8e64,,,0.0,3.0,False
+87.225.77.161,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59715.0,b69a,,,0.0,3.0,False
+87.225.77.161,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27953.0,f28d,,,0.0,3.0,False
+87.225.77.161,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34010.0,bfb8,,,0.0,3.0,False
+87.225.77.161,/info,1.0,2.0,2.0,2.05 Content,49468.0,42ab,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""174e631e-3bfa-11e6-8115-55e0b76248e9"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+87.225.77.161,/,1.0,2.0,2.0,4.04 Not Found,30315.0,69f2,,,0.0,3.0,True
+95.159.181.94,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40985.0,496e,,,0.0,3.0,False
+95.159.181.94,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35020.0,e18b,,,0.0,3.0,False
+95.159.181.94,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19396.0,ffe3,,0x1,3.0,3.0,False
+95.159.181.94,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58331.0,8e65,,,0.0,3.0,False
+95.159.181.94,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59716.0,b69b,,,0.0,3.0,False
+95.159.181.94,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27954.0,f28e,,,0.0,3.0,False
+95.159.181.94,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34011.0,bfb9,,,0.0,3.0,False
+95.159.181.94,/info,1.0,2.0,2.0,2.05 Content,49469.0,42ac,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ee678a00-3679-11e6-8115-8dce46042e11"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+95.159.181.94,/,1.0,2.0,2.0,4.04 Not Found,30316.0,69f3,,,0.0,3.0,True
+92.37.197.107,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40986.0,496f,,,0.0,3.0,False
+92.37.197.107,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35021.0,e18c,,,0.0,3.0,False
+92.37.197.107,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19397.0,ffe4,,0x1,3.0,3.0,False
+92.37.197.107,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58332.0,8e66,,,0.0,3.0,False
+92.37.197.107,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59717.0,b69c,,,0.0,3.0,False
+92.37.197.107,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27955.0,f28f,,,0.0,3.0,False
+92.37.197.107,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34012.0,bfba,,,0.0,3.0,False
+92.37.197.107,/info,1.0,2.0,2.0,2.05 Content,49470.0,42ad,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""73bb18e8-25f9-11e6-8115-899248248c78"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128.0,3.0,False
+92.37.197.107,/,1.0,2.0,2.0,4.04 Not Found,30317.0,69f4,,,0.0,3.0,True
+95.47.189.69,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40987.0,4970,,,0.0,3.0,False
+95.47.189.69,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35022.0,e18d,,,0.0,3.0,False
+95.47.189.69,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19398.0,ffe5,,0x1,3.0,3.0,False
+95.47.189.69,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58333.0,8e67,,,0.0,3.0,False
+95.47.189.69,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59718.0,b69d,,,0.0,3.0,False
+95.47.189.69,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27956.0,f290,,,0.0,3.0,False
+95.47.189.69,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34013.0,bfbb,,,0.0,3.0,False
+95.47.189.69,/info,1.0,2.0,2.0,2.05 Content,49471.0,42ae,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d91b0570-787b-11e6-8115-73f4e1648b23"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+95.47.189.69,/,1.0,2.0,2.0,4.04 Not Found,30318.0,69f5,,,0.0,3.0,True
+94.142.248.136,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40988.0,4971,,,0.0,3.0,False
+94.142.248.136,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35023.0,e18e,,,0.0,3.0,False
+94.142.248.136,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19399.0,ffe6,,0x1,3.0,3.0,False
+94.142.248.136,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58334.0,8e68,,,0.0,3.0,False
+94.142.248.136,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59719.0,b69e,,,0.0,3.0,False
+94.142.248.136,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27957.0,f291,,,0.0,3.0,False
+94.142.248.136,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34014.0,bfbc,,,0.0,3.0,False
+94.142.248.136,/info,1.0,2.0,2.0,2.05 Content,49472.0,42af,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9ca2b07e-2b79-11e6-8115-cd37fc83b8f5"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+94.142.248.136,/,1.0,2.0,2.0,4.04 Not Found,30319.0,69f6,,,0.0,3.0,True
+95.70.142.140,/register,1.0,2.0,2.0,4.05 Method Not Allowed,40989.0,4972,,,0.0,3.0,False
+95.70.142.140,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,35024.0,e18f,,,0.0,3.0,False
+95.70.142.140,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,19400.0,ffe7,,0x1,3.0,3.0,False
+95.70.142.140,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,58335.0,8e69,,,0.0,3.0,False
+95.70.142.140,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,59720.0,b69f,,,0.0,3.0,False
+95.70.142.140,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,27958.0,f292,,,0.0,3.0,False
+95.70.142.140,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,34015.0,bfbd,,,0.0,3.0,False
+95.70.142.140,/info,1.0,2.0,2.0,2.05 Content,49473.0,42b0,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""5643dda6-2fa6-11ec-8f23-d779620a89a6"",""http_port"":80,""type"":""router"",""name"":""Keenetic Omni DSL"",""version"":""0.3.5""}",122.0,3.0,False
+95.70.142.140,/,1.0,2.0,2.0,4.04 Not Found,30320.0,69f7,,,0.0,3.0,True

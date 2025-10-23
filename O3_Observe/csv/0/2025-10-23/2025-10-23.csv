@@ -1,0 +1,4 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+18.156.133.79,/efento/t,1.0,2.0,2.0,2.05 Content,4201.0,ab7a,"{""OBSERVE"": ""0""}",b'h\xfa\x10j',4.0,1.0,False
+5.53.55.210,/device/inform/data,1.0,2.0,2.0,2.05 Content,58968.0,711f,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
