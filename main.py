@@ -1,5 +1,5 @@
-from O1_ZMap.menu import zmap_menu
-from O4_Analysis.menu import analysis_menu
+from O1a_DataCollection.menu import zmap_menu
+from O2_Analysis.menu import analysis_menu
 
 
 def main():

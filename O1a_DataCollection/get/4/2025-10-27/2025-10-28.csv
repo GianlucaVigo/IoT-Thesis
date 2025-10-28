@@ -1,0 +1,583 @@
+saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
+157.230.103.254,/api,1.0,2.0,2.0,4.05 Method Not Allowed,52496.0,c7cf,,,0.0,3.0,False
+157.230.103.254,/api/v1,1.0,2.0,2.0,4.00 Bad Request,30312.0,9540,,,0.0,2.0,False
+157.230.103.254,/efento,1.0,2.0,2.0,4.00 Bad Request,52595.0,3f7c,,,0.0,2.0,False
+157.230.103.254,/efento/c,1.0,2.0,2.0,4.00 Bad Request,4276.0,3ca9,,,0.0,3.0,False
+157.230.103.254,/efento/i,1.0,2.0,2.0,4.00 Bad Request,55963.0,b598,,,0.0,3.0,False
+157.230.103.254,/efento/m,1.0,2.0,2.0,4.00 Bad Request,42188.0,fe91,,,0.0,3.0,False
+157.230.103.254,/efento/t,1.0,2.0,2.0,2.05 Content,6713.0,1a20,"{""OBSERVE"": ""0""}",b'i\x00\xea\x8a',4.0,1.0,False
+157.230.103.254,/fw,1.0,0.0,2.0,4.01 Unauthorized,45304.0,8759,,,0.0,2.0,False
+157.230.103.254,/sw,1.0,0.0,2.0,4.01 Unauthorized,55611.0,c91c,,,0.0,2.0,False
+157.230.103.254,/,1.0,2.0,2.0,2.05 Content,29048.0,0ffe,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2023 Institute for Pervasive Computing, ETH Zurich
+              and others
+****************************************************************",420.0,3.0,True
+159.224.199.13,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52497.0,c7d0,,,0.0,3.0,False
+159.224.199.13,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30313.0,9541,,,0.0,3.0,False
+159.224.199.13,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52596.0,3f7d,,0x1,3.0,3.0,False
+159.224.199.13,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4277.0,3caa,,,0.0,3.0,False
+159.224.199.13,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55964.0,b599,,,0.0,3.0,False
+159.224.199.13,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42189.0,fe92,,,0.0,3.0,False
+159.224.199.13,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6714.0,1a21,,,0.0,3.0,False
+159.224.199.13,/info,1.0,2.0,2.0,2.05 Content,45934.0,875a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ee6ddaea-3679-11e6-8115-173b7d74981e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+159.224.199.13,/,1.0,2.0,2.0,4.04 Not Found,48977.0,c91d,,,0.0,3.0,True
+146.66.204.143,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52498.0,c7d1,,,0.0,3.0,False
+146.66.204.143,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30314.0,9542,,,0.0,3.0,False
+146.66.204.143,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52597.0,3f7e,,0x1,3.0,3.0,False
+146.66.204.143,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4278.0,3cab,,,0.0,3.0,False
+146.66.204.143,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55965.0,b59a,,,0.0,3.0,False
+146.66.204.143,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42190.0,fe93,,,0.0,3.0,False
+146.66.204.143,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6715.0,1a22,,,0.0,3.0,False
+146.66.204.143,/info,1.0,2.0,2.0,2.05 Content,45935.0,875b,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ec4ff370-a7e6-11e3-8009-ddc8218bfb7e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Viva"",""version"":""0.3.5-1""}",126.0,3.0,False
+146.66.204.143,/,1.0,2.0,2.0,4.04 Not Found,48978.0,c91e,,,0.0,3.0,True
+146.247.32.33,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52499.0,c7d2,,,0.0,3.0,False
+146.247.32.33,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30315.0,9543,,,0.0,3.0,False
+146.247.32.33,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52598.0,3f7f,,0x1,3.0,3.0,False
+146.247.32.33,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4279.0,3cac,,,0.0,3.0,False
+146.247.32.33,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55966.0,b59b,,,0.0,3.0,False
+146.247.32.33,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42191.0,fe94,,,0.0,3.0,False
+146.247.32.33,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6716.0,1a23,,,0.0,3.0,False
+146.247.32.33,/info,1.0,2.0,2.0,2.05 Content,45936.0,875c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""8751fcea-6d7b-11e6-8115-9130ab0cb453"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130.0,3.0,False
+146.247.32.33,/,1.0,2.0,2.0,4.04 Not Found,48979.0,c91f,,,0.0,3.0,True
+146.158.50.3,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52500.0,c7d3,,,0.0,3.0,False
+146.158.50.3,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30316.0,9544,,,0.0,3.0,False
+146.158.50.3,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52599.0,3f80,,0x1,3.0,3.0,False
+146.158.50.3,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4280.0,3cad,,,0.0,3.0,False
+146.158.50.3,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55967.0,b59c,,,0.0,3.0,False
+146.158.50.3,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42192.0,fe95,,,0.0,3.0,False
+146.158.50.3,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6717.0,1a24,,,0.0,3.0,False
+146.158.50.3,/info,1.0,2.0,2.0,2.05 Content,45937.0,875d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""53c7415e-88fc-11e6-8115-21e9383bcc70"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+146.158.50.3,/,1.0,2.0,2.0,4.04 Not Found,48980.0,c920,,,0.0,3.0,True
+158.181.219.69,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52501.0,c7d4,,,0.0,3.0,False
+158.181.219.69,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30317.0,9545,,,0.0,3.0,False
+158.181.219.69,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52600.0,3f81,,0x1,3.0,3.0,False
+158.181.219.69,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4281.0,3cae,,,0.0,3.0,False
+158.181.219.69,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55968.0,b59d,,,0.0,3.0,False
+158.181.219.69,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42193.0,fe96,,,0.0,3.0,False
+158.181.219.69,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6718.0,1a25,,,0.0,3.0,False
+158.181.219.69,/info,1.0,2.0,2.0,2.05 Content,45938.0,875e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""159dd0fa-c57e-11e6-8115-6f453654d6b5"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+158.181.219.69,/,1.0,2.0,2.0,4.04 Not Found,48981.0,c921,,,0.0,3.0,True
+135.0.86.37,/,1.0,2.0,2.0,2.05 Content,52502.0,c7d5,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.86.37,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30318.0,9546,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52601.0,3f82,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4282.0,3caf,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55969.0,b59e,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42194.0,fe97,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6719.0,1a26,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45939.0,875f,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48982.0,c922,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29049.0,0fff,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4937.0,07f9,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63682.0,bd60,,Method Not Allowed,18.0,3.0,False
+135.0.86.37,/async,1.0,0.0,2.0,2.05 Content,8236.0,c3c9,,done,4.0,3.0,False
+135.0.88.45,/,1.0,2.0,2.0,2.05 Content,52503.0,c7d6,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.88.45,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30319.0,9547,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52602.0,3f83,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4283.0,3cb0,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55970.0,b59f,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42195.0,fe98,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6720.0,1a27,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45940.0,8760,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48983.0,c923,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29050.0,1000,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4938.0,07fa,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63683.0,bd61,,Method Not Allowed,18.0,3.0,False
+135.0.88.45,/async,1.0,0.0,2.0,2.05 Content,27527.0,c3ca,,done,4.0,3.0,False
+147.124.72.45,/,1.0,2.0,2.0,2.05 Content,52504.0,c7d7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+147.124.72.45,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30320.0,9548,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52603.0,3f84,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4284.0,3cb1,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55971.0,b5a0,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42196.0,fe99,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6721.0,1a28,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45941.0,8761,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48984.0,c924,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29051.0,1001,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4939.0,07fb,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63684.0,bd62,,Method Not Allowed,18.0,3.0,False
+147.124.72.45,/async,1.0,0.0,2.0,2.05 Content,65502.0,c3cb,,done,4.0,3.0,False
+147.124.75.193,/,1.0,2.0,2.0,2.05 Content,52505.0,c7d8,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+147.124.75.193,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30321.0,9549,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52604.0,3f85,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4285.0,3cb2,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55972.0,b5a1,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42197.0,fe9a,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6722.0,1a29,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45942.0,8762,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48985.0,c925,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29052.0,1002,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4940.0,07fc,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63685.0,bd63,,Method Not Allowed,18.0,3.0,False
+147.124.75.193,/async,1.0,0.0,2.0,2.05 Content,32013.0,c3cc,,done,4.0,3.0,False
+135.0.237.168,/,1.0,2.0,2.0,2.05 Content,52506.0,c7d9,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.237.168,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30322.0,954a,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52605.0,3f86,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4286.0,3cb3,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55973.0,b5a2,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42198.0,fe9b,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6723.0,1a2a,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45943.0,8763,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48986.0,c926,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29053.0,1003,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4941.0,07fd,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63686.0,bd64,,Method Not Allowed,18.0,3.0,False
+135.0.237.168,/async,1.0,0.0,2.0,2.05 Content,35735.0,c3cd,,done,4.0,3.0,False
+135.0.240.131,/,1.0,2.0,2.0,2.05 Content,52507.0,c7da,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.240.131,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30323.0,954b,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52606.0,3f87,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4287.0,3cb4,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55974.0,b5a3,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42199.0,fe9c,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6724.0,1a2b,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45944.0,8764,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48987.0,c927,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29054.0,1004,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4942.0,07fe,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63687.0,bd65,,Method Not Allowed,18.0,3.0,False
+135.0.240.131,/async,1.0,0.0,2.0,2.05 Content,43114.0,c3ce,,done,4.0,3.0,False
+135.0.93.154,/,1.0,2.0,2.0,2.05 Content,52508.0,c7db,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.93.154,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30324.0,954c,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52607.0,3f88,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4288.0,3cb5,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55975.0,b5a4,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42200.0,fe9d,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6725.0,1a2c,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45945.0,8765,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48988.0,c928,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29055.0,1005,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4943.0,07ff,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63688.0,bd66,,Method Not Allowed,18.0,3.0,False
+135.0.93.154,/async,,,,,,,,timeout,,,
+135.0.152.222,/,1.0,2.0,2.0,2.05 Content,52509.0,c7dc,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.152.222,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30325.0,954d,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52608.0,3f89,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4289.0,3cb6,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55976.0,b5a5,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42201.0,fe9e,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6726.0,1a2d,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45946.0,8766,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48989.0,c929,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29056.0,1006,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4944.0,0800,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63689.0,bd67,,Method Not Allowed,18.0,3.0,False
+135.0.152.222,/async,1.0,0.0,2.0,2.05 Content,61090.0,c3d0,,done,4.0,3.0,False
+135.0.120.33,/,1.0,2.0,2.0,2.05 Content,52510.0,c7dd,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.120.33,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30326.0,954e,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52609.0,3f8a,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4290.0,3cb7,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55977.0,b5a6,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42202.0,fe9f,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6727.0,1a2e,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45947.0,8767,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48990.0,c92a,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29057.0,1007,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4945.0,0801,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63690.0,bd68,,Method Not Allowed,18.0,3.0,False
+135.0.120.33,/async,1.0,0.0,2.0,2.05 Content,7021.0,c3d1,,done,4.0,3.0,False
+135.0.146.30,/,1.0,2.0,2.0,2.05 Content,52511.0,c7de,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.146.30,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30327.0,954f,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52610.0,3f8b,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4291.0,3cb8,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55978.0,b5a7,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42203.0,fea0,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6728.0,1a2f,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45948.0,8768,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48991.0,c92b,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29058.0,1008,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4946.0,0802,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63691.0,bd69,,Method Not Allowed,18.0,3.0,False
+135.0.146.30,/async,1.0,0.0,2.0,2.05 Content,62992.0,c3d2,,done,4.0,3.0,False
+135.0.229.56,/,1.0,2.0,2.0,2.05 Content,52512.0,c7df,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.229.56,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30328.0,9550,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52611.0,3f8c,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4292.0,3cb9,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55979.0,b5a8,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42204.0,fea1,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6729.0,1a30,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45949.0,8769,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48992.0,c92c,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29059.0,1009,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4947.0,0803,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63692.0,bd6a,,Method Not Allowed,18.0,3.0,False
+135.0.229.56,/async,1.0,0.0,2.0,2.05 Content,44399.0,c3d3,,done,4.0,3.0,False
+135.0.117.142,/,1.0,2.0,2.0,2.05 Content,52513.0,c7e0,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.117.142,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30329.0,9551,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52612.0,3f8d,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4293.0,3cba,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55980.0,b5a9,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42205.0,fea2,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6730.0,1a31,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45950.0,876a,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48993.0,c92d,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29060.0,100a,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4948.0,0804,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63693.0,bd6b,,Method Not Allowed,18.0,3.0,False
+135.0.117.142,/async,1.0,0.0,2.0,2.05 Content,15790.0,c3d4,,done,4.0,3.0,False
+135.0.246.140,/,1.0,2.0,2.0,2.05 Content,52514.0,c7e1,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.246.140,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30330.0,9552,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52613.0,3f8e,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4294.0,3cbb,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55981.0,b5aa,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42206.0,fea3,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6731.0,1a32,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45951.0,876b,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48994.0,c92e,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29061.0,100b,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4949.0,0805,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63694.0,bd6c,,Method Not Allowed,18.0,3.0,False
+135.0.246.140,/async,1.0,0.0,2.0,2.05 Content,17596.0,c3d5,,done,4.0,3.0,False
+135.0.53.24,/,1.0,2.0,2.0,2.05 Content,52515.0,c7e2,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.53.24,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30331.0,9553,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52614.0,3f8f,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4295.0,3cbc,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55982.0,b5ab,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42207.0,fea4,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6732.0,1a33,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45952.0,876c,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48995.0,c92f,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29062.0,100c,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4950.0,0806,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63695.0,bd6d,,Method Not Allowed,18.0,3.0,False
+135.0.53.24,/async,1.0,0.0,2.0,2.05 Content,6479.0,c3d6,,done,4.0,3.0,False
+135.0.237.187,/,1.0,2.0,2.0,2.05 Content,52516.0,c7e3,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.237.187,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30332.0,9554,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52615.0,3f90,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4296.0,3cbd,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55983.0,b5ac,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42208.0,fea5,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6733.0,1a34,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45953.0,876d,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48996.0,c930,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29063.0,100d,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4951.0,0807,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63696.0,bd6e,,Method Not Allowed,18.0,3.0,False
+135.0.237.187,/async,1.0,0.0,2.0,2.05 Content,42495.0,c3d7,,done,4.0,3.0,False
+158.58.134.243,/register,1.0,2.0,2.0,4.05 Method Not Allowed,52517.0,c7e4,,,0.0,3.0,False
+158.58.134.243,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,30333.0,9555,,,0.0,3.0,False
+158.58.134.243,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,52616.0,3f91,,0x1,3.0,3.0,False
+158.58.134.243,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,4297.0,3cbe,,,0.0,3.0,False
+158.58.134.243,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,55984.0,b5ad,,,0.0,3.0,False
+158.58.134.243,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,42209.0,fea6,,,0.0,3.0,False
+158.58.134.243,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,6734.0,1a35,,,0.0,3.0,False
+158.58.134.243,/info,1.0,2.0,2.0,2.05 Content,45954.0,876e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""91fed220-4c7a-11e6-8115-0dc738956e9c"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+158.58.134.243,/,1.0,2.0,2.0,4.04 Not Found,48997.0,c931,,,0.0,3.0,True
+135.0.3.59,/,1.0,2.0,2.0,2.05 Content,52518.0,c7e5,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.3.59,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30334.0,9556,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52617.0,3f92,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4298.0,3cbf,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55985.0,b5ae,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42210.0,fea7,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6735.0,1a36,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45955.0,876f,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48998.0,c932,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29064.0,100e,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4952.0,0808,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63697.0,bd6f,,Method Not Allowed,18.0,3.0,False
+135.0.3.59,/async,1.0,0.0,2.0,2.05 Content,64813.0,c3d8,,done,4.0,3.0,False
+135.0.155.30,/,1.0,2.0,2.0,2.05 Content,52519.0,c7e6,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.155.30,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30335.0,9557,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52618.0,3f93,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4299.0,3cc0,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55986.0,b5af,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42211.0,fea8,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6736.0,1a37,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45956.0,8770,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,48999.0,c933,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29065.0,100f,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4953.0,0809,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63698.0,bd70,,Method Not Allowed,18.0,3.0,False
+135.0.155.30,/async,1.0,0.0,2.0,2.05 Content,15503.0,c3d9,,done,4.0,3.0,False
+135.0.86.46,/,1.0,2.0,2.0,2.05 Content,52520.0,c7e7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.86.46,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30336.0,9558,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52619.0,3f94,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4300.0,3cc1,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55987.0,b5b0,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42212.0,fea9,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6737.0,1a38,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45957.0,8771,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49000.0,c934,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29066.0,1010,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4954.0,080a,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63699.0,bd71,,Method Not Allowed,18.0,3.0,False
+135.0.86.46,/async,1.0,0.0,2.0,2.05 Content,35452.0,c3da,,done,4.0,3.0,False
+135.0.223.51,/,1.0,2.0,2.0,2.05 Content,52521.0,c7e8,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.223.51,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30337.0,9559,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52620.0,3f95,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4301.0,3cc2,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55988.0,b5b1,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42213.0,feaa,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6738.0,1a39,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45958.0,8772,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49001.0,c935,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29067.0,1011,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4955.0,080b,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63700.0,bd72,,Method Not Allowed,18.0,3.0,False
+135.0.223.51,/async,1.0,0.0,2.0,2.05 Content,16418.0,c3db,,done,4.0,3.0,False
+135.0.155.2,/,1.0,2.0,2.0,2.05 Content,52522.0,c7e9,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.155.2,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30338.0,955a,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52621.0,3f96,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4302.0,3cc3,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55989.0,b5b2,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42214.0,feab,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6739.0,1a3a,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45959.0,8773,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49002.0,c936,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29068.0,1012,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4956.0,080c,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63701.0,bd73,,Method Not Allowed,18.0,3.0,False
+135.0.155.2,/async,1.0,0.0,2.0,2.05 Content,44713.0,c3dc,,done,4.0,3.0,False
+135.0.234.3,/,1.0,2.0,2.0,2.05 Content,52523.0,c7ea,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.234.3,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30339.0,955b,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52622.0,3f97,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4303.0,3cc4,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55990.0,b5b3,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42215.0,feac,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6740.0,1a3b,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45960.0,8774,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49003.0,c937,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29069.0,1013,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4957.0,080d,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63702.0,bd74,,Method Not Allowed,18.0,3.0,False
+135.0.234.3,/async,1.0,0.0,2.0,2.05 Content,27922.0,c3dd,,done,4.0,3.0,False
+135.0.2.85,/,1.0,2.0,2.0,2.05 Content,52524.0,c7eb,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.2.85,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30340.0,955c,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52623.0,3f98,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4304.0,3cc5,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55991.0,b5b4,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42216.0,fead,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6741.0,1a3c,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45961.0,8775,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49004.0,c938,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29070.0,1014,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4958.0,080e,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63703.0,bd75,,Method Not Allowed,18.0,3.0,False
+135.0.2.85,/async,1.0,0.0,2.0,2.05 Content,44954.0,c3de,,done,4.0,3.0,False
+135.0.237.90,/,1.0,2.0,2.0,2.05 Content,52525.0,c7ec,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.237.90,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30341.0,955d,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52624.0,3f99,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4305.0,3cc6,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55992.0,b5b5,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42217.0,feae,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6742.0,1a3d,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45962.0,8776,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49005.0,c939,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29071.0,1015,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4959.0,080f,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63704.0,bd76,,Method Not Allowed,18.0,3.0,False
+135.0.237.90,/async,1.0,0.0,2.0,2.05 Content,43281.0,c3df,,done,4.0,3.0,False
+138.229.114.221,/,1.0,2.0,2.0,2.05 Content,52526.0,c7ed,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+138.229.114.221,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30342.0,955e,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52625.0,3f9a,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4306.0,3cc7,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55993.0,b5b6,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42218.0,feaf,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6743.0,1a3e,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45963.0,8777,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49006.0,c93a,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29072.0,1016,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4960.0,0810,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63705.0,bd77,,Method Not Allowed,18.0,3.0,False
+138.229.114.221,/async,1.0,0.0,2.0,2.05 Content,60546.0,c3e0,,done,4.0,3.0,False
+135.0.52.14,/,1.0,2.0,2.0,2.05 Content,52527.0,c7ee,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.52.14,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30343.0,955f,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52626.0,3f9b,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4307.0,3cc8,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55994.0,b5b7,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42219.0,feb0,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6744.0,1a3f,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45964.0,8778,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49007.0,c93b,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29073.0,1017,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4961.0,0811,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63706.0,bd78,,Method Not Allowed,18.0,3.0,False
+135.0.52.14,/async,1.0,0.0,2.0,2.05 Content,10721.0,c3e1,,done,4.0,3.0,False
+135.0.194.171,/,1.0,2.0,2.0,2.05 Content,52528.0,c7ef,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.194.171,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30344.0,9560,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52627.0,3f9c,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4308.0,3cc9,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55995.0,b5b8,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42220.0,feb1,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6745.0,1a40,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45965.0,8779,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49008.0,c93c,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29074.0,1018,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4962.0,0812,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63707.0,bd79,,Method Not Allowed,18.0,3.0,False
+135.0.194.171,/async,1.0,0.0,2.0,2.05 Content,41408.0,c3e2,,done,4.0,3.0,False
+135.0.184.220,/,1.0,2.0,2.0,2.05 Content,52529.0,c7f0,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.184.220,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30345.0,9561,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52628.0,3f9d,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4309.0,3cca,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55996.0,b5b9,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42221.0,feb2,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6746.0,1a41,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45966.0,877a,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49009.0,c93d,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29075.0,1019,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4963.0,0813,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63708.0,bd7a,,Method Not Allowed,18.0,3.0,False
+135.0.184.220,/async,1.0,0.0,2.0,2.05 Content,14474.0,c3e3,,done,4.0,3.0,False
+135.0.183.96,/,1.0,2.0,2.0,2.05 Content,52530.0,c7f1,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.183.96,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30346.0,9562,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52629.0,3f9e,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4310.0,3ccb,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55997.0,b5ba,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42222.0,feb3,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6747.0,1a42,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45967.0,877b,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49010.0,c93e,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29076.0,101a,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4964.0,0814,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63709.0,bd7b,,Method Not Allowed,18.0,3.0,False
+135.0.183.96,/async,1.0,0.0,2.0,2.05 Content,49385.0,c3e4,,done,4.0,3.0,False
+135.0.163.29,/,1.0,2.0,2.0,2.05 Content,52531.0,c7f2,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.163.29,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30347.0,9563,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52630.0,3f9f,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4311.0,3ccc,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55998.0,b5bb,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42223.0,feb4,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6748.0,1a43,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45968.0,877c,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49011.0,c93f,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29077.0,101b,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4965.0,0815,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63710.0,bd7c,,Method Not Allowed,18.0,3.0,False
+135.0.163.29,/async,1.0,0.0,2.0,2.05 Content,48865.0,c3e5,,done,4.0,3.0,False
+135.0.174.139,/,1.0,2.0,2.0,2.05 Content,52532.0,c7f3,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.174.139,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30348.0,9564,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52631.0,3fa0,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4312.0,3ccd,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,55999.0,b5bc,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42224.0,feb5,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6749.0,1a44,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45969.0,877d,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49012.0,c940,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29078.0,101c,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4966.0,0816,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63711.0,bd7d,,Method Not Allowed,18.0,3.0,False
+135.0.174.139,/async,1.0,0.0,2.0,2.05 Content,11698.0,c3e6,,done,4.0,3.0,False
+135.0.169.59,/,1.0,2.0,2.0,2.05 Content,52533.0,c7f4,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+135.0.169.59,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,30349.0,9565,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,52632.0,3fa1,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,4313.0,3cce,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,56000.0,b5bd,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,42225.0,feb6,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,6750.0,1a45,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,45970.0,877e,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,49013.0,c941,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,29079.0,101d,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,4967.0,0817,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,63712.0,bd7e,,Method Not Allowed,18.0,3.0,False
+135.0.169.59,/async,1.0,0.0,2.0,2.05 Content,7875.0,c3e7,,done,4.0,3.0,False
+153.99.114.102,/.well-known/core,1.0,2.0,2.0,2.05 Content,52534.0,c7f5,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</.well-known/core>,</qlink>,</qlink/netinfo>;title=""qlink-netinfo Resource"",</qlink/searchack>;title=""qlink-searchack Resource""",128.0,3.0,False
+153.99.114.102,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,30350.0,9566,,,0.0,3.0,False
+153.99.114.102,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,52633.0,3fa2,,,0.0,3.0,False
+153.99.114.102,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,4314.0,3ccf,,,0.0,3.0,False
+153.99.114.102,/,1.0,2.0,2.0,2.05 Content,56001.0,b5be,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                         Cf 0.0
+************************************************************
+This server is using the Californium (Cf) CoAP framework
+published by the Eclipse Foundation under EPL+EDL:
+http://www.eclipse.org/californium/
+
+(c) 2014, Institute for Pervasive Computing, ETH Zurich
+Contact: Matthias Kovatsch <kovatsch@inf.ethz.ch>
+************************************************************",494.0,3.0,True

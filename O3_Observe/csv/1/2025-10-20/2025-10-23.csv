@@ -1,9 +1,0 @@
-saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
-39.129.95.66,/device/inform/data,1.0,2.0,2.0,2.05 Content,31780.0,b548,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
- postRequestText: null",23.0,0.0,False
-39.129.231.104,/device/inform/data,1.0,2.0,2.0,2.05 Content,32977.0,e7d9,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
- postRequestText: null",23.0,0.0,False
-39.184.200.77,/device/inform/data,1.0,2.0,2.0,2.05 Content,32978.0,e7da,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
- postRequestText: null",23.0,0.0,False
-39.129.227.24,/device/inform/data,1.0,2.0,2.0,2.05 Content,32979.0,e7db,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
- postRequestText: null",23.0,0.0,False

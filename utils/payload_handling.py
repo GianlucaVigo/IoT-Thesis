@@ -227,7 +227,7 @@ def options_to_json(discovery_df):
     return discovery_df
 
 
-def detect_truncated_discovery(udp_pkt_size, raw_coap_message, decoded_msg):
+def detect_truncated_response(udp_pkt_size, raw_coap_message, decoded_msg):
 
     truncated = False
 

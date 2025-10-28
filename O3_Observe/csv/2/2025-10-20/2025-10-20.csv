@@ -1,3 +1,0 @@
-saddr,uri,version,mtype,token-length,code,mid,token,options,payload,payload-length,observable,user_inserted
-92.205.234.156,/efento/t,1,2,2,2.05 Content,5029,3f4f,"{""OBSERVE"": ""0""}",b'h\xf6\x05\xeb',4,1,False
-94.130.169.171,/efento/t,1,2,2,2.05 Content,15731,e7c2,"{""OBSERVE"": ""0""}",b'h\xf6\x05\xf5',4,1,False
