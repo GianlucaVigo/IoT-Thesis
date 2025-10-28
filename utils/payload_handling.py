@@ -229,15 +229,12 @@ def options_to_json(discovery_df):
 
 def detect_truncated_response(udp_pkt_size, raw_coap_message, decoded_msg):
 
-    truncated = False
-
     # Handle Block2
     # if options is not empty/None + 'BLOCK2' is part of the option list
     #   -> ZMap got a truncated result
     if decoded_msg['options'] and 'BLOCK2' in decoded_msg['options'].keys():
         print(f"\nBlock2 detected!")
-        truncated = True
-
+        return True
 
 
     # Check UDP Pkt Size
@@ -250,7 +247,7 @@ def detect_truncated_response(udp_pkt_size, raw_coap_message, decoded_msg):
     # I have the UDP Pkt Size: 
     # if by subtracting the UDP Header and the CoAP Header, 
     # I don't get the payload length this means that is truncated
-    if len(decoded_msg['data']) > 0:
+    if decoded_msg['data_length'] > 0:
 
         # getting Coap Header size
         raw_coap_delimeter = raw_coap_message.find('ff')
@@ -261,8 +258,8 @@ def detect_truncated_response(udp_pkt_size, raw_coap_message, decoded_msg):
         udp_header_size = 8 # fixed
 
         if (udp_pkt_size - udp_header_size - raw_coap_header_size != raw_coap_payload_size):
-            print("\nTruncated payload: a new discovery must be performed!")
-            truncated = True
+            print("\nTruncated payload: a new request must be performed!")
+            return True
 
 
-    return truncated
+    return False
