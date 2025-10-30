@@ -1,6 +1,7 @@
-from O1b_DataCollection.menu import zmap_menu
+from utils import zmap_handling
 from O2_Analysis.menu import analysis_menu
 
+APPROACH = 'b'
 
 def main():
 
@@ -26,7 +27,7 @@ def main():
         # the program execution passes the control towards the menu associated to user choice
         match choice:
             case 0:
-                zmap_menu()                                                 # ZMap utility
+                zmap_handling.zmap_menu(APPROACH)                                                 # ZMap utility
                 continue
 
             case 1:
