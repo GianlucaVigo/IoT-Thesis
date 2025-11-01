@@ -84,10 +84,10 @@ def get_metadata_value_of(payload, metadata_name):
     return None
 
 
-def get_version(response):
+def get_version(message):
 
     try:
-        version = response.version
+        version = message.version
     except Exception:
         print("[ERROR] Version extraction")
         return None
@@ -95,10 +95,10 @@ def get_version(response):
     return version
 
 
-def get_mtype(response):
+def get_mtype(message):
 
     try:
-        mtype = response.mtype
+        mtype = message.mtype
     except Exception:
         print("[ERROR] Message Type extraction")
         return None
@@ -106,10 +106,10 @@ def get_mtype(response):
     return mtype
 
 
-def get_token_length(response):
+def get_token_length(message):
 
     try:
-        token_length = len(response.token)
+        token_length = len(message.token)
     except Exception:
         print("[ERROR] Token Length extraction")
         return None
@@ -117,10 +117,10 @@ def get_token_length(response):
     return token_length
 
 
-def get_code(response):
+def get_code(message):
 
     try:
-        code= str(response.code)
+        code= str(message.code)
     except Exception:
         print("[ERROR] Code extraction")
         return None
@@ -128,10 +128,10 @@ def get_code(response):
     return code
 
 
-def get_mid(response):
+def get_mid(message):
 
     try:
-        mid= response.mid
+        mid= message.mid
     except Exception:
         print("[ERROR] MessageID extraction")
         return None
@@ -139,10 +139,10 @@ def get_mid(response):
     return mid
 
 
-def get_token(response):
+def get_token(message):
 
     try:
-        token= response.token.hex()
+        token= message.token.hex()
     except Exception:
         print("[ERROR] Token extraction")
         return None
@@ -150,22 +150,22 @@ def get_token(response):
     return token
 
 
-def get_options(response):
+def get_options(message):
 
     try:
 
         options = None
 
         # if options are defined
-        if (len(response.opt._options.keys()) > 0):
+        if (len(message.opt._options.keys()) > 0):
             options = {}
 
             options_key = []
-            for option in response.opt._options:
+            for option in message.opt._options:
                 options_key.append(str(option))
 
             options_value = []
-            for option in response.opt.option_list():
+            for option in message.opt.option_list():
                 options_value.append(str(option))
 
             for i in range(len(options_key)):
@@ -178,24 +178,24 @@ def get_options(response):
     return options
 
 
-def get_payload(response):
+def get_payload(message):
 
-    if isinstance(response.payload, bytes):
+    if isinstance(message.payload, bytes):
         try:
-            payload = response.payload.decode("utf-8")
+            payload = message.payload.decode("utf-8")
         except UnicodeDecodeError as e:
             print(f"\t\t\tFailed to decode payload: {e}")
-            payload = response.payload  # fallback to raw bytes
+            payload = message.payload  # fallback to raw bytes
     else:
-        payload = response.payload  # already a str
+        payload = message.payload  # already a str
 
     return payload
 
 
-def get_payload_length(response):
+def get_payload_length(message):
 
     try:
-        payload_length = len(response.payload)
+        payload_length = len(message.payload)
     except Exception:
         print("[ERROR] Payload Length extraction")
         return None
@@ -203,10 +203,10 @@ def get_payload_length(response):
     return payload_length
 
 
-def get_observe(response, uri):
+def get_observe(message, uri):
 
     try:
-        observe = response.opt.observe
+        observe = message.opt.observe
     except Exception:
         print("[ERROR] Observe Option extraction")
         return None

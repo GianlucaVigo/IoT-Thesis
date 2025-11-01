@@ -1,51 +1,19 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
 import pandas as pd
 import plotly.express as px
 import gc
 import datetime
 
-from utils import files_handling
 from collections import Counter
+
+#############################
 
 CHUNK_SIZE = 10000
 
-def parse_csv(data_path, mode, ip_info_df, focused_analysis):
+#############################
 
-    # data dict to plot
-    dict_plot = Counter()
-
-    with pd.read_csv(data_path, chunksize=CHUNK_SIZE, usecols=['saddr']) as csv_reader:
-
-        for chunk in csv_reader:
-
-            for index, data_row in chunk.iterrows():
-
-                if focused_analysis != None:
-                    df_to_analyse = ip_info_df[(ip_info_df['saddr'] == data_row['saddr']) & (ip_info_df[mode] == focused_analysis)]
-                else:
-                    df_to_analyse = ip_info_df[ip_info_df['saddr'] == data_row['saddr']]
-
-                for index, ip_info_row in df_to_analyse.iterrows():
-
-                    # format already present in the counter
-                    dict_plot.update([ip_info_row[mode]])
-
-            # clean the memory
-            del chunk
-
-            
-        # clean the memory
-        del ip_info_df
-        gc.collect()
-
-    print(dict_plot)
-
-    return dict_plot
-
-
-def complete_or_partial_analysis(mode, ip_info_df):
+def complete_or_partial_analysis(mode, unique_elements):
 
     # focus on single element or entire picture?
     print(f"Do you want to analyse data of:\n\t1. one specific {mode}\n\t2. all of them\n")
@@ -55,84 +23,69 @@ def complete_or_partial_analysis(mode, ip_info_df):
 
     if focused_analysis_choice == 1:
         print(f"Select the {mode} you're interested:\n")
-        elements = ip_info_df[mode].unique()
-        for id, elem in enumerate(elements):
+
+        for id, elem in enumerate(unique_elements):
             print(f"\t{id}. {elem}")
     
         print("\nPlease, specify the index:")
         choice = int(input())
 
-        print(f"You have selected: {elements[choice]}")
+        print(f"You have selected: {unique_elements[choice]}")
 
-        focused_analysis = elements[choice]
+        focused_analysis = unique_elements[choice]
 
     return focused_analysis
 
+#############################
 
-''''''
 def analysis(paths, mode):
-
-    # IP INFO DATAFRAME
-    ip_info_df_frames = []
-
-    for path_dict in paths:
-
-        with pd.read_csv(path_dict['ip_info'], chunksize=CHUNK_SIZE, usecols=['saddr', mode]) as csv_reader:
-
-            for chunk in csv_reader:
-
-                ip_info_df_frames.append(chunk)
-
-    ip_info_df = pd.concat(ip_info_df_frames, ignore_index=True)
+    
+    data_per_date_dict = {} 
+        
+    for path in paths:
+            
+        # take only date and ignore '.csv' part of the string 
+        current_date = path.split('/')[4][:-4] 
+            
+        data_dict = Counter() 
+            
+        for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=[mode]): 
+                
+            vc = chunk[mode].value_counts(dropna=True)
+                
+            data_dict.update(vc.to_dict()) 
+            
+            
+        if current_date in data_per_date_dict:
+            data_per_date_dict[current_date].update(data_dict)
+        else:
+            data_per_date_dict[current_date] = data_dict 
+                
+    # flatten the structure 
+    rows = [ 
+        {"date": date, mode: item, "count": count} 
+        for date, counter in data_per_date_dict.items() 
+        for item, count in counter.items() 
+    ] 
+            
+    df_plot = pd.DataFrame(rows)
+    
+    #######################################
+    
+    unique_elements = df_plot[mode].unique()
 
     #######################################
 
     # COMPLETE or PARTIAL ANALYSIS
-    focused_analysis = complete_or_partial_analysis(mode, ip_info_df)
+    focused_analysis = complete_or_partial_analysis(mode, unique_elements)
 
     #######################################
-
-    # MODE DISTRIBUTION DATAFRAME
-    # dataframes to concatenate
-    data_per_date_dict = []
-
-    # internet partition level
-    for path_dict in paths:
-
-        # dates level
-        for date_path in path_dict['data']:
-
-            # take only date and ignore '.csv' part of the string
-            current_date = date_path.split('/')[5][:-4]
+    
+    if focused_analysis != None:
+        df_plot = df_plot[df_plot[mode] == focused_analysis]
         
-            # get the counter dictionary considering the selected csv partition and mode
-            date_dict = parse_csv(date_path, mode, ip_info_df, focused_analysis)
-
-            to_store = {'date': current_date, 'data': date_dict}
-
-            appended = False 
-            for date in data_per_date_dict:
-                if date['date'] == to_store['date']:
-                    date['data'].update(to_store['data'])
-                    appended = True
-
-            if not appended:
-                data_per_date_dict.append(to_store)
-
-    # flatten the structure
-    rows = [
-        {"date": entry["date"], mode: country, "count": count}
-        for entry in data_per_date_dict
-        for country, count in entry["data"].items()
-    ]
-
-    # convert the list of dictionaries into a pandas dataframe for plotting
-    df_plot = pd.DataFrame(rows)
     df_plot.sort_values(by=['date', 'count'], ignore_index=True, inplace=True, ascending=True)
-
     print(df_plot)
-
-   #######################################
 
     # PLOTTING
 
@@ -174,4 +127,80 @@ def analysis(paths, mode):
     del df_plot
     gc.collect()
 
+    return
+
+def stability_analysis(data_paths):
+    
+    print(data_paths)
+    
+    on = Counter()
+    off = Counter()
+    
+    
+    
+    portions_datasets = {}
+    
+    for path in data_paths:
+        portion_id = int(path.split('/')[3])
+        
+        if portion_id in portions_datasets.keys():
+            portions_datasets[portion_id].append(path)
+        else:
+            portions_datasets[portion_id] = [path]
+            
+    print(portions_datasets)
+    
+    
+    
+    
+    ip_stability = {}
+    
+    for _, portion_dataset_path in portions_datasets.items():
+        
+        for date_path in portion_dataset_path:
+            
+            current_date_str = path.split('/')[4][:-4]
+        
+            for chunk in pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['saddr']):
+                
+                for _, row in chunk.iterrows():
+                    
+                    ip = row['saddr']
+                    
+                    # ip address has been already seen
+                    if ip in ip_stability.keys():
+                        
+                        modified_last_str = ip_stability[ip][1]
+                        
+                        current_date = datetime.datetime.strptime(current_date_str, "%Y-%m-%d").date()
+                        modified_last = datetime.datetime.strptime(modified_last_str, "%Y-%m-%d").date()
+                        
+                        diff = current_date - modified_last
+                        
+                        # yesterday was still active/on
+                        if diff == 1:
+                            
+                            # incrementing the time interval in which the ip is on/active
+                            ip_stability[ip][0] += 1
+                            # updating modified last date
+                            ip_stability[ip][1] = current_date_str
+                        
+                        # from diff days the ip was not on/active
+                        elif diff > 1:
+                            
+                            on.update([ip_stability[ip][0]])
+                            off.update([diff])
+                            
+                            # start over
+                            ip_stability[ip] = [1, current_date_str]
+                            
+                    # first time an ip address appears
+                    else:
+                        ip_stability[ip] = [1, current_date_str]
+        
+    print(on)
+    
+    print(off)
+        
+    
     return

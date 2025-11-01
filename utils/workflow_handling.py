@@ -1,6 +1,5 @@
 import maxminddb
 import pandas as pd
-import datetime
 import os
 
 from utils import payload_handling
@@ -89,28 +88,14 @@ def extract_ip_info(ip_list_df):
 ################################################################################################
 
 # perform the resource discovery operation -> GET (<IP> + <URI>)
-async def get(ip_address, res_uri, context):
+async def get(ip_address, truncated_decoded_msg, context):
 
-    decoded_msg = {
-        'version': None,
-        'mtype': None,
-        'token': None,
-        'token_length': None,
-        'code': None,
-        'mid': None,
-        'options': None,
-        'observable': None,
-        'data': None,
-        'data_length': None
-    }
-
-    print(f"\t\t\tPerforming new GET request to {res_uri} ...")
+    print(f"\t\t\tPerforming new GET request to {truncated_decoded_msg['uri']} ...")
 
     # resource URI to be checked
-    uri_to_check = f"coap://{ip_address}:5683{res_uri}"
+    uri_to_check = f"coap://{ip_address}:5683{truncated_decoded_msg['uri']}"
     # build the request message
     request = Message(code=GET, uri=uri_to_check)
-
 
     try:
         # send the request and obtained the response
@@ -118,11 +103,12 @@ async def get(ip_address, res_uri, context):
 
     except Exception as e:
         print(f"\t{e}")
-        return decoded_msg
+        print("\t[aiocoap] Unsuccessful response: storing truncated message ...")
+        return truncated_decoded_msg
 
     else:
 
-        decoded_msg.update({
+        full_decoded_msg = {
             'version': payload_handling.get_version(response),
             'mtype': payload_handling.get_mtype(response),
             'token': payload_handling.get_token(response),
@@ -130,12 +116,13 @@ async def get(ip_address, res_uri, context):
             'code': payload_handling.get_code(response),
             'mid': payload_handling.get_mid(response),
             'options': payload_handling.get_options(response),
-            'observable': payload_handling.get_observe(response, res_uri),
+            'observable': payload_handling.get_observe(response, truncated_decoded_msg['uri']),
             'data': payload_handling.get_payload(response),
-            'data_length': payload_handling.get_payload_length(response)
-        })
+            'data_length': payload_handling.get_payload_length(response),
+            'uri': truncated_decoded_msg['uri']
+        }
 
-        return decoded_msg # success
+        return full_decoded_msg # success
 
 ################################################################################################
 # decode_data()
@@ -155,7 +142,8 @@ def decode_data(binary_data, uri):
         'observable': None,
         # maintain the raw payload as is
         'data': binary_data,     
-        'data_length': len(binary_data)
+        'data_length': len(binary_data),
+        'uri': uri
     }
 
     # ----- decoding ZMap binary message -----
@@ -189,9 +177,7 @@ def decode_data(binary_data, uri):
 
 ################################################################################################
 
-def create_today_files(output_paths):
-    
-    current_date = str(datetime.date.today())
+def create_today_files(output_paths, current_date):
     
     for file_path in output_paths:
 
@@ -208,7 +194,7 @@ def create_today_files(output_paths):
 # decode()
 #   it takes as input the raw/binary ZMap data field and it returns a structured object representing a CoAP response message
 #   O: version, message type (mtype), token length, code (response code), mid (message id), tokenn, options, data (payload)
-async def decode(df_zmap, approach):
+async def decode(df_zmap, uri, approach):
 
     # it contains all the decoded messages
     new_data_list = []
@@ -232,21 +218,22 @@ async def decode(df_zmap, approach):
             'options': None,
             'observable': None,
             'data': None,
-            'data_length': None
+            'data_length': None,
+            'uri': None
         }
 
         # if success field is equal to 1 (all UDP kind of result)
         if row['success'] == 1:
 
             # decoding binary data and get a dictionary as result
-            decoded_msg = decode_data(row['data'], row['uri'])
+            decoded_msg = decode_data(row['data'], uri)
 
             # if decodede message code field is equal to None -> something went wrong during the decoding process
             #   ex. undecodable message, ...
             if decoded_msg['code'] is None:
 
                 # update summary
-                decode_results.update([f"unsuccess/{decoded_msg['data']}"])
+                decode_results.update([f"undecodable_msg/{decoded_msg['data']}"])
 
             # otherwise it is a success
             else:
@@ -263,7 +250,7 @@ async def decode(df_zmap, approach):
                     print(f"ZMap Payload decoded: {decoded_msg['data']}")
                     
                     # -> if so, perform a new discovery through aiocoap library
-                    decoded_msg = await get(row['saddr'], row['uri'], context)
+                    decoded_msg = await get(row['saddr'], decoded_msg, context)
 
                     # print the complete/not truncated data/payload field
                     print(f"ZMap Complete Payload decoded: {decoded_msg['data']}")
@@ -295,6 +282,7 @@ async def decode(df_zmap, approach):
                             decoded_msg['observable'] = 3
                     # ------------------------------------------
 
+
         # if success field is equal to 0 (all icmp, ... kind of result)
         else:
             decode_results.update([f"unsuccess/{row['icmp_unreach_str']}"])
@@ -307,7 +295,7 @@ async def decode(df_zmap, approach):
     await context.shutdown()
 
     # Build dataframe from list
-    columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_length', 'observable']
+    columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_length', 'observable', 'uri']
     for col in columns:
         df_zmap[col] = [d[col] for d in new_data_list]
 

@@ -1,0 +1,611 @@
+saddr,saddr_raw,daddr,daddr_raw,ipid,ttl,classification,success,sport,dport,udp_pkt_size,data,icmp_responder,icmp_type,icmp_code,icmp_unreach_str,repeat,cooldown,timestamp_str,timestamp_ts,timestamp_us,observable,user_inserted,version,mtype,token,token_length,code,mid,options,data_length,uri
+46.173.50.116,1949478190,192.168.0.123,2063640768,55155,51,udp,1,5683,46515,12,,,,,,0,1,2025-10-31T15:34:46.612+0100,1761921286,612213,3,True,1,2,,0,4.04 Not Found,32112,,0,/
+37.204.171.78,1319881765,192.168.0.123,2063640768,34377,53,udp,1,5683,52522,12,,,,,,0,1,2025-10-31T15:34:46.618+0100,1761921286,618114,3,True,1,2,,0,4.04 Not Found,32112,,0,/
+44.250.80.149,2505112108,192.168.0.123,2063640768,61834,111,udp,1,5683,39565,419,"****************************************************************
+CoAP RFC 7252****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2022 Institute for Pervasive Computing, ETH Zurich and others
+****************************************************************",,,,,0,1,2025-10-31T15:34:46.722+0100,1761921286,722082,3,True,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",405,/
+42.191.89.119,2002370346,192.168.0.123,2063640768,43639,50,udp,1,5683,33566,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.745+0100,1761921286,745388,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,50,udp,1,5683,33999,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.752+0100,1761921286,752620,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,51121,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.759+0100,1761921286,759087,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,38909,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.762+0100,1761921286,762797,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,50477,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.776+0100,1761921286,776700,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+36.141.76.76,1280085284,192.168.0.123,2063640768,60203,42,udp,1,5683,41070,154,"This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",,,,,0,1,2025-10-31T15:34:46.801+0100,1761921286,801167,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",136,/
+42.224.183.32,548921386,192.168.0.123,2063640768,20194,36,udp,1,5683,59891,22,Not Found,,,,,0,1,2025-10-31T15:34:46.804+0100,1761921286,804348,3,True,1,2,,0,4.04 Not Found,32112,,9,/
+60.187.247.219,3690445628,192.168.0.123,2063640768,51962,50,udp,1,5683,52220,22,Not Found,,,,,0,1,2025-10-31T15:34:46.808+0100,1761921286,808234,3,True,1,2,,0,4.04 Not Found,32112,,9,/
+60.53.255.138,2331981116,192.168.0.123,2063640768,20199,50,udp,1,5683,40244,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-10-31T15:34:46.831+0100,1761921286,831055,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+36.158.57.157,2637798948,192.168.0.123,2063640768,40805,41,udp,1,5683,53947,462,"************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",,,,,0,1,2025-10-31T15:34:46.849+0100,1761921286,849457,3,True,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",448,/
+42.52.135.172,2894541866,192.168.0.123,2063640768,30757,38,udp,1,5683,56629,22,Not Found,,,,,0,1,2025-10-31T15:34:46.878+0100,1761921286,878383,3,True,1,2,,0,4.04 Not Found,32112,,9,/
+39.183.171.83,1403762471,192.168.0.123,2063640768,33854,42,udp,1,5683,56396,462,"************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",,,,,0,1,2025-10-31T15:34:46.901+0100,1761921286,901654,3,True,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",448,/
+60.187.247.219,3690445628,192.168.0.123,2063640768,52333,50,udp,1,5683,33963,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:00.934+0100,1761921300,934858,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchdevice
+36.141.76.76,1280085284,192.168.0.123,2063640768,61081,42,udp,1,5683,56310,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:00.944+0100,1761921300,944670,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchdevice
+42.224.183.32,548921386,192.168.0.123,2063640768,20211,36,udp,1,5683,49673,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:00.954+0100,1761921300,954361,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchdevice
+42.52.135.172,2894541866,192.168.0.123,2063640768,30760,38,udp,1,5683,51717,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:00.999+0100,1761921300,999289,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchdevice
+60.187.247.219,3690445628,192.168.0.123,2063640768,52407,50,udp,1,5683,41348,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:15.055+0100,1761921315,55899,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/netinfo
+36.141.76.76,1280085284,192.168.0.123,2063640768,62048,42,udp,1,5683,39055,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:15.061+0100,1761921315,61767,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/netinfo
+42.224.183.32,548921386,192.168.0.123,2063640768,20212,36,udp,1,5683,44489,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:15.066+0100,1761921315,66610,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/netinfo
+42.52.135.172,2894541866,192.168.0.123,2063640768,30775,36,udp,1,5683,46739,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:15.093+0100,1761921315,93065,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/netinfo
+60.187.247.219,3690445628,192.168.0.123,2063640768,53359,50,udp,1,5683,35675,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:29.275+0100,1761921329,275261,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchack
+36.141.76.76,1280085284,192.168.0.123,2063640768,62909,42,udp,1,5683,39211,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:29.276+0100,1761921329,276289,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchack
+60.187.247.219,3690445628,192.168.0.123,2063640768,53509,50,udp,1,5683,47821,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:43.303+0100,1761921343,303683,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/unbind
+36.141.76.76,1280085284,192.168.0.123,2063640768,63399,42,udp,1,5683,49891,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:43.306+0100,1761921343,306995,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/unbind
+60.187.247.219,3690445628,192.168.0.123,2063640768,53686,50,udp,1,5683,48934,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:57.435+0100,1761921357,435326,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/file
+36.141.76.76,1280085284,192.168.0.123,2063640768,63872,42,udp,1,5683,40058,31,Method Not Allowed,,,,,0,1,2025-10-31T15:35:57.436+0100,1761921357,436209,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/file
+36.141.76.76,1280085284,192.168.0.123,2063640768,65041,42,udp,1,5683,47450,31,Method Not Allowed,,,,,0,1,2025-10-31T15:36:11.566+0100,1761921371,566125,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/log
+36.141.76.76,1280085284,192.168.0.123,2063640768,862,42,udp,1,5683,58640,31,Method Not Allowed,,,,,0,1,2025-10-31T15:36:25.800+0100,1761921385,800238,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/command/selfdetect
+36.141.76.76,1280085284,192.168.0.123,2063640768,2192,42,udp,1,5683,37399,22,Not Found,,,,,0,1,2025-10-31T15:36:39.828+0100,1761921399,828791,2,False,1,2,,0,4.04 Not Found,32112,,9,/qlink/searchdevice?true
+36.141.76.76,1280085284,192.168.0.123,2063640768,3043,42,udp,1,5683,59325,22,Not Found,,,,,0,1,2025-10-31T15:36:53.995+0100,1761921413,995039,2,False,1,2,,0,4.04 Not Found,32112,,9,/qlink/searchRouter?true
+36.141.76.76,1280085284,192.168.0.123,2063640768,3983,42,udp,1,5683,60876,22,Not Found,,,,,0,1,2025-10-31T15:37:07.989+0100,1761921427,989448,2,False,1,2,,0,4.04 Not Found,32112,,9,/qlink/guide?true
+36.141.76.76,1280085284,192.168.0.123,2063640768,4273,42,udp,1,5683,35768,22,Not Found,,,,,0,1,2025-10-31T15:37:22.231+0100,1761921442,231749,2,False,1,2,,0,4.04 Not Found,32112,,9,/qlink/request?true
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,48080,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.011+0100,1761921456,11239,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+42.191.89.119,2002370346,192.168.0.123,2063640768,54120,50,udp,1,5683,37039,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.019+0100,1761921456,19235,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,46820,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.058+0100,1761921456,58308,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+60.187.247.219,3690445628,192.168.0.123,2063640768,55831,50,udp,1,5683,45665,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.078+0100,1761921456,78637,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+36.141.76.76,1280085284,192.168.0.123,2063640768,4578,42,udp,1,5683,48816,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.090+0100,1761921456,90393,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+60.53.255.138,2331981116,192.168.0.123,2063640768,32161,50,udp,1,5683,56486,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.103+0100,1761921456,103161,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+39.183.171.83,1403762471,192.168.0.123,2063640768,34796,42,udp,1,5683,54878,26,should post ,,,,,0,1,2025-10-31T15:37:36.128+0100,1761921456,128088,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/device/inform/data
+36.158.57.157,2637798948,192.168.0.123,2063640768,44518,41,udp,1,5683,50546,26,should post ,,,,,0,1,2025-10-31T15:37:36.135+0100,1761921456,135206,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/device/inform/data
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,50482,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.157+0100,1761921456,157922,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.145.62.50,842961201,192.168.0.123,2063640768,0,50,udp,1,5683,36877,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:36.164+0100,1761921456,164856,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+36.141.76.76,1280085284,192.168.0.123,2063640768,5493,42,udp,1,5683,56780,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:50.280+0100,1761921470,280466,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WiFiParameterSync
+60.187.247.219,3690445628,192.168.0.123,2063640768,56865,50,udp,1,5683,44984,31,Method Not Allowed,,,,,0,1,2025-10-31T15:37:50.281+0100,1761921470,281374,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WiFiParameterSync
+60.187.247.219,3690445628,192.168.0.123,2063640768,57977,50,udp,1,5683,42200,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:04.411+0100,1761921484,411879,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WiFiSwitch
+36.141.76.76,1280085284,192.168.0.123,2063640768,5944,42,udp,1,5683,45829,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:04.412+0100,1761921484,412773,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WiFiSwitch
+60.187.247.219,3690445628,192.168.0.123,2063640768,58375,50,udp,1,5683,41016,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:18.440+0100,1761921498,440270,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/RadioConfig
+36.141.76.76,1280085284,192.168.0.123,2063640768,6369,42,udp,1,5683,45547,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:18.441+0100,1761921498,441137,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/RadioConfig
+60.187.247.219,3690445628,192.168.0.123,2063640768,58544,50,udp,1,5683,52405,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:32.520+0100,1761921512,520099,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WPS
+36.141.76.76,1280085284,192.168.0.123,2063640768,6678,42,udp,1,5683,37631,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:32.533+0100,1761921512,533471,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/WPS
+60.187.247.219,3690445628,192.168.0.123,2063640768,59801,50,udp,1,5683,60334,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:46.629+0100,1761921526,629457,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/MacFilter
+36.141.76.76,1280085284,192.168.0.123,2063640768,7651,42,udp,1,5683,48993,31,Method Not Allowed,,,,,0,1,2025-10-31T15:38:46.649+0100,1761921526,649121,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/MacFilter
+60.187.247.219,3690445628,192.168.0.123,2063640768,60528,50,udp,1,5683,38206,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:00.834+0100,1761921540,834541,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/Reboot
+36.141.76.76,1280085284,192.168.0.123,2063640768,9050,42,udp,1,5683,60185,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:00.835+0100,1761921540,835801,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/Reboot
+60.187.247.219,3690445628,192.168.0.123,2063640768,61015,50,udp,1,5683,43568,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:14.844+0100,1761921554,844141,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/LEDControl
+36.141.76.76,1280085284,192.168.0.123,2063640768,10343,42,udp,1,5683,34489,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:14.852+0100,1761921554,852356,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/LEDControl
+60.187.247.219,3690445628,192.168.0.123,2063640768,61127,50,udp,1,5683,41597,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:28.994+0100,1761921568,994708,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/RoamingConfig
+36.141.76.76,1280085284,192.168.0.123,2063640768,11579,42,udp,1,5683,55839,31,Method Not Allowed,,,,,0,1,2025-10-31T15:39:28.995+0100,1761921568,995589,2,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/control/RoamingConfig
+36.141.76.76,1280085284,192.168.0.123,2063640768,12305,42,udp,1,5683,41697,3131,"{
+	""data"":	{
+		""hardwareVersion"":	""HV3.0.0"",
+		""softwareVersion"":	""RAX3000-ZXW.ZD.06"",
+		""WorkingMode"":	1,
+		""FlashSize"":	128,
+		""RamSize"":	256,
+		""CPUOccupancyRate"":	24,
+		""RamOccupancyRate"":	48,
+		""UpTime"":	""41962995"",
+		""MacFilterEnable"":	0,
+		""MacFilterPolicy"":	0,
+		""MacFilterEntries"":	"""",
+		""LEDOnOff"":	1,
+		""BandSteeringStatus"":	0,
+		""RoamingSwitch"":	0,
+		""LowRSSI2.4G"":	-79,
+		""LowRSSI5G"":	-79,
+		""IPv6ConnStatus"":	""Unconnected"",
+		""IPv6IPAddressOrigin"":	""AutoConfigured"",
+		""IPv6IPAddress"":	""::"",
+		""IPv6DNSServers"":	""::"",
+		""IPv6PrefixDelegationEnabled"":	""FALSE"",
+		""IPv6PrefixOrigin"":	""PrefixDelegation"",
+		""IPv6Prefix"":	""::"",
+		""IPv6PrefixPltime"":	0,
+		""IPv6PrefixVltime"":	0,
+		""DefaultIPv6Gateway"":	""::"",
+		""Dslite_Enable"":	""FALSE"",
+		""IPv6Status"":	0,
+		""SyncCode"":	""0"",
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11b/g/n/ax"",
+				""NoiseLevel"":	""-87"",
+				""LoadRate"":	33,
+				""InterferencePercent"":	33,
+				""Channel"":	""11"",
+				""Bandwidth"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""SSIDStandard"":	""802.11a/n/ac/ax"",
+				""NoiseLevel"":	""-92"",
+				""LoadRate"":	19,
+				""InterferencePercent"":	19,
+				""Channel"":	""161"",
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""特百惠"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""13680380168"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""SSID2"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""特百惠_GUEST"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	1,
+				""SSID"":	""特百惠_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""13680380168"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""特百惠-5G"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Pwd"":	""13680380168"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-18B5DE-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""!@#$%12345"",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""特百惠-5G_GUEST"",
+				""SecurityMode"":	""None"",
+				""Pwd"":	"""",
+				""Encrypt"":	3,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	1,
+				""SSID"":	""特百惠-5G_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Pwd"":	""13680380168"",
+				""Encrypt"":	1,
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",,,,,0,1,2025-10-31T15:39:43.228+0100,1761921583,228197,2,False,1,2,54ec,2,2.05 Content,17323,"{""CONTENT_FORMAT"": ""JSON""}",3116,/apdevice/query/ApConfigInfo
+60.187.247.219,3690445628,192.168.0.123,2063640768,62247,50,udp,1,5683,53790,815,"{""deviceId"":"""",""data"":{""hardwareVersion"":""V1.0.00"",""softwareVersion"":""V1.00.33321M01"",""WorkingMode"":1,""FlashSize"":128,""RamSize"":128,""CPUOccupancyRate"":1,""RamOccupancyRate"":79,""UpTime"":""543510"",""MacFilterEnable"":0,""MacFilterPolicy"":0,""MacFilterEntries"":"""",""LEDOnOff"":1,""RoamingSwitch"":0,""LowRSSI2.4G"":-100,""LowRSSI5G"":-100,""SyncCode"":""0"",""Radios"":[{""Radio"":""2.4G"",""Enable"":1,""TransmitPower"":""100"",""Channel"":11},{""Radio"":""5G"",""Enable"":1,""TransmitPower"":""100"",""Channel"":157}],""Configurations"":[{""Radio"":""2.4G"",""Index"":1,""Enable"":1,""SSID"":""hu_home"",""SecurityMode"":""WPA2-Personal"",""Pwd"":""hzhhzhhzh"",""MaxAssociateNum"":64,""SSIDAdvertisementEnabled"":1},{""Radio"":""5G"",""Index"":5,""Enable"":1,""SSID"":""hu_home_5G"",""SecurityMode"":""WPA2-Personal"",""Pwd"":""hzhhzhhzh"",""MaxAssociateNum"":64,""SSIDAdvertisementEnabled"":1}]}}",,,,,0,1,2025-10-31T15:39:43.304+0100,1761921583,304059,3,False,1,2,,0,2.05 Content,32112,,802,/apdevice/query/ApConfigInfo
+60.187.247.219,3690445628,192.168.0.123,2063640768,62927,50,udp,1,5683,43329,230,"{""deviceId"":"""",""data"":{""UplinkType"":""Ethernet"",""MacAddress"":""BC13A84586C0"",""Radio"":"""",""SSID"":"""",""Channel"":0,""Noise"":"""",""SNR"":"""",""RSSI"":"""",""RxRate"":""1000"",""TxRate"":""1000"",""RxRate_rt"":""3.315936"",""TxRate_rt"":""0.139096""}}",,,,,0,1,2025-10-31T15:39:57.605+0100,1761921597,605901,3,False,1,2,,0,2.05 Content,32112,,217,/apdevice/query/UplinkStatus
+36.141.76.76,1280085284,192.168.0.123,2063640768,13114,42,udp,1,5683,53804,284,"{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""00005E000175"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""0.048"",
+		""TxRate_rt"":	""0.702"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",,,,,0,1,2025-10-31T15:39:57.690+0100,1761921597,690892,2,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""JSON""}",269,/apdevice/query/UplinkStatus
+60.187.247.219,3690445628,192.168.0.123,2063640768,64153,50,udp,1,5683,42319,638,"{""deviceId"":"""",""data"":{""Devices"":[{""MacAddress"":""EAE4841F2407"",""VMacAddress"":""EAE4841F2407"",""UpTime"":""5517"",""Radio"":""5G"",""SSID"":""hu_home_5G"",""RSSI"":""-56"",""RxRate"":""585"",""TxRate"":""780"",""RxRate_rt"":""1.459656"",""TxRate_rt"":""0.026832""},{""MacAddress"":""EE37E3BE115F"",""VMacAddress"":""EE37E3BE115F"",""UpTime"":""5311"",""Radio"":""2.4G"",""SSID"":""hu_home"",""RSSI"":""-58"",""RxRate"":""65"",""TxRate"":""117"",""RxRate_rt"":""21.187616"",""TxRate_rt"":""0.781872""},{""MacAddress"":""C21F03FA768C"",""VMacAddress"":""C21F03FA768C"",""UpTime"":""1990"",""Radio"":""2.4G"",""SSID"":""hu_home"",""RSSI"":""-68"",""RxRate"":""11"",""TxRate"":""72.2"",""RxRate_rt"":""0.000688"",""TxRate_rt"":""0.000384""}]}}",,,,,0,1,2025-10-31T15:40:11.798+0100,1761921611,798002,3,False,1,2,,0,2.05 Content,32112,,625,/apdevice/query/STAInfo
+36.141.76.76,1280085284,192.168.0.123,2063640768,14008,42,udp,1,5683,39462,461,"{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.2"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""94A408841522"",
+				""VMacAddress"":	""94A408841522"",
+				""STAType"":	""other"",
+				""HostName"":	""GWIPC-4325747138"",
+				""UpTime"":	""2058965"",
+				""Radio"":	""2.4G"",
+				""SSID"":	""特百惠"",
+				""RSSI"":	""-49"",
+				""RxRate"":	""1"",
+				""TxRate"":	""72"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}],
+		""STANumber"":	1
+	},
+	""deviceId"":	""""
+}",,,,,0,1,2025-10-31T15:40:11.856+0100,1761921611,856366,2,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""JSON""}",446,/apdevice/query/STAInfo
+60.187.247.219,3690445628,192.168.0.123,2063640768,65433,50,udp,1,5683,52071,965,"{""deviceId"":"""",""data"":{""Stats"":[{""Radio"":""5G"",""Index"":5,""SSID"":""hu_home_5G"",""TotalBytesSent"":2147483647,""TotalBytesReceived"":436280155,""TotalPacketsSent"":10021218,""TotalPacketsReceived"":1463574,""ErrorsSent"":168,""ErrorsReceived"":0,""DiscardPacketsSent"":1064,""DiscardPacketsReceived"":0},{""Radio"":""2.4G"",""Index"":1,""SSID"":""hu_home"",""TotalBytesSent"":463219145,""TotalBytesReceived"":1601668558,""TotalPacketsSent"":3846002,""TotalPacketsReceived"":6300185,""ErrorsSent"":923,""ErrorsReceived"":27063,""DiscardPacketsSent"":1657,""DiscardPacketsReceived"":0},{""Radio"":""0"",""Index"":2,""SSID"":"""",""TotalBytesSent"":0,""TotalBytesReceived"":0,""TotalPacketsSent"":0,""TotalPacketsReceived"":0,""ErrorsSent"":0,""ErrorsReceived"":0,""DiscardPacketsSent"":0,""DiscardPacketsReceived"":0},{""Radio"":""0"",""Index"":1,""SSID"":"""",""TotalBytesSent"":0,""TotalBytesReceived"":0,""TotalPacketsSent"":0,""TotalPacketsReceived"":0,""ErrorsSent"":0,""ErrorsReceived"":0,""DiscardPacketsSent"":0,""DiscardPacketsReceived"":0}]}}",,,,,0,1,2025-10-31T15:40:25.871+0100,1761921625,871837,3,False,1,2,,0,2.05 Content,32112,,952,/apdevice/query/WiFiStats
+36.141.76.76,1280085284,192.168.0.123,2063640768,14950,42,udp,1,5683,35346,2469,"{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""特百惠"",
+				""TotalBytesSent"":	-305997733,
+				""TotalBytesReceived"":	-1790895952,
+				""TotalPacketsSent"":	119217448,
+				""TotalPacketsReceived"":	433571291,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""SSID2"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""特百惠_GUEST"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""特百惠_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""特百惠-5G"",
+				""TotalBytesSent"":	883821619,
+				""TotalBytesReceived"":	1233211255,
+				""TotalPacketsSent"":	201183481,
+				""TotalPacketsReceived"":	670824073,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""MESH-18B5DE-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""特百惠-5G_GUEST"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""特百惠-5G_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",,,,,0,1,2025-10-31T15:40:25.888+0100,1761921625,888673,2,False,1,2,1b9b,2,2.05 Content,45487,"{""CONTENT_FORMAT"": ""JSON""}",2454,/apdevice/query/WiFiStats
+36.141.76.76,1280085284,192.168.0.123,2063640768,15273,42,udp,1,5683,42751,2171,"{
+	""data"":	{
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""11"",
+				""LoadRate"":	40,
+				""Bandwidth"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Enable"":	1,
+				""TransmitPower"":	""100"",
+				""Channel"":	""161"",
+				""LoadRate"":	26,
+				""Bandwidth"":	0
+			}],
+		""Configurations"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""Enable"":	1,
+				""SSID"":	""特百惠"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""13680380168"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""Enable"":	0,
+				""SSID"":	""SSID2"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""Enable"":	0,
+				""SSID"":	""特百惠_GUEST"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""Enable"":	1,
+				""SSID"":	""特百惠_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""13680380168"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""Enable"":	1,
+				""SSID"":	""特百惠-5G"",
+				""SecurityMode"":	""MIXED-WPA2WPA3"",
+				""Encrypt"":	1,
+				""Pwd"":	""13680380168"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""Enable"":	1,
+				""SSID"":	""MESH-18B5DE-5G"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	3,
+				""Pwd"":	""!@#$%12345"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""Enable"":	0,
+				""SSID"":	""特百惠-5G_GUEST"",
+				""SecurityMode"":	""None"",
+				""Encrypt"":	3,
+				""Pwd"":	"""",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	1
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""Enable"":	1,
+				""SSID"":	""特百惠-5G_Wi-Fi5"",
+				""SecurityMode"":	""WPA2-Personal"",
+				""Encrypt"":	1,
+				""Pwd"":	""13680380168"",
+				""MaxAssociateNum"":	64,
+				""SSIDAdvertisementEnabled"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",,,,,0,1,2025-10-31T15:40:40.367+0100,1761921640,367794,2,False,1,2,86cf,2,2.05 Content,12509,"{""CONTENT_FORMAT"": ""JSON""}",2156,/apdevice/query/WiFiStatus
+36.141.76.76,1280085284,192.168.0.123,2063640768,15662,42,udp,1,5683,56538,4157,"{
+	""respCode"":	1001,
+	""restCont"":	""invalid argument""
+}",,,,,0,1,2025-10-31T15:40:57.776+0100,1761921657,776188,2,False,1,2,a49e,2,2.05 Content,45703,"{""CONTENT_FORMAT"": ""JSON""}",54,/apdevice/query/WlanNeighborInfo
+60.187.247.219,3690445628,192.168.0.123,2063640768,704,50,udp,1,5683,42341,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:09.463+0100,1761921669,463190,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/apdevice/searchap
+60.187.247.219,3690445628,192.168.0.123,2063640768,1223,50,udp,1,5683,33348,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:23.683+0100,1761921683,683359,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/addgw
+60.187.247.219,3690445628,192.168.0.123,2063640768,1641,50,udp,1,5683,47789,26,"{""gwList"":[]}",,,,,0,1,2025-10-31T15:41:37.655+0100,1761921697,655168,3,False,1,2,,0,2.05 Content,32112,,13,/qlink/querygw
+42.191.89.119,2002370346,192.168.0.123,2063640768,64635,50,udp,1,5683,60956,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.731+0100,1761921711,731121,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.145.62.50,842961201,192.168.0.123,2063640768,0,50,udp,1,5683,49531,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.751+0100,1761921711,751095,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,42465,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.784+0100,1761921711,784758,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,50,udp,1,5683,52439,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.811+0100,1761921711,811517,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+60.53.255.138,2331981116,192.168.0.123,2063640768,54764,50,udp,1,5683,33302,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.814+0100,1761921711,814018,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,48630,31,Method Not Allowed,,,,,0,1,2025-10-31T15:41:51.829+0100,1761921711,829981,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,38919,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.851+0100,1761921725,851590,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+42.191.89.119,2002370346,192.168.0.123,2063640768,164,50,udp,1,5683,57224,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.854+0100,1761921725,854472,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,50,udp,1,5683,55041,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.882+0100,1761921725,882897,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,38958,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.886+0100,1761921725,886674,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,50,udp,1,5683,48398,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.888+0100,1761921725,888438,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+60.53.255.138,2331981116,192.168.0.123,2063640768,55079,48,udp,1,5683,43108,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:05.941+0100,1761921725,941149,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+39.183.171.83,1403762471,192.168.0.123,2063640768,50247,42,udp,1,5683,59872,30,not soupport GET,,,,,0,1,2025-10-31T15:42:05.970+0100,1761921725,970407,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/qlink/searchgw
+36.158.57.157,2637798948,192.168.0.123,2063640768,56109,41,udp,1,5683,52954,30,not soupport GET,,,,,0,1,2025-10-31T15:42:05.972+0100,1761921725,972281,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/qlink/searchgw
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,38702,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:19.973+0100,1761921739,973323,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+42.191.89.119,2002370346,192.168.0.123,2063640768,1043,50,udp,1,5683,51161,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:19.978+0100,1761921739,978818,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,50515,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:19.998+0100,1761921739,998174,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,45702,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:19.998+0100,1761921739,998282,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,41371,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:20.010+0100,1761921740,10376,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+60.53.255.138,2331981116,192.168.0.123,2063640768,55203,48,udp,1,5683,48621,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:20.058+0100,1761921740,58866,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+42.191.89.119,2002370346,192.168.0.123,2063640768,1449,50,udp,1,5683,54440,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.101+0100,1761921754,101773,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,49126,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.112+0100,1761921754,112654,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,56742,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.129+0100,1761921754,129069,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,42230,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.129+0100,1761921754,129166,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,36903,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.134+0100,1761921754,134825,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+60.53.255.138,2331981116,192.168.0.123,2063640768,56207,50,udp,1,5683,52688,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:34.187+0100,1761921754,187373,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+42.191.89.119,2002370346,192.168.0.123,2063640768,2055,50,udp,1,5683,57993,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.224+0100,1761921768,224794,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,57480,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.232+0100,1761921768,232698,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,48894,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.248+0100,1761921768,248258,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.145.62.50,842961201,192.168.0.123,2063640768,0,50,udp,1,5683,53227,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.251+0100,1761921768,251101,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,59614,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.254+0100,1761921768,254718,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+60.53.255.138,2331981116,192.168.0.123,2063640768,57440,50,udp,1,5683,44938,31,Method Not Allowed,,,,,0,1,2025-10-31T15:42:48.310+0100,1761921768,310536,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+36.158.57.157,2637798948,192.168.0.123,2063640768,60057,41,udp,1,5683,33817,205,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:42:48.332+0100,1761921768,332750,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",191,/device/inform/bootstrap
+39.183.171.83,1403762471,192.168.0.123,2063640768,53538,42,udp,1,5683,55268,205,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:42:48.371+0100,1761921768,371677,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",191,/device/inform/bootstrap
+42.191.89.119,2002370346,192.168.0.123,2063640768,2593,50,udp,1,5683,37459,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.354+0100,1761921782,354094,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,55411,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.370+0100,1761921782,370895,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,45814,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.371+0100,1761921782,371034,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,59443,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.376+0100,1761921782,376616,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,40109,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.393+0100,1761921782,393756,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+60.53.255.138,2331981116,192.168.0.123,2063640768,58631,50,udp,1,5683,36953,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:02.439+0100,1761921782,439839,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+36.158.57.157,2637798948,192.168.0.123,2063640768,60980,41,udp,1,5683,60873,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:43:02.461+0100,1761921782,461050,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/device/inform/boot
+39.183.171.83,1403762471,192.168.0.123,2063640768,54325,42,udp,1,5683,44561,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:43:02.511+0100,1761921782,511619,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/device/inform/boot
+42.191.89.119,2002370346,192.168.0.123,2063640768,2849,50,udp,1,5683,42176,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.479+0100,1761921796,479496,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,39806,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.493+0100,1761921796,493891,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,50,udp,1,5683,42833,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.505+0100,1761921796,505625,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,50,udp,1,5683,35106,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.546+0100,1761921796,546609,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,37951,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.550+0100,1761921796,550055,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+60.53.255.138,2331981116,192.168.0.123,2063640768,59803,50,udp,1,5683,33730,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:16.556+0100,1761921796,556169,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+42.191.89.119,2002370346,192.168.0.123,2063640768,3644,48,udp,1,5683,38298,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.602+0100,1761921810,602781,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,41539,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.608+0100,1761921810,608914,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,44445,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.611+0100,1761921810,611975,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,43373,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.614+0100,1761921810,614511,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,41391,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.626+0100,1761921810,626139,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+60.53.255.138,2331981116,192.168.0.123,2063640768,60606,50,udp,1,5683,55353,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:30.678+0100,1761921810,678771,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+36.158.57.157,2637798948,192.168.0.123,2063640768,63554,41,udp,1,5683,46186,26,should post ,,,,,0,1,2025-10-31T15:43:30.708+0100,1761921810,708108,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/device/inform/offline
+39.183.171.83,1403762471,192.168.0.123,2063640768,55872,42,udp,1,5683,54596,26,should post ,,,,,0,1,2025-10-31T15:43:30.720+0100,1761921810,720282,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/device/inform/offline
+42.191.89.119,2002370346,192.168.0.123,2063640768,4005,50,udp,1,5683,57869,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.708+0100,1761921824,708614,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,52,udp,1,5683,39179,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.721+0100,1761921824,721245,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,59989,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.732+0100,1761921824,732361,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,42609,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.742+0100,1761921824,742503,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+60.53.255.138,2331981116,192.168.0.123,2063640768,61595,50,udp,1,5683,39674,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.791+0100,1761921824,791182,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+39.183.171.83,1403762471,192.168.0.123,2063640768,57226,42,udp,1,5683,58251,61,"should post example,{
+""deviceId"": ""deviceId""
+
+}",,,,,0,1,2025-10-31T15:43:44.812+0100,1761921824,812068,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",47,/device/inform/heartbeat
+36.158.57.157,2637798948,192.168.0.123,2063640768,63763,41,udp,1,5683,34207,61,"should post example,{
+""deviceId"": ""deviceId""
+
+}",,,,,0,1,2025-10-31T15:43:44.815+0100,1761921824,815213,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",47,/device/inform/heartbeat
+49.145.62.50,842961201,192.168.0.123,2063640768,0,52,udp,1,5683,48305,31,Method Not Allowed,,,,,0,1,2025-10-31T15:43:44.878+0100,1761921824,878068,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+42.191.89.119,2002370346,192.168.0.123,2063640768,4066,50,udp,1,5683,57269,12,,,,,,0,1,2025-10-31T15:43:58.823+0100,1761921838,823719,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.144.220.226,3806105649,192.168.0.123,2063640768,0,50,udp,1,5683,40783,12,,,,,,0,1,2025-10-31T15:43:58.825+0100,1761921838,825591,3,False,1,2,,0,5.03 Service Unavailable,32112,,0,/async
+49.145.117.205,3447034161,192.168.0.123,2063640768,0,52,udp,1,5683,42440,12,,,,,,0,1,2025-10-31T15:43:58.839+0100,1761921838,839276,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.149.201.190,3200881969,192.168.0.123,2063640768,0,52,udp,1,5683,42369,12,,,,,,0,1,2025-10-31T15:43:58.854+0100,1761921838,854807,3,False,1,2,,0,EMPTY,32112,,0,/async
+60.53.255.138,2331981116,192.168.0.123,2063640768,61746,50,udp,1,5683,41856,12,,,,,,0,1,2025-10-31T15:43:58.903+0100,1761921838,903486,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.145.62.50,842961201,192.168.0.123,2063640768,0,50,udp,1,5683,35313,12,,,,,,0,1,2025-10-31T15:43:58.968+0100,1761921838,968686,3,False,1,2,,0,EMPTY,32112,,0,/async
+36.158.57.157,2637798948,192.168.0.123,2063640768,64223,41,udp,1,5683,38381,12,,,,,,0,1,2025-10-31T15:44:13.062+0100,1761921853,62369,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/qlink
+39.183.171.83,1403762471,192.168.0.123,2063640768,59329,42,udp,1,5683,56224,12,,,,,,0,1,2025-10-31T15:44:13.070+0100,1761921853,70341,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/qlink
+36.158.57.157,2637798948,192.168.0.123,2063640768,64593,41,udp,1,5683,38694,12,,,,,,0,1,2025-10-31T15:44:27.287+0100,1761921867,287376,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device
+39.183.171.83,1403762471,192.168.0.123,2063640768,59402,42,udp,1,5683,33032,12,,,,,,0,1,2025-10-31T15:44:27.288+0100,1761921867,288295,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device
+36.158.57.157,2637798948,192.168.0.123,2063640768,65381,41,udp,1,5683,45465,12,,,,,,0,1,2025-10-31T15:44:41.307+0100,1761921881,307286,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device/inform
+39.183.171.83,1403762471,192.168.0.123,2063640768,60367,42,udp,1,5683,43282,12,,,,,,0,1,2025-10-31T15:44:41.313+0100,1761921881,313835,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device/inform
+36.158.57.157,2637798948,192.168.0.123,2063640768,1190,41,udp,1,5683,43551,12,,,,,,0,1,2025-10-31T15:44:55.429+0100,1761921895,429739,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ekit
+39.183.171.83,1403762471,192.168.0.123,2063640768,61000,42,udp,1,5683,36978,12,,,,,,0,1,2025-10-31T15:44:55.476+0100,1761921895,476802,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ekit
+36.158.57.157,2637798948,192.168.0.123,2063640768,2334,41,udp,1,5683,52110,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:45:09.579+0100,1761921909,579298,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/ekit/boot
+39.183.171.83,1403762471,192.168.0.123,2063640768,61766,42,udp,1,5683,34723,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:45:09.580+0100,1761921909,580310,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/ekit/boot
+39.183.171.83,1403762471,192.168.0.123,2063640768,62437,42,udp,1,5683,33611,205,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:45:23.710+0100,1761921923,710122,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",191,/ekit/bootstrap
+36.158.57.157,2637798948,192.168.0.123,2063640768,2705,41,udp,1,5683,38643,205,"should post example:{""deviceMac"":""AABBCCDDEEFF"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.12"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-10-31T15:45:25.187+0100,1761921925,187224,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",191,/ekit/bootstrap
+36.158.57.157,2637798948,192.168.0.123,2063640768,3248,41,udp,1,5683,57581,61,"should post example,{
+""deviceId"": ""deviceId""
+
+}",,,,,0,1,2025-10-31T15:45:37.841+0100,1761921937,841660,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",47,/ekit/heartbeat
+39.183.171.83,1403762471,192.168.0.123,2063640768,63659,42,udp,1,5683,35901,61,"should post example,{
+""deviceId"": ""deviceId""
+
+}",,,,,0,1,2025-10-31T15:45:37.844+0100,1761921937,844336,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",47,/ekit/heartbeat
+36.158.57.157,2637798948,192.168.0.123,2063640768,4326,41,udp,1,5683,33540,30,not soupport GET,,,,,0,1,2025-10-31T15:45:51.972+0100,1761921951,972777,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/ekit/searchgw
+39.183.171.83,1403762471,192.168.0.123,2063640768,63673,42,udp,1,5683,45293,30,not soupport GET,,,,,0,1,2025-10-31T15:45:51.974+0100,1761921951,974540,3,False,1,2,,0,4.00 Bad Request,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/ekit/searchgw
+39.183.171.83,1403762471,192.168.0.123,2063640768,64480,42,udp,1,5683,45637,285,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",,,,,0,1,2025-10-31T15:46:05.965+0100,1761921965,965764,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""LINKFORMAT""}",270,/.well-known/core
+36.158.57.157,2637798948,192.168.0.123,2063640768,5660,41,udp,1,5683,56529,285,"</qlink>,</qlink/searchgw>,</device>,</device/inform>,</device/inform/boot>,</device/inform/bootstrap>,</device/inform/data>,</device/inform/heartbeat>,</device/inform/offline>,</ekit>,</ekit/boot>,</ekit/bootstrap>,</ekit/heartbeat>,</ekit/searchgw>,</.well-known/core>",,,,,0,1,2025-10-31T15:46:05.971+0100,1761921965,971071,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""LINKFORMAT""}",270,/.well-known/core
+42.191.89.119,2002370346,192.168.0.123,2063640768,11421,50,udp,1,5683,52558,31,Method Not Allowed,,,,,0,1,2025-10-31T15:46:19.973+0100,1761921979,973279,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/change
+60.53.255.138,2331981116,192.168.0.123,2063640768,7493,50,udp,1,5683,33721,31,Method Not Allowed,,,,,0,1,2025-10-31T15:46:20.053+0100,1761921980,53802,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/change
+46.173.50.116,1949478190,192.168.0.123,2063640768,33832,51,udp,1,5683,57485,12,,,,,,0,1,2025-10-31T15:46:33.957+0100,1761921993,957158,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/register
+37.204.171.78,1319881765,192.168.0.123,2063640768,16364,53,udp,1,5683,48521,12,,,,,,0,1,2025-10-31T15:46:33.958+0100,1761921993,958106,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/register
+37.204.171.78,1319881765,192.168.0.123,2063640768,19207,53,udp,1,5683,40302,12,,,,,,0,1,2025-10-31T15:46:48.088+0100,1761922008,88699,3,False,1,2,,0,4.00 Bad Request,32112,,0,/ndm/dis
+46.173.50.116,1949478190,192.168.0.123,2063640768,34180,49,udp,1,5683,44989,12,,,,,,0,1,2025-10-31T15:46:48.090+0100,1761922008,90088,3,False,1,2,,0,4.00 Bad Request,32112,,0,/ndm/dis
+46.173.50.116,1949478190,192.168.0.123,2063640768,36350,51,udp,1,5683,47774,16,0x1,,,,,0,1,2025-10-31T15:47:02.219+0100,1761922022,219564,3,False,1,2,,0,4.00 Bad Request,32112,,3,/ndm/ci
+37.204.171.78,1319881765,192.168.0.123,2063640768,19414,53,udp,1,5683,53068,16,0x1,,,,,0,1,2025-10-31T15:47:02.286+0100,1761922022,286563,3,False,1,2,,0,4.00 Bad Request,32112,,3,/ndm/ci
+37.204.171.78,1319881765,192.168.0.123,2063640768,21575,53,udp,1,5683,36104,12,,,,,,0,1,2025-10-31T15:47:16.351+0100,1761922036,351038,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/mirror
+46.173.50.116,1949478190,192.168.0.123,2063640768,38681,51,udp,1,5683,55817,12,,,,,,0,1,2025-10-31T15:47:16.352+0100,1761922036,352608,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/mirror
+37.204.171.78,1319881765,192.168.0.123,2063640768,24139,53,udp,1,5683,42370,12,,,,,,0,1,2025-10-31T15:47:30.482+0100,1761922050,482456,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/uhp
+46.173.50.116,1949478190,192.168.0.123,2063640768,41041,51,udp,1,5683,45680,12,,,,,,0,1,2025-10-31T15:47:30.486+0100,1761922050,486547,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/uhp
+37.204.171.78,1319881765,192.168.0.123,2063640768,24633,53,udp,1,5683,51661,12,,,,,,0,1,2025-10-31T15:47:44.613+0100,1761922064,613739,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/logout
+46.173.50.116,1949478190,192.168.0.123,2063640768,41440,51,udp,1,5683,38524,12,,,,,,0,1,2025-10-31T15:47:44.615+0100,1761922064,615045,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/logout
+37.204.171.78,1319881765,192.168.0.123,2063640768,26398,53,udp,1,5683,52450,12,,,,,,0,1,2025-10-31T15:47:58.745+0100,1761922078,745286,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/login
+46.173.50.116,1949478190,192.168.0.123,2063640768,41801,51,udp,1,5683,43597,12,,,,,,0,1,2025-10-31T15:47:58.909+0100,1761922078,909255,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/login
+37.204.171.78,1319881765,192.168.0.123,2063640768,27108,53,udp,1,5683,59196,132,"{""cid"":""3d27a27a-6c99-11ea-9396-a74d63b00d84"",""http_port"":80,""type"":""router"",""name"":""Keenetic Giga"",""version"":""0.3.5""}",,,,,0,1,2025-10-31T15:48:12.745+0100,1761922092,745054,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",118,/info
+46.173.50.116,1949478190,192.168.0.123,2063640768,43933,49,udp,1,5683,57833,144,"{""cid"":""5e7171d2-67fb-11e6-8115-cf06e9a4bd5e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",,,,,0,1,2025-10-31T15:48:12.749+0100,1761922092,749168,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",130,/info
+44.250.80.149,2505112108,192.168.0.123,2063640768,44472,111,udp,1,5683,45182,12,,,,,,0,1,2025-10-31T15:48:26.949+0100,1761922106,949513,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/bs

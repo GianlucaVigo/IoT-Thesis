@@ -1,0 +1,137 @@
+saddr,uri,version,mtype,token_length,code,mid,token,options,data,data_length,observable,user_inserted
+5.79.225.162,/register,1,2,2,4.05 Method Not Allowed,54620,8a4c,,,0,3,False
+5.79.225.162,/ndm/dis,1,2,2,4.00 Bad Request,46603,332f,,,0,3,False
+5.79.225.162,/ndm/ci,1,2,2,4.00 Bad Request,10275,7b8d,,0x1,3,3,False
+5.79.225.162,/mirror,1,2,1,4.05 Method Not Allowed,34783,6a,,,0,3,False
+5.79.225.162,/uhp,1,2,2,4.05 Method Not Allowed,8986,7c55,,,0,3,False
+5.79.225.162,/ndm/logout,1,2,2,4.05 Method Not Allowed,63705,d248,,,0,3,False
+5.79.225.162,/ndm/login,1,2,2,4.05 Method Not Allowed,1864,4b90,,,0,3,False
+5.79.225.162,/info,1,2,2,2.05 Content,35875,a574,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9c9ecb4e-2b79-11e6-8115-a79bc451386e"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128,3,False
+5.79.225.162,/,1,2,2,4.04 Not Found,4585,dbc1,,,0,3,True
+24.156.162.105,/,1,2,2,2.05 Content,54621,8a4d,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127,3,False
+24.156.162.105,/qlink/searchfh,1,2,2,4.05 Method Not Allowed,46604,3330,,Method Not Allowed,18,3,False
+24.156.162.105,/qlink/searchgw,1,2,2,4.05 Method Not Allowed,10276,7b8e,,Method Not Allowed,18,3,False
+24.156.162.105,/qlink/request,1,2,1,4.05 Method Not Allowed,34784,6b,,Method Not Allowed,18,3,False
+24.156.162.105,/qlink/success,1,2,2,4.05 Method Not Allowed,8987,7c56,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/bootstrap,1,2,2,4.05 Method Not Allowed,63706,d249,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/boot,1,2,2,4.05 Method Not Allowed,1865,4b91,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/syncreq,1,2,2,4.05 Method Not Allowed,35876,a575,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/offline,1,2,2,4.05 Method Not Allowed,4586,dbc2,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/heartbeat,1,2,2,4.05 Method Not Allowed,3,8a78,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/data,1,2,2,4.05 Method Not Allowed,33249,fca9,,Method Not Allowed,18,3,False
+24.156.162.105,/device/inform/change,1,2,2,4.05 Method Not Allowed,47578,2e37,,Method Not Allowed,18,3,False
+24.156.162.105,/async,1,0,2,2.05 Content,18141,e5e7,,done,4,3,False
+13.125.238.60,/fw,1,0,2,4.01 Unauthorized,41983,8a4e,,,0,3,False
+13.125.238.60,/efento,1,2,2,4.00 Bad Request,46605,3331,,,0,3,False
+13.125.238.60,/efento/c,1,2,2,4.00 Bad Request,10277,7b8f,,,0,3,False
+13.125.238.60,/efento/i,1,2,1,4.00 Bad Request,34785,6c,,,0,3,False
+13.125.238.60,/efento/m,1,2,2,4.00 Bad Request,8988,7c57,,,0,3,False
+13.125.238.60,/efento/t,1,2,2,2.05 Content,63707,d24a,"{""OBSERVE"": ""0""}",b'i\x04\xf0t',4,1,False
+13.125.238.60,/sw,1,0,2,4.01 Unauthorized,43330,4b92,,,0,3,False
+13.125.238.60,/api,1,2,2,4.05 Method Not Allowed,35877,a576,,,0,3,False
+13.125.238.60,/api/v1,1,2,2,4.00 Bad Request,4587,dbc3,,,0,3,False
+13.125.238.60,/.well-known/core,1,2,2,2.05 Content,4,8a79,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</fw>,</efento>,</efento/c>,</efento/i>,</efento/m>,</efento/t>,</sw>,</api>,</api/v1>,</.well-known/core>",106,3,False
+13.125.238.60,/,1,2,2,2.05 Content,33250,fcaa,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2021 Institute for Pervasive Computing, ETH Zurich and others
+****************************************************************",406,3,True
+31.171.196.29,/register,1,2,2,4.05 Method Not Allowed,54623,8a4f,,,0,3,False
+31.171.196.29,/ndm/dis,1,2,2,4.00 Bad Request,46606,3332,,,0,3,False
+31.171.196.29,/ndm/ci,1,2,2,4.00 Bad Request,10278,7b90,,0x1,3,3,False
+31.171.196.29,/mirror,1,2,1,4.05 Method Not Allowed,34786,6d,,,0,3,False
+31.171.196.29,/uhp,1,2,2,4.05 Method Not Allowed,8989,7c58,,,0,3,False
+31.171.196.29,/ndm/logout,1,2,2,4.05 Method Not Allowed,63708,d24b,,,0,3,False
+31.171.196.29,/ndm/login,1,2,2,4.05 Method Not Allowed,1867,4b93,,,0,3,False
+31.171.196.29,/info,1,2,2,2.05 Content,35878,a577,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""9ae969ea-b4fd-11e6-8115-9bb8b94996df"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130,3,False
+31.171.196.29,/,1,2,2,4.04 Not Found,4588,dbc4,,,0,3,True
+27.222.174.173,/qlink/searchdevice,1,2,2,4.05 Method Not Allowed,54624,8a50,,Method Not Allowed,18,3,False
+27.222.174.173,/qlink/netinfo,1,2,2,4.05 Method Not Allowed,46607,3333,,Method Not Allowed,18,3,False
+27.222.174.173,/,1,2,2,4.04 Not Found,10279,7b91,,Not Found,9,3,True
+31.207.207.50,/register,1,2,2,4.05 Method Not Allowed,54625,8a51,,,0,3,False
+31.207.207.50,/ndm/dis,1,2,2,4.00 Bad Request,46608,3334,,,0,3,False
+31.207.207.50,/ndm/ci,1,2,2,4.00 Bad Request,10280,7b92,,0x1,3,3,False
+31.207.207.50,/mirror,1,2,1,4.05 Method Not Allowed,34787,6e,,,0,3,False
+31.207.207.50,/uhp,1,2,2,4.05 Method Not Allowed,8990,7c59,,,0,3,False
+31.207.207.50,/ndm/logout,1,2,2,4.05 Method Not Allowed,63709,d24c,,,0,3,False
+31.207.207.50,/ndm/login,1,2,2,4.05 Method Not Allowed,1868,4b94,,,0,3,False
+31.207.207.50,/info,1,2,2,2.05 Content,35879,a578,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""5b062ce2-7b03-11e7-8115-31766a3b86ba"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128,3,False
+31.207.207.50,/,1,2,2,4.04 Not Found,4589,dbc5,,,0,3,True
+2.63.22.252,/register,1,2,2,4.05 Method Not Allowed,54626,8a52,,,0,3,False
+2.63.22.252,/ndm/dis,1,2,2,4.00 Bad Request,46609,3335,,,0,3,False
+2.63.22.252,/ndm/ci,1,2,2,4.00 Bad Request,10281,7b93,,0x1,3,3,False
+2.63.22.252,/mirror,1,2,1,4.05 Method Not Allowed,34788,6f,,,0,3,False
+2.63.22.252,/uhp,1,2,2,4.05 Method Not Allowed,8991,7c5a,,,0,3,False
+2.63.22.252,/ndm/logout,1,2,2,4.05 Method Not Allowed,63710,d24d,,,0,3,False
+2.63.22.252,/ndm/login,1,2,2,4.05 Method Not Allowed,1869,4b95,,,0,3,False
+2.63.22.252,/info,1,2,2,2.05 Content,35880,a579,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""d919a108-787b-11e6-8115-11862b748ae4"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130,3,False
+2.63.22.252,/,1,2,2,4.04 Not Found,4590,dbc6,,,0,3,True
+31.28.192.106,/register,1,2,2,4.05 Method Not Allowed,54627,8a53,,,0,3,False
+31.28.192.106,/ndm/dis,1,2,2,4.00 Bad Request,46610,3336,,,0,3,False
+31.28.192.106,/ndm/ci,1,2,2,4.00 Bad Request,10282,7b94,,0x1,3,3,False
+31.28.192.106,/mirror,1,2,1,4.05 Method Not Allowed,34789,70,,,0,3,False
+31.28.192.106,/uhp,1,2,2,4.05 Method Not Allowed,8992,7c5b,,,0,3,False
+31.28.192.106,/ndm/logout,1,2,2,4.05 Method Not Allowed,63711,d24e,,,0,3,False
+31.28.192.106,/ndm/login,1,2,2,4.05 Method Not Allowed,1870,4b96,,,0,3,False
+31.28.192.106,/info,1,2,2,2.05 Content,35881,a57a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""5e6f3b10-67fb-11e6-8115-a7e5fd33eabd"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130,3,False
+31.28.192.106,/,1,2,2,4.04 Not Found,4591,dbc7,,,0,3,True
+13.202.217.244,/api,1,2,2,4.05 Method Not Allowed,54628,8a54,,,0,3,False
+13.202.217.244,/api/v1,1,2,2,4.00 Bad Request,46611,3337,,,0,2,False
+13.202.217.244,/efento,1,2,2,4.00 Bad Request,10283,7b95,,,0,2,False
+13.202.217.244,/efento/c,1,2,1,4.00 Bad Request,34790,71,,,0,3,False
+13.202.217.244,/efento/i,1,2,2,4.00 Bad Request,8993,7c5c,,,0,3,False
+13.202.217.244,/efento/m,1,2,2,4.00 Bad Request,63712,d24f,,,0,3,False
+13.202.217.244,/efento/t,1,2,2,2.05 Content,1871,4b97,"{""OBSERVE"": ""0""}",b'i\x04\xf0v',4,1,False
+13.202.217.244,/fw,1,0,2,4.01 Unauthorized,21177,a57b,,,0,2,False
+13.202.217.244,/sw,1,0,2,4.01 Unauthorized,63844,dbc8,,,0,2,False
+13.202.217.244,/,1,2,2,2.05 Content,5,8a7a,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2023 Institute for Pervasive Computing, ETH Zurich
+              and others
+****************************************************************",420,3,True
+31.42.43.59,/register,1,2,2,4.05 Method Not Allowed,54629,8a55,,,0,3,False
+31.42.43.59,/ndm/dis,1,2,2,4.00 Bad Request,46612,3338,,,0,3,False
+31.42.43.59,/ndm/ci,1,2,2,4.00 Bad Request,10284,7b96,,0x1,3,3,False
+31.42.43.59,/mirror,1,2,1,4.05 Method Not Allowed,34791,72,,,0,3,False
+31.42.43.59,/uhp,1,2,2,4.05 Method Not Allowed,8994,7c5d,,,0,3,False
+31.42.43.59,/ndm/logout,1,2,2,4.05 Method Not Allowed,63713,d250,,,0,3,False
+31.42.43.59,/ndm/login,1,2,2,4.05 Method Not Allowed,1872,4b98,,,0,3,False
+31.42.43.59,/info,1,2,2,2.05 Content,35883,a57c,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""4984dfa4-c214-11e9-8f23-fb95fe949925"",""http_port"":80,""type"":""router"",""name"":""Keenetic Lite"",""version"":""0.3.5-1""}",120,3,False
+31.42.43.59,/,1,2,2,4.04 Not Found,4593,dbc9,,,0,3,True
+31.210.211.144,/register,1,2,2,4.05 Method Not Allowed,54630,8a56,,,0,3,False
+31.210.211.144,/ndm/dis,1,2,2,4.00 Bad Request,46613,3339,,,0,3,False
+31.210.211.144,/ndm/ci,1,2,2,4.00 Bad Request,10285,7b97,,0x1,3,3,False
+31.210.211.144,/mirror,1,2,1,4.05 Method Not Allowed,34792,73,,,0,3,False
+31.210.211.144,/uhp,1,2,2,4.05 Method Not Allowed,8995,7c5e,,,0,3,False
+31.210.211.144,/ndm/logout,1,2,2,4.05 Method Not Allowed,63714,d251,,,0,3,False
+31.210.211.144,/ndm/login,1,2,2,4.05 Method Not Allowed,1873,4b99,,,0,3,False
+31.210.211.144,/info,1,2,2,2.05 Content,35884,a57d,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""15997a14-c57e-11e6-8115-47ab5fae85cc"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic 4G III"",""version"":""0.3.5-1""}",128,3,False
+31.210.211.144,/,1,2,2,4.04 Not Found,4594,dbca,,,0,3,True
+31.132.166.44,/register,1,2,2,4.05 Method Not Allowed,54631,8a57,,,0,3,False
+31.132.166.44,/ndm/dis,1,2,2,4.00 Bad Request,46614,333a,,,0,3,False
+31.132.166.44,/ndm/ci,1,2,2,4.00 Bad Request,10286,7b98,,0x1,3,3,False
+31.132.166.44,/mirror,1,2,1,4.05 Method Not Allowed,34793,74,,,0,3,False
+31.132.166.44,/uhp,1,2,2,4.05 Method Not Allowed,8996,7c5f,,,0,3,False
+31.132.166.44,/ndm/logout,1,2,2,4.05 Method Not Allowed,63715,d252,,,0,3,False
+31.132.166.44,/ndm/login,1,2,2,4.05 Method Not Allowed,1874,4b9a,,,0,3,False
+31.132.166.44,/info,1,2,2,2.05 Content,35885,a57e,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""c5842218-30f9-11e6-8115-71e81effee43"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Start II"",""version"":""0.3.5-1""}",130,3,False
+31.132.166.44,/,1,2,2,4.04 Not Found,4595,dbcb,,,0,3,True
+31.172.215.63,/register,1,2,2,4.05 Method Not Allowed,54632,8a58,,,0,3,False
+31.172.215.63,/ndm/dis,1,2,2,4.00 Bad Request,46615,333b,,,0,3,False
+31.172.215.63,/ndm/ci,1,2,2,4.00 Bad Request,10287,7b99,,0x1,3,3,False
+31.172.215.63,/mirror,1,2,1,4.05 Method Not Allowed,34794,75,,,0,3,False
+31.172.215.63,/uhp,1,2,2,4.05 Method Not Allowed,8997,7c60,,,0,3,False
+31.172.215.63,/ndm/logout,1,2,2,4.05 Method Not Allowed,63716,d253,,,0,3,False
+31.172.215.63,/ndm/login,1,2,2,4.05 Method Not Allowed,1875,4b9b,,,0,3,False
+31.172.215.63,/info,1,2,2,2.05 Content,35886,a57f,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""ce7459ec-997c-11e6-8115-41f32cf67dfa"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130,3,False
+31.172.215.63,/,1,2,2,4.04 Not Found,4596,dbcc,,,0,3,True

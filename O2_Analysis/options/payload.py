@@ -1,10 +1,6 @@
-import seaborn as sns
 import pandas as pd
-import matplotlib.pyplot as plt
 from collections import Counter
 import plotly.express as px
-import gc
-import datetime
 
 from utils import payload_handling
 
@@ -20,33 +16,29 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                sizes = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'data_length', 'code']): 
 
-                    sizes = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    sizes += Counter(chunk['data_length'])
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
-
-                            ##############################
-
-                            sizes += Counter(chunk['data'].apply(len))
-
-                    to_plot.extend(
-                        {'date': current_date, 'size': size, 'count': count}
-                        for size, count in sizes.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'size': size, 'count': count}
+                    for size, count in sizes.items()
+                )
 
             ##############################
 
@@ -73,39 +65,35 @@ def analysis(data_paths, mode):
 
         # 1
         case 'Most Common':
-
+            
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                uri_counter = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
 
-                    uri_counter = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    for uri_list in uri_lists:
+                        uri_counter += Counter(uri_list)
 
-                            ##############################
-
-                            uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
-
-                            for uri_list in uri_lists:
-                                uri_counter += Counter(uri_list)
-
-                    to_plot.extend(
-                        {'date': current_date, 'uri': uri, 'count': count}
-                        for uri, count in uri_counter.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'uri': uri, 'count': count}
+                    for uri, count in uri_counter.items()
+                )
 
             ##############################
 
@@ -118,7 +106,7 @@ def analysis(data_paths, mode):
             df_plot = (
                 df_plot
                 .groupby('date', group_keys=False)
-                .head(20)
+                .head(30)
             )
 
             ##############################
@@ -129,8 +117,9 @@ def analysis(data_paths, mode):
                 x='count',
                 y='uri',
                 animation_frame='date',
-                title="Most Common URIs over Time"
+                title="30 Most Common URIs over Time"
             )
+            
             fig.update_layout(yaxis = {'categoryorder': 'total ascending'})
             fig.show()
 
@@ -140,33 +129,30 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                n_resources = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
 
-                    n_resources = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    n_resources += Counter(chunk['data'].apply(payload_handling.resource_list_of).apply(len))
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                            ##############################
-
-                            n_resources += Counter(chunk['data'].apply(payload_handling.resource_list_of).apply(len))
-
-                    to_plot.extend(
-                        {'date': current_date, 'n_res': n_res, 'count': count}
-                        for n_res, count in n_resources.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'n_res': n_res, 'count': count}
+                    for n_res, count in n_resources.items()
+                )
 
             ##############################
 
@@ -195,37 +181,33 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                n_levels = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
 
-                    n_levels = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    for uri_list in uri_lists:
+                        for uri in uri_list:
+                            n_levels += Counter([payload_handling.n_levels_of(uri)])
 
-                            ##############################
-
-                            uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
-
-                            for uri_list in uri_lists:
-                                for uri in uri_list:
-                                    n_levels += Counter([payload_handling.n_levels_of(uri)])
-
-                    to_plot.extend(
-                        {'date': current_date, 'n_levels': n_levels, 'count': count}
-                        for n_levels, count in n_levels.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'n_levels': n_levels, 'count': count}
+                    for n_levels, count in n_levels.items()
+                )
 
             ##############################
 
@@ -254,26 +236,20 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                active_servers = 0
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['success']): 
+                    
+                    active_servers += chunk[chunk['success'] == 1].shape[0]
 
-                    active_servers = 0
-
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
-
-                        for chunk in csv_reader:
-
-                            active_servers += chunk[chunk['success'] == 1].shape[0]
-
-                    to_plot.extend(
-                        [{'date': current_date, 'active_servers': active_servers}]
-                    )
+                to_plot.extend(
+                    [{'date': current_date, 'active_servers': active_servers}]
+                )
 
             ##############################
 
@@ -299,35 +275,36 @@ def analysis(data_paths, mode):
         case '/.well-known/core Visibility':
 
             to_plot = []
+            
+            for path in data_paths:
 
-            # internet partition level
-            for path_dict in data_paths:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                # dates level
-                for date_path in path_dict['data']:
+                coap_servers = 0
+                wellknown_explicit = 0
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code', 'success']): 
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    coap_servers = 0
-                    wellknown_explicit = 0
+                    ##############################
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    coap_servers += chunk[chunk['success'] == 1].shape[0]
 
-                        for chunk in csv_reader:
+                    uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
 
-                            coap_servers += chunk[chunk['success'] == 1].shape[0]
+                    for uri_list in uri_lists:
+                        if '</.well-known/core>' in uri_list:
+                            wellknown_explicit += 1
 
-                            uri_lists = chunk['data'].apply(payload_handling.uri_list_of)
-
-                            for uri_list in uri_lists:
-                                if '</.well-known/core>' in uri_list:
-                                    wellknown_explicit += 1
-
-
-                    to_plot.extend(
-                        [{'date': current_date, 'coap_servers': coap_servers, 'wellknown_explicit': wellknown_explicit}]
-                    )
+                to_plot.extend(
+                    [{'date': current_date, 'coap_servers': coap_servers, 'wellknown_explicit': wellknown_explicit}]
+                )
 
             ##############################
 
@@ -355,37 +332,34 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                metadatas = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
 
-                    metadatas = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    resources_lists = chunk['data'].apply(payload_handling.resource_list_of)
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    for resources_list in resources_lists:
+                        for resource in resources_list:
+                            metadatas += Counter(payload_handling.resource_metadata_names_of(resource))
 
-                            ##############################
 
-                            resources_lists = chunk['data'].apply(payload_handling.resource_list_of)
-
-                            for resources_list in resources_lists:
-                                for resource in resources_list:
-                                    metadatas += Counter(payload_handling.resource_metadata_names_of(resource))
-
-                    to_plot.extend(
-                        {'date': current_date, 'metadata': metadata, 'count': count}
-                        for metadata, count in metadatas.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'metadata': metadata, 'count': count}
+                    for metadata, count in metadatas.items()
+                )
 
             ##############################
 
@@ -414,41 +388,38 @@ def analysis(data_paths, mode):
 
             to_plot = []
 
-            # internet partition level
-            for path_dict in data_paths:
+            for path in data_paths:
 
-                # dates level
-                for date_path in path_dict['data']:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                ct_values = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
 
-                    ct_values = Counter()
+                    # DATA CLEANING
+                    # keeping only entries having code equal to 2.05 Content
+                    chunk = chunk[chunk['code'] == '2.05 Content']
+                    # deleting rows with data field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE) as csv_reader:
+                    ##############################
 
-                        for chunk in csv_reader:
+                    resources_lists = chunk['data'].apply(payload_handling.resource_list_of)
 
-                            # DATA CLEANING
-                            # deleting rows with data field equal to nan
-                            chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    for resources_list in resources_lists:
+                        for resource in resources_list:
 
-                            ##############################
+                            ct_value = payload_handling.get_metadata_value_of(resource, 'ct')
 
-                            resources_lists = chunk['data'].apply(payload_handling.resource_list_of)
+                            if ct_value is not None:
+                                ct_values.update(ct_value)
 
-                            for resources_list in resources_lists:
-                                for resource in resources_list:
 
-                                    ct_value = payload_handling.get_metadata_value_of(resource, 'ct')
-
-                                    if ct_value is not None:
-                                        ct_values.update(ct_value)
-
-                    to_plot.extend(
-                        {'date': current_date, 'ct_value': ct_value, 'count': count}
-                        for ct_value, count in ct_values.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'ct_value': ct_value, 'count': count}
+                    for ct_value, count in ct_values.items()
+                )
 
             ##############################
 
@@ -475,39 +446,31 @@ def analysis(data_paths, mode):
         case 'ZMap Results':
 
             to_plot = []
+            
+            for path in data_paths:
 
-            # internet partition level
-            for path_dict in data_paths:
+                # take only date and ignore '.csv' part of the string
+                current_date = path.split('/')[4][:-4]
 
-                # dates level
-                for date_path in path_dict['data']:
+                zmap_results = Counter()
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['classification', 'icmp_unreach_str', 'code']): 
 
-                    # take only date and ignore '.csv' part of the string
-                    current_date = date_path.split('/')[5][:-4]
+                    for _, row in chunk.iterrows():
 
-                    zmap_results = Counter()
-
-                    with pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['classification', 'icmp_unreach_str', 'code']) as csv_reader:
-
-                        for chunk in csv_reader:
-
-                            for _, row in chunk.iterrows():
-
-                                if row['classification'] == 'udp':
-                                    key = ('udp', row['code'])
-                                elif row['classification'] == 'icmp':
-                                    key = ('icmp', row['icmp_unreach_str'])
-                                else:
-                                    continue
+                        if row['classification'] == 'udp':
+                            key = ('udp', row['code'])
+                        elif row['classification'] == 'icmp':
+                            key = ('icmp', row['icmp_unreach_str'])
+                        else:
+                            continue
                                 
-                                zmap_results[key] += 1
+                        zmap_results.update([key])
 
-                    print(date_path, zmap_results)
-
-                    to_plot.extend(
-                        {'date': current_date, 'first_level': first_level, 'second_level': second_level, 'count': count}
-                        for (first_level, second_level), count in zmap_results.items()
-                    )
+                to_plot.extend(
+                    {'date': current_date, 'first_level': first_level, 'second_level': second_level, 'count': count}
+                    for (first_level, second_level), count in zmap_results.items()
+                )
 
             ##############################
 

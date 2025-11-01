@@ -11,7 +11,7 @@ from utils import payload_handling, workflow_handling, zmap_handling
 
 # constants definition
 
-MENU_WAIT = 1
+MENU_WAIT = 0.5
 CHUNK_SIZE = 10000
 
 ################################################################################################
@@ -59,7 +59,7 @@ def encode_uri(uri):
 
 '''NEW INTERNET WIDE SEARCH'''
 '''-------------------------------------------------------'''
-def lookups(cidr, cidr_id, zmap_user_cmd, approach):
+def lookups(cidr_id, zmap_user_cmd, approach):
 
     current_date = str(datetime.date.today())
 
@@ -84,7 +84,7 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
     ]
 
     # create a new empty csv file in all the previously elencated directories
-    workflow_handling.create_today_files(output_paths) 
+    workflow_handling.create_today_files(output_paths, current_date) 
 
     '''2) ZMAP DISCOVERY'''
     '''-------------------------------------------------------'''
@@ -100,7 +100,6 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
 
     # enrich the base ZMap command with the user specified options
     cmd_additions.extend(zmap_user_cmd)
-    cmd_additions.append(cidr)
 
     zmap_handling.execute_zmap(cmd_additions)
     
@@ -129,7 +128,7 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
             # print number of entries in the current chunk
             print(f"\t\tNumber of entries: {chunk.shape[0]}")
 
-            # ----------- remove-duplicates -----------     => there could be a problem when dealing with a lot of data (multiple chunks) + multiple probes                                    
+            # ----------- remove-duplicates -----------                 
             print('-' * 100)
             print("\t DUPLICATES REMOVAL")
             time.sleep(MENU_WAIT)
@@ -137,15 +136,15 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
             chunk = workflow_handling.remove_duplicates(chunk)
             print(f"\t\tNumber of unique entries: {chunk.shape[0]}")
 
-            # ----------- enrich ZMap result -----------
-            chunk['uri'] = '/.well-known/core'
-
+            # ----------- enrich-chunk -----------
+            chunk['observable'] = False
+            
             # ----------- decode-zmap-payload -----------
             print('-' * 100)
             print("\t ZMAP BINARY DECODE")
             time.sleep(MENU_WAIT)
             # decode the ZMap results
-            decode_res = asyncio.run(workflow_handling.decode(chunk, approach))
+            decode_res = asyncio.run(workflow_handling.decode(chunk,'/.well-known/core', approach))
             chunk = decode_res[0]
             print(f"\n\t\t{decode_res[1]}")
 
@@ -167,7 +166,7 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
 
             # ----------- get-resources -----------
             print('-' * 100)
-            print("\t EXTRACTING IP + URI")
+            print("\t EXTRACTING URI + IPs")
             time.sleep(MENU_WAIT)
 
             for _,row in chunk[['saddr','code','success','data','options']].iterrows():
@@ -190,6 +189,7 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
                         # --------- uris-validity-check ---------
                         # 1. uri must start with '/'
                         if not uri.startswith('/'):
+                            print(f"{uri} does not respect the correct syntax -> NOT EVALUATED")
                             continue
 
                         ip = row['saddr']
@@ -209,9 +209,14 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
 
     '''4) ZMAP GET REQUESTS '''
     '''-------------------------------------------------------'''
+    print("+++++++++++++++++++++++++++++")
     print("+++++++++ CoAP GETs +++++++++")
+    print("+++++++++++++++++++++++++++++")
+    
     # supporting files
+    # I: allowlist-file -> ip list
     ips_support_file = "O1b_DataCollection/get/ips.csv"
+    # O: zmap results of GET requests
     res_support_file = "O1b_DataCollection/get/res.csv"
 
     add_header = True
@@ -258,78 +263,77 @@ def lookups(cidr, cidr_id, zmap_user_cmd, approach):
         zmap_handling.execute_zmap(cmd)
 
         #################################################
-
+        
         '''5) ELABORATE ZMAP GET RESULTS '''
         '''-------------------------------------------------------'''
-        # ----------- raw-master-dataset -----------
-        print('-' * 100)
-        print("\t ZMAP GET RAW DATASET")
-        # temporary ZMap get results are store in res_support_file -> convert it to a dataframe
-        try:
-            zmap_uri_res = pd.read_csv(res_support_file)
-        except pd.io.common.EmptyDataError:
-            print(f"Empty Result - {uri}")
-            continue
-        # print number of entries in the current chunk
-        print(f"\t\tNumber of entries: {zmap_uri_res.shape[0]}")
+        # since the ZMap result could be large, I split the output csv file into chunks having size CHUNK_SIZE    
+        with pd.read_csv(res_support_file, chunksize=CHUNK_SIZE) as csv_reader:
 
-        # ----------- remove-duplicates -----------     => there could be a problem when dealing with a lot of data (multiple chunks) + multiple probes                                    
-        print('-' * 100)
-        print("\t DUPLICATES REMOVAL")
-        time.sleep(MENU_WAIT)
-        # clean the chunk by removing eventual duplicates -> 'probes' option
-        zmap_uri_res = workflow_handling.remove_duplicates(zmap_uri_res)
-        print(f"\t\tNumber of unique entries: {zmap_uri_res.shape[0]}")
+            for i, chunk in enumerate(csv_reader):
 
-        # ----------- enrich ZMap result -----------
-        zmap_uri_res['uri'] = uri
+                # ----------- chunk-info -----------
+                print(f"\tChunk nr [{i+1}]")
+        
+                # ----------- raw-dataset -----------
+                print('-' * 100)
+                print("\t ZMAP GET RAW DATASET")
+                print(f"\t\tNumber of entries: {chunk.shape[0]}")
 
-        for index, ip in enumerate(zmap_uri_res['saddr']):
+                # ----------- remove-duplicates -----------                
+                print('-' * 100)
+                print("\t DUPLICATES REMOVAL")
+                time.sleep(MENU_WAIT)
+                # clean the chunk by removing eventual duplicates -> 'probes' option
+                chunk = workflow_handling.remove_duplicates(chunk)
+                print(f"\t\tNumber of unique entries: {chunk.shape[0]}")
 
-            for data_items in resources_and_ips[uri]:
+                # ----------- enrich ZMap result -----------
+                for index, ip in enumerate(chunk['saddr']):
+
+                    for data_items in resources_and_ips[uri]:
+                            
+                        ip_addr = data_items[0]
+                        obs = data_items[1]
+                        user_inserted = data_items[2]
+
+                        if ip_addr == ip:
+                            chunk.loc[index, 'observable'] = obs
+                            chunk.loc[index, 'user_inserted'] = user_inserted
+                            break
+            
+                # ----------- decode-zmap-payload -----------
+                print('-' * 100)
+                print("\t ZMAP BINARY DECODE")
+                time.sleep(MENU_WAIT)
+                # decode the ZMap results
+                decode_res = asyncio.run(workflow_handling.decode(chunk, uri, approach))
+                get_resources_df = decode_res[0]
+                print(f"\n\t\t{decode_res[1]}")
+
+                # ----------- store-get-dataframe -----------
+                print('-' * 100)
+                print("\t GET DATASET STORAGE")
+                time.sleep(MENU_WAIT)
+                # stored the cleaned chunk version in append mode
+                payload_handling.options_to_json(get_resources_df).to_csv(output_paths[3]+ f"{current_date}.csv", index=False, header=add_header, mode='a')
+                print("\t\tCleaned version stored correctly!")
+                        
+                # ----------- observe -----------
+                print('-' * 100)
+                print("\t OBSERVE RESOURCES")
+                time.sleep(MENU_WAIT)
+                # consider only those entries having the observable field equal to 0 or 1 -> REAL OBS resources
+                observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
+
+                if observable_resources_df.empty:
+                    print("\t\tThere were NOT observable resources within the collected dataset")
+                else:
+                    print(f"\t\tObservable Resources: \n{observable_resources_df[['saddr', 'uri', 'data', 'data_length']]}")
+                    # store essential data
+                    observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(output_paths[4] + f"{current_date}.csv", index=False, header=add_observe_header, mode='a')  
+                    add_observe_header = False
                     
-                ip_addr = data_items[0]
-                obs = data_items[1]
-                user_inserted = data_items[2]
-
-                if ip_addr == ip:
-                    zmap_uri_res.loc[index, 'observable'] = obs
-                    zmap_uri_res.loc[index, 'user_inserted'] = user_inserted
-                    break
-            
-        # ----------- decode-zmap-payload -----------
-        print('-' * 100)
-        print("\t ZMAP BINARY DECODE")
-        time.sleep(MENU_WAIT)
-        # decode the ZMap results
-        decode_res = asyncio.run(workflow_handling.decode(zmap_uri_res, approach))
-        get_resources_df = decode_res[0]
-        print(f"\n\t\t{decode_res[1]}")
-
-        # ----------- store-get-dataframe -----------
-        print('-' * 100)
-        print("\t GET DATASET STORAGE")
-        time.sleep(MENU_WAIT)
-        # stored the cleaned chunk version in append mode
-        payload_handling.options_to_json(get_resources_df).to_csv(output_paths[3]+ f"{current_date}.csv", index=False, header=add_header, mode='a')
-        print("\t\tCleaned version stored correctly!")
-                
-        # ----------- observe -----------
-        print('-' * 100)
-        print("\t OBSERVE RESOURCES")
-        time.sleep(MENU_WAIT)
-        # consider only those entries having the observable field equal to 0 or 1 -> REAL OBS resources
-        observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
-
-        if observable_resources_df.empty:
-            print("\t\tThere were NOT observable resources within the collected dataset")
-        else:
-            print(f"\t\tObservable Resources: \n{observable_resources_df[['saddr', 'uri', 'data', 'data_length']]}")
-            # store essential data
-            observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(output_paths[4] + f"{current_date}.csv", index=False, header=add_observe_header, mode='a')  
-            add_observe_header = False
-            
-        add_header = False
+                add_header = False
         
     return
 

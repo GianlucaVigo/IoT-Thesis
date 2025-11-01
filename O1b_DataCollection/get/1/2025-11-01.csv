@@ -1,0 +1,248 @@
+saddr,saddr_raw,daddr,daddr_raw,ipid,ttl,classification,success,sport,dport,udp_pkt_size,data,icmp_responder,icmp_type,icmp_code,icmp_unreach_str,repeat,cooldown,timestamp_str,timestamp_ts,timestamp_us,observable,user_inserted,version,mtype,token,token_length,code,mid,options,data_length,uri
+36.153.130.202,3397556516,192.168.0.123,2063640768,33482,43,udp,1,5683,54573,12,,,,,,0,1,2025-11-01T10:35:07.853+0100,1761989707,853140,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/qlink
+36.141.36.196,3290729764,192.168.0.123,2063640768,21320,43,udp,1,5683,48482,12,,,,,,0,1,2025-11-01T10:35:08.003+0100,1761989708,3769,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/qlink
+36.153.130.202,3397556516,192.168.0.123,2063640768,33962,43,udp,1,5683,33931,12,,,,,,0,1,2025-11-01T10:35:20.143+0100,1761989720,143508,3,False,1,3,,0,EMPTY,32112,,0,/qlink/ack
+36.141.36.196,3290729764,192.168.0.123,2063640768,21972,43,udp,1,5683,47742,12,,,,,,0,1,2025-11-01T10:35:20.892+0100,1761989720,892813,3,False,1,3,,0,EMPTY,32112,,0,/qlink/ack
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,45363,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.033+0100,1761989732,33386,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,54980,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.033+0100,1761989732,33528,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,52924,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.036+0100,1761989732,36859,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,60469,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.036+0100,1761989732,36965,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+60.53.162.18,312620348,192.168.0.123,2063640768,48960,51,udp,1,5683,40026,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.047+0100,1761989732,47972,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,40493,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.051+0100,1761989732,51474,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,46227,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.055+0100,1761989732,55707,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,50,udp,1,5683,54603,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.058+0100,1761989732,58008,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,50,udp,1,5683,46764,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.061+0100,1761989732,61175,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,50421,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:32.066+0100,1761989732,66106,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/request
+36.153.130.202,3397556516,192.168.0.123,2063640768,35036,43,udp,1,5683,36437,256,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",,,,,0,1,2025-11-01T10:35:32.124+0100,1761989732,124331,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",242,/qlink/request
+36.141.36.196,3290729764,192.168.0.123,2063640768,22566,43,udp,1,5683,45711,256,"should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",,,,,0,1,2025-11-01T10:35:32.187+0100,1761989732,187890,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",242,/qlink/request
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,59504,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.193+0100,1761989744,193702,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,42889,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.193+0100,1761989744,193815,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,50094,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.193+0100,1761989744,193934,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,35383,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.193+0100,1761989744,193983,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+60.53.162.18,312620348,192.168.0.123,2063640768,50174,51,udp,1,5683,52364,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.194+0100,1761989744,194175,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,43877,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.194+0100,1761989744,194555,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,34617,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.194+0100,1761989744,194577,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,34205,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.198+0100,1761989744,198907,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,50,udp,1,5683,59947,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.199+0100,1761989744,199835,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,55149,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:44.201+0100,1761989744,201695,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchgw
+36.153.130.202,3397556516,192.168.0.123,2063640768,36081,43,udp,1,5683,53059,26,"{""result"":1}",,,,,0,1,2025-11-01T10:35:44.229+0100,1761989744,229546,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/qlink/searchgw
+36.141.36.196,3290729764,192.168.0.123,2063640768,23470,43,udp,1,5683,35172,26,"{""result"":1}",,,,,0,1,2025-11-01T10:35:44.294+0100,1761989744,294748,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/qlink/searchgw
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,42852,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.296+0100,1761989756,296759,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,50006,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.298+0100,1761989756,298212,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,35249,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.299+0100,1761989756,299122,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,50,udp,1,5683,46677,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.301+0100,1761989756,301420,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+60.53.162.18,312620348,192.168.0.123,2063640768,50478,51,udp,1,5683,46140,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.310+0100,1761989756,310988,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,40858,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.313+0100,1761989756,313730,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,34309,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.317+0100,1761989756,317046,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,33665,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.319+0100,1761989756,319882,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,60485,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.320+0100,1761989756,320749,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,48704,31,Method Not Allowed,,,,,0,1,2025-11-01T10:35:56.333+0100,1761989756,333703,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/success
+36.153.130.202,3397556516,192.168.0.123,2063640768,36173,43,udp,1,5683,46055,13,,,,,,0,1,2025-11-01T10:35:56.342+0100,1761989756,342096,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",0,/qlink/success
+36.141.36.196,3290729764,192.168.0.123,2063640768,24191,43,udp,1,5683,43208,13,,,,,,0,1,2025-11-01T10:35:56.423+0100,1761989756,423652,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",0,/qlink/success
+36.141.36.196,3290729764,192.168.0.123,2063640768,24927,43,udp,1,5683,50478,12,,,,,,0,1,2025-11-01T10:36:08.681+0100,1761989768,681846,3,False,1,3,,0,EMPTY,32112,,0,/qlink/wlantest
+36.153.130.202,3397556516,192.168.0.123,2063640768,37990,43,udp,1,5683,39606,12,,,,,,0,1,2025-11-01T10:36:20.663+0100,1761989780,663027,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/gw
+36.141.36.196,3290729764,192.168.0.123,2063640768,25781,43,udp,1,5683,35308,12,,,,,,0,1,2025-11-01T10:36:20.664+0100,1761989780,664064,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/gw
+36.153.130.202,3397556516,192.168.0.123,2063640768,38899,43,udp,1,5683,50501,12,,,,,,0,1,2025-11-01T10:36:32.652+0100,1761989792,652567,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/gw/query
+36.141.36.196,3290729764,192.168.0.123,2063640768,26830,43,udp,1,5683,43378,12,,,,,,0,1,2025-11-01T10:36:32.746+0100,1761989792,746449,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/gw/query
+36.153.130.202,3397556516,192.168.0.123,2063640768,39587,43,udp,1,5683,44604,52,"010_B0305500DC60{""apmsOnlineStatus"":0}",,,,,0,1,2025-11-01T10:36:44.932+0100,1761989804,932587,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",38,/gw/query/DiagnotorConnection
+36.141.36.196,3290729764,192.168.0.123,2063640768,27181,43,udp,1,5683,38194,52,"090_2C3341AADFD8{""apmsOnlineStatus"":0}",,,,,0,1,2025-11-01T10:36:45.126+0100,1761989805,126034,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",38,/gw/query/DiagnotorConnection
+36.153.130.202,3397556516,192.168.0.123,2063640768,40678,43,udp,1,5683,46135,30,"{""APDevices"":[]}",,,,,0,1,2025-11-01T10:36:57.016+0100,1761989817,16214,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/gw/query/apdevices
+36.141.36.196,3290729764,192.168.0.123,2063640768,27985,43,udp,1,5683,48710,30,"{""APDevices"":[]}",,,,,0,1,2025-11-01T10:36:57.078+0100,1761989817,78634,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",16,/gw/query/apdevices
+36.153.130.202,3397556516,192.168.0.123,2063640768,41187,43,udp,1,5683,39126,26,"""respCode"":1",,,,,0,1,2025-11-01T10:37:09.099+0100,1761989829,99458,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/gw/query/config
+36.141.36.196,3290729764,192.168.0.123,2063640768,28405,43,udp,1,5683,60054,26,"""respCode"":1",,,,,0,1,2025-11-01T10:37:09.100+0100,1761989829,100611,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",12,/gw/query/config
+36.153.130.202,3397556516,192.168.0.123,2063640768,41603,43,udp,1,5683,59633,12,,,,,,0,1,2025-11-01T10:37:21.285+0100,1761989841,285496,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/basic
+36.141.36.196,3290729764,192.168.0.123,2063640768,29163,43,udp,1,5683,57198,12,,,,,,0,1,2025-11-01T10:37:21.288+0100,1761989841,288508,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/basic
+36.153.130.202,3397556516,192.168.0.123,2063640768,42345,43,udp,1,5683,57126,94,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",,,,,0,1,2025-11-01T10:37:33.266+0100,1761989853,266614,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",80,/basic/regist
+36.141.36.196,3290729764,192.168.0.123,2063640768,29279,43,udp,1,5683,37965,94,"should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",,,,,0,1,2025-11-01T10:37:33.370+0100,1761989853,370270,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",80,/basic/regist
+36.153.130.202,3397556516,192.168.0.123,2063640768,43200,43,udp,1,5683,44809,68,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",,,,,0,1,2025-11-01T10:37:45.452+0100,1761989865,452753,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",54,/basic/show
+36.141.36.196,3290729764,192.168.0.123,2063640768,29941,43,udp,1,5683,51569,68,"userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",,,,,0,1,2025-11-01T10:37:48.833+0100,1761989868,833054,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",54,/basic/show
+36.153.130.202,3397556516,192.168.0.123,2063640768,43873,43,udp,1,5683,50010,12,,,,,,0,1,2025-11-01T10:37:57.535+0100,1761989877,535932,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device
+36.141.36.196,3290729764,192.168.0.123,2063640768,30994,43,udp,1,5683,47864,12,,,,,,0,1,2025-11-01T10:37:57.590+0100,1761989877,590347,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device
+36.153.130.202,3397556516,192.168.0.123,2063640768,44208,43,udp,1,5683,36995,12,,,,,,0,1,2025-11-01T10:38:09.721+0100,1761989889,721458,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device/command
+36.141.36.196,3290729764,192.168.0.123,2063640768,31854,43,udp,1,5683,53242,12,,,,,,0,1,2025-11-01T10:38:09.722+0100,1761989889,722592,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/device/command
+36.153.130.202,3397556516,192.168.0.123,2063640768,45366,43,udp,1,5683,52604,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:38:21.804+0100,1761989901,804961,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/command/control
+36.141.36.196,3290729764,192.168.0.123,2063640768,32971,43,udp,1,5683,58250,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:38:21.806+0100,1761989901,806750,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/command/control
+36.153.130.202,3397556516,192.168.0.123,2063640768,45559,43,udp,1,5683,52706,16,[],,,,,0,1,2025-11-01T10:38:33.888+0100,1761989913,888275,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",2,/device/command/data
+36.141.36.196,3290729764,192.168.0.123,2063640768,34182,43,udp,1,5683,48478,16,[],,,,,0,1,2025-11-01T10:38:33.923+0100,1761989913,923458,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",2,/device/command/data
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,57796,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.969+0100,1761989937,969915,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,51589,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.974+0100,1761989937,974368,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,42809,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.982+0100,1761989937,982950,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,50,udp,1,5683,60818,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.989+0100,1761989937,989589,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,34107,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.991+0100,1761989937,991893,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+60.53.162.18,312620348,192.168.0.123,2063640768,55263,51,udp,1,5683,51806,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.996+0100,1761989937,996086,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,38616,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:57.996+0100,1761989937,996220,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+36.153.130.202,3397556516,192.168.0.123,2063640768,46616,43,udp,1,5683,43467,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-11-01T10:38:58.002+0100,1761989938,2459,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/device/inform/boot
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,42962,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:58.002+0100,1761989938,2557,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,45356,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:58.006+0100,1761989938,6926,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,55045,31,Method Not Allowed,,,,,0,1,2025-11-01T10:38:58.010+0100,1761989938,10674,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/boot
+36.141.36.196,3290729764,192.168.0.123,2063640768,34973,43,udp,1,5683,35165,208,"should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-11-01T10:38:58.112+0100,1761989938,112968,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",194,/device/inform/boot
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,48680,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.084+0100,1761989950,84922,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,57788,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.091+0100,1761989950,91992,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,43334,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.096+0100,1761989950,96176,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,46963,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.097+0100,1761989950,97072,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,56649,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.099+0100,1761989950,99015,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,59248,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.103+0100,1761989950,103251,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,40487,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.103+0100,1761989950,103453,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+60.53.162.18,312620348,192.168.0.123,2063640768,56049,51,udp,1,5683,51048,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.104+0100,1761989950,104889,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,50,udp,1,5683,53800,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.112+0100,1761989950,112436,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,33134,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:10.115+0100,1761989950,115597,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/bootstrap
+36.153.130.202,3397556516,192.168.0.123,2063640768,47320,43,udp,1,5683,55683,206,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-11-01T10:39:10.138+0100,1761989950,138797,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",192,/device/inform/bootstrap
+36.141.36.196,3290729764,192.168.0.123,2063640768,35224,43,udp,1,5683,49525,206,"should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",,,,,0,1,2025-11-01T10:39:10.207+0100,1761989950,207518,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",192,/device/inform/bootstrap
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,52671,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.243+0100,1761989962,243014,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,47103,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.243+0100,1761989962,243147,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,47619,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.245+0100,1761989962,245937,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,47701,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.247+0100,1761989962,247926,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,52626,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.250+0100,1761989962,250186,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+60.53.162.18,312620348,192.168.0.123,2063640768,56663,51,udp,1,5683,57493,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.250+0100,1761989962,250334,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,46848,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.251+0100,1761989962,251786,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,53696,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.253+0100,1761989962,253524,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,33984,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.257+0100,1761989962,257434,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,55186,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:22.265+0100,1761989962,265963,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/data
+36.153.130.202,3397556516,192.168.0.123,2063640768,47426,43,udp,1,5683,36513,38,"
+ postRequestText: null",,,,,0,1,2025-11-01T10:39:22.311+0100,1761989962,311574,0,False,1,2,,0,2.05 Content,32112,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}",23,/device/inform/data
+36.141.36.196,3290729764,192.168.0.123,2063640768,35432,43,udp,1,5683,51419,38,"
+ postRequestText: null",,,,,0,1,2025-11-01T10:39:22.566+0100,1761989962,566997,0,False,1,2,,0,2.05 Content,32112,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}",23,/device/inform/data
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,45022,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.402+0100,1761989974,402964,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,44814,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.406+0100,1761989974,406978,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,48306,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.408+0100,1761989974,408797,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+60.53.162.18,312620348,192.168.0.123,2063640768,57741,51,udp,1,5683,48846,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.410+0100,1761989974,410544,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,45533,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.417+0100,1761989974,417879,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,52556,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.420+0100,1761989974,420358,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,41386,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.422+0100,1761989974,422301,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,50,udp,1,5683,49391,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.425+0100,1761989974,425865,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,50,udp,1,5683,35461,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.429+0100,1761989974,429761,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,47756,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:34.431+0100,1761989974,431762,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/heartbeat
+36.153.130.202,3397556516,192.168.0.123,2063640768,48074,43,udp,1,5683,56818,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:39:34.462+0100,1761989974,462992,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/inform/heartbeat
+36.141.36.196,3290729764,192.168.0.123,2063640768,36017,43,udp,1,5683,34334,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:39:34.515+0100,1761989974,515322,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/inform/heartbeat
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,60320,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.543+0100,1761989986,543573,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,48896,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.551+0100,1761989986,551027,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,47378,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.552+0100,1761989986,552325,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+60.53.162.18,312620348,192.168.0.123,2063640768,58214,51,udp,1,5683,48342,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.555+0100,1761989986,555036,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,51456,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.559+0100,1761989986,559572,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+36.153.130.202,3397556516,192.168.0.123,2063640768,49103,43,udp,1,5683,35062,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:39:46.561+0100,1761989986,561781,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/inform/offline
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,43657,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.564+0100,1761989986,564400,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,57247,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.570+0100,1761989986,570920,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,58727,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.571+0100,1761989986,571380,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,60450,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.574+0100,1761989986,574788,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,50,udp,1,5683,42884,31,Method Not Allowed,,,,,0,1,2025-11-01T10:39:46.579+0100,1761989986,579392,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/offline
+36.141.36.196,3290729764,192.168.0.123,2063640768,36529,43,udp,1,5683,47813,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:39:46.666+0100,1761989986,666655,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/inform/offline
+36.153.130.202,3397556516,192.168.0.123,2063640768,49445,43,udp,1,5683,44653,991,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",,,,,0,1,2025-11-01T10:39:58.910+0100,1761989998,910837,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""LINKFORMAT""}",976,/.well-known/core
+36.141.36.196,3290729764,192.168.0.123,2063640768,37044,43,udp,1,5683,47309,532,"</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</device/inform/requestSync>;title=""AP device request synchronization"",</.well-known/core>",,,,,0,1,2025-11-01T10:39:58.931+0100,1761989998,931127,3,False,1,2,5917,2,2.05 Content,17954,"{""CONTENT_FORMAT"": ""LINKFORMAT"", ""SIZE2"": ""BlockwiseTuple(block_number=2, more=False, size_exponent=5)"", ""BLOCK2"": ""1098""}",1098,/.well-known/core
+46.160.209.143,2412879918,192.168.0.123,2063640768,5903,48,udp,1,5683,35297,12,,,,,,0,1,2025-11-01T10:40:11.831+0100,1761990011,831932,3,True,1,2,,0,4.04 Not Found,32112,,0,/
+46.242.76.71,1196225070,192.168.0.123,2063640768,6191,53,udp,1,5683,60455,12,,,,,,0,1,2025-11-01T10:40:11.836+0100,1761990011,836906,3,True,1,2,,0,4.04 Not Found,32112,,0,/
+46.73.164.127,2141473070,192.168.0.123,2063640768,5880,243,udp,1,5683,34407,12,,,,,,0,1,2025-11-01T10:40:11.848+0100,1761990011,848779,3,True,1,2,,0,4.04 Not Found,32112,,0,/
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,52,udp,1,5683,60146,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.959+0100,1761990011,959905,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,60657,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.968+0100,1761990011,968697,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,59373,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.969+0100,1761990011,969495,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,53750,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.973+0100,1761990011,973817,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+60.53.162.18,312620348,192.168.0.123,2063640768,60193,51,udp,1,5683,58023,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.974+0100,1761990011,974493,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,57709,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.981+0100,1761990011,981108,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,41587,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.984+0100,1761990011,984911,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,41412,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.990+0100,1761990011,990252,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,50,udp,1,5683,56129,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.995+0100,1761990011,995082,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,56543,145,"This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",,,,,0,1,2025-11-01T10:40:11.998+0100,1761990011,998550,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}",127,/
+36.153.130.202,3397556516,192.168.0.123,2063640768,49844,43,udp,1,5683,47181,462,"************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",,,,,0,1,2025-11-01T10:40:12.052+0100,1761990012,52457,3,True,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",448,/
+36.141.36.196,3290729764,192.168.0.123,2063640768,37989,43,udp,1,5683,47369,420,"****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2020 Institute for Pervasive Computing, ETH Zurich and others
+****************************************************************",,,,,0,1,2025-11-01T10:40:12.086+0100,1761990012,86456,3,True,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",406,/
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,40356,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.103+0100,1761990024,103425,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,48071,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.112+0100,1761990024,112377,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,49571,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.115+0100,1761990024,115777,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+60.53.162.18,312620348,192.168.0.123,2063640768,60548,51,udp,1,5683,53235,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.117+0100,1761990024,117087,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,50,udp,1,5683,45491,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.119+0100,1761990024,119194,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,52703,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.123+0100,1761990024,123382,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,50,udp,1,5683,47099,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.125+0100,1761990024,125411,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,52,udp,1,5683,40321,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.129+0100,1761990024,129841,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,34536,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.131+0100,1761990024,131374,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,53556,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:24.136+0100,1761990024,136760,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/qlink/searchfh
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,54276,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.225+0100,1761990036,225374,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,60385,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.231+0100,1761990036,231827,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+60.53.162.18,312620348,192.168.0.123,2063640768,61456,51,udp,1,5683,39923,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.242+0100,1761990036,242030,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,52,udp,1,5683,43851,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.242+0100,1761990036,242136,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,50,udp,1,5683,39091,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.244+0100,1761990036,244325,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,50,udp,1,5683,47197,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.250+0100,1761990036,250126,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,52,udp,1,5683,35681,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.251+0100,1761990036,251707,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.146.251.18,318476849,192.168.0.123,2063640768,0,50,udp,1,5683,54025,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.252+0100,1761990036,252201,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,54714,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.253+0100,1761990036,253754,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,52,udp,1,5683,47251,31,Method Not Allowed,,,,,0,1,2025-11-01T10:40:36.262+0100,1761990036,262389,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/syncreq
+49.144.222.13,232689713,192.168.0.123,2063640768,0,52,udp,1,5683,45607,12,,,,,,0,1,2025-11-01T10:40:48.365+0100,1761990048,365146,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.144.56.238,3996684337,192.168.0.123,2063640768,0,50,udp,1,5683,48942,12,,,,,,0,1,2025-11-01T10:40:48.366+0100,1761990048,366434,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.151.31.83,1394579249,192.168.0.123,2063640768,0,50,udp,1,5683,54485,12,,,,,,0,1,2025-11-01T10:40:48.368+0100,1761990048,368765,3,False,1,2,,0,EMPTY,32112,,0,/async
+60.53.162.18,312620348,192.168.0.123,2063640768,61875,51,udp,1,5683,40806,12,,,,,,0,1,2025-11-01T10:40:48.368+0100,1761990048,368840,3,False,1,2,,0,5.03 Service Unavailable,32112,,0,/async
+49.147.45.194,3257766705,192.168.0.123,2063640768,0,52,udp,1,5683,34669,12,,,,,,0,1,2025-11-01T10:40:48.375+0100,1761990048,375630,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.149.204.211,3553400113,192.168.0.123,2063640768,0,52,udp,1,5683,37289,12,,,,,,0,1,2025-11-01T10:40:48.375+0100,1761990048,375736,3,False,1,2,,0,5.03 Service Unavailable,32112,,0,/async
+49.146.251.18,318476849,192.168.0.123,2063640768,0,52,udp,1,5683,58626,12,,,,,,0,1,2025-11-01T10:40:48.378+0100,1761990048,378546,3,False,1,2,,0,5.03 Service Unavailable,32112,,0,/async
+49.147.100.241,4049900337,192.168.0.123,2063640768,0,50,udp,1,5683,52677,12,,,,,,0,1,2025-11-01T10:40:48.380+0100,1761990048,380023,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.146.243.254,4277375537,192.168.0.123,2063640768,0,50,udp,1,5683,51865,12,,,,,,0,1,2025-11-01T10:40:48.385+0100,1761990048,385461,3,False,1,2,,0,EMPTY,32112,,0,/async
+49.146.54.113,1899401777,192.168.0.123,2063640768,0,50,udp,1,5683,53152,12,,,,,,0,1,2025-11-01T10:40:48.392+0100,1761990048,392382,3,False,1,2,,0,EMPTY,32112,,0,/async
+46.160.209.143,2412879918,192.168.0.123,2063640768,18910,48,udp,1,5683,58927,12,,,,,,0,1,2025-11-01T10:41:12.470+0100,1761990072,470517,3,False,1,2,,0,4.00 Bad Request,32112,,0,/ndm/dis
+46.242.76.71,1196225070,192.168.0.123,2063640768,19586,53,udp,1,5683,60977,12,,,,,,0,1,2025-11-01T10:41:12.474+0100,1761990072,474190,3,False,1,2,,0,4.00 Bad Request,32112,,0,/ndm/dis
+46.73.164.127,2141473070,192.168.0.123,2063640768,10655,243,udp,1,5683,33113,12,,,,,,0,1,2025-11-01T10:41:13.157+0100,1761990073,157305,3,False,1,2,,0,4.00 Bad Request,32112,,0,/ndm/dis
+46.160.209.143,2412879918,192.168.0.123,2063640768,19731,48,udp,1,5683,38044,16,0x1,,,,,0,1,2025-11-01T10:41:24.601+0100,1761990084,601915,3,False,1,2,,0,4.00 Bad Request,32112,,3,/ndm/ci
+46.242.76.71,1196225070,192.168.0.123,2063640768,21585,53,udp,1,5683,33024,16,0x1,,,,,0,1,2025-11-01T10:41:24.602+0100,1761990084,602040,3,False,1,2,,0,4.00 Bad Request,32112,,3,/ndm/ci
+46.73.164.127,2141473070,192.168.0.123,2063640768,11913,243,udp,1,5683,43291,16,0x1,,,,,0,1,2025-11-01T10:41:24.611+0100,1761990084,611986,3,False,1,2,,0,4.00 Bad Request,32112,,3,/ndm/ci
+46.242.76.71,1196225070,192.168.0.123,2063640768,24212,53,udp,1,5683,45096,12,,,,,,0,1,2025-11-01T10:41:49.127+0100,1761990109,127405,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/uhp
+46.73.164.127,2141473070,192.168.0.123,2063640768,14378,243,udp,1,5683,60748,12,,,,,,0,1,2025-11-01T10:41:49.127+0100,1761990109,127667,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/uhp
+46.160.209.143,2412879918,192.168.0.123,2063640768,24956,48,udp,1,5683,35602,12,,,,,,0,1,2025-11-01T10:41:49.127+0100,1761990109,127952,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/uhp
+46.160.209.143,2412879918,192.168.0.123,2063640768,26673,48,udp,1,5683,47124,12,,,,,,0,1,2025-11-01T10:42:00.952+0100,1761990120,952056,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/logout
+46.242.76.71,1196225070,192.168.0.123,2063640768,25777,53,udp,1,5683,47075,12,,,,,,0,1,2025-11-01T10:42:00.952+0100,1761990120,952185,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/logout
+46.73.164.127,2141473070,192.168.0.123,2063640768,16076,243,udp,1,5683,40919,12,,,,,,0,1,2025-11-01T10:42:00.964+0100,1761990120,964457,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/logout
+46.160.209.143,2412879918,192.168.0.123,2063640768,28036,48,udp,1,5683,40945,12,,,,,,0,1,2025-11-01T10:42:13.075+0100,1761990133,75862,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/login
+46.242.76.71,1196225070,192.168.0.123,2063640768,27690,53,udp,1,5683,51290,12,,,,,,0,1,2025-11-01T10:42:13.076+0100,1761990133,76213,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/login
+46.73.164.127,2141473070,192.168.0.123,2063640768,19049,243,udp,1,5683,36706,12,,,,,,0,1,2025-11-01T10:42:16.115+0100,1761990136,115605,3,False,1,2,,0,4.05 Method Not Allowed,32112,,0,/ndm/login
+46.160.209.143,2412879918,192.168.0.123,2063640768,29654,48,udp,1,5683,41039,144,"{""cid"":""53c8ab3e-88fc-11e6-8115-bd0b72d90543"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",,,,,0,1,2025-11-01T10:42:25.237+0100,1761990145,237877,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",130,/info
+46.242.76.71,1196225070,192.168.0.123,2063640768,29676,53,udp,1,5683,42621,144,"{""cid"":""174deb8c-3bfa-11e6-8115-73824e8a185a"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",,,,,0,1,2025-11-01T10:42:25.242+0100,1761990145,242808,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",130,/info
+46.73.164.127,2141473070,192.168.0.123,2063640768,20529,243,udp,1,5683,35303,132,"{""cid"":""c0c4e4a4-e59c-11ea-9396-9b0c8bf17d26"",""http_port"":80,""type"":""router"",""name"":""Keenetic Giga"",""version"":""0.3.5""}",,,,,0,1,2025-11-01T10:42:25.243+0100,1761990145,243604,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",118,/info
+60.53.162.18,312620348,192.168.0.123,2063640768,5257,51,udp,1,5683,43561,31,Method Not Allowed,,,,,0,1,2025-11-01T10:42:37.525+0100,1761990157,525864,3,False,1,2,,0,4.05 Method Not Allowed,32112,,18,/device/inform/change
+36.141.36.196,3290729764,192.168.0.123,2063640768,48890,43,udp,1,5683,33750,233,"{""gatewayMac"":""2C3341AADFD8"",""firmwareVersion"":""CIOT;GM230"",""type"":0,""gatewayManufacturer"":""CIOT"",""softwareVersion"":""V1A0.A04.01;1.0;2.6.1-230712"",""gatewaySn"":""CIOT28AADFD8"",""andlinkVersion"":""2.6.0"",""provinceAbb"":""GUD""}",,,,,0,1,2025-11-01T10:42:50.156+0100,1761990170,156240,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",219,/qlink/queryGwExt
+36.141.36.196,3290729764,192.168.0.123,2063640768,49339,43,udp,1,5683,43521,28,"{""respCode"":1}",,,,,0,1,2025-11-01T10:43:01.757+0100,1761990181,757413,3,False,1,2,,0,2.05 Content,32112,"{""CONTENT_FORMAT"": ""TEXT""}",14,/device/inform/requestSync

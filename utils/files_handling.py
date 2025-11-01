@@ -1,6 +1,6 @@
-import csv
 import os
 
+#############################
 
 def path_dict_to_str(dict_path):
 
@@ -11,33 +11,25 @@ def path_dict_to_str(dict_path):
 
     return string_path[:-1]
 
-
-
-def store_data(data, file):
-
-    with open(file, "a", newline = '') as csv_file:
-        write = csv.writer(csv_file)
-        write.writerow(data)
-
-
+#############################
 
 def read_file_system(base_path):
 
-    file_system = []
+    portions = ['0', '1', '2', '3', '4', '5', '6']
+    
+    date_paths = []
 
-    items = os.listdir(base_path)
-    items.sort()
+    for portion in portions:
 
-    if not items:
-        return []
+        path = base_path + f"/{portion}"
+        
+        dates = os.listdir(path)
+        dates.sort()
+        
+        if not dates:
+            continue 
+        
+        for date in dates:
+            date_paths.append(path + f"/{date}")
 
-    for item in items:
-
-        to_test = base_path + f"/{item}"
-
-        if os.path.isfile(to_test):
-            file_system.append(to_test)
-        else:
-            file_system.extend(read_file_system(to_test))
-
-    return file_system
+    return date_paths

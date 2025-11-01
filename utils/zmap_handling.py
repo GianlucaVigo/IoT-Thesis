@@ -2,20 +2,17 @@ import subprocess
 import os
 import datetime
 
-#from O1a_DataCollection.menu import lookups as a_lookups
+from O1a_DataCollection.menu import lookups as a_lookups
 from O1b_DataCollection.menu import lookups as b_lookups
 
 ################################################################################################
 
-def zmap_additions():
+def zmap_additions(cidr):
 
     # user can specify some custom ZMap command options
-    #
-    #               stability       new
-    # bandwidth         x            x
-    # probes            x            x
-    # max-results                    x
-    # 
+    # bandwidth
+    # probes
+    # max-results
 
     user_options = ['bandwidth', 'probes', 'max-results']
     zmap_user_cmd = []
@@ -27,10 +24,14 @@ def zmap_additions():
 
         user_choice = input()
 
-        if not user_choice: # if the user does not provide anything -> the option won't be added to the ZMap command
+        # if the user does not provide anything -> the option won't be added to the ZMap command
+        if not user_choice: 
             continue
         else:
             zmap_user_cmd.append(f"--{option}={user_choice}")
+    
+    # append ip range selected by user 
+    zmap_user_cmd.append(cidr)
 
     return zmap_user_cmd
 
@@ -75,7 +76,7 @@ def zmap_menu(approach):
         print(info_line)
     
     # user selects the portion id
-    print("\nPlease select the index: ", end="")
+    print("\nPlease select the index:", end="")
 
     try:
         # get the index and convert it to integer
@@ -84,13 +85,12 @@ def zmap_menu(approach):
         internet_portion = internet_portions[internet_portion_id]
         
         # ZMap command additions
-        cmd = zmap_additions()
+        cmd = zmap_additions(internet_portion)
         
         if approach == 'a':
-            pass
-            #a_lookups(internet_portion, internet_portion_id, cmd, approach)
+            a_lookups(internet_portion_id, cmd, approach)
         elif approach == 'b':
-            b_lookups(internet_portion, internet_portion_id, cmd, approach)
+            b_lookups(internet_portion_id, cmd, approach)
 
     except Exception as e:
         # print the error type
@@ -114,6 +114,8 @@ def execute_zmap(command_additions):
     ]
 
     command.extend(command_additions)
+    
+    print(command)
 
     # ZMap Command Execution
     # stdout=subprocess.PIPE    => captures the process's std output so that Python can read it
