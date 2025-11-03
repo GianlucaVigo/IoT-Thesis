@@ -170,7 +170,7 @@ def perform_analysis(analysis, data_paths):
                             ip.analysis(data_paths[1], "as_name")
                         # Stability
                         case 3:
-                            ip.stability_analysis(data_paths[1])
+                            ip.stability_analysis(data_paths[0])
 
                 # Payload-based
                 case 1:

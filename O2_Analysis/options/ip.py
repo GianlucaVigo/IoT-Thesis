@@ -131,11 +131,8 @@ def analysis(paths, mode):
 
 def stability_analysis(data_paths):
     
-    print(data_paths)
-    
     on = Counter()
     off = Counter()
-    
     
     
     portions_datasets = {}
@@ -147,10 +144,7 @@ def stability_analysis(data_paths):
             portions_datasets[portion_id].append(path)
         else:
             portions_datasets[portion_id] = [path]
-            
-    print(portions_datasets)
-    
-    
+
     
     
     ip_stability = {}
@@ -159,9 +153,15 @@ def stability_analysis(data_paths):
         
         for date_path in portion_dataset_path:
             
-            current_date_str = path.split('/')[4][:-4]
+            current_date_str = date_path.split('/')[4][:-4]
         
-            for chunk in pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['saddr']):
+            for chunk in pd.read_csv(date_path, chunksize=CHUNK_SIZE, usecols=['saddr', 'code', 'classification']):
+                
+                # DATA CLEANING
+                # keeping only entries having classification equal to udp
+                chunk = chunk[chunk['classification'] == 'udp']
+                # deleting rows with code field equal to nan
+                chunk.dropna(ignore_index=True, inplace=True, subset=['code'])
                 
                 for _, row in chunk.iterrows():
                     
@@ -175,7 +175,7 @@ def stability_analysis(data_paths):
                         current_date = datetime.datetime.strptime(current_date_str, "%Y-%m-%d").date()
                         modified_last = datetime.datetime.strptime(modified_last_str, "%Y-%m-%d").date()
                         
-                        diff = current_date - modified_last
+                        diff = (current_date - modified_last).days
                         
                         # yesterday was still active/on
                         if diff == 1:
@@ -197,10 +197,23 @@ def stability_analysis(data_paths):
                     # first time an ip address appears
                     else:
                         ip_stability[ip] = [1, current_date_str]
-        
-    print(on)
     
-    print(off)
+    today = datetime.date.today()
+    
+    for ip in ip_stability.keys():
+        
+        last_date_str = ip_stability[ip][1]
+        last_date = datetime.datetime.strptime(last_date_str, "%Y-%m-%d").date()
+        
+        diff = (today - last_date).days
+        
+        on.update([ip_stability[ip][0]])
+        off.update([diff])
+        
+        
+    print(f"on: {on}")
+    
+    print(f"off: {off}")
         
     
     return

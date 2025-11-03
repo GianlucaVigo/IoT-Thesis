@@ -454,15 +454,21 @@ def analysis(data_paths, mode):
 
                 zmap_results = Counter()
                 
-                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['classification', 'icmp_unreach_str', 'code']): 
-
-                    for _, row in chunk.iterrows():
-
-                        if row['classification'] == 'udp':
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data','classification', 'icmp_unreach_str', 'code']):
+                    
+                    for i, row in chunk.iterrows():
+                        
+                        # detect undecodable messages
+                        if row['classification'] == 'udp' and pd.isna(chunk.at[i, 'code']):
+                            key = ('udp', 'undecodable msg')
+                        # detect correct messages
+                        elif row['classification'] == 'udp':
                             key = ('udp', row['code'])
+                        # detect icmp kind of messages
                         elif row['classification'] == 'icmp':
                             key = ('icmp', row['icmp_unreach_str'])
                         else:
+                            print(f"Not classified case: {row['data']}")
                             continue
                                 
                         zmap_results.update([key])
