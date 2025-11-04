@@ -129,6 +129,8 @@ def analysis(paths, mode):
 
     return
 
+#############################
+
 def stability_analysis(data_paths):
     
     on = Counter()
@@ -205,15 +207,16 @@ def stability_analysis(data_paths):
         last_date_str = ip_stability[ip][1]
         last_date = datetime.datetime.strptime(last_date_str, "%Y-%m-%d").date()
         
-        diff = (today - last_date).days
-        
         on.update([ip_stability[ip][0]])
+        
+        if last_date == today:
+            continue
+        
+        diff = (today - last_date).days
         off.update([diff])
         
-        
+    # print on/off counters
     print(f"on: {on}")
-    
     print(f"off: {off}")
-        
     
     return
