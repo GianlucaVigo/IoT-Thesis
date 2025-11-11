@@ -95,7 +95,7 @@ def analysis(data_paths, mode):
 
                     ##############################
 
-                    formats += Counter(chunk['payload'].apply(detect_format))
+                    formats += Counter(chunk['data'].apply(detect_format))
 
                 to_plot.extend(
                     {'date': current_date, 'format': format, 'count': count}
@@ -242,8 +242,6 @@ def analysis(data_paths, mode):
                     # deleting rows with code field equal to nan
                     chunk.dropna(ignore_index=True, inplace=True, subset=['options'])
 
-                    response_codes += Counter(chunk['code'])
-
                     ##############################
 
                     # Parse JSON safely
@@ -300,7 +298,7 @@ def analysis(data_paths, mode):
                     # DATA CLEANING
                     chunk = chunk[(chunk['code'] == '2.05 Content') & (chunk['uri'] == '/')]
                     # deleting rows with code field equal to nan
-                    chunk.dropna(ignore_index=True, inplace=True, subset=['payload'])
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
 
                     ##############################
 
@@ -318,8 +316,6 @@ def analysis(data_paths, mode):
             df_plot = pd.DataFrame(to_plot, columns=['date', 'server', 'count'])
             df_plot = df_plot.groupby(['date', 'server'], as_index=False)['count'].sum()
             df_plot = df_plot.sort_values(['date', 'server'], ascending=[True, False]).reset_index(drop=True)
-
-            print(df_plot)
 
             ##############################
 
@@ -356,7 +352,7 @@ def analysis(data_paths, mode):
                     ##############################
 
                     obs_types += Counter(chunk['observable'])
-
+                
                 to_plot.extend(
                     {'date': current_date, 'obs_type': obs_type, 'count': count}
                     for obs_type, count in obs_types.items()
@@ -369,6 +365,8 @@ def analysis(data_paths, mode):
             df_plot = pd.DataFrame(to_plot, columns=['date', 'obs_type', 'count'])
             df_plot = df_plot.groupby(['date', 'obs_type'], as_index=False)['count'].sum()
             df_plot = df_plot.sort_values(['date', 'obs_type'], ascending=[True, False]).reset_index(drop=True)
+            
+            print(df_plot)
 
             ##############################
 

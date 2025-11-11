@@ -77,7 +77,14 @@ def get_metadata_value_of(payload, metadata_name):
         if attribute_info[0] == metadata_name:
             match metadata_name:
                 case 'ct':
-                    return [int(attribute_info[1])]
+                    try:
+                        return [int(attribute_info[1])]
+                    except:
+                        #.strip() removes whitespace
+                        #.strip('"') removes double quotes
+                        #.strip("'") removes single quotes if present
+                        value = attribute_info[1].strip().strip('"').strip("'")
+                        return [int(value)]
                 case 'obs':
                     return True
 

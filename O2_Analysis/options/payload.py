@@ -432,14 +432,15 @@ def analysis(data_paths, mode):
             ##############################
 
             # PLOTTING
+            
             fig = px.bar(
                 df_plot,
-                x='ct_value',
+                x='date',
                 y='count',
-                color="date",
-                barmode='group',
+                animation_frame='ct_value',
                 title="Metadata Distribution over Time"
             )
+
             fig.show()
 
         # 8

@@ -214,9 +214,38 @@ def stability_analysis(data_paths):
         
         diff = (today - last_date).days
         off.update([diff])
-        
-    # print on/off counters
-    print(f"on: {on}")
-    print(f"off: {off}")
+    
+    ##############################
+    
+    # DICTIONARY -> DATAFRAME
+    on_plot = pd.DataFrame(on.items(), columns=['days_on', 'instances'])
+    on_plot = on_plot.sort_values('days_on', ascending=True).reset_index(drop=True)
+    
+    off_plot = pd.DataFrame(off.items(), columns=['days_off', 'instances'])
+    off_plot = off_plot.sort_values('days_off', ascending=True).reset_index(drop=True)
+    
+    print(on_plot)
+    print(off_plot)
+
+    ##############################
+
+    # PLOTTING
+    fig = px.bar(
+        on_plot,
+        x='days_on',
+        y='instances',
+        title="CoAP Servers' stability"
+    )
+
+    fig.show()
+    
+    fig = px.bar(
+        off_plot,
+        x='days_off',
+        y='instances',
+        title="Inactivity Periods"
+    )
+    
+    fig.show()
     
     return
