@@ -1,7 +1,7 @@
 from utils import zmap_handling
 from O2_Analysis.menu import analysis_menu
 
-APPROACH = 'b'
+APPROACH = 'a'
 
 def main():
 
