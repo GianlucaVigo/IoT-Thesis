@@ -1,13 +1,72 @@
 import maxminddb
 import pandas as pd
 import os
+import datetime
 
 from utils import payload_handling
 
 from collections import Counter
 from aiocoap import *
 
+
 ################################################################################################
+
+def create_today_files(cidr_id, is_master, refine_only):
+    
+    # get current date
+    current_date = str(datetime.date.today())
+    
+    ################################################
+    
+    # CSV output files creation
+    base_dirs = [
+        
+        # 0) Raw csv file         
+        f'O1_DataHandling/discovery/csv/{cidr_id}/',
+        # 1) Cleaned/Decoded csv file         
+        f'O1_DataHandling/discovery/cleaned/{cidr_id}/',
+        # 2) Get Resources
+        f'O1_DataHandling/get/{cidr_id}/',
+        # 3) Observe
+        f'O1_DataHandling/observe/{cidr_id}/',
+        # 4) Undecodable Messages
+        f'O1_DataHandling/discovery/undecodable_msgs/{cidr_id}/'
+                                 
+    ]
+    
+    
+    
+    if is_master:
+        
+        # 5) Ip Info csv file                            
+        ip_info = f'O1_DataHandling/discovery/ip_info/{cidr_id}/'
+        # 6) Ip List file
+        ip_list = f'O1_DataHandling/discovery/ip_list/{cidr_id}/'
+        
+        base_dirs.extend([ip_info, ip_list])  
+    
+    
+    
+    full_paths = []
+    
+    for index, dir_path in enumerate(base_dirs):
+
+        os.makedirs(dir_path, exist_ok=True)
+
+        file_path = os.path.join(dir_path, f"{current_date}.csv")
+        full_paths.append(file_path)
+        
+        if refine_only and index == 0:
+            continue
+
+        with open(file_path, "w"):
+            pass
+
+    return full_paths
+        
+        
+################################################################################################
+
 
 def avoid_get(row):
 
@@ -174,30 +233,18 @@ def decode_data(binary_data, uri):
     })
 
     return decoded_msg
-
-################################################################################################
-
-def create_today_files(output_paths, current_date):
-    
-    for file_path in output_paths:
-
-        if not os.path.exists(file_path):
-            os.makedirs(file_path)
-
-        file_path += f"{current_date}.csv"
-
-        with open(file_path, 'w') as new_csv:
-            pass
         
 ################################################################################################
 
 # decode()
 #   it takes as input the raw/binary ZMap data field and it returns a structured object representing a CoAP response message
 #   O: version, message type (mtype), token length, code (response code), mid (message id), tokenn, options, data (payload)
-async def decode(df_zmap, uri, approach):
+async def decode(df_zmap, uri):
 
     # it contains all the decoded messages
     new_data_list = []
+    # undecodable messages
+    undecodable_msgs = []
     # it contains a summary of the decode process (success, unsuccess/<REASON>)
     decode_results = Counter()
 
@@ -233,7 +280,9 @@ async def decode(df_zmap, uri, approach):
             if decoded_msg['code'] is None:
 
                 # update summary
-                decode_results.update([f"undecodable_msg/{decoded_msg['data']}"])
+                decode_results.update([f"undecodable_msg"])
+                
+                undecodable_msgs.append([decoded_msg['saddr'], decoded_msg['data']])
 
             # otherwise it is a success
             else:
@@ -254,33 +303,6 @@ async def decode(df_zmap, uri, approach):
 
                     # print the complete/not truncated data/payload field
                     print(f"ZMap Complete Payload decoded: {decoded_msg['data']}")
-                    
-                    
-                if approach == 'b':
-
-                    # -------- observability handling --------
-                    # OBS resource 
-                    if decoded_msg['observable'] == True:
-
-                        #   -> declared OBS = CORRECT              
-                        if row['observable'] == True:           
-                            decoded_msg['observable'] = 0
-
-                        #   -> NOT declared OBS = WRONG
-                        else:                                                   
-                            decoded_msg['observable'] = 1
-
-                    # NOT OBS resource
-                    else:
-
-                        #   -> declared OBS = WRONG                                               
-                        if row['observable'] == True:                                
-                            decoded_msg['observable'] = 2
-
-                        #   -> NOT declared OBS = CORRECT               
-                        else:                                                   
-                            decoded_msg['observable'] = 3
-                    # ------------------------------------------
 
 
         # if success field is equal to 0 (all icmp, ... kind of result)
@@ -293,12 +315,38 @@ async def decode(df_zmap, uri, approach):
     
     # close context/UDP socket
     await context.shutdown()
-
+    
     # Build dataframe from list
     columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_length', 'observable', 'uri']
     for col in columns:
         df_zmap[col] = [d[col] for d in new_data_list]
+        
+    # define result to be returned
+    result = [df_zmap, decode_results]
+    
+    # ---------- undecodable-msgs management ----------
+    
+    # not empty list
+    if undecodable_msgs:
+        
+        try: 
+            # print undecodable msgs' data
+            print(undecodable_msgs)
+            
+            # convert list of lists into Pandas dataframe
+            undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data'])
+            
+            result.append(undecodable_df)
+            
+        except Exception as e:
+            print(e)
+            
+    else:
+        print("\tNo undecodable messages")
+        result.append(None)
+            
+    # -------------------------------------------------
 
     # return datafram structure + summary
-    return [df_zmap, decode_results]
+    return result
 

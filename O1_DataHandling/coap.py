@@ -109,14 +109,11 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
 
 
 
-# coroutine function: entry point of event loop
-async def get_requests(discovery_df):
-
+async def coap(discovery_df, is_discovery):
+    
     start_time = time.time()
 
     total_ips = discovery_df.shape[0]
-
-    responses = []
 
     # modify the MAX_RETRANSMIT from 4 to 2
     aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 2
@@ -127,6 +124,48 @@ async def get_requests(discovery_df):
     contexts = [await Context.create_client_context() for _ in range(CONCURRENCY)]
 
     await asyncio.sleep(2)
+    
+    # -------------------------------------
+    
+    if is_discovery:
+        responses = await discovery(discovery_df, semaphore, contexts)
+    else:
+        responses = await get_requests(discovery_df, total_ips, semaphore, contexts)
+    
+    # -------------------------------------
+
+    for ctx in contexts:
+        await ctx.shutdown()
+
+    
+    print(f"Elapsed: {time.time() - start_time}")
+    
+    responses_df = pd.DataFrame(responses)
+
+    return responses_df
+
+
+
+async def discovery(discovery_df, semaphore, contexts):
+    
+    tasks = []
+    
+    for i, row in discovery_df.iterrows():
+        
+        slot_idx= i % CONCURRENCY
+        context = contexts[slot_idx]
+
+        tasks.append(get(row['saddr'], '/.well-known/core', context, False, False, i, semaphore))
+        
+    responses = await asyncio.gather(*tasks)
+    
+    return responses
+
+
+
+async def get_requests(discovery_df, total_ips, semaphore, contexts):
+    
+    responses = []
 
     for index, row in discovery_df.iterrows():
 
@@ -182,12 +221,4 @@ async def get_requests(discovery_df):
 
     # -------------------------------------
 
-    for ctx in contexts:
-        await ctx.shutdown()
-
-    
-    print(f"Elapsed: {time.time() - start_time}")
-    
-    responses_df = pd.DataFrame(responses)
-
-    return responses_df
+    return responses
