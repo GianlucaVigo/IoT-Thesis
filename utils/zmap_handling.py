@@ -165,10 +165,10 @@ def execute_zmap(cidr, is_master):
     
     
     if is_master:
-        config_option = "--config=utils/zmap/config_world.txt"
+        config_option = "--config=utils/zmap_configs/config_world.txt"
         command.extend([config_option, cidr])
     else:
-        config_option = "--config=utils/zmap/config_stability.txt"
+        config_option = "--config=utils/zmap_configs/config_stability.txt"
         command.extend([config_option])
     
 
