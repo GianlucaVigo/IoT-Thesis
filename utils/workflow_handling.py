@@ -282,7 +282,7 @@ async def decode(df_zmap, uri):
                 # update summary
                 decode_results.update([f"undecodable_msg"])
                 
-                undecodable_msgs.append([decoded_msg['saddr'], decoded_msg['data']])
+                undecodable_msgs.append([row['saddr'], decoded_msg['data']])
 
             # otherwise it is a success
             else:
@@ -330,9 +330,6 @@ async def decode(df_zmap, uri):
     if undecodable_msgs:
         
         try: 
-            # print undecodable msgs' data
-            print(undecodable_msgs)
-            
             # convert list of lists into Pandas dataframe
             undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data'])
             

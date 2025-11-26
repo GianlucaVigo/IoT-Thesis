@@ -82,33 +82,8 @@ def elaborate_zmap_results(output_paths, is_master):
 
             # ----------- enrich-chunk -----------
             chunk['observable'] = False
-
-            # ----------- decode-zmap-payload -----------
-            print('-' * 100)
-            print("\tZMAP BINARY DECODE")
-            time.sleep(MENU_WAIT)
-            # decode the ZMap results
-            decode_res = asyncio.run(workflow_handling.decode(chunk,'/.well-known/core'))
-            chunk = decode_res[0]
             
-            print("\tDecode Results")
-            print(f"\t\t{decode_res[1]}")
             
-            if decode_res[2] is not None:
-                print("Undecodable Messages")
-                print(f"\n\t\t{decode_res[2]}")
-                decode_res[2].to_csv(output_paths[4], index=False, header=add_undecodable_msgs_header, mode='a')
-                add_undecodable_msgs_header = False
-
-            # ----------- store-discovery-dataframe -----------
-            print('-' * 100)
-            print("\tDISCOVERY DATASET STORAGE")
-            time.sleep(MENU_WAIT)
-            # stored the cleaned chunk version in append mode
-            payload_handling.options_to_json(chunk).to_csv(output_paths[1], index=False, header=add_header, mode='a')
-            print("\t\tCleaned version stored correctly!")
-
-
             if is_master:
                 
                 # ----------- ip-info -----------
@@ -126,6 +101,31 @@ def elaborate_zmap_results(output_paths, is_master):
                 # extract and store the IP addresses collected by ZMap processing
                 ip_info_df[['saddr']].to_csv(output_paths[6], index=False, header=False, mode='a')
                 
+
+            # ----------- decode-zmap-payload -----------
+            print('-' * 100)
+            print("\tZMAP BINARY DECODE")
+            time.sleep(MENU_WAIT)
+            # decode the ZMap results
+            decode_res = asyncio.run(workflow_handling.decode(chunk,'/.well-known/core'))
+            chunk = decode_res[0]
+            
+            print("\tDecode Results")
+            print(f"\t\t{decode_res[1]}")
+            
+            if decode_res[2] is not None:
+                print("\tUndecodable Messages")
+                print(decode_res[2])
+                decode_res[2].to_csv(output_paths[4], index=False, header=add_undecodable_msgs_header, mode='a')
+                add_undecodable_msgs_header = False
+
+            # ----------- store-discovery-dataframe -----------
+            print('-' * 100)
+            print("\tDISCOVERY DATASET STORAGE")
+            time.sleep(MENU_WAIT)
+            # stored the cleaned chunk version in append mode
+            payload_handling.options_to_json(chunk).to_csv(output_paths[1], index=False, header=add_header, mode='a')
+            print("\t\tCleaned version stored correctly!")
 
             # ----------- get-resources -----------
             print('-' * 100)
