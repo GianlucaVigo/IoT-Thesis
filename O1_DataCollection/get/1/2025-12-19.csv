@@ -1,0 +1,617 @@
+saddr,uri,version,mtype,token_length,code,mid,token,options,data,data_length,observable,user_inserted
+49.148.100.18,/,1.0,2.0,2.0,2.05 Content,41572.0,66d6,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.148.100.18,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,61345.0,9eb3,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,62215.0,c0a7,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,19009.0,cbb4,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,9674.0,482c,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,6565.0,8b95,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,15960.0,c6c1,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,43833.0,7536,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,37624.0,21c7,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,33672.0,6b58,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,57134.0,c509,,Method Not Allowed,18.0,3.0,False
+49.148.100.18,/async,1.0,0.0,2.0,2.05 Content,7197.0,da9f,,done,4.0,3.0,False
+61.146.231.254,/,1.0,2.0,2.0,2.05 Content,41573.0,66d7,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see https://libcoap.net)
+Copyright (C) 2010--2019 Olaf Bergmann <bergmann@tzi.org> and others
+
+",136.0,3.0,False
+61.146.231.254,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,61346.0,9eb4,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/netinfo,1.0,2.0,2.0,4.05 Method Not Allowed,62216.0,c0a8,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/searchack,1.0,2.0,2.0,4.05 Method Not Allowed,19010.0,cbb5,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/device/command/unbind,1.0,2.0,2.0,4.05 Method Not Allowed,9675.0,482d,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/device/command/file,1.0,2.0,2.0,4.05 Method Not Allowed,6566.0,8b96,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/device/command/log,1.0,2.0,2.0,4.05 Method Not Allowed,15961.0,c6c2,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/device/command/selfdetect,1.0,2.0,2.0,4.05 Method Not Allowed,43834.0,7537,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/searchdevice?true,1.0,2.0,2.0,4.05 Method Not Allowed,37625.0,21c8,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/searchRouter?true,1.0,2.0,2.0,4.05 Method Not Allowed,33673.0,6b59,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/guide?true,1.0,2.0,2.0,4.05 Method Not Allowed,57135.0,c50a,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/qlink/request?true,1.0,2.0,2.0,4.05 Method Not Allowed,36729.0,daa0,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,3971.0,69e2,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/WiFiParameterSync,1.0,2.0,2.0,4.05 Method Not Allowed,6185.0,7523,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/WiFiSwitch,1.0,2.0,2.0,4.05 Method Not Allowed,21007.0,df8d,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/RadioConfig,1.0,2.0,2.0,4.05 Method Not Allowed,48911.0,6474,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/WPS,1.0,2.0,2.0,4.05 Method Not Allowed,37429.0,b516,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/MacFilter,1.0,2.0,2.0,4.05 Method Not Allowed,2819.0,0153,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/Reboot,1.0,2.0,2.0,4.05 Method Not Allowed,17405.0,1aaa,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/LEDControl,1.0,2.0,2.0,4.05 Method Not Allowed,41023.0,5b84,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/control/RoamingConfig,1.0,2.0,2.0,4.05 Method Not Allowed,10543.0,d168,,Method Not Allowed,18.0,2.0,False
+61.146.231.254,/apdevice/query/ApConfigInfo,1.0,2.0,2.0,2.05 Content,38946.0,90cc,"{""CONTENT_FORMAT"": ""JSON""}","b'{\n\t""data"":\t{\n\t\t""hardwareVersion"":\t""HV4.0.0"",\n\t\t""softwareVersion"":\t""RAX3000-ZXW.ZD.04"",\n\t\t""WorkingMode"":\t1,\n\t\t""FlashSize"":\t128,\n\t\t""RamSize"":\t512,\n\t\t""CPUOccupancyRate"":\t7,\n\t\t""RamOccupancyRate"":\t25,\n\t\t""UpTime"":\t""694207"",\n\t\t""MacFilterEnable"":\t0,\n\t\t""MacFilterPolicy"":\t0,\n\t\t""MacFilterEntries"":\t"""",\n\t\t""LEDOnOff"":\t1,\n\t\t""BandSteeringStatus"":\t1,\n\t\t""RoamingSwitch"":\t0,\n\t\t""LowRSSI2.4G"":\t-79,\n\t\t""LowRSSI5G"":\t-79,\n\t\t""IPv6ConnStatus"":\t""Unconnected"",\n\t\t""IPv6IPAddressOrigin"":\t""AutoConfigured"",\n\t\t""IPv6IPAddress"":\t""::"",\n\t\t""IPv6DNSServers"":\t""::"",\n\t\t""IPv6PrefixDelegationEnabled"":\t""FALSE"",\n\t\t""IPv6PrefixOrigin"":\t""PrefixDelegation"",\n\t\t""IPv6Prefix"":\t""::"",\n\t\t""IPv6PrefixPltime"":\t0,\n\t\t""IPv6PrefixVltime"":\t0,\n\t\t""DefaultIPv6Gateway"":\t""::"",\n\t\t""Dslite_Enable"":\t""FALSE"",\n\t\t""IPv6Status"":\t0,\n\t\t""SyncCode"":\t""0"",\n\t\t""Radios"":\t[{\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""TransmitPower"":\t""100"",\n\t\t\t\t""SSIDStandard"":\t""802.11b/g/n/ax"",\n\t\t\t\t""NoiseLevel"":\t""-87"",\n\t\t\t\t""LoadRate"":\t4,\n\t\t\t\t""InterferencePercent"":\t4,\n\t\t\t\t""Channel"":\t""12"",\n\t\t\t\t""Bandwidth"":\t0\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""TransmitPower"":\t""100"",\n\t\t\t\t""SSIDStandard"":\t""802.11a/n/ac/ax"",\n\t\t\t\t""NoiseLevel"":\t""-92"",\n\t\t\t\t""LoadRate"":\t3,\n\t\t\t\t""InterferencePercent"":\t3,\n\t\t\t\t""Channel"":\t""48"",\n\t\t\t\t""Bandwidth"":\t0\n\t\t\t}],\n\t\t""Configurations"":\t[{\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t1,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""CMCC-wsk5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t2,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-GUIDE-LINK"",\n\t\t\t\t""SecurityMode"":\t""WPA2-Personal"",\n\t\t\t\t""Pwd"":\t"">fk2XZwL"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t3,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Guest"",\n\t\t\t\t""SecurityMode"":\t""None"",\n\t\t\t\t""Pwd"":\t"""",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t4,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Wi-Fi5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t5,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""CMCC-wsk5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t6,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""MESH-A01227-5G"",\n\t\t\t\t""SecurityMode"":\t""WPA2-Personal"",\n\t\t\t\t""Pwd"":\t""!@#$%12345"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t0\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t7,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5-5G_Guest"",\n\t\t\t\t""SecurityMode"":\t""None"",\n\t\t\t\t""Pwd"":\t""Hwn\xb6M"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t8,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Wi-Fi5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}]\n\t},\n\t""deviceId"":\t""""\n}'",3105.0,2.0,False
+61.146.231.254,/apdevice/query/UplinkStatus,1.0,2.0,2.0,2.05 Content,8005.0,642d,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""UplinkType"":	""Ethernet"",
+		""MacAddress"":	""B63920280014"",
+		""Radio"":	"""",
+		""SSID"":	"""",
+		""Noise"":	"""",
+		""SNR"":	"""",
+		""RSSI"":	"""",
+		""RxRate"":	""1000"",
+		""TxRate"":	""1000"",
+		""RxRate_rt"":	""0.025"",
+		""TxRate_rt"":	""0.250"",
+		""Channel"":	""""
+	},
+	""deviceId"":	""""
+}",269.0,2.0,False
+61.146.231.254,/apdevice/query/STAInfo,1.0,2.0,2.0,2.05 Content,53591.0,0466,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Devices"":	[{
+				""IPAddress"":	""192.168.10.7"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""D8BBC1BF69AB"",
+				""VMacAddress"":	""D8BBC1BF69AB"",
+				""STAType"":	""pc"",
+				""HostName"":	""DESKTOP-OND5AED"",
+				""UpTime"":	""374301"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.006"",
+				""TxRate_rt"":	""0.006""
+			}, {
+				""IPAddress"":	""192.168.10.5"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""CE71C99B9EE1"",
+				""VMacAddress"":	""CE71C99B9EE1"",
+				""STAType"":	""phone"",
+				""HostName"":	""08cfd01f0699616befe825cd12a6f01"",
+				""UpTime"":	""56440"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}, {
+				""IPAddress"":	""192.168.10.3"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""54F2947E75A5"",
+				""VMacAddress"":	""54F2947E75A5"",
+				""STAType"":	""phone"",
+				""HostName"":	""0da9c671ee9d64a3b936e59850844a5"",
+				""UpTime"":	""22873"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}, {
+				""IPAddress"":	""192.168.10.4"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""540DF90E7251"",
+				""VMacAddress"":	""540DF90E7251"",
+				""STAType"":	""pc"",
+				""HostName"":	""0753ab8e43f813c48ea3f4e174f211b"",
+				""UpTime"":	""53660"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}, {
+				""IPAddress"":	""192.168.10.8"",
+				""STAIPv6IPAddress"":	""::"",
+				""MacAddress"":	""B0735D1EA815"",
+				""VMacAddress"":	""B0735D1EA815"",
+				""STAType"":	""phone"",
+				""HostName"":	""07c3674a2f54890bb0b68da6b92534c"",
+				""UpTime"":	""11073"",
+				""Radio"":	"""",
+				""SSID"":	"""",
+				""RSSI"":	"""",
+				""RxRate"":	""1000"",
+				""TxRate"":	""1000"",
+				""RxRate_rt"":	""0.000"",
+				""TxRate_rt"":	""0.000""
+			}],
+		""STANumber"":	5
+	},
+	""deviceId"":	""""
+}",1955.0,2.0,False
+61.146.231.254,/apdevice/query/WiFiStats,1.0,2.0,2.0,2.05 Content,6955.0,1b04,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Stats"":	[{
+				""Radio"":	""2.4G"",
+				""Index"":	1,
+				""SSID"":	""CMCC-wsk5"",
+				""TotalBytesSent"":	31085001,
+				""TotalBytesReceived"":	32250896,
+				""TotalPacketsSent"":	50771,
+				""TotalPacketsReceived"":	198519,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	2,
+				""SSID"":	""CMCC-GUIDE-LINK"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	3,
+				""SSID"":	""CMCC-wsk5_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""2.4G"",
+				""Index"":	4,
+				""SSID"":	""CMCC-wsk5_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	5,
+				""SSID"":	""CMCC-wsk5"",
+				""TotalBytesSent"":	46208460,
+				""TotalBytesReceived"":	124813267,
+				""TotalPacketsSent"":	66777,
+				""TotalPacketsReceived"":	915545,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	6,
+				""SSID"":	""MESH-A01227-5G"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	7,
+				""SSID"":	""CMCC-wsk5-5G_Guest"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}, {
+				""Radio"":	""5G"",
+				""Index"":	8,
+				""SSID"":	""CMCC-wsk5_Wi-Fi5"",
+				""TotalBytesSent"":	0,
+				""TotalBytesReceived"":	0,
+				""TotalPacketsSent"":	0,
+				""TotalPacketsReceived"":	0,
+				""ErrorsSent"":	0,
+				""ErrorsReceived"":	0,
+				""DiscardPacketsSent"":	0,
+				""DiscardPacketsReceived"":	0
+			}]
+	},
+	""deviceId"":	""""
+}",2437.0,2.0,False
+61.146.231.254,/apdevice/query/WiFiStatus,1.0,2.0,2.0,2.05 Content,20425.0,96ec,"{""CONTENT_FORMAT"": ""JSON""}","b'{\n\t""data"":\t{\n\t\t""Radios"":\t[{\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""TransmitPower"":\t""100"",\n\t\t\t\t""Channel"":\t""12"",\n\t\t\t\t""LoadRate"":\t4,\n\t\t\t\t""Bandwidth"":\t0\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""TransmitPower"":\t""100"",\n\t\t\t\t""Channel"":\t""48"",\n\t\t\t\t""LoadRate"":\t3,\n\t\t\t\t""Bandwidth"":\t0\n\t\t\t}],\n\t\t""Configurations"":\t[{\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t1,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""CMCC-wsk5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t2,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-GUIDE-LINK"",\n\t\t\t\t""SecurityMode"":\t""WPA2-Personal"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""Pwd"":\t"">fk2XZwL"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t3,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Guest"",\n\t\t\t\t""SecurityMode"":\t""None"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""Pwd"":\t"""",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""2.4G"",\n\t\t\t\t""Index"":\t4,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Wi-Fi5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t5,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""CMCC-wsk5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t6,\n\t\t\t\t""Enable"":\t1,\n\t\t\t\t""SSID"":\t""MESH-A01227-5G"",\n\t\t\t\t""SecurityMode"":\t""WPA2-Personal"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""Pwd"":\t""!@#$%12345"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t0\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t7,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5-5G_Guest"",\n\t\t\t\t""SecurityMode"":\t""None"",\n\t\t\t\t""Encrypt"":\t3,\n\t\t\t\t""Pwd"":\t""Hwn\xb6M"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}, {\n\t\t\t\t""Radio"":\t""5G"",\n\t\t\t\t""Index"":\t8,\n\t\t\t\t""Enable"":\t0,\n\t\t\t\t""SSID"":\t""CMCC-wsk5_Wi-Fi5"",\n\t\t\t\t""SecurityMode"":\t""MIXED-WPA2WPA3"",\n\t\t\t\t""Encrypt"":\t1,\n\t\t\t\t""Pwd"":\t""tyw7rynr"",\n\t\t\t\t""MaxAssociateNum"":\t64,\n\t\t\t\t""SSIDAdvertisementEnabled"":\t1\n\t\t\t}]\n\t},\n\t""deviceId"":\t""""\n}'",2150.0,2.0,False
+61.146.231.254,/apdevice/query/WlanNeighborInfo,1.0,2.0,2.0,2.05 Content,19543.0,8039,"{""CONTENT_FORMAT"": ""JSON""}","{
+	""data"":	{
+		""Number"":	24,
+		""Radios"":	[{
+				""Radio"":	""2.4G"",
+				""SSID"":	""C7_Wi-Fi5"",
+				""MacAddress"":	""32D0F55D17CE"",
+				""Channel"":	""6"",
+				""RSSI"":	""-70"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""USER_1C526Ctp"",
+				""MacAddress"":	""0ADDB7E69FA7"",
+				""Channel"":	""7"",
+				""RSSI"":	""-71"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""702"",
+				""MacAddress"":	""E8436878F228"",
+				""Channel"":	""1"",
+				""RSSI"":	""-73"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""C7"",
+				""MacAddress"":	""28D0F55D17CE"",
+				""Channel"":	""6"",
+				""RSSI"":	""-73"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""TP-LINK_601"",
+				""MacAddress"":	""2469688D0253"",
+				""Channel"":	""11"",
+				""RSSI"":	""-76"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""USER_1C526C"",
+				""MacAddress"":	""10551CE45271"",
+				""Channel"":	""7"",
+				""RSSI"":	""-77"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Xiaomi_BCBC"",
+				""MacAddress"":	""50D2F5F1BCBD"",
+				""Channel"":	""10"",
+				""RSSI"":	""-79"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ChinaNet-TXsG"",
+				""MacAddress"":	""D8A8C8F5A1D8"",
+				""Channel"":	""8"",
+				""RSSI"":	""-79"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""DIRECT-90-HP M208 LaserJet"",
+				""MacAddress"":	""B6B5B61AB390"",
+				""Channel"":	""6"",
+				""RSSI"":	""-80"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""ChinaNet-whun"",
+				""MacAddress"":	""1409B49A0AD2"",
+				""Channel"":	""5"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""B0735D1EA81C"",
+				""Channel"":	""1"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""701"",
+				""MacAddress"":	""E466AB032E10"",
+				""Channel"":	""10"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""540DF90E7258"",
+				""Channel"":	""11"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	"""",
+				""MacAddress"":	""B0735D1EA821"",
+				""Channel"":	""1"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""BYD_DVR33587be4"",
+				""MacAddress"":	""54EF33587BE4"",
+				""Channel"":	""12"",
+				""RSSI"":	""-81"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""12#1201HYS"",
+				""MacAddress"":	""081F713E42DE"",
+				""Channel"":	""1"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""9楼"",
+				""MacAddress"":	""9CA615D7C2FC"",
+				""Channel"":	""1"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	2,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-kttT"",
+				""MacAddress"":	""A41B347F1071"",
+				""Channel"":	""1"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""360行车记录仪-D5C2"",
+				""MacAddress"":	""64E1723CD5C2"",
+				""Channel"":	""12"",
+				""RSSI"":	""-82"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""Xiaomi 13"",
+				""MacAddress"":	""0AADD97DF2A2"",
+				""Channel"":	""12"",
+				""RSSI"":	""-83"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""CMCC-X4NR"",
+				""MacAddress"":	""9C635BC6B8D8"",
+				""Channel"":	""3"",
+				""RSSI"":	""-83"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""902"",
+				""MacAddress"":	""300D9EF06263"",
+				""Channel"":	""9"",
+				""RSSI"":	""-83"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""WU"",
+				""MacAddress"":	""56C4801DEDA0"",
+				""Channel"":	""6"",
+				""RSSI"":	""-84"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	4
+			}, {
+				""Radio"":	""2.4G"",
+				""SSID"":	""902"",
+				""MacAddress"":	""300D9EF0F9B2"",
+				""Channel"":	""9"",
+				""RSSI"":	""-84"",
+				""Bandwidth"":	1,
+				""Wifistandard"":	2
+		",4087.0,2.0,False
+36.170.4.70,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,41574.0,66d8,,,0.0,3.0,False
+36.170.4.70,/qlink/ack,,,,,,,,Network error: MessageError,,,
+36.170.4.70,/qlink/queryGwExt,1.0,2.0,2.0,2.05 Content,62217.0,c0a9,"{""CONTENT_FORMAT"": ""TEXT""}","{""gatewayMac"":""14ADCAAC0C60"",""firmwareVersion"":""CIOT;GM220-S"",""type"":1,""gatewayManufacturer"":""CIOT"",""softwareVersion"":""V1A0.A04.01;1.0;2.6.1-230712"",""gatewaySn"":""CIOT12AC0C60"",""andlinkVersion"":""2.6.0"",""provinceAbb"":""SCH""}",221.0,3.0,False
+36.170.4.70,/qlink/request,1.0,2.0,2.0,2.05 Content,19011.0,cbb6,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+36.170.4.70,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,9676.0,482e,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+36.170.4.70,/qlink/success,1.0,2.0,2.0,2.05 Content,6567.0,8b97,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+36.170.4.70,/qlink/wlantest,,,,,,,,Network error: MessageError,,,
+36.170.4.70,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,43835.0,7538,,,0.0,3.0,False
+36.170.4.70,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,37626.0,21c9,,,0.0,3.0,False
+36.170.4.70,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,33674.0,6b5a,"{""CONTENT_FORMAT"": ""TEXT""}","090_14ADCAAC0C60{""apmsOnlineStatus"":0}",38.0,3.0,False
+36.170.4.70,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,57136.0,c50b,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+36.170.4.70,/gw/query/config,1.0,2.0,2.0,2.05 Content,36730.0,daa1,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+36.170.4.70,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,3972.0,69e3,,,0.0,3.0,False
+36.170.4.70,/basic/regist,1.0,2.0,2.0,2.05 Content,6186.0,7524,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+36.170.4.70,/basic/show,1.0,2.0,2.0,2.05 Content,21008.0,df8e,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+36.170.4.70,/device,1.0,2.0,2.0,4.05 Method Not Allowed,48912.0,6475,,,0.0,3.0,False
+36.170.4.70,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,37430.0,b517,,,0.0,3.0,False
+36.170.4.70,/device/command/control,1.0,2.0,2.0,2.05 Content,2820.0,0154,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+36.170.4.70,/device/command/data,1.0,2.0,2.0,2.05 Content,17406.0,1aab,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+36.170.4.70,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,41024.0,5b85,,,0.0,3.0,False
+36.170.4.70,/device/inform/boot,1.0,2.0,2.0,2.05 Content,10544.0,d169,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+36.170.4.70,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,38947.0,90cd,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+36.170.4.70,/device/inform/data,1.0,2.0,2.0,2.05 Content,8006.0,642e,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+36.170.4.70,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,53592.0,0467,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+36.170.4.70,/device/inform/offline,1.0,2.0,2.0,2.05 Content,6956.0,1b05,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+36.170.4.70,/device/inform/requestSync,1.0,2.0,2.0,2.05 Content,20426.0,96ed,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+36.170.4.70,/.well-known/core,1.0,2.0,2.0,2.05 Content,19546.0,803c,"{""CONTENT_FORMAT"": ""LINKFORMAT"", ""SIZE2"": ""BlockwiseTuple(block_number=2, more=False, size_exponent=5)"", ""BLOCK2"": ""1098""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</device/inform/requestSync>;title=""AP device request synchronization"",</.well-known/core>",1098.0,3.0,False
+36.170.4.70,/,1.0,2.0,2.0,2.05 Content,31965.0,9fd0,"{""CONTENT_FORMAT"": ""TEXT""}","****************************************************************
+CoAP RFC 7252
+****************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014-2020 Institute for Pervasive Computing, ETH Zurich and others
+****************************************************************",406.0,3.0,True
+49.148.98.188,/,1.0,2.0,2.0,2.05 Content,41575.0,66d9,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.148.98.188,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,61348.0,9eb6,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,62218.0,c0aa,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,19012.0,cbb7,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,9677.0,482f,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,6568.0,8b98,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,15963.0,c6c4,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,43836.0,7539,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,37627.0,21ca,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,33675.0,6b5b,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,57137.0,c50c,,Method Not Allowed,18.0,3.0,False
+49.148.98.188,/async,1.0,0.0,2.0,2.05 Content,7197.0,daa2,,done,4.0,3.0,False
+46.241.58.225,/register,1.0,2.0,2.0,4.05 Method Not Allowed,41576.0,66da,,,0.0,3.0,False
+46.241.58.225,/ndm/dis,1.0,2.0,2.0,4.00 Bad Request,61349.0,9eb7,,,0.0,3.0,False
+46.241.58.225,/ndm/ci,1.0,2.0,2.0,4.00 Bad Request,62219.0,c0ab,,0x1,3.0,3.0,False
+46.241.58.225,/mirror,1.0,2.0,2.0,4.05 Method Not Allowed,19013.0,cbb8,,,0.0,3.0,False
+46.241.58.225,/uhp,1.0,2.0,2.0,4.05 Method Not Allowed,9678.0,4830,,,0.0,3.0,False
+46.241.58.225,/ndm/logout,1.0,2.0,2.0,4.05 Method Not Allowed,6569.0,8b99,,,0.0,3.0,False
+46.241.58.225,/ndm/login,1.0,2.0,2.0,4.05 Method Not Allowed,15964.0,c6c5,,,0.0,3.0,False
+46.241.58.225,/info,1.0,2.0,2.0,2.05 Content,43837.0,753a,"{""CONTENT_FORMAT"": ""TEXT""}","{""cid"":""5e6fd66a-67fb-11e6-8115-d9cc61533729"",""http_port"":80,""type"":""router"",""name"":""ZyXEL Keenetic Lite III"",""version"":""0.3.5-1""}",130.0,3.0,False
+46.241.58.225,/,1.0,2.0,2.0,4.04 Not Found,37628.0,21cb,,,0.0,3.0,True
+59.183.163.141,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,41577.0,66db,,,0.0,3.0,False
+59.183.163.141,/qlink/ack,,,,,,,,Network error: MessageError,,,
+59.183.163.141,/qlink/request,1.0,2.0,2.0,2.05 Content,62220.0,c0ac,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+59.183.163.141,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,19014.0,cbb9,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+59.183.163.141,/qlink/success,1.0,2.0,2.0,2.05 Content,9679.0,4831,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+59.183.163.141,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+59.183.163.141,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,15965.0,c6c6,,,0.0,3.0,False
+59.183.163.141,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,43838.0,753b,,,0.0,3.0,False
+59.183.163.141,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,37629.0,21cc,"{""CONTENT_FORMAT"": ""TEXT""}","010_68D1BA053C28{""apmsOnlineStatus"":0}",38.0,3.0,False
+59.183.163.141,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,33676.0,6b5c,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+59.183.163.141,/gw/query/config,1.0,2.0,2.0,2.05 Content,57138.0,c50d,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+59.183.163.141,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,36732.0,daa3,,,0.0,3.0,False
+59.183.163.141,/basic/regist,1.0,2.0,2.0,2.05 Content,3973.0,69e4,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+59.183.163.141,/basic/show,1.0,2.0,2.0,2.05 Content,6187.0,7525,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+59.183.163.141,/device,1.0,2.0,2.0,4.05 Method Not Allowed,21009.0,df8f,,,0.0,3.0,False
+59.183.163.141,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,48913.0,6476,,,0.0,3.0,False
+59.183.163.141,/device/command/control,1.0,2.0,2.0,2.05 Content,37431.0,b518,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+59.183.163.141,/device/command/data,1.0,2.0,2.0,2.05 Content,2821.0,0155,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+59.183.163.141,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,17407.0,1aac,,,0.0,3.0,False
+59.183.163.141,/device/inform/boot,1.0,2.0,2.0,2.05 Content,41025.0,5b86,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+59.183.163.141,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,10545.0,d16a,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+59.183.163.141,/device/inform/data,1.0,2.0,2.0,2.05 Content,38948.0,90ce,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+59.183.163.141,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,8007.0,642f,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+59.183.163.141,/device/inform/offline,1.0,2.0,2.0,2.05 Content,53593.0,0468,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+59.183.163.141,/.well-known/core,1.0,2.0,2.0,2.05 Content,6957.0,1b06,"{""CONTENT_FORMAT"": ""LINKFORMAT""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""Inform Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",976.0,3.0,False
+59.183.163.141,/,1.0,2.0,2.0,2.05 Content,20427.0,96ee,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+58.212.143.205,/qlink/searchdevice,1.0,2.0,2.0,4.05 Method Not Allowed,41578.0,66dc,,Method Not Allowed,18.0,3.0,False
+58.212.143.205,/qlink/netinfo,,,,,,,,Network error: ConRetransmitsExceeded,,,
+58.212.143.205,/qlink/searchRouter,1.0,2.0,2.0,4.05 Method Not Allowed,62221.0,c0ad,,Method Not Allowed,18.0,3.0,False
+58.212.143.205,/qlink/guide,1.0,2.0,2.0,4.05 Method Not Allowed,19015.0,cbba,,Method Not Allowed,18.0,3.0,False
+58.212.143.205,/,1.0,2.0,2.0,4.04 Not Found,9680.0,4832,,Not Found,9.0,3.0,True
+49.228.132.174,/,1.0,2.0,2.0,2.05 Content,41579.0,66dd,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+49.228.132.174,/qlink/searchfh,,,,,,,,Network error: ConRetransmitsExceeded,,,
+49.228.132.174,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,62222.0,c0ae,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/qlink/request,,,,,,,,Network error: ConRetransmitsExceeded,,,
+49.228.132.174,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,9681.0,4833,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/bootstrap,,,,,,,,Network error: ConRetransmitsExceeded,,,
+49.228.132.174,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,15966.0,c6c7,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,43839.0,753c,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,37630.0,21cd,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,33677.0,6b5d,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,57139.0,c50e,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/device/inform/change,1.0,2.0,2.0,4.05 Method Not Allowed,36733.0,daa4,,Method Not Allowed,18.0,3.0,False
+49.228.132.174,/async,1.0,0.0,2.0,2.05 Content,11607.0,69e5,,done,4.0,3.0,False
+37.237.228.253,/qlink,1.0,2.0,2.0,4.05 Method Not Allowed,41580.0,66de,,,0.0,3.0,False
+37.237.228.253,/qlink/ack,,,,,,,,Network error: MessageError,,,
+37.237.228.253,/qlink/queryGwExt,1.0,2.0,2.0,2.05 Content,62223.0,c0af,"{""CONTENT_FORMAT"": ""TEXT""}","{""gatewayMac"":""74B57E8BBA9F"",""firmwareVersion"":""ZTE;HG8120CV7"",""type"":0,""gatewayManufacturer"":""ZTE"",""softwareVersion"":""V2.2.0P1T10;5.4.0;2.5.1-200908"",""gatewaySn"":""HWTCC312B099"",""andlinkVersion"":""2.5"",""provinceAbb"":""FUJ""}",221.0,3.0,False
+37.237.228.253,/qlink/request,1.0,2.0,2.0,2.05 Content,19017.0,cbbc,"{""CONTENT_FORMAT"": ""TEXT""}","should post example,should post example should post exampleshould post exampleshould post exampleshould post examplepost exampleshould post exampleshould post example::{""deviceId"":""50294D0120011"",""deviceType"":""111"",""ipAddress"":""192.168.1.15""}",242.0,3.0,False
+37.237.228.253,/qlink/searchgw,1.0,2.0,2.0,2.05 Content,9682.0,4834,"{""CONTENT_FORMAT"": ""TEXT""}","{""result"":1}",12.0,3.0,False
+37.237.228.253,/qlink/success,1.0,2.0,2.0,2.05 Content,6572.0,8b9c,"{""CONTENT_FORMAT"": ""TEXT""}",,0.0,3.0,False
+37.237.228.253,/qlink/wlantest,,,,,,,,Network error: ConRetransmitsExceeded,,,
+37.237.228.253,/gw,1.0,2.0,2.0,4.05 Method Not Allowed,43840.0,753d,,,0.0,3.0,False
+37.237.228.253,/gw/query,1.0,2.0,2.0,4.05 Method Not Allowed,37631.0,21ce,,,0.0,3.0,False
+37.237.228.253,/gw/query/DiagnotorConnection,1.0,2.0,2.0,2.05 Content,33678.0,6b5e,"{""CONTENT_FORMAT"": ""TEXT""}","090_74B57E8BBA9F{""apmsOnlineStatus"":0}",38.0,3.0,False
+37.237.228.253,/gw/query/apdevices,1.0,2.0,2.0,2.05 Content,57140.0,c50f,"{""CONTENT_FORMAT"": ""TEXT""}","{""APDevices"":[]}",16.0,3.0,False
+37.237.228.253,/gw/query/config,1.0,2.0,2.0,2.05 Content,36734.0,daa5,"{""CONTENT_FORMAT"": ""TEXT""}","""respCode"":1",12.0,3.0,False
+37.237.228.253,/basic,1.0,2.0,2.0,4.05 Method Not Allowed,3975.0,69e6,,,0.0,3.0,False
+37.237.228.253,/basic/regist,1.0,2.0,2.0,2.05 Content,6188.0,7526,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""ClientId"":""1391234567"",""ClientType"":0,""password"":""123456""}",80.0,3.0,False
+37.237.228.253,/basic/show,1.0,2.0,2.0,2.05 Content,21010.0,df90,"{""CONTENT_FORMAT"": ""TEXT""}","userIp:null
+SUCCESS_RESP:
+userDevices:
+toLinkDevices:
+",54.0,3.0,False
+37.237.228.253,/device,1.0,2.0,2.0,4.05 Method Not Allowed,48914.0,6477,,,0.0,3.0,False
+37.237.228.253,/device/command,1.0,2.0,2.0,4.05 Method Not Allowed,37432.0,b519,,,0.0,3.0,False
+37.237.228.253,/device/command/Intranet,1.0,2.0,2.0,2.05 Content,2822.0,0156,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+37.237.228.253,/device/command/control,1.0,2.0,2.0,2.05 Content,17408.0,1aad,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+37.237.228.253,/device/command/data,1.0,2.0,2.0,2.05 Content,41026.0,5b87,"{""CONTENT_FORMAT"": ""TEXT""}",[],2.0,3.0,False
+37.237.228.253,/device/inform,1.0,2.0,2.0,4.05 Method Not Allowed,10546.0,d16b,,,0.0,3.0,False
+37.237.228.253,/device/inform/boot,1.0,2.0,2.0,2.05 Content,38949.0,90cf,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceId"":""50292222111"",""deviceMac"":""50294D0120011"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",194.0,3.0,False
+37.237.228.253,/device/inform/bootstrap,1.0,2.0,2.0,2.05 Content,8008.0,6430,"{""CONTENT_FORMAT"": ""TEXT""}","should post example:{""deviceMac"":""50294D0120011"",""productToken"":""*****"",""deviceType"":""30102"",""ipAddress"":""192.168.1.15"",""firmwareVersion"":""f1.0"",""softwareVersion"":""s1.0"",""timestamp"":734354788}",192.0,3.0,False
+37.237.228.253,/device/inform/data,1.0,2.0,2.0,2.05 Content,53594.0,0469,"{""OBSERVE"": ""0"", ""CONTENT_FORMAT"": ""TEXT""}","
+ postRequestText: null",23.0,0.0,False
+37.237.228.253,/device/inform/heartbeat,1.0,2.0,2.0,2.05 Content,6958.0,1b07,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+37.237.228.253,/device/inform/offline,1.0,2.0,2.0,2.05 Content,20428.0,96ef,"{""CONTENT_FORMAT"": ""TEXT""}","{""respCode"":1}",14.0,3.0,False
+37.237.228.253,/.well-known/core,1.0,2.0,2.0,2.05 Content,19549.0,803f,"{""CONTENT_FORMAT"": ""LINKFORMAT"", ""SIZE2"": ""BlockwiseTuple(block_number=2, more=False, size_exponent=5)"", ""BLOCK2"": ""1087""}","</qlink>,</qlink/ack>;title=""Qlink-ACK Resource"",</qlink/queryGwExt>;title=""queryGwExt Resource"",</qlink/request>;title=""Qlink-Request Resource"",</qlink/searchgw>;title=""SearchGW Resource"",</qlink/success>;title=""Qlink-Success Resource"",</qlink/wlantest>;title=""Qlink-WLAN Resource"",</gw>,</gw/query>,</gw/query/DiagnotorConnection>;title=""Connect To Diagnotor"",</gw/query/apdevices>;title=""apdevices Data Resource"",</gw/query/config>;title=""config-properties Resource"",</basic>,</basic/regist>;title=""Qlink-Regist Resource"",</basic/show>;title=""Qlink-SHOW Resource"",</device>,</device/command>,</device/command/Intranet>;title=""Device Intranet Resource"",</device/command/control>;title=""Device Control Resource"",</device/command/data>;title=""Control Data Resource"",</device/inform>,</device/inform/boot>;title=""Boot-Request Resource"",</device/inform/bootstrap>;title=""bootstrap-Request Resource"",</device/inform/data>;obs;title=""Inform Data Resource"",</device/inform/heartbeat>;title=""HeartBeat Resource"",</device/inform/offline>;title=""ChildDevice Offline Resource"",</.well-known/core>",1087.0,3.0,False
+37.237.228.253,/,1.0,2.0,2.0,2.05 Content,31966.0,9fd1,"{""CONTENT_FORMAT"": ""TEXT""}","************************************************************
+CoAP RFC 7252                                               
+************************************************************
+This server is using the Eclipse Californium (Cf) CoAP framework
+published under EPL+EDL: http://www.eclipse.org/californium/
+
+(c) 2014, 2015, 2016 Institute for Pervasive Computing, ETH Zurich and others
+************************************************************",448.0,3.0,True
+58.69.172.210,/,1.0,2.0,2.0,2.05 Content,41581.0,66df,"{""CONTENT_FORMAT"": ""TEXT"", ""MAX_AGE"": ""196607""}","This is a test server made with libcoap (see http://libcoap.sf.net)
+Copyright (C) 2010--2013 Olaf Bergmann <bergmann@tzi.org>
+
+",127.0,3.0,False
+58.69.172.210,/qlink/searchfh,1.0,2.0,2.0,4.05 Method Not Allowed,61354.0,9ebc,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/qlink/searchgw,1.0,2.0,2.0,4.05 Method Not Allowed,62224.0,c0b0,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/qlink/request,1.0,2.0,2.0,4.05 Method Not Allowed,19018.0,cbbd,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/qlink/success,1.0,2.0,2.0,4.05 Method Not Allowed,9683.0,4835,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/bootstrap,1.0,2.0,2.0,4.05 Method Not Allowed,6573.0,8b9d,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/boot,1.0,2.0,2.0,4.05 Method Not Allowed,15968.0,c6c9,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/syncreq,1.0,2.0,2.0,4.05 Method Not Allowed,43841.0,753e,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/offline,1.0,2.0,2.0,4.05 Method Not Allowed,37632.0,21cf,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/heartbeat,1.0,2.0,2.0,4.05 Method Not Allowed,33679.0,6b5f,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/device/inform/data,1.0,2.0,2.0,4.05 Method Not Allowed,57141.0,c510,,Method Not Allowed,18.0,3.0,False
+58.69.172.210,/async,1.0,0.0,2.0,2.05 Content,7197.0,daa6,,done,4.0,3.0,False

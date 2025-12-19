@@ -1,6 +1,5 @@
 import datetime
-
-from threading import Timer
+import time
 
 from utils.zmap_handling import before_zmap_execution, execute_zmap, after_zmap_execution
 from O1_DataCollection import coap
@@ -15,17 +14,19 @@ def data_collection():
     
     after_zmap_execution(cidr_id)
     
+    # debug 
+    start = datetime.datetime.now()
     
     # 2. subsequent dates -> aiocoap gets
     # start
     print('start: ', start)
 
-    Timer((datetime.timedelta(seconds=10) - (datetime.datetime.now() - start)).seconds, gets, 1).start()
-    Timer((datetime.timedelta(seconds=20) - (datetime.datetime.now() - start)).seconds, gets, 2).start()
-    Timer((datetime.timedelta(seconds=30) - (datetime.datetime.now() - start)).seconds, gets, 3).start()
-    Timer((datetime.timedelta(seconds=40) - (datetime.datetime.now() - start)).seconds, gets, 4).start()
-    Timer((datetime.timedelta(seconds=50) - (datetime.datetime.now() - start)).seconds, gets, 5).start()
-    Timer((datetime.timedelta(seconds=60) - (datetime.datetime.now() - start)).seconds, gets, 6).start()
+    for i, offset in enumerate([10, 20, 30, 40, 50, 60], start=1):
+        delay = (datetime.timedelta(seconds=offset) - (datetime.datetime.now() - start)).total_seconds()
+        delay = max(0, delay)  # prevent negative delays
+
+        time.sleep(delay)
+        gets(i)
     
     return
 
@@ -34,5 +35,6 @@ def data_collection():
 def gets(number):
     
     print(f"gets - {number} - function executed!")
+    print('\t', datetime.datetime.now())
     
     return
