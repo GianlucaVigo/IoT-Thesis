@@ -1,4 +1,4 @@
-from utils.zmap_handling import zmap_menu
+from O1_DataCollection.menu import data_collection
 from O2_Analysis.menu import analysis_menu
 
 def main():
@@ -9,10 +9,9 @@ def main():
         print('-' * 111)
 
         print("What kind of operation you want to perform? (Specify the associated number)\n")
-        print("\t 0. [ZMAP] Execute ZMap")
-        print("\t 1. [ZMAP] Refine ZMap results")
-        print("\t 2. [ANALYSIS] extract knowledge/insights")
-        print("\t 3. [EXIT] exit from the application")
+        print("\t0. [DATA COLLECTION] Perform data collection")
+        print("\t1. [ANALYSIS] extract knowledge/insights")
+        print("\t2. [EXIT] exit from the application")
         print("\nOption: ", end="")
 
         try:
@@ -27,18 +26,14 @@ def main():
         match choice:
             
             case 0:
-                zmap_menu(False)                                            # ZMap
-                continue
-            
-            case 1:
-                zmap_menu(True)                                             # Refine ZMap results
+                data_collection()
                 continue
 
-            case 2:
+            case 1:
                 analysis_menu()                                             # Analysis
                 continue
 
-            case 3:
+            case 2:
                 print("Bye!")                                               # End the program execution
                 break
 

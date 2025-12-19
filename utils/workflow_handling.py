@@ -11,7 +11,7 @@ from aiocoap import *
 
 ################################################################################################
 
-def create_today_files(cidr_id, is_master, refine_only):
+def create_today_files(cidr_id):
     
     # get current date
     current_date = str(datetime.date.today())
@@ -20,47 +20,50 @@ def create_today_files(cidr_id, is_master, refine_only):
     
     # CSV output files creation
     base_dirs = [
-        
-        # 0) Raw csv file         
-        f'O1_DataHandling/discovery/csv/{cidr_id}/',
+
         # 1) Cleaned/Decoded csv file         
-        f'O1_DataHandling/discovery/cleaned/{cidr_id}/',
-        # 2) Get Resources
-        f'O1_DataHandling/get/{cidr_id}/',
-        # 3) Observe
-        f'O1_DataHandling/observe/{cidr_id}/',
-        # 4) Undecodable Messages
-        f'O1_DataHandling/discovery/undecodable_msgs/{cidr_id}/'
-                                 
+        f'O1_DataCollection/discovery/cleaned/{cidr_id}/',
+        # 2) Undecodable Messages
+        f'O1_DataCollection/discovery/undecodable_msgs/{cidr_id}/',
+        # 3) Ip Info csv file                            
+        f'O1_DataCollection/discovery/ip_info/{cidr_id}/',
+        # 4) Ip List file
+        f'O1_DataCollection/discovery/ip_list/{cidr_id}/',
+        # 5) Get Resources
+        f'O1_DataCollection/get/{cidr_id}/',
+        # 6) Observe
+        f'O1_DataCollection/observe/{cidr_id}/'
+    
     ]
-    
-    
-    
-    if is_master:
-        
-        # 5) Ip Info csv file                            
-        ip_info = f'O1_DataHandling/discovery/ip_info/{cidr_id}/'
-        # 6) Ip List file
-        ip_list = f'O1_DataHandling/discovery/ip_list/{cidr_id}/'
-        
-        base_dirs.extend([ip_info, ip_list])  
-    
-    
     
     full_paths = []
     
-    for index, dir_path in enumerate(base_dirs):
+    for dir_path in base_dirs:
 
         os.makedirs(dir_path, exist_ok=True)
 
         file_path = os.path.join(dir_path, f"{current_date}.csv")
         full_paths.append(file_path)
-        
-        if refine_only and index == 0:
-            continue
 
         with open(file_path, "w"):
             pass
+    
+    # 0) Raw zmap csv file
+    # f'O1_DataCollection/discovery/csv/{zmap_dataset_filename}'
+    # 1) Cleaned/Decoded csv file         
+    # f'O1_DataCollection/discovery/cleaned/{cidr_id}/',
+    # 2) Undecodable Messages
+    # f'O1_DataCollection/discovery/undecodable_msgs/{cidr_id}/',
+    # 3) Ip Info csv file                            
+    # f'O1_DataCollection/discovery/ip_info/{cidr_id}/',
+    # 4) Ip List file
+    # f'O1_DataCollection/discovery/ip_list/{cidr_id}/',
+    # 5) Get Resources
+    # f'O1_DataCollection/get/{cidr_id}/',
+    # 6) Observe
+    # f'O1_DataCollection/observe/{cidr_id}/'
+    
+    full_paths = [f'O1_DataCollection/discovery/csv/{cidr_id}.csv'] + full_paths
 
     return full_paths
         

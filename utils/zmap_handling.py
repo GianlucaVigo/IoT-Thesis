@@ -1,12 +1,12 @@
-import subprocess
 import os
 import pandas as pd
 import time
 import asyncio
+import subprocess
 import datetime
 
 from utils import payload_handling, workflow_handling
-from O1_DataHandling.coap import coap
+from O1_DataCollection.coap import coap
 
 ################################################################################################
 
@@ -16,39 +16,10 @@ CHUNK_SIZE = 10000
 
 ################################################################################################
 
-def is_master_dataset(internet_portion_id):
-    
-    dataset_path = f"O1_DataHandling/discovery/csv/{internet_portion_id}"
-    today = str(datetime.datetime.today())
-    
-    try:
-        
-        file_list = os.listdir(dataset_path)
-        file_list.sort()
-        
-    # empty list
-    except FileNotFoundError:
-        print("\tNo previous datasets -> MASTER")
-        return True
-    
-    # no files at all
-    if not file_list:
-        print("\tNo previous datasets -> MASTER")
-        return True
-        
-    if len(file_list) == 1 and file_list[0].split('.')[0] == today:
-        return True
-        
-    # NOT empty list
-    print("\tThere're already ZMap datasets -> LOOKUP")
-    return False
-    
-################################################################################################
-
-def elaborate_zmap_results(output_paths, is_master):
+def elaborate_zmap_results(output_paths):
     
     print('=' * 75)
-    print("--------- Refine ZMap Results ---------")
+    print("--------- Refine Raw ZMap Results ---------")
 
 
     '''ELABORATE ZMAP RESULTS'''
@@ -82,26 +53,22 @@ def elaborate_zmap_results(output_paths, is_master):
 
             # ----------- enrich-chunk -----------
             chunk['observable'] = False
+             
+            # ----------- ip-info -----------
+            print('-' * 100)
+            print("\tADDITIONAL IP INFORMATION EXTRACTION")
+            time.sleep(MENU_WAIT)
+            # extract and store the IP addresses collected by ZMap processing 
+            ip_info_df = workflow_handling.extract_ip_info(chunk[['saddr']])
+            ip_info_df.to_csv(output_paths[3], index=False, header=add_header, mode='a')
+                
+            # ----------- ip-list -----------
+            print('-' * 100)
+            print("\tIP LIST EXTRACTION")
+            time.sleep(MENU_WAIT)
+            # extract and store the IP addresses collected by ZMap processing
+            ip_info_df[['saddr']].to_csv(output_paths[4], index=False, header=add_header, mode='a')
             
-            
-            if is_master:
-                
-                # ----------- ip-info -----------
-                print('-' * 100)
-                print("\tADDITIONAL IP INFORMATION EXTRACTION")
-                time.sleep(MENU_WAIT)
-                # extract and store the IP addresses collected by ZMap processing 
-                ip_info_df = workflow_handling.extract_ip_info(chunk[['saddr']])
-                ip_info_df.to_csv(output_paths[5], index=False, header=add_header, mode='a')
-                
-                # ----------- ip-list -----------
-                print('-' * 100)
-                print("\tIP LIST EXTRACTION")
-                time.sleep(MENU_WAIT)
-                # extract and store the IP addresses collected by ZMap processing
-                ip_info_df[['saddr']].to_csv(output_paths[6], index=False, header=False, mode='a')
-                
-
             # ----------- decode-zmap-payload -----------
             print('-' * 100)
             print("\tZMAP BINARY DECODE")
@@ -116,7 +83,7 @@ def elaborate_zmap_results(output_paths, is_master):
             if decode_res[2] is not None:
                 print("\tUndecodable Messages")
                 print(decode_res[2])
-                decode_res[2].to_csv(output_paths[4], index=False, header=add_undecodable_msgs_header, mode='a')
+                decode_res[2].to_csv(output_paths[2], index=False, header=add_undecodable_msgs_header, mode='a')
                 add_undecodable_msgs_header = False
 
             # ----------- store-discovery-dataframe -----------
@@ -133,7 +100,7 @@ def elaborate_zmap_results(output_paths, is_master):
             time.sleep(MENU_WAIT)
             # perform the GET requests to found ZMap resources
             get_resources_df = asyncio.run(coap(chunk[['saddr','code','success','data','options']], False))
-            payload_handling.options_to_json(get_resources_df).to_csv(output_paths[2], index=False, header=add_header, mode='a')
+            payload_handling.options_to_json(get_resources_df).to_csv(output_paths[5], index=False, header=add_header, mode='a')
 
             # ----------- observe -----------
             print('-' * 100)
@@ -146,66 +113,12 @@ def elaborate_zmap_results(output_paths, is_master):
                 print("\t\tThere were NOT observable resources within the collected dataset")
             else:
                 # store essential data
-                observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(output_paths[3], index=False, header=add_observe_header, mode='a')
+                observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(output_paths[6], index=False, header=add_observe_header, mode='a')
                 print(f"\t\tObservable Resources: \n{observable_resources_df[['saddr', 'uri', 'data', 'data_length']]}")
                 add_observe_header = True
                 
             add_header = False
     
-    return
-
-################################################################################################
-
-def execute_zmap(cidr, is_master):
-
-    command = [
-        "sudo",
-        "zmap"
-    ]
-    
-    
-    if is_master:
-        config_option = "--config=utils/zmap_configs/config_world.txt"
-        command.extend([config_option, cidr])
-    else:
-        config_option = "--config=utils/zmap_configs/config_stability.txt"
-        command.extend([config_option])
-    
-
-    print('-' * 30)
-    print("ZMap command executed:\n\t", end="")
-    for part in command:
-        print(part, end=" ")
-    print()
-    print('-' * 30)
-        
-    # ZMap Command Execution
-    # stdout=subprocess.PIPE    => captures the process's std output so that Python can read it
-    # stderr=subprocess.STDOUT  => redirect the std error to output and so to Python
-    # text=True                 => convert the std output into text (instead of bytes)
-    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-
-    try:
-        # read the process output line-by-line as it runs
-        while True:
-            # blocks until a newline is available or EOF occurs
-            line = p.stdout.readline()
-
-            # line is empty/no data/EOF
-            if not line and p.poll() is not None:
-                break # exit from the loop
-            # otherwise print the captured line
-            if line:
-                print("[zmap]", line.rstrip())
-
-    finally:
-        # close the captured stdout file object 
-        p.stdout.close()
-        # let the process ends and collect its return code
-        ret = p.wait()
-        # print return exit
-        print("ZMap exit:", ret)
-
     return
 
 ################################################################################################
@@ -247,26 +160,102 @@ def portion_selection():
 
 ################################################################################################
 
-def zmap_menu(refine_only):
-
+def before_zmap_execution():
+    
     # Header + Description
-    print('-' * 50, '[ZMAP]', '-' * 50)
-    print("Welcome to the ZMAP utility!")
+    print('-' * 50, '[BEFORE ZMAP EXEC]', '-' * 50)
+    print("This utility must be executed BEFORE the execution of Zmap!")
+    
+    # 1. choose internet portion
+    try:
+        internet_portion_id, internet_portion = portion_selection()
+        print(f"Selected cidr: {internet_portion}")
+    except Exception as e:
+        print(e)
+    
+    # 2. create the .csv file for zmap output
+    # raw csv file path       
+    base_dir_path = 'O1_DataCollection/discovery/csv/'
+    # create the missing directory (csv)
+    os.makedirs(base_dir_path, exist_ok=True)
+    # define the full file path
+    file_path = os.path.join(base_dir_path, f"{internet_portion_id}.csv")
+    # create the file according to the full file path
+    with open(file_path, "w"):
+        pass
+    
+    return [internet_portion_id, internet_portion]
+
+################################################################################################
+
+def execute_zmap(cidr_id, cidr):
+    
+    # Header + Description
+    print('-' * 50, '[ZMAP EXEC]', '-' * 50)
+    print("Execute ZMap to get results to be then refined!")
+
+    command = [
+        "sudo",
+        "zmap"
+    ]
+
+    config_option = "--config=utils/zmap_configs/config.txt"
+    output_file = f"--output-file=O1_DataCollection/discovery/csv/{cidr_id}.csv"
+    command.extend([config_option, output_file, cidr])
+    
+    # debug
+    print('-' * 30)
+    print("ZMap command executed:\n\t", end="")
+    for part in command:
+        print(part, end=" ")
+    print()
+    print('-' * 30)
+    
+    zmap_start_time = datetime.datetime.now()
+        
+    # ZMap Command Execution
+    # stdout=subprocess.PIPE    => captures the process's std output so that Python can read it
+    # stderr=subprocess.STDOUT  => redirect the std error to output and so to Python
+    # text=True                 => convert the std output into text (instead of bytes)
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
     try:
-        
-        internet_portion_id, internet_portion = portion_selection()
-        
-        is_master = is_master_dataset(internet_portion_id)
-        
-        '''FILES CREATION'''
-        # create a new empty csv file in all the previously elencated directories
-        output_paths = workflow_handling.create_today_files(internet_portion_id, is_master, refine_only)
+        # read the process output line-by-line as it runs
+        while True:
+            # blocks until a newline is available or EOF occurs
+            line = p.stdout.readline()
 
-        if refine_only is False:
-            execute_zmap(internet_portion, is_master)
+            # line is empty/no data/EOF
+            if not line and p.poll() is not None:
+                break # exit from the loop
+            # otherwise print the captured line
+            if line:
+                print("[zmap]", line.rstrip())
+
+    finally:
+        # close the captured stdout file object 
+        p.stdout.close()
+        # let the process ends and collect its return code
+        ret = p.wait()
+        # print return exit
+        print("ZMap exit:", ret)
+
+    return zmap_start_time
+
+################################################################################################
+
+def after_zmap_execution(cidr_id):
+    
+    # Header + Description
+    print('-' * 50, '[AFTER ZMAP EXEC]', '-' * 50)
+    print("This utility must be executed AFTER the execution of Zmap!")
+
+    try:
+
+        # create a new empty csv file in all the previously elencated directories
+        output_paths = workflow_handling.create_today_files(cidr_id)
         
-        elaborate_zmap_results(output_paths, is_master)
+        elaborate_zmap_results(output_paths)
 
     except Exception as e:
         # print the error type

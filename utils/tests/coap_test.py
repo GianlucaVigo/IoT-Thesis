@@ -2,50 +2,32 @@ import asyncio
 from aiocoap import *
 import logging
 
-import payload_handling
 
 # log info settings
 logging.basicConfig(level=logging.INFO)
 
 
 # perform the resource discovery operation -> GET (/.well-known/core)
-async def coap_get(ip_address, uri):
+async def coap_get():
 
-    # client context creation
-    protocol = await Context.create_client_context()
-    # resource URI to be checked
-    uri_to_check = f"coap://{ip_address}:5683{uri}"
+
     # build the request message
-    request = Message(code=GET, uri=uri_to_check)
-
-    try:
-        # send the request and obtained the response
-        response = await protocol.request(request).response
-
-        print(payload_handling.get_version(response))
-        print(payload_handling.get_mtype(response))
-        print(payload_handling.get_token_length(response))
-        print(payload_handling.get_code(response))
-        print(payload_handling.get_mid(response))
-        print(payload_handling.get_token(response))
-        print(payload_handling.get_options(response))
-        print(payload_handling.get_payload(response))
-
-    except Exception as e:
-        print(f"\t{e}")
-        return None # error
+    request = Message(mtype=CON, code=GET, mid=1234)
+    request.opt.uri_path = (".well-known", "core")
+    request.token = b'\x01\x02\x03\x04'
+    
+    raw_bytes = request.encode()
+    
+    hex_string = raw_bytes.hex()
+    
+    print(hex_string)
+    
+    return
 
 
 
-rows = ['27.215.221.207']
 
-for row in rows:
-
-    ip = row
-
-    print('%' * 50)
-    asyncio.run(coap_get(ip,"/.well-known/core"))
-    asyncio.run(coap_get(ip,"/oic/res")) 
+asyncio.run(coap_get())
 
 '''
 import asyncio

@@ -1,6 +1,6 @@
 from aiocoap import *
-import aiocoap
 
+import aiocoap
 import asyncio
 import pandas as pd
 import logging
@@ -8,11 +8,14 @@ import time
 
 from utils import payload_handling, workflow_handling
 
+################################################################################################
+
 # log info settings
 logging.basicConfig(level=logging.INFO)
 
 CONCURRENCY = 30
 
+################################################################################################
 
 # perform a CoAP GET request of a specified CoAP resource (IP addr + Resource URI)
 async def get(ip_address, uri, context, declared_obs, user_inserted, progress_counter, semaphore):
@@ -107,7 +110,7 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
 
         return data_to_store
 
-
+################################################################################################
 
 async def coap(discovery_df, is_discovery):
     
@@ -144,7 +147,7 @@ async def coap(discovery_df, is_discovery):
 
     return responses_df
 
-
+################################################################################################
 
 async def discovery(discovery_df, semaphore, contexts):
     
@@ -161,7 +164,7 @@ async def discovery(discovery_df, semaphore, contexts):
     
     return responses
 
-
+################################################################################################
 
 async def get_requests(discovery_df, total_ips, semaphore, contexts):
     
