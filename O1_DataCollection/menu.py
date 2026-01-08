@@ -15,9 +15,9 @@ def data_collection():
     
     # 2. subsequent dates -> aiocoap gets
     
-    SECONDS_PER_DAY = 10 * 60
+    SECONDS_PER_DAY = 24 * 60 * 60
     
-    for i, offset in enumerate([1, 2, 3], start=1):
+    for i, offset in enumerate([1, 2, 3, 4, 5, 6], start=1):
         delay = (datetime.timedelta(seconds=offset * SECONDS_PER_DAY) - (datetime.datetime.now() - start)).total_seconds()
         delay = max(0, delay)  # prevent negative delays
         
