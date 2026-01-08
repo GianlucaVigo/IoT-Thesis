@@ -1,24 +1,24 @@
-from aiocoap import *
-
-import aiocoap
 import asyncio
 import pandas as pd
-import logging
 import time
+import aiocoap
+import logging
+
+from aiocoap import *
 
 from utils import payload_handling, workflow_handling
 
 ################################################################################################
 
 # log info settings
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.CRITICAL)
 
-CONCURRENCY = 30
+SEMAPHORE_SLOTS = 1000
 
 ################################################################################################
 
 # perform a CoAP GET request of a specified CoAP resource (IP addr + Resource URI)
-async def get(ip_address, uri, context, declared_obs, user_inserted, progress_counter, semaphore):
+async def get(ip_address, uri, context, declared_obs, user_inserted, semaphore):
         
     async with semaphore:
         
@@ -33,6 +33,7 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
             'token': None,
             'options': None,
             'data': None,
+            'data_format': None,
             'data_length': None,
             'observable': None,
             'user_inserted': None
@@ -50,7 +51,7 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
         request = Message(code=GET, uri=uri_to_check, observe=0)
 
         try:
-            print(f"\t\t[{"{:2d}".format(progress_counter + 1)}] ({time.ctime(time.time())})\tGET request to: {uri}")
+            print(f"\t[{ip_address}] ({time.ctime(time.time())})\tGET request to: {uri}")
             # send the request and obtained the response
             response = await asyncio.wait_for(context.request(request).response, timeout=MAX_TRANSMIT_WAIT + 5)
 
@@ -79,7 +80,6 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
                     observable_status = 3
             # ------------------------------------------
 
-                
             data_to_store.update({
                 'version': payload_handling.get_version(response),
                 'mtype': payload_handling.get_mtype(response),
@@ -89,10 +89,11 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
                 'token': payload_handling.get_token(response),
                 'options': payload_handling.get_options(response),
                 'data': payload_handling.get_payload(response),
+                'data_format': payload_handling.get_payload_format(response),   
                 'data_length': payload_handling.get_payload_length(response),
                 'observable': observable_status,
                 'user_inserted': user_inserted
-            })
+            })    
 
         except asyncio.TimeoutError:
             print(f"\t\t\tRequest to {ip_address}{uri} timed out")
@@ -113,68 +114,60 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, progress_co
 ################################################################################################
 
 async def coap(discovery_df, is_discovery):
-    
-    start_time = time.time()
-
-    total_ips = discovery_df.shape[0]
 
     # modify the MAX_RETRANSMIT from 4 to 2
     aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 2
 
-    semaphore = asyncio.Semaphore(CONCURRENCY)
+    # semaphore instantiation
+    semaphore = asyncio.Semaphore(SEMAPHORE_SLOTS)
 
     # client context creation
-    contexts = [await Context.create_client_context() for _ in range(CONCURRENCY)]
+    context = await Context.create_client_context()
 
     await asyncio.sleep(2)
     
     # -------------------------------------
     
     if is_discovery:
-        responses = await discovery(discovery_df, semaphore, contexts)
+        responses_df = await discovery(discovery_df, semaphore, context)
     else:
-        responses = await get_requests(discovery_df, total_ips, semaphore, contexts)
+        responses_df = await get_requests(discovery_df, semaphore, context)
     
     # -------------------------------------
 
-    for ctx in contexts:
-        await ctx.shutdown()
-
-    
-    print(f"Elapsed: {time.time() - start_time}")
-    
-    responses_df = pd.DataFrame(responses)
+    await context.shutdown()
 
     return responses_df
 
 ################################################################################################
 
-async def discovery(discovery_df, semaphore, contexts):
+async def discovery(discovery_df, semaphore, context):
     
     tasks = []
     
-    for i, row in discovery_df.iterrows():
+    for _, row in discovery_df.iterrows():
         
-        slot_idx= i % CONCURRENCY
-        context = contexts[slot_idx]
-
-        tasks.append(get(row['saddr'], '/.well-known/core', context, False, False, i, semaphore))
+        if row['success'] == 1:
+            tasks.append(get(row['saddr'], '/.well-known/core', context, False, False, semaphore))
         
     responses = await asyncio.gather(*tasks)
     
-    return responses
+    responses_df = pd.DataFrame(responses)
+    
+    return responses_df
 
 ################################################################################################
 
-async def get_requests(discovery_df, total_ips, semaphore, contexts):
+async def get_requests(discovery_df, semaphore, context):
     
-    responses = []
+    tasks = []
 
-    for index, row in discovery_df.iterrows():
+    num_of_tasks = 0
 
-        # print status line (# servers left to check)
-        print(f"\t[{index + 1}/{total_ips}] Testing: {row['saddr']}")
-            
+    #########################################
+
+    for _,row in discovery_df.iterrows():
+
         if not workflow_handling.avoid_get(row):
 
             # resources = list of uris + their metadata
@@ -192,9 +185,7 @@ async def get_requests(discovery_df, total_ips, semaphore, contexts):
                 home_path_inserted = True
 
 
-            tasks = []
-
-            for i, res in enumerate(resources):
+            for _, res in enumerate(resources):
                 
                 uri = res.split(';')[0].strip('<>')
 
@@ -211,17 +202,23 @@ async def get_requests(discovery_df, total_ips, semaphore, contexts):
                 
                 if uri == '/':
                     user_inserted = home_path_inserted
+
+                # ---------------------------------------
                 
-                slot_idx= i % CONCURRENCY
-                context = contexts[slot_idx]
-
-                tasks.append(get(row['saddr'], uri, context, declared_obs, user_inserted, i, semaphore))
+                tasks.append(get(row['saddr'], uri, context, declared_obs, user_inserted, semaphore))
+                num_of_tasks += 1
 
 
-            results = await asyncio.gather(*tasks)
+    # collect ALL results
+    results = await asyncio.gather(*tasks)
 
-            responses.extend(results)
-
+    # convert list to DataFrame
+    responses_df = pd.DataFrame(results)
+            
     # -------------------------------------
+    
+    # Number of examined resources 
+    print(f"Number of tasks: {num_of_tasks}")
+    
 
-    return responses
+    return responses_df

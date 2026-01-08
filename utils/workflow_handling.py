@@ -11,61 +11,31 @@ from aiocoap import *
 
 ################################################################################################
 
-def create_today_files(cidr_id):
+def create_file(path, cidr_id):
     
-    # get current date
-    current_date = str(datetime.date.today())
     
-    ################################################
+    os.makedirs(path, exist_ok=True)
     
-    # CSV output files creation
-    base_dirs = [
+    
+    if cidr_id == None:
+        
+        # get current date
+        # current_date = str(datetime.date.today())
+        
+        # test
+        current_date = str(datetime.datetime.now())
 
-        # 1) Cleaned/Decoded csv file         
-        f'O1_DataCollection/discovery/cleaned/{cidr_id}/',
-        # 2) Undecodable Messages
-        f'O1_DataCollection/discovery/undecodable_msgs/{cidr_id}/',
-        # 3) Ip Info csv file                            
-        f'O1_DataCollection/discovery/ip_info/{cidr_id}/',
-        # 4) Ip List file
-        f'O1_DataCollection/discovery/ip_list/{cidr_id}/',
-        # 5) Get Resources
-        f'O1_DataCollection/get/{cidr_id}/',
-        # 6) Observe
-        f'O1_DataCollection/observe/{cidr_id}/'
-    
-    ]
-    
-    full_paths = []
-    
-    for dir_path in base_dirs:
+        path = os.path.join(path, f"{current_date}.csv")
+        
+    else:
+        
+        path = os.path.join(path, f"{cidr_id}.csv")
+        
 
-        os.makedirs(dir_path, exist_ok=True)
+    with open(path, "w"):
+        pass
 
-        file_path = os.path.join(dir_path, f"{current_date}.csv")
-        full_paths.append(file_path)
-
-        with open(file_path, "w"):
-            pass
-    
-    # 0) Raw zmap csv file
-    # f'O1_DataCollection/discovery/csv/{zmap_dataset_filename}'
-    # 1) Cleaned/Decoded csv file         
-    # f'O1_DataCollection/discovery/cleaned/{cidr_id}/',
-    # 2) Undecodable Messages
-    # f'O1_DataCollection/discovery/undecodable_msgs/{cidr_id}/',
-    # 3) Ip Info csv file                            
-    # f'O1_DataCollection/discovery/ip_info/{cidr_id}/',
-    # 4) Ip List file
-    # f'O1_DataCollection/discovery/ip_list/{cidr_id}/',
-    # 5) Get Resources
-    # f'O1_DataCollection/get/{cidr_id}/',
-    # 6) Observe
-    # f'O1_DataCollection/observe/{cidr_id}/'
-    
-    full_paths = [f'O1_DataCollection/discovery/csv/{cidr_id}.csv'] + full_paths
-
-    return full_paths
+    return path
         
         
 ################################################################################################
@@ -180,6 +150,7 @@ async def get(ip_address, truncated_decoded_msg, context):
             'options': payload_handling.get_options(response),
             'observable': payload_handling.get_observe(response, truncated_decoded_msg['uri']),
             'data': payload_handling.get_payload(response),
+            'data_format': payload_handling.get_payload_format(response),
             'data_length': payload_handling.get_payload_length(response),
             'uri': truncated_decoded_msg['uri']
         }
@@ -203,7 +174,8 @@ def decode_data(binary_data, uri):
         'options': None,
         'observable': None,
         # maintain the raw payload as is
-        'data': binary_data,     
+        'data': binary_data,
+        'data_format': None,     
         'data_length': len(binary_data),
         'uri': uri
     }
@@ -232,6 +204,7 @@ def decode_data(binary_data, uri):
         'options': payload_handling.get_options(msg),
         'observable': payload_handling.get_observe(msg, uri),
         'data': payload_handling.get_payload(msg),
+        'data_format': payload_handling.get_payload_format(msg),
         'data_length': payload_handling.get_payload_length(msg)
     })
 
@@ -268,6 +241,7 @@ async def decode(df_zmap, uri):
             'options': None,
             'observable': None,
             'data': None,
+            'data_format': None,
             'data_length': None,
             'uri': None
         }
@@ -285,7 +259,7 @@ async def decode(df_zmap, uri):
                 # update summary
                 decode_results.update([f"undecodable_msg"])
                 
-                undecodable_msgs.append([row['saddr'], decoded_msg['data']])
+                undecodable_msgs.append([row['saddr'], decoded_msg['data'], decoded_msg['data_length'], decoded_msg['uri']])
 
             # otherwise it is a success
             else:
@@ -320,7 +294,7 @@ async def decode(df_zmap, uri):
     await context.shutdown()
     
     # Build dataframe from list
-    columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_length', 'observable', 'uri']
+    columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_format', 'data_length', 'observable', 'uri']
     for col in columns:
         df_zmap[col] = [d[col] for d in new_data_list]
         
@@ -334,7 +308,7 @@ async def decode(df_zmap, uri):
         
         try: 
             # convert list of lists into Pandas dataframe
-            undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data'])
+            undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data', 'data_length', 'uri'])
             
             result.append(undecodable_df)
             
@@ -349,4 +323,3 @@ async def decode(df_zmap, uri):
 
     # return datafram structure + summary
     return result
-

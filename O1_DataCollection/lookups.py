@@ -1,7 +1,6 @@
 import asyncio
 import pandas as pd
 import time
-import os
 
 from aiocoap import *
 
@@ -12,58 +11,17 @@ from O1_DataCollection.coap import coap
 
 # constants definition
 MENU_WAIT = 0.5
-CHUNK_SIZE = 10000
+CHUNK_SIZE = 5000
 
 ################################################################################################
 
-'''NEW INTERNET WIDE SEARCH'''
-'''-------------------------------------------------------'''
-
-def lookups():
-
-    # Check if ZMap raw results are available
-    zmap_raw_results_path = "O1_DataHandling/discovery/cleaned/"
-
-    zmap_raw_results_portions = os.listdir(zmap_raw_results_path)
-    zmap_raw_results_portions.sort()
-
-    # empty list
-    if not zmap_raw_results_portions:
-        
-        print("[ERROR] You must execute ZMap before considering this phase!")
-        
-        return
-
-    ####################################################
-
-    # update zmap raw results path including portion file name
-    zmap_raw_results_path += zmap_raw_results_portions[0]
-
-    # [0.csv] -> list with at most one item
-    # [0] -> get the first and only one element
-    # [0] -> access the first char
-    try:
-        cidr_id = int(zmap_raw_results_portions[0][0])
-
-    except Exception as e:
-        print(e)
-
-    ####################################################
-
-    print('=' * 75)
-    print("--------- New Lookup ---------")
+def lookups(cidr_id):
     
-    '''1) FILES CREATION'''
-    '''-------------------------------------------------------'''    
-    # create a new empty csv file in all the previously elencated directories
+    filename = f'O1_DataCollection/data/discovery/csv/{cidr_id}.csv'
 
-    output_paths = workflow_handling.create_today_files(cidr_id, False)
-
-    '''2) LOOKUP PHASE'''
-    '''-------------------------------------------------------'''
     # since the ZMap result could be large, I split the output csv file into chunks having size CHUNK_SIZE    
-
-    with pd.read_csv(zmap_raw_results_path, chunksize=CHUNK_SIZE, usecols=['saddr']) as csv_reader:
+    #   get IP addresses from master ip info file
+    with pd.read_csv(filename, chunksize=CHUNK_SIZE, usecols=['saddr', 'success']) as csv_reader:
 
         # when an header is necessary, it must be happended on the first chunk only
         add_header = True
@@ -83,8 +41,15 @@ def lookups():
             time.sleep(MENU_WAIT)
 
             # perform discovery over already found IP addresses
-            discovery_df = asyncio.run(coap(chunk[['saddr']], True))
-            discovery_df.to_csv(output_paths[0], index=False, header=add_header, mode='a')
+            discovery_df = asyncio.run(coap(chunk, True))
+            filename = workflow_handling.create_file(f'O1_DataCollection/data/discovery/cleaned/{cidr_id}/', None)
+            discovery_df = payload_handling.options_to_json(discovery_df)
+            
+            discovery_df.to_csv(filename, index=False, header=add_header, mode='a')
+            
+            # insert 'success' column and set it to 1 in order to pass the success check
+            #   -> I rely on the remaining checks
+            discovery_df['success'] = 1
 
             # ----------- get-resources -----------
             print('-' * 100)
@@ -93,8 +58,8 @@ def lookups():
 
             # perform the GET requests to found ZMap resources
             get_resources_df = asyncio.run(coap(discovery_df[['saddr','code','success','data','options']], False))
-
-            payload_handling.options_to_json(get_resources_df).to_csv(output_paths[1], index=False, header=add_header, mode='a')
+            filename = workflow_handling.create_file(f'O1_DataCollection/data/get/{cidr_id}/', None)
+            payload_handling.options_to_json(get_resources_df).to_csv(filename, index=False, header=add_header, mode='a')
 
             # ----------- observe -----------
             print('-' * 100)
@@ -111,7 +76,8 @@ def lookups():
             else:
                 
                 # store essential data
-                observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(output_paths[2], index=False, header=add_observe_header, mode='a')
+                filename = workflow_handling.create_file(f'O1_DataCollection/data/observe/{cidr_id}/', None)
+                observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(filename, index=False, header=add_observe_header, mode='a')
                 print(f"\t\tObservable Resources: \n{observable_resources_df[['saddr', 'uri', 'data', 'data_length']]}")
 
                 add_observe_header = True

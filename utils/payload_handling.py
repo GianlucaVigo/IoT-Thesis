@@ -1,4 +1,48 @@
 import json
+from dateutil.parser import parse
+
+''''''
+def detect_format(payload):
+    
+    # empty payload/data field -> None
+    if not payload:
+        return None
+        
+    # 1. Number first
+    try:
+        int(payload)
+        return "int"
+    except ValueError:
+        try:
+            float(payload)
+            return "float"
+        except ValueError:
+            try:
+                complex(payload)
+                return "complex"
+            except ValueError:
+                pass
+
+    # 2. Boolean
+    if payload.lower() in {"true", "false"}:
+        return "boolean"
+
+    # 3. Datetime
+    try:
+        parse(payload)
+        return "datetime"
+    except Exception:
+        pass
+
+    # 4. JSON
+    try:
+        json.loads(payload)
+        return "json"
+    except (json.JSONDecodeError, TypeError):
+        pass
+
+    # 5. Fallback: just a string
+    return "string"
 
 ''''''
 def uri_list_of(payload):
@@ -197,6 +241,22 @@ def get_payload(message):
         payload = message.payload  # already a str
 
     return payload
+
+
+def get_payload_format(message):
+
+    if isinstance(message.payload, bytes):
+        try:
+            payload = message.payload.decode("utf-8")
+        except UnicodeDecodeError as e:
+            print(f"\t\t\tFailed to decode payload: {e}")
+            payload = message.payload  # fallback to raw bytes
+    else:
+        payload = message.payload  # already a str
+    
+    payload_format = detect_format(payload)
+
+    return payload_format
 
 
 def get_payload_length(message):

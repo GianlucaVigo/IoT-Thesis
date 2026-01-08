@@ -2,8 +2,6 @@ from O2_Analysis.options import ip
 from O2_Analysis.options import payload
 from O2_Analysis.options import get_resource
 
-from utils import files_handling
-
 ############################################
 
 APPROACH = 'b'
@@ -123,8 +121,7 @@ def dataset_sel(analysis):
     # --------- IP info datasets ---------
     path = {'phase': f'O1{APPROACH}_DataCollection', 'folder': 'discovery/ip_info'}
 
-    ip_info_datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
-    ip_info_datasets.sort()
+    ip_info_datasets = []
 
     # --------- Scope-oriented datasets ---------
     match analysis[0]:
@@ -139,8 +136,7 @@ def dataset_sel(analysis):
             # get based
             path.update({'folder': 'get'})
 
-    datasets = files_handling.read_file_system(files_handling.path_dict_to_str(path))
-    datasets.sort()
+    datasets = []
     
     return [datasets, ip_info_datasets]
     

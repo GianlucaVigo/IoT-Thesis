@@ -27,7 +27,7 @@ def main():
             
             case 0:
                 data_collection()
-                continue
+                break
 
             case 1:
                 analysis_menu()                                             # Analysis

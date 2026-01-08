@@ -1,40 +1,34 @@
 import datetime
 import time
 
-from utils.zmap_handling import before_zmap_execution, execute_zmap, after_zmap_execution
-from O1_DataCollection import coap
+from O1_DataCollection.lookups import lookups
+from O1_DataCollection.zmap import zmap
 
 # orchestration function
 def data_collection():
     
-    # 1. master date -> zmap + decode res + gets
-    cidr_id, cidr = before_zmap_execution()
     
-    start = execute_zmap(cidr_id, cidr)
+    # 1. master date -> execute zmap
     
-    after_zmap_execution(cidr_id)
-    
-    # debug 
-    start = datetime.datetime.now()
+    cidr_id, start = zmap()
+
     
     # 2. subsequent dates -> aiocoap gets
-    # start
-    print('start: ', start)
-
-    for i, offset in enumerate([10, 20, 30, 40, 50, 60], start=1):
-        delay = (datetime.timedelta(seconds=offset) - (datetime.datetime.now() - start)).total_seconds()
+    
+    SECONDS_PER_DAY = 10 * 60
+    
+    for i, offset in enumerate([1, 2, 3], start=1):
+        delay = (datetime.timedelta(seconds=offset * SECONDS_PER_DAY) - (datetime.datetime.now() - start)).total_seconds()
         delay = max(0, delay)  # prevent negative delays
+        
+        print('-'*30)
+        print(f"[{i}] Waiting for {delay} seconds ({datetime.datetime.now()})")
+        print('-'*30)
 
         time.sleep(delay)
-        gets(i)
-    
-    return
-
-
-
-def gets(number):
-    
-    print(f"gets - {number} - function executed!")
-    print('\t', datetime.datetime.now())
+        
+        print('Time: ', datetime.datetime.now())
+        
+        lookups(cidr_id)
     
     return

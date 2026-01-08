@@ -1,6 +1,6 @@
 target-port=5683
-rate=1000
-probes=1
+rate=500000
+probes=2
 output-module=csv
 blocklist-file=utils/zmap_configs/blocklist.conf
 probe-module=udp
