@@ -264,7 +264,7 @@ def get_payload_format(message):
 def get_payload_length(message):
 
     try:
-        payload_length = len(message)
+        payload_length = len(message.payload)
     except Exception as e:
         print(f"\t\t\t[ERROR] Payload Length extraction: {e}")
         return None

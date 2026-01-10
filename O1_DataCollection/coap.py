@@ -92,7 +92,7 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, semaphore):
                 'options': payload_handling.get_options(response),
                 'data': decoded_message_payload,
                 'data_format': payload_handling.get_payload_format(decoded_message_payload),   
-                'data_length': payload_handling.get_payload_length(decoded_message_payload),
+                'data_length': payload_handling.get_payload_length(response),
                 'observable': observable_status,
                 'user_inserted': user_inserted
             })    

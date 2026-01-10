@@ -150,7 +150,7 @@ async def get(ip_address, truncated_decoded_msg, context):
             'observable': payload_handling.get_observe(response, truncated_decoded_msg['uri']),
             'data': decoded_message_payload,
             'data_format': payload_handling.get_payload_format(decoded_message_payload),
-            'data_length': payload_handling.get_payload_length(decoded_message_payload),
+            'data_length': payload_handling.get_payload_length(response),
             'uri': truncated_decoded_msg['uri']
         }
 
@@ -207,7 +207,7 @@ def decode_data(binary_data, uri):
         'observable': payload_handling.get_observe(msg, uri),
         'data': decoded_message_payload,
         'data_format': payload_handling.get_payload_format(decoded_message_payload),
-        'data_length': payload_handling.get_payload_length(decoded_message_payload)
+        'data_length': payload_handling.get_payload_length(msg)
     })
 
     return decoded_msg
