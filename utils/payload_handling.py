@@ -4,6 +4,9 @@ from dateutil.parser import parse
 ''''''
 def detect_format(payload):
     
+    # cast it to string
+    payload = str(payload)
+    
     # empty payload/data field -> None
     if not payload:
         return None
