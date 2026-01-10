@@ -175,7 +175,7 @@ def decode_data(binary_data, uri):
         # maintain the raw payload as is
         'data': binary_data,
         'data_format': None,     
-        'data_length': len(binary_data),
+        'data_length': None,
         'uri': uri
     }
 
