@@ -142,8 +142,8 @@ def get_version(message):
 
     try:
         version = message.version
-    except Exception:
-        print("[ERROR] Version extraction")
+    except Exception as e:
+        print(f"[ERROR] Version extraction: {e}")
         return None
 
     return version
@@ -153,8 +153,8 @@ def get_mtype(message):
 
     try:
         mtype = message.mtype
-    except Exception:
-        print("[ERROR] Message Type extraction")
+    except Exception as e:
+        print(f"[ERROR] Message Type extraction: {e}")
         return None
 
     return mtype
@@ -164,8 +164,8 @@ def get_token_length(message):
 
     try:
         token_length = len(message.token)
-    except Exception:
-        print("[ERROR] Token Length extraction")
+    except Exception as e:
+        print(f"[ERROR] Token Length extraction: {e}")
         return None
 
     return token_length
@@ -175,8 +175,8 @@ def get_code(message):
 
     try:
         code= str(message.code)
-    except Exception:
-        print("[ERROR] Code extraction")
+    except Exception as e:
+        print(f"[ERROR] Code extraction: {e}")
         return None
 
     return code
@@ -186,8 +186,8 @@ def get_mid(message):
 
     try:
         mid= message.mid
-    except Exception:
-        print("[ERROR] MessageID extraction")
+    except Exception as e:
+        print(f"[ERROR] MessageID extraction: {e}")
         return None
 
     return mid
@@ -197,8 +197,8 @@ def get_token(message):
 
     try:
         token= message.token.hex()
-    except Exception:
-        print("[ERROR] Token extraction")
+    except Exception as e:
+        print(f"[ERROR] Token extraction: {e}")
         return None
 
     return token
@@ -225,8 +225,8 @@ def get_options(message):
             for i in range(len(options_key)):
                 options.update({options_key[i]: options_value[i]})
     
-    except Exception:
-        print("[ERROR] Options extraction")
+    except Exception as e:
+        print(f"[ERROR] Options extraction: {e}")
         return None
     
     return options
@@ -241,23 +241,22 @@ def get_payload(message):
             print(f"\t\t\tFailed to decode payload: {e}")
             payload = message.payload  # fallback to raw bytes
     else:
-        payload = message.payload  # already a str
+        try:
+            payload = message.payload  # already a str
+        except Exception as e:
+            print(f"\t\t\t[ERROR] Payload extraction: {e}")
+            return None
 
     return payload
 
 
 def get_payload_format(message):
 
-    if isinstance(message.payload, bytes):
-        try:
-            payload = message.payload.decode("utf-8")
-        except UnicodeDecodeError as e:
-            print(f"\t\t\tFailed to decode payload: {e}")
-            payload = message.payload  # fallback to raw bytes
-    else:
-        payload = message.payload  # already a str
-    
-    payload_format = detect_format(payload)
+    try:
+        payload_format = detect_format(message)
+    except Exception as e:
+        print(f"\t\t\t[ERROR] Payload Format extraction: {e}")
+        return None
 
     return payload_format
 
@@ -265,9 +264,9 @@ def get_payload_format(message):
 def get_payload_length(message):
 
     try:
-        payload_length = len(message.payload)
-    except Exception:
-        print("[ERROR] Payload Length extraction")
+        payload_length = len(message)
+    except Exception as e:
+        print(f"\t\t\t[ERROR] Payload Length extraction: {e}")
         return None
 
     return payload_length

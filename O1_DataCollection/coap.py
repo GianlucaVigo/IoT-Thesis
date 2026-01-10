@@ -80,6 +80,8 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, semaphore):
                     observable_status = 3
             # ------------------------------------------
 
+            decoded_message_payload = payload_handling.get_payload(response)
+
             data_to_store.update({
                 'version': payload_handling.get_version(response),
                 'mtype': payload_handling.get_mtype(response),
@@ -88,9 +90,9 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, semaphore):
                 'mid': payload_handling.get_mid(response),
                 'token': payload_handling.get_token(response),
                 'options': payload_handling.get_options(response),
-                'data': payload_handling.get_payload(response),
-                'data_format': payload_handling.get_payload_format(response),   
-                'data_length': payload_handling.get_payload_length(response),
+                'data': decoded_message_payload,
+                'data_format': payload_handling.get_payload_format(decoded_message_payload),   
+                'data_length': payload_handling.get_payload_length(decoded_message_payload),
                 'observable': observable_status,
                 'user_inserted': user_inserted
             })    
@@ -115,8 +117,8 @@ async def get(ip_address, uri, context, declared_obs, user_inserted, semaphore):
 
 async def coap(discovery_df, is_discovery):
 
-    # modify the MAX_RETRANSMIT from 4 to 2
-    aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 2
+    # MAX_RETRANSMIT = 4
+    aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 4
 
     # semaphore instantiation
     semaphore = asyncio.Semaphore(SEMAPHORE_SLOTS)

@@ -136,6 +136,8 @@ async def get(ip_address, truncated_decoded_msg, context):
         return truncated_decoded_msg
 
     else:
+        
+        decoded_message_payload = payload_handling.get_payload(response)
 
         full_decoded_msg = {
             'version': payload_handling.get_version(response),
@@ -146,9 +148,9 @@ async def get(ip_address, truncated_decoded_msg, context):
             'mid': payload_handling.get_mid(response),
             'options': payload_handling.get_options(response),
             'observable': payload_handling.get_observe(response, truncated_decoded_msg['uri']),
-            'data': payload_handling.get_payload(response),
-            'data_format': payload_handling.get_payload_format(response),
-            'data_length': payload_handling.get_payload_length(response),
+            'data': decoded_message_payload,
+            'data_format': payload_handling.get_payload_format(decoded_message_payload),
+            'data_length': payload_handling.get_payload_length(decoded_message_payload),
             'uri': truncated_decoded_msg['uri']
         }
 
@@ -191,6 +193,9 @@ def decode_data(binary_data, uri):
     # ----------------------------------------
 
     # update/populate the starting decoded message structure with all retrieved info/data
+    
+    decoded_message_payload = payload_handling.get_payload(msg)
+    
     decoded_msg.update({
         'version': payload_handling.get_version(msg),
         'mtype': payload_handling.get_mtype(msg),
@@ -200,9 +205,9 @@ def decode_data(binary_data, uri):
         'mid': payload_handling.get_mid(msg),
         'options': payload_handling.get_options(msg),
         'observable': payload_handling.get_observe(msg, uri),
-        'data': payload_handling.get_payload(msg),
-        'data_format': payload_handling.get_payload_format(msg),
-        'data_length': payload_handling.get_payload_length(msg)
+        'data': decoded_message_payload,
+        'data_format': payload_handling.get_payload_format(decoded_message_payload),
+        'data_length': payload_handling.get_payload_length(decoded_message_payload)
     })
 
     return decoded_msg
