@@ -20,7 +20,7 @@ def create_file(path, cidr_id):
     if cidr_id == None:
         
         # get current date
-        current_date = str(datetime.date.today())
+        current_date = str(datetime.datetime.now())
 
         path = os.path.join(path, f"{current_date}.csv")
         

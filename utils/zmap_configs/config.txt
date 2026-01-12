@@ -1,9 +1,10 @@
 target-port=5683
-rate=500000
-probes=2
+rate=1000
+probes=1
 output-module=csv
 blocklist-file=utils/zmap_configs/blocklist.conf
 probe-module=udp
 probe-args=file:utils/zmap_configs/coap_5683.pkt
+max-results=100
 output-fields=*
 output-filter=repeat=0

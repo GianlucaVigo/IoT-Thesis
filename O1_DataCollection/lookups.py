@@ -1,6 +1,7 @@
 import asyncio
 import pandas as pd
 import time
+import os
 
 from aiocoap import *
 
@@ -27,10 +28,7 @@ def lookups(cidr_id):
         add_header = True
         add_observe_header = True
 
-        for i, chunk in enumerate(csv_reader):
-
-            # ----------- chunk-info -----------
-            print(f"\tChunk nr [{i+1}]")
+        for _, chunk in enumerate(csv_reader):
 
             # ----------- enrich-chunk -----------
             chunk['observable'] = False
@@ -41,47 +39,52 @@ def lookups(cidr_id):
             time.sleep(MENU_WAIT)
 
             # perform discovery over already found IP addresses
-            discovery_df = asyncio.run(coap(chunk, True))
+            discovery_df = asyncio.run(coap(chunk, 0))
             filename = workflow_handling.create_file(f'O1_DataCollection/data/discovery/cleaned/{cidr_id}/', None)
             discovery_df = payload_handling.options_to_json(discovery_df)
             
             discovery_df.to_csv(filename, index=False, header=add_header, mode='a')
             
-            # insert 'success' column and set it to 1 in order to pass the success check
-            #   -> I rely on the remaining checks
-            discovery_df['success'] = 1
+            add_header = False
+            
+            
+            
+            
+            
+    filepath = f'O1_DataCollection/data/observe/{cidr_id}/'
+    
+    master_observe = os.listdir(filepath)
+    master_observe.sort()
+    
+    filepath += master_observe[0]
+    
+    # since the ZMap result could be large, I split the output csv file into chunks having size CHUNK_SIZE    
+    #   get IP addresses from master ip info file
+    with pd.read_csv(filepath, chunksize=CHUNK_SIZE, usecols=['saddr','uri']) as csv_reader:
+        
+        # when an header is necessary, it must be happended on the first chunk only
+        add_observe_header = True
 
-            # ----------- get-resources -----------
+        for _, chunk in enumerate(csv_reader):
+
+            # ----------- get-observable-resources -----------
             print('-' * 100)
-            print("\t2. GET RESOURCES")
+            print("\t2. GET OBSERVABLE RESOURCES")
             time.sleep(MENU_WAIT)
-
-            # perform the GET requests to found ZMap resources
-            get_resources_df = asyncio.run(coap(discovery_df[['saddr','code','success','data','options']], False))
-            filename = workflow_handling.create_file(f'O1_DataCollection/data/get/{cidr_id}/', None)
-            payload_handling.options_to_json(get_resources_df).to_csv(filename, index=False, header=add_header, mode='a')
-
-            # ----------- observe -----------
-            print('-' * 100)
-            print("\t3. OBSERVE RESOURCES")
-            time.sleep(MENU_WAIT)
-
-            # consider only those entries having the observable field equal to 0 or 1 -> REAL OBS resources
-            observable_resources_df = get_resources_df[(get_resources_df['observable'] == 0) | (get_resources_df['observable'] == 1)]
-
-            if observable_resources_df.empty:
+            
+            if chunk.empty:
                 
-                print("\t\tThere were NOT observable resources within the collected dataset")
-
+                print("\tThere were no observable resources")
+                
             else:
                 
-                # store essential data
+                print(chunk)
+
+                # perform the GET requests to found ZMap resources
+                observable_res_df = asyncio.run(coap(chunk, 2))
                 filename = workflow_handling.create_file(f'O1_DataCollection/data/observe/{cidr_id}/', None)
-                observable_resources_df[['saddr', 'uri', 'data', 'data_length']].to_csv(filename, index=False, header=add_observe_header, mode='a')
-                print(f"\t\tObservable Resources: \n{observable_resources_df[['saddr', 'uri', 'data', 'data_length']]}")
+                observable_res_df[['saddr', 'uri', 'data', 'data_length']].to_csv(filename, index=False, header=add_observe_header, mode='a')
 
-                add_observe_header = True
-
-            add_header = False
-
+                add_observe_header = False
+                
     return

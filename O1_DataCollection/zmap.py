@@ -3,9 +3,11 @@ import time
 import asyncio
 import subprocess
 import datetime
+import os
 
 from utils import payload_handling, workflow_handling
 from O1_DataCollection.coap import coap
+from O1_DataCollection.lookups import lookups
 
 ################################################################################################
 
@@ -15,17 +17,50 @@ CHUNK_SIZE = 5000
 
 ################################################################################################
 
+def balance_zmap_datasets():
+    
+    # 1. Read and combine all CSVs
+    path_to_zmap_datasets = 'O1_DataCollection/data/discovery/csv/'
+    
+    zmap_datasets = os.listdir(path_to_zmap_datasets)
+    
+    zmap_dataframes = [pd.read_csv(path_to_zmap_datasets + f) for f in zmap_datasets]
+    
+    all_data = pd.concat(zmap_dataframes, ignore_index=True)
+    
+    
+    # 2. Compute how many rows each output file should have
+    final_num_files = 7
+    
+    total_rows = len(all_data)
+    
+    base_rows = total_rows // final_num_files
+    extra_rows = total_rows % final_num_files
+    
+    # 3. Split evenly and write new CSV files
+    start = 0
+    
+    for i in range(final_num_files):
+        rows = base_rows + (1 if i < extra_rows else 0)
+        chunk = all_data.iloc[start:start + rows]
+        chunk.to_csv(f'{path_to_zmap_datasets}{i}.csv', index=False)
+        start += rows
+
+################################################################################################
+
 def zmap():
     
     print('-' * 50, '[ZMAP]', '-' * 50)
     
+    balance_zmap_datasets()
+    
+    return
+    
     cidr_id, cidr = before_zmap_execution()
     
-    start = execute_zmap(cidr_id, cidr)
+    execute_zmap(cidr_id, cidr)
     
-    after_zmap_execution(cidr_id)
-    
-    return [cidr_id, start]
+    return
 
 ################################################################################################
 
@@ -89,7 +124,7 @@ def elaborate_zmap_results(cidr_id):
                 print("\tUndecodable Messages")
                 print(decode_res[2])
                 
-                filename = workflow_handling.create_file(f'O1_DataCollection/data/discovery/undecodable_msgs/', cidr_id)
+                filename = workflow_handling.create_file('O1_DataCollection/data/discovery/undecodable_msgs/', cidr_id)
                 decode_res[2].to_csv(filename, index=False, header=add_undecodable_msgs_header, mode='a')
                 add_undecodable_msgs_header = False
 
@@ -107,8 +142,8 @@ def elaborate_zmap_results(cidr_id):
             print("\tGET RESOURCES")
             time.sleep(MENU_WAIT)
             # perform the GET requests to found ZMap resources
-            get_resources_df = asyncio.run(coap(chunk[['saddr','code','success','data','options']], False))
-            filename = workflow_handling.create_file(f'O1_DataCollection/data/get/{cidr_id}/', None)
+            get_resources_df = asyncio.run(coap(chunk[['saddr','code','success','data','options']], 1))
+            filename = workflow_handling.create_file('O1_DataCollection/data/get/', cidr_id)
             payload_handling.options_to_json(get_resources_df).to_csv(filename, index=False, header=add_header, mode='a')
 
             # ----------- observe -----------
@@ -133,10 +168,29 @@ def elaborate_zmap_results(cidr_id):
 
 ################################################################################################
 
-def after_zmap_execution(cidr_id):
+def after_zmap_execution():
 
     try:
+        cidr_id, cidr = portion_selection()
+        
+        start = datetime.datetime.now()
+        
         elaborate_zmap_results(cidr_id)
+        
+        SECONDS_PER_DAY = 5*60
+    
+        for i, offset in enumerate([1, 2], start=1):
+            delay = (datetime.timedelta(seconds=offset * SECONDS_PER_DAY) - (datetime.datetime.now() - start)).total_seconds()
+            delay = max(0, delay)  # prevent negative delays
+            
+            print('-'*30)
+            print(f"[{i}] Waiting for {delay} seconds ({datetime.datetime.now()})")
+            print('-'*30)
+
+            time.sleep(delay)
+            
+            lookups(cidr_id)
+    
     except Exception as e:
         # print the error type
         print(e)
@@ -156,9 +210,6 @@ def execute_zmap(cidr_id, cidr):
     config_option = "--config=utils/zmap_configs/config.txt"
     output_file = f"--output-file=O1_DataCollection/data/discovery/csv/{cidr_id}.csv"
     command.extend([config_option, output_file, cidr])
-    
-    # save current datetime info to be used for subsequent lookups
-    zmap_start_time = datetime.datetime.now()
         
     # ZMap Command Execution
     # stdout=subprocess.PIPE    => captures the process's std output so that Python can read it
@@ -187,7 +238,7 @@ def execute_zmap(cidr_id, cidr):
         # print return exit
         print("ZMap exit:", ret)
 
-    return zmap_start_time
+    return
 
 ################################################################################################
 
