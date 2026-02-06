@@ -2,36 +2,67 @@ import maxminddb
 import pandas as pd
 import os
 import datetime
+import aiocoap
+import asyncio
 
 from utils import payload_handling
 
 from collections import Counter
 from aiocoap import *
 
+################################################################################################
+
+# setting MAX_RETRANSMIT = 3
+aiocoap.numbers.TransportTuning.MAX_RETRANSMIT = 3
+
+MAX_TRANSMIT_WAIT = (
+            aiocoap.numbers.TransportTuning.ACK_TIMEOUT *
+            (2 ** (aiocoap.numbers.TransportTuning.MAX_RETRANSMIT + 1) - 1) *
+            aiocoap.numbers.TransportTuning.ACK_RANDOM_FACTOR
+        )
 
 ################################################################################################
 
-def create_file(path, cidr_id):
-    
+def create_file(path, cidr_id, need_new_file, date_and_time):
     
     os.makedirs(path, exist_ok=True)
-    
+
     
     if cidr_id == None:
         
-        # get current date
-        current_date = str(datetime.datetime.now())
-
-        path = os.path.join(path, f"{current_date}.csv")
+        if need_new_file:
+            
+            print("\tFile needs to be created!")
+            
+            # get current date
+            path = os.path.join(path, f"{date_and_time}.csv")
+            
+            with open(path, "w"):
+                pass
         
+        else:
+            
+            print("\tFile already created!")
+            
+            created_files = os.listdir(path)
+            created_files.sort()
+            
+            # get last file name created
+            last_file = created_files[len(created_files) - 1]
+            print(f"\tLast file name is {last_file}")
+            
+            path = os.path.join(path, f"{last_file}")
+    
     else:
-        
+            
         path = os.path.join(path, f"{cidr_id}.csv")
         
+        if need_new_file:
 
-    with open(path, "w"):
-        pass
-
+            with open(path, "w"):
+                pass
+        
+        
     return path
         
         
@@ -41,15 +72,9 @@ def create_file(path, cidr_id):
 def avoid_get(row):
 
     # When can GET requests be avoided?
-
-    # ----- SUCCESS check -----
-    if row['success'] == 0: # success = 0/1
-        print(f"\t\tNot successful response to resource discovery: \n\t\tskip {row['saddr']}")
-        return True
-
+    
     # ----- CODE check -----
     if row['code'] != '2.05 Content': # not successful discovery (= 2.05 Content)
-        print(f"\t\tNot '2.05 Content' discovery: \n\t\tskip {row['saddr']}")
         return True
 
     # ----- OPTION check -----
@@ -65,12 +90,10 @@ def avoid_get(row):
 
     # ----- EMPTY PAYLOAD check -----
     if len(row['data']) == 0: # empty payload string
-        print(f"\t\tEmpty payload was returned from resource discovery: \n\t\tskip {row['saddr']}")
         return True
 
     # ----- STILL BINARY PAYLOAD check -----
     if isinstance(row['data'], bytes):
-        print(f"\t\tCan't decode its binary payload: \n\t\tskip {row['saddr']}")
         return True
 
     return False
@@ -100,27 +123,37 @@ def remove_duplicates(df_zmap):
 #   it returns a flat dataframe that will be then stored safely
 def extract_ip_info(ip_list_df):
 
-    with maxminddb.open_database('utils/ipinfo/ipinfo_lite.mmdb') as reader:
-        # apply -> returns a dictionary of IP related fields
-        ip_info = ip_list_df['saddr'].apply(reader.get)
-        
-        reader.close()
+    rows = []
 
-    # normalize/flatten the dictionary
-    ip_info_df = pd.json_normalize(ip_info)
-        
-    # concatenate IP + IP info
-    ip_info_df = pd.concat([ip_list_df.reset_index(drop=True), ip_info_df], axis=1)
+    with maxminddb.open_database("utils/ipinfo/ipinfo_lite.mmdb") as reader:
+        for ip in ip_list_df["saddr"]:
+            record = reader.get(ip) or {}
 
-    return ip_info_df
+            row = {
+                "asn": record.get("asn"),
+                "as_name": record.get("as_name"),
+                "as_domain": record.get("as_domain"),
+                "continent": record.get("continent"),
+                "continent_code": record.get("continent_code"),
+                "country": record.get("country"),
+                "country_code": record.get("country_code"),
+            }
+
+            rows.append(row)
+
+    ip_info_df = pd.DataFrame(rows)
+
+    return pd.concat(
+        [ip_list_df.reset_index(drop=True), ip_info_df],
+        axis=1
+    )
+
 
 ################################################################################################
 
 # perform the resource discovery operation -> GET (<IP> + <URI>)
 async def get(ip_address, truncated_decoded_msg, context):
-
-    print(f"\t\t\tPerforming new GET request to {truncated_decoded_msg['uri']} ...")
-
+        
     # resource URI to be checked
     uri_to_check = f"coap://{ip_address}:5683{truncated_decoded_msg['uri']}"
     # build the request message
@@ -128,11 +161,9 @@ async def get(ip_address, truncated_decoded_msg, context):
 
     try:
         # send the request and obtained the response
-        response = await context.request(request).response
+        response = await asyncio.wait_for(context.request(request).response, timeout=MAX_TRANSMIT_WAIT + 5)
 
-    except Exception as e:
-        print(f"\t{e}")
-        print("\t[aiocoap] Unsuccessful response: storing truncated message ...")
+    except Exception:
         return truncated_decoded_msg
 
     else:
@@ -140,6 +171,7 @@ async def get(ip_address, truncated_decoded_msg, context):
         decoded_message_payload = payload_handling.get_payload(response)
 
         full_decoded_msg = {
+            'uri': truncated_decoded_msg['uri'],
             'version': payload_handling.get_version(response),
             'mtype': payload_handling.get_mtype(response),
             'token': payload_handling.get_token(response),
@@ -150,8 +182,7 @@ async def get(ip_address, truncated_decoded_msg, context):
             'observable': payload_handling.get_observe(response, truncated_decoded_msg['uri']),
             'data': decoded_message_payload,
             'data_format': payload_handling.get_payload_format(decoded_message_payload),
-            'data_length': payload_handling.get_payload_length(response),
-            'uri': truncated_decoded_msg['uri']
+            'data_length': payload_handling.get_payload_length(response)
         }
 
         return full_decoded_msg # success
@@ -164,6 +195,7 @@ def decode_data(binary_data, uri):
 
     # default message to be returned (if any error occurs during the decoding process)
     decoded_msg = {
+        'uri': uri,
         'version': None,
         'mtype': None,
         'token': None,
@@ -176,7 +208,7 @@ def decode_data(binary_data, uri):
         'data': binary_data,
         'data_format': None,     
         'data_length': None,
-        'uri': uri
+        'user_inserted': None
     }
 
     # ----- decoding ZMap binary message -----
@@ -186,8 +218,7 @@ def decode_data(binary_data, uri):
         msg = Message.decode(bytes.fromhex(binary_data))
 
     # unable to decode the message
-    except Exception as e:
-        print(f'Decoding Error - {e}')
+    except Exception:
         return decoded_msg
     
     # ----------------------------------------
@@ -226,14 +257,21 @@ async def decode(df_zmap, uri):
     # it contains a summary of the decode process (success, unsuccess/<REASON>)
     decode_results = Counter()
 
+
     # client context creation for eventual GETs
     context = await Context.create_client_context()
 
     # iterate over rows
     for _, row in df_zmap.iterrows():
 
+        # logging
+        if (len(new_data_list) % 200 == 0):
+            print(f"\t({datetime.datetime.now()}) Rows examined: {round(len(new_data_list)/df_zmap.shape[0] * 100, 2)}%")
+        
         # default decoded message (it will be returned if any error occurs)
         decoded_msg = {
+            'saddr': row['saddr'],
+            'uri': None,
             'version': None,
             'mtype': None,
             'token': None,
@@ -245,14 +283,14 @@ async def decode(df_zmap, uri):
             'data': None,
             'data_format': None,
             'data_length': None,
-            'uri': None
+            'user_inserted': None
         }
 
         # if success field is equal to 1 (all UDP kind of result)
         if row['success'] == 1:
 
-            # decoding binary data and get a dictionary as result
-            decoded_msg = decode_data(row['data'], uri)
+            # decoding binary data, get a dictionary as result and update decoded message
+            decoded_msg.update(decode_data(row['data'], uri))
 
             # if decodede message code field is equal to None -> something went wrong during the decoding process
             #   ex. undecodable message, ...
@@ -261,7 +299,7 @@ async def decode(df_zmap, uri):
                 # update summary
                 decode_results.update([f"undecodable_msg"])
                 
-                undecodable_msgs.append([row['saddr'], decoded_msg['data'], decoded_msg['data_length'], decoded_msg['uri']])
+                undecodable_msgs.append([decoded_msg['saddr'], decoded_msg['data'], decoded_msg['uri']])
 
             # otherwise it is a success
             else:
@@ -271,37 +309,25 @@ async def decode(df_zmap, uri):
 
                 # detect if ZMap retrieved payload is truncated
                 if payload_handling.detect_truncated_response(row['udp_pkt_size'], row['data'], decoded_msg):
-                    
-                    print('£' * 50)
-                    
-                    # print decoded message data field
-                    print(f"ZMap Payload decoded: {decoded_msg['data']}")
-                    
-                    # -> if so, perform a new discovery through aiocoap library
-                    decoded_msg = await get(row['saddr'], decoded_msg, context)
 
-                    # print the complete/not truncated data/payload field
-                    print(f"ZMap Complete Payload decoded: {decoded_msg['data']}")
-
+                    decoded_msg.update(await get(row['saddr'], decoded_msg, context))
+            
+                # success case -> append and store it
+                new_data_list.append(decoded_msg)
 
         # if success field is equal to 0 (all icmp, ... kind of result)
         else:
             decode_results.update([f"unsuccess/{row['icmp_unreach_str']}"])
-
-        # each case (un/success) -> append and store it
-        new_data_list.append(decoded_msg)
-        
+    
     
     # close context/UDP socket
     await context.shutdown()
     
     # Build dataframe from list
-    columns = ['version', 'mtype', 'token', 'token_length', 'code', 'mid', 'options', 'data', 'data_format', 'data_length', 'observable', 'uri']
-    for col in columns:
-        df_zmap[col] = [d[col] for d in new_data_list]
+    decoded_df = pd.DataFrame(new_data_list)
         
     # define result to be returned
-    result = [df_zmap, decode_results]
+    result = [decoded_df, decode_results]
     
     # ---------- undecodable-msgs management ----------
     
@@ -310,7 +336,7 @@ async def decode(df_zmap, uri):
         
         try: 
             # convert list of lists into Pandas dataframe
-            undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data', 'data_length', 'uri'])
+            undecodable_df = pd.DataFrame(undecodable_msgs, columns=['saddr', 'data', 'uri'])
             
             result.append(undecodable_df)
             

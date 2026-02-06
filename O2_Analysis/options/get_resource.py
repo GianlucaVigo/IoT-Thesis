@@ -76,39 +76,29 @@ def analysis(data_paths, mode):
         # 0
         case 'Data Format':
             
-            to_plot = []
+            formats = Counter()
 
             for path in data_paths:
-
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                formats = Counter()
                 
-                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code']): 
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data_format']): 
 
                     # DATA CLEANING
-                    # keeping only entries having not None code
-                    chunk = chunk[chunk['code'] != None]
-                    # deleting rows with data field equal to nan
-                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    # deleting rows with data_format field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data_format'])
 
                     ##############################
 
-                    formats += Counter(chunk['data'].apply(detect_format))
+                    formats += Counter(chunk['data_format'])
 
-                to_plot.extend(
-                    {'date': current_date, 'format': format, 'count': count}
-                    for format, count in formats.items()
-                )             
 
             ##############################
 
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'format', 'count'])
-            df_plot = df_plot.groupby(['date', 'format'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'format'], ascending=[True, False]).reset_index(drop=True)
+            df_plot = pd.DataFrame.from_dict(formats, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'format', 0:'count'})            
+            df_plot = df_plot.sort_values('count', ascending=False).reset_index(drop=True)
+            print(df_plot)
 
             ##############################
 
@@ -117,8 +107,6 @@ def analysis(data_paths, mode):
                 df_plot,
                 x='format',
                 y='count',
-                color="date",
-                barmode='group',
                 title="Data Format Distribution over Time"
             )
             fig.show()
@@ -126,90 +114,84 @@ def analysis(data_paths, mode):
 
         # 1
         case 'Payload Size':
-
-            to_plot = []
+            
+            sizes = Counter()
             
             for path in data_paths:
-
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                sizes = Counter()
                 
-                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'data_length', 'code']): 
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data_length']): 
 
                     # DATA CLEANING
+                    # deleting rows with data_length field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['data_length'])
                     # keeping only entries having not None code
-                    chunk = chunk[chunk['code'] != None]
-                    # deleting rows with data field equal to nan
-                    chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
+                    chunk = chunk[chunk['data_length'] != 0]
 
                     ##############################
 
                     sizes += Counter(chunk['data_length'])
 
-                to_plot.extend(
-                    {'date': current_date, 'size': size, 'count': count}
-                    for size, count in sizes.items()
-                )
-
             ##############################
 
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'size', 'count'])
-            df_plot = df_plot.groupby(['date', 'size'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'size'], ascending=[True, False]).reset_index(drop=True)
+            df_plot = pd.DataFrame.from_dict(sizes, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'size', 0:'count'})            
+            df_plot = df_plot.sort_values('size', ascending=True).reset_index(drop=True)
+            print(df_plot)
 
             ##############################
 
             # PLOTTING
-            fig = px.scatter(
-                df_plot, 
-                x="date", 
-                y="size",
-                size="count",
-                color="date",
-                hover_name="size", 
-                log_y=True, 
-                size_max=60
+            fig = px.histogram(
+                df_plot,
+                nbins=100,
+                x='size',
+                y='count',
+                barmode='group',
+                title="Payload Size Distribution"
             )
             fig.show()
 
         # 2
         case 'Response Code':
 
-            to_plot = []
+            response_codes = Counter()
 
             for path in data_paths:
-
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                response_codes = Counter()
                 
-                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['code']): 
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['uri','code', 'user_inserted']): 
 
                     # DATA CLEANING
-                    # keeping only entries having not None code
-                    chunk = chunk[chunk['code'] != None]
+                    # deleting rows with code field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['code'])
+                    
+                    # NB: inserted '/' resource inserted by hand
+                    # keep rows considering 3 cases:
+                    # 1) if uri is '/', the code is '2.05 Content' (there was an actual result) and it was inserted by hand
+                    # 2) if uri is '/' and it wasn't inserted by hand
+                    # 3) every uri different from '/' (because they were not inserted by hand)
+                    #
+                    # -> i should delete all entries with uri '/', it was inserted by hand and the code is not '2.05 Content'
+                    #
+                    chunk = chunk[
+                        (chunk['uri'] == '/') & (chunk['code'] == '2.05 Content') & (chunk['user_inserted'] == True) |
+                        (chunk['uri'] == '/') & (chunk['user_inserted'] == False) |
+                        (chunk['uri'] != '/')
+                    ]
 
                     ##############################
 
                     response_codes += Counter(chunk['code'])
 
-                to_plot.extend(
-                    {'date': current_date, 'code': code, 'count': count}
-                    for code, count in response_codes.items()
-                )
-
             ##############################
-
+            
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'code', 'count'])
-            df_plot = df_plot.groupby(['date', 'code'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'code'], ascending=[True, False]).reset_index(drop=True)
+            df_plot = pd.DataFrame.from_dict(response_codes, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'code', 0:'count'})            
+            df_plot = df_plot.sort_values('count', ascending=False).reset_index(drop=True)
+            print(df_plot)
 
             ##############################
 
@@ -218,24 +200,17 @@ def analysis(data_paths, mode):
                 df_plot,
                 x='code',
                 y='count',
-                color="date",
-                barmode='group',
-                title="Response Code Distribution over Time"
+                title="Response Code Distribution"
             )
             fig.show()
 
         # 3
         case 'Options':
 
-            to_plot = []
+            options = Counter()
             
             for path in data_paths:
 
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                options = Counter()
-                
                 for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['options']): 
 
                     # DATA CLEANING
@@ -255,18 +230,15 @@ def analysis(data_paths, mode):
                         except Exception:
                             continue 
 
-                to_plot.extend(
-                    {'date': current_date, 'option': option, 'count': count}
-                    for option, count in options.items()
-                )
 
             ##############################
-
+            
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'option', 'count'])
-            df_plot = df_plot.groupby(['date', 'option'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'option'], ascending=[True, False]).reset_index(drop=True)
+            df_plot = pd.DataFrame.from_dict(options, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'option', 0:'count'})            
+            df_plot = df_plot.sort_values('count', ascending=False).reset_index(drop=True)
+            print(df_plot)
 
             ##############################
 
@@ -275,58 +247,46 @@ def analysis(data_paths, mode):
                 df_plot,
                 x='option',
                 y='count',
-                color="date",
-                barmode='group',
-                title="Options Distribution over Time"
+                title="Options Distribution"
             )
             fig.show()
 
         # 4
         case 'Server Specifications':
 
-            to_plot = []
+            server_specs = Counter()
             
             for path in data_paths:
-
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                server_specs = Counter()
                 
                 for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['data', 'code', 'uri']): 
 
                     # DATA CLEANING
-                    chunk = chunk[(chunk['code'] == '2.05 Content') & (chunk['uri'] == '/')]
-                    # deleting rows with code field equal to nan
+                    # deleting rows with data field equal to nan
                     chunk.dropna(ignore_index=True, inplace=True, subset=['data'])
-
+                    # keep only rows with code equal to 2.05 and where the uri is home path ('/')
+                    chunk = chunk[(chunk['code'] == '2.05 Content') & (chunk['uri'] == '/')]
+                    
                     ##############################
 
                     server_specs += Counter(chunk['data'].apply(detect_server_version))
 
-                to_plot.extend(
-                    {'date': current_date, 'server': spec, 'count': count}
-                    for spec, count in server_specs.items()
-                )
-
             ##############################
-        
+            
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'server', 'count'])
-            df_plot = df_plot.groupby(['date', 'server'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'server'], ascending=[True, False]).reset_index(drop=True)
+            df_plot = pd.DataFrame.from_dict(server_specs, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'server_spec', 0:'count'})            
+            df_plot = df_plot.sort_values('count', ascending=False).reset_index(drop=True)
+            print(df_plot)
 
             ##############################
 
             # PLOTTING
             fig = px.bar(
                 df_plot,
-                x='server',
+                x='server_spec',
                 y='count',
-                color="date",
-                barmode='group',
-                title="Server Specs Distribution over Time"
+                title="Server Specs Distribution"
             )
             fig.show()
 
@@ -334,38 +294,41 @@ def analysis(data_paths, mode):
         # 5
         case 'OBS Resources':
 
-            to_plot = []
+            obs_types = Counter()
             
             for path in data_paths:
-
-                # take only date and ignore '.csv' part of the string
-                current_date = path.split('/')[3][:-4]
-
-                obs_types = Counter()
                 
-                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['observable']): 
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['uri', 'code', 'user_inserted', 'observable']): 
 
                     # DATA CLEANING
                     # deleting rows with code field equal to nan
                     chunk.dropna(ignore_index=True, inplace=True, subset=['observable'])
+                    
+                    # NB: inserted '/' resource inserted by hand
+                    # keep rows considering 3 cases:
+                    # 1) if uri is '/', the code is '2.05 Content' (there was an actual result) and it was inserted by hand
+                    # 2) if uri is '/' and it wasn't inserted by hand
+                    # 3) every uri different from '/' (because they were not inserted by hand)
+                    #
+                    # -> i should delete all entries with uri '/', it was inserted by hand and the code is not '2.05 Content'
+                    #
+                    chunk = chunk[
+                        (chunk['uri'] == '/') & (chunk['code'] == '2.05 Content') & (chunk['user_inserted'] == True) |
+                        (chunk['uri'] == '/') & (chunk['user_inserted'] == False) |
+                        (chunk['uri'] != '/')
+                    ]
 
                     ##############################
 
                     obs_types += Counter(chunk['observable'])
-                
-                to_plot.extend(
-                    {'date': current_date, 'obs_type': obs_type, 'count': count}
-                    for obs_type, count in obs_types.items()
-                )
 
             ##############################
-        
+            
             # DICTIONARY TO DATAFRAME
             # Converting the dictionary into DataFrame
-            df_plot = pd.DataFrame(to_plot, columns=['date', 'obs_type', 'count'])
-            df_plot = df_plot.groupby(['date', 'obs_type'], as_index=False)['count'].sum()
-            df_plot = df_plot.sort_values(['date', 'obs_type'], ascending=[True, False]).reset_index(drop=True)
-            
+            df_plot = pd.DataFrame.from_dict(obs_types, orient='index').reset_index() 
+            df_plot = df_plot.rename(columns={'index':'obs_type', 0:'count'})            
+            df_plot = df_plot.sort_values('count', ascending=False).reset_index(drop=True)
             print(df_plot)
 
             ##############################
@@ -375,12 +338,69 @@ def analysis(data_paths, mode):
                 df_plot,
                 x='obs_type',
                 y='count',
-                color="date",
-                barmode='group',
-                title="Observable Types Distribution over Time"
+                title="Observable Types Distribution"
             )
             fig.show()
 
 
+        # 6
+        # About the home path (/) resource, it could be interesting to focus on the comparison between
+        # the ones available in the resource list collected from discovery (user_inserted == False)
+        # and those that were inserted by hand (user_inserted == False) + gave a valid result (code == 2.05 Content)
+        case 'Home Path Info':
 
+            home_path_infos = Counter()
+
+            for path in data_paths:
+                
+                for chunk in pd.read_csv(path, chunksize=CHUNK_SIZE, usecols=['uri','code', 'user_inserted']): 
+
+                    # DATA CLEANING
+                    # deleting rows with code field equal to nan
+                    chunk.dropna(ignore_index=True, inplace=True, subset=['code'])
+                    
+                    # NB: inserted '/' resource inserted by hand
+                    # keep rows considering 3 cases:
+                    # 1) if uri is '/', the code is '2.05 Content' (there was an actual result) and it was inserted by hand
+                    # 2) if uri is '/' and it wasn't inserted by hand
+                    # 3) every uri different from '/' (because they were not inserted by hand)
+                    #
+                    # -> i should delete all entries with uri '/', it was inserted by hand and the code is not '2.05 Content'
+                    #
+                    chunk = chunk[
+                        (chunk['uri'] == '/') & (chunk['code'] == '2.05 Content') & (chunk['user_inserted'] == True) |
+                        (chunk['uri'] == '/') & (chunk['user_inserted'] == False) |
+                        (chunk['uri'] != '/')
+                    ]
+
+                    ##############################
+
+                    home_path_infos += Counter(zip(chunk['user_inserted'], chunk['code']))
+            
+            home_path_infos = [
+                    {'user_inserted': key[0], 'code': key[1], 'count': count}
+                    for key, count in home_path_infos.items()
+            ]
+            
+            ##############################
+            
+            # DICTIONARY TO DATAFRAME
+            # Converting the dictionary into DataFrame
+            df_plot = pd.DataFrame(home_path_infos, columns=['user_inserted', 'code', 'count'])         
+            df_plot = df_plot.sort_values(['user_inserted', 'count'], ascending=[False, False]).reset_index(drop=True)
+            print(df_plot)
+
+            ##############################
+
+            # PLOTTING
+            fig = px.bar(
+                df_plot,
+                x='code',
+                y='count',
+                color='user_inserted',
+                title="Home Path Info Distribution"
+            )
+            fig.show()
+            
+            
     return

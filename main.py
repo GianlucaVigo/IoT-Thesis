@@ -1,18 +1,18 @@
-from O1_DataCollection.zmap import zmap, after_zmap_execution
+from O1_DataCollection.zmap import balance_zmap_datasets, after_zmap_execution
 from O2_Analysis.menu import analysis_menu
 
 def main():
 
     while(True):
-        print('-' * 111)
-        print('-' * 50, 'MAIN MENU', '-' * 50)
-        print('-' * 111)
+        print('-' * 51)
+        print('-' * 20, 'MAIN MENU', '-' * 20)
+        print('-' * 51)
 
         print("What kind of operation you want to perform? (Specify the associated number)\n")
-        print("\t0. [BEFORE ZMAP + ZMAP] Perform data collection")
-        print("\t1. [AFTER ZMAP] Perform data collection")
-        print("\t2. [ANALYSIS] extract knowledge/insights")
-        print("\t3. [EXIT] exit from the application")
+        print("\t0. Balance ZMap Raw Datasets")
+        print("\t1. Refine ZMap Raw Datasets")
+        print("\t2. Extract knowledge/insights out of collected and refined data")
+        print("\t3. Exit from the application")
         print("\nOption: ", end="")
 
         try:
@@ -27,7 +27,7 @@ def main():
         match choice:
             
             case 0:
-                zmap()
+                balance_zmap_datasets()
             
             case 1:
                 after_zmap_execution()
